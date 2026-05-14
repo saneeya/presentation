@@ -336,3 +336,142 @@ layout: default
   animation: goals-check-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 </style>
+
+---
+layout: default
+---
+
+<CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="3" />
+
+<div class="lb-scene">
+  <div class="lb-label">In Development<span class="lb-cursor">|</span></div>
+  <div class="lb-track">
+    <div class="lb-fill"></div>
+    <div class="lb-shimmer"></div>
+  </div>
+</div>
+
+<style>
+.lb-scene {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 16rem;
+  height: 60px;
+}
+.lb-label {
+  position: absolute;
+  top: -4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #3A4652;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  animation: lb-type 1.2s steps(14) 0.3s forwards;
+}
+@keyframes lb-type {
+  from { width: 0; }
+  to { width: 21rem; }
+}
+.lb-cursor {
+  color: #e60024;
+  font-weight: 300;
+  animation: lb-blink 0.8s step-end infinite;
+}
+@keyframes lb-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.lb-track {
+  position: relative;
+  width: min(100%, 30rem);
+  height: 14px;
+  background: #e2e8f0;
+  border-radius: 9999px;
+  overflow: hidden;
+  z-index: 2;
+}
+@keyframes lb-grow {
+  from { width: 0%; }
+  to { width: 65%; }
+}
+@keyframes lb-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(400%); }
+}
+.lb-fill {
+  height: 100%;
+  width: 0%;
+  background: #e60024;
+  border-radius: 9999px;
+  animation: lb-grow 2.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  animation-delay: 0.3s;
+}
+.lb-shimmer {
+  position: absolute;
+  top: 0; left: 0;
+  width: 30%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+  animation: lb-shimmer 1.4s ease-in-out infinite;
+  animation-delay: 0.8s;
+}
+@keyframes lb-float {
+  0%, 100% { transform: translateY(0px); opacity: 0.7; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
+@keyframes lb-pop {
+  0% { transform: scale(0); opacity: 0; }
+  60% { transform: scale(1.2); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+.lb-dot {
+  position: absolute;
+  border-radius: 9999px;
+  background: #e60024;
+}
+.lb-dot-1 { width:10px; height:10px; top:-12px; left:calc(50% - 140px); animation: lb-pop 0.4s ease forwards, lb-float 2s ease-in-out 0.4s infinite; animation-delay: 0.5s, 0.9s; opacity:0; }
+.lb-dot-2 { width:6px;  height:6px;  top:-20px; left:calc(50% - 80px);  animation: lb-pop 0.4s ease forwards, lb-float 2.3s ease-in-out 0.4s infinite; animation-delay: 0.9s, 1.3s; opacity:0; }
+.lb-dot-3 { width:8px;  height:8px;  top:-14px; left:calc(50% + 60px);  animation: lb-pop 0.4s ease forwards, lb-float 1.8s ease-in-out 0.4s infinite; animation-delay: 1.3s, 1.7s; opacity:0; }
+.lb-dot-4 { width:6px;  height:6px;  bottom:-14px; left:calc(50% - 60px);  animation: lb-pop 0.4s ease forwards, lb-float 2.1s ease-in-out 0.4s infinite; animation-delay: 0.7s, 1.1s; opacity:0; }
+.lb-dot-5 { width:10px; height:10px; bottom:-18px; left:calc(50% + 40px);  animation: lb-pop 0.4s ease forwards, lb-float 2.4s ease-in-out 0.4s infinite; animation-delay: 1.1s, 1.5s; opacity:0; }
+.lb-dot-6 { width:7px;  height:7px;  bottom:-10px; left:calc(50% + 110px); animation: lb-pop 0.4s ease forwards, lb-float 1.9s ease-in-out 0.4s infinite; animation-delay: 1.5s, 1.9s; opacity:0; }
+@keyframes lb-ring-pulse {
+  0% { transform: translateY(-50%) scale(0.6); opacity: 0.6; }
+  100% { transform: translateY(-50%) scale(1.6); opacity: 0; }
+}
+.lb-ring {
+  position: absolute;
+  border-radius: 9999px;
+  border: 2px solid #e60024;
+  top: 50%;
+}
+.lb-ring-1 { width:26px; height:26px; left:calc(50% - 183px); animation: lb-ring-pulse 1.8s ease-out 1s infinite; opacity:0; }
+.lb-ring-2 { width:20px; height:20px; left:calc(50% + 164px); animation: lb-ring-pulse 1.8s ease-out 1.4s infinite; opacity:0; }
+</style>
+
+---
+layout: two-cols
+layoutClass: h-full
+transition: fade-out
+---
+
+<div class="flex h-full min-h-0 flex-col py-10 pr-4">
+  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
+<HeroTitle compact>
+  Thank you
+</HeroTitle>
+  </div>
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col pl-4">
+<PinterestMasonry placement="title" />
+</div>

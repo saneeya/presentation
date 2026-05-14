@@ -1,0 +1,321 @@
+/* Light deck: near-white canvas + soft silver-gray layered depth */
+:root {
+  --deck-bg-base: #f8f9fb;
+  --deck-bg-elevated: #ffffff;
+  --deck-bg-tint: rgba(148, 163, 184, 0.11);
+  --deck-bg-corner: rgba(203, 213, 225, 0.28);
+  --deck-accent: #0d9488;
+  --deck-accent-dim: #0f766e;
+  --deck-ink: #0f172a;
+  --deck-muted: #3a4652;
+  /* Must win over @slidev/client/styles/vars.css (:root sets black later in bundle) */
+  --slidev-slide-container-background: transparent !important;
+  /* Image drop shadow (#000 @ ~10–15% opacity, blur ~8–12px, Y offset ~2–4px) */
+  --deck-img-shadow-y: 3px;
+  --deck-img-shadow-blur: 10px;
+  --deck-img-shadow-color: rgb(0 0 0 / 12%);
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+  background: transparent;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--deck-bg-base);
+  background-image:
+    radial-gradient(ellipse 115% 90% at 18% -8%, var(--deck-bg-tint), transparent 58%),
+    radial-gradient(ellipse 78% 62% at 100% 100%, var(--deck-bg-corner), transparent 52%),
+    linear-gradient(188deg, var(--deck-bg-elevated) 0%, #f6f7f9 40%, var(--deck-bg-base) 72%, #f0f2f5 100%);
+}
+
+html,
+body,
+#app,
+#page-root {
+  background-color: transparent !important;
+}
+
+.slidev-slide-content {
+  background-color: transparent !important;
+}
+
+.slidev-layout {
+  color: var(--deck-ink);
+  background-color: transparent;
+}
+
+/* Title slide: stack SlideBottom / layout / SlideTop in ONE grid cell so layer
+   components do not reserve in-flow height (avoids ~30–40px gap pushing masonry down). */
+/* Pin slideshow to the slide canvas so height never depends on in-flow siblings. */
+#slide-content #slideshow {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  box-sizing: border-box;
+}
+
+#slide-content .slidev-page-1 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  /* minmax(0,1fr): row min is 0 so stacked layers / layers don’t inflate min track size */
+  grid-template-rows: minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+}
+
+#slide-content .slidev-page-1 > * {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 0;
+}
+
+#slide-content .slidev-page-1 > .slidev-layout.two-columns {
+  position: relative;
+  z-index: 0;
+}
+
+#slide-content .slidev-page-1 > *:not(.slidev-layout.two-columns) {
+  z-index: 2;
+  pointer-events: none;
+}
+
+#slide-content .slidev-page-1 > *:not(.slidev-layout.two-columns) * {
+  pointer-events: auto;
+}
+
+/* Main two-cols on title slide: row fills slide height */
+#slide-content .slidev-page-1 .slidev-layout.two-columns {
+  height: 100%;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Any two-cols in slide: remove layout padding (shorthand from layouts-base) */
+#slide-content .slidev-layout.two-columns {
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+#slide-content .slidev-layout.two-columns .col-left {
+  padding-left: 3.5rem; /* was px-14 on whole layout */
+  padding-right: 1rem;
+  box-sizing: border-box;
+  min-width: 0;
+}
+
+/* Right column fills slide height; slot wrapper fills column edge-to-edge */
+.slidev-layout.two-columns .col-right {
+  position: relative;
+  min-height: 0;
+  height: 100%;
+  display: block;
+  padding: 0 !important;
+}
+
+/* Right slot root (wrapper in slides.md): inner gutter + modest right edge inset */
+.slidev-layout.two-columns .col-right > * {
+  position: absolute;
+  inset: 0;
+  padding-left: 1rem;
+  padding-right: 1.25rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  overflow: visible;
+}
+
+/* Legacy: keep if any rule still targets without #slide-content */
+.slidev-layout.two-columns,
+.slidev-page-1 .slidev-layout.two-columns {
+  padding: 0 !important;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  letter-spacing: -0.02em;
+}
+
+#slide-content .slidev-layout h2 {
+  color: #e60024;
+  font-weight: 700;
+  font-size: 2.3rem;
+}
+
+/* User groups slide: heading lives in left column with list (aligns with list edge) */
+#slide-content .slidev-layout .user-groups-slide-heading {
+  color: #e60024;
+  font-weight: 700;
+  font-size: 2.3rem;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.slidev-layout a {
+  color: var(--deck-accent);
+  text-decoration-color: color-mix(in srgb, var(--deck-accent) 45%, transparent);
+}
+
+.slidev-layout a:hover {
+  color: var(--deck-accent-dim);
+}
+
+.slidev-layout blockquote {
+  border-left: 3px solid var(--deck-accent);
+  background: rgba(15, 23, 42, 0.05);
+}
+
+/* Case-study slide (two-cols + PinterestMasonry): stack SlideBottom / layout / SlideTop
+   like slide 1 so masonry fills the right column height. */
+#slide-content .slidev-page:has(.slide-4-root) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  height: 100%;
+  min-height: 0;
+}
+
+#slide-content .slidev-page:has(.slide-4-root) > * {
+  grid-column: 1;
+  grid-row: 1;
+  min-height: 0;
+}
+
+#slide-content .slidev-page:has(.slide-4-root) > .slidev-layout.two-columns {
+  position: relative;
+  z-index: 0;
+}
+
+#slide-content .slidev-page:has(.slide-4-root) > *:not(.slidev-layout.two-columns) {
+  z-index: 2;
+  pointer-events: none;
+}
+
+#slide-content .slidev-page:has(.slide-4-root) > *:not(.slidev-layout.two-columns) * {
+  pointer-events: auto;
+}
+
+#slide-content .slidev-page:has(.slide-4-root) .slidev-layout.two-columns {
+  height: 100%;
+  min-height: 0;
+  grid-template-rows: minmax(0, 1fr);
+  align-content: stretch;
+  padding: 0 !important;
+  box-sizing: border-box;
+}
+
+/* Title-slide chip (also used on content slides, e.g. case-study line) */
+.slidev-layout .hero-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.4rem 1rem 0.4rem 0.85rem;
+  font-size: clamp(0.6rem, 1.05vw, 0.75rem);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #e60024;
+  border: 1px solid color-mix(in srgb, #e60024 88%, #000);
+  border-radius: 9999px;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
+}
+
+.slidev-layout .hero-pill::before {
+  content: '';
+  flex-shrink: 0;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-radius: 50%;
+  background: #fff;
+  animation: hero-pill-dot-pulse 1.75s ease-out infinite;
+}
+
+@keyframes hero-pill-dot-pulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 2px 1px rgb(255 255 255 / 0.5),
+      0 0 6px 2px rgb(255 255 255 / 0.22);
+  }
+  50% {
+    box-shadow:
+      0 0 8px 3px rgb(255 255 255 / 0.5),
+      0 0 18px 8px rgb(255 255 255 / 0.22),
+      0 0 28px 12px rgb(255 255 255 / 0.06);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slidev-layout .hero-pill::before {
+    animation: none;
+    box-shadow: none;
+  }
+}
+
+/* User groups slide: circular list markers (must beat .slidev-layout ul { list-style: square }) */
+.slidev-layout .user-groups-list ul {
+  list-style: none;
+  list-style-type: none;
+  list-style-image: none;
+  margin: 0;
+  padding: 0;
+}
+
+.slidev-layout .user-groups-list li {
+  position: relative;
+  display: block;
+  padding-left: 0.85em;
+  margin-bottom: 0.4em;
+  list-style: none;
+  list-style-type: none;
+  list-style-image: none;
+}
+
+.slidev-layout .user-groups-list li:last-child {
+  margin-bottom: 0;
+}
+
+.slidev-layout .user-groups-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  /* Fallback ~first-line center when lh is unavailable */
+  top: 0.55em;
+  width: 0.42em;
+  height: 0.42em;
+  border-radius: 50%;
+  background: var(--deck-ink);
+}
+
+@supports (height: 1lh) {
+  .slidev-layout .user-groups-list li::before {
+    /* First-line vertical center: half line box minus half bullet */
+    top: calc(0.5lh - 0.21em);
+  }
+}
+
+.slidev-layout .user-groups-list.user-groups-list--on-red {
+  color: #fff;
+}
+
+.slidev-layout .user-groups-list.user-groups-list--on-red li::before {
+  background: #fff;
+}
+
+/* All raster / SVG images in slide body */
+.slidev-layout img {
+  box-shadow: 0 var(--deck-img-shadow-y) var(--deck-img-shadow-blur) var(--deck-img-shadow-color);
+}

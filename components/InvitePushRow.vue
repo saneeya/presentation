@@ -1,13 +1,6 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { useNav } from '@slidev/client'
-import {
-  computed,
-  nextTick,
-  onMounted,
-  onUnmounted,
-  ref,
-  watch,
-} from 'vue'
 import InviteClickGap from './InviteClickGap.vue'
 
 const props = withDefaults(
@@ -28,248 +21,119 @@ const props = withDefaults(
 
 const { clicks } = useNav()
 
-/** Click indices reserved by InviteClickGap children before this component's strip logic */
-const stripStage = computed(() =>
-  Math.min(clicks.value, Math.max(0, props.images.length - 1)),
-)
+const displayImages = computed(() => props.images)
+const stage = computed(() => Math.min(clicks.value, displayImages.value.length - 1))
 
-/** One gap per image; N gaps ⇒ Slidev total N−1 so clicks reach the final pair (e.g. 6 images ⇒ click 5). */
-const gapIndices = computed(() => [...Array(Math.max(0, props.images.length)).keys()])
+type CardState = 'main' | 'nudged' | 'off-left' | 'off-right'
 
-const viewportRef = ref<HTMLElement | null>(null)
-const viewportWidthPx = ref(0)
-
-/** Overrides computed translate while animating forward one stage (next panel sliding in from the right) */
-const manualTranslatePx = ref<number | null>(null)
-/** One frame without CSS transition so slide-in starts from V − W, not from 0 */
-const suppressTrackTransition = ref(false)
-
-function measureViewport() {
-  viewportWidthPx.value = viewportRef.value?.clientWidth ?? 0
+function cardState(idx: number): CardState {
+  const s = stage.value
+  if (idx === s)     return 'main'
+  if (idx === s - 1) return 'nudged'
+  if (idx < s - 1)   return 'off-left'
+  return 'off-right'
 }
 
-let resizeObserver: ResizeObserver | null = null
-
-onMounted(() => {
-  nextTick(() => {
-    measureViewport()
-    resizeObserver = new ResizeObserver(() => measureViewport())
-    if (viewportRef.value)
-      resizeObserver.observe(viewportRef.value)
-  })
-})
-
-onUnmounted(() => {
-  resizeObserver?.disconnect()
-})
-
-/** Uniform gap between panels (track `gap` + translate `stepPx`) — same between all pairs. */
-const PANEL_GAP_REM = 1.25
-
-function rootRemPx() {
-  if (typeof window === 'undefined')
-    return 16
-  return parseFloat(getComputedStyle(document.documentElement).fontSize || '16')
-}
-
-/** ~half viewport per panel (slightly under 50% so invites read a bit smaller), capped in rem */
-const panelW = computed(() => {
-  const V = viewportWidthPx.value
-  if (!V || typeof window === 'undefined')
-    return 0
-  const rem = rootRemPx()
-  return Math.min(V * 0.46, 28 * rem)
-})
-
-/** Horizontal space between adjacent invite images (must match track `gap`) */
-const panelGapPx = computed(() => PANEL_GAP_REM * rootRemPx())
-
-/** Distance from one panel’s start to the next (width + gap) */
-const stepPx = computed(() => panelW.value + panelGapPx.value)
-
-/**
- * Translate when not in a manual override. For s>=1, two panels span L=2W+G; if L>V, shift left
- * (negative X) so the pair fits and the trailing panel is not clipped.
- */
-function stripTranslateRest(s: number, V: number, W: number, G: number) {
-  if (!V || !W)
-    return 0
-  const S = W + G
-  if (s <= 0)
-    return V - W - G
-  const pairStart = (s - 1) * S
-  const pairWidth = 2 * W + G
-  const tLeftAlign = -pairStart
-  const tRightFit = V - pairStart - pairWidth
-  return tLeftAlign <= tRightFit ? tLeftAlign : tRightFit
-}
-
-const translatePx = computed(() => {
-  const V = viewportWidthPx.value
-  const W = panelW.value
-  const G = panelGapPx.value
-  const s = stripStage.value
-  if (!V || !W)
-    return 0
-
-  if (manualTranslatePx.value !== null)
-    return manualTranslatePx.value
-
-  return stripTranslateRest(s, V, W, G)
-})
-
-watch(
-  stripStage,
-  async (s, prevS) => {
-    if (s > prevS) {
-      const V = viewportWidthPx.value
-      const W = panelW.value
-      const G = panelGapPx.value
-      if (V && W) {
-        manualTranslatePx.value = stripTranslateRest(prevS, V, W, G)
-        suppressTrackTransition.value = true
-
-        await nextTick()
-        requestAnimationFrame(() => {
-          requestAnimationFrame(() => {
-            suppressTrackTransition.value = false
-            manualTranslatePx.value = stripTranslateRest(s, V, W, G)
-          })
-        })
-        return
-      }
-    }
-
-    manualTranslatePx.value = null
-  },
-  { flush: 'sync' },
-)
-
-const trackStyle = computed(() => ({
-  transform: `translateX(${translatePx.value}px)`,
-  gap: panelGapPx.value ? `${panelGapPx.value}px` : undefined,
-}))
-
-function onTrackTransitionEnd(e: TransitionEvent) {
-  if (e.propertyName !== 'transform')
-    return
-  if (e.target !== e.currentTarget)
-    return
-  if (manualTranslatePx.value !== null)
-    manualTranslatePx.value = null
-}
-
-/**
- * Hug the flex gap so space between image edges matches `panelGapPx` (not panel width).
- * Left panel of the visible pair: flex-end; right: flex-start.
- */
-function panelAlignClass(idx: number) {
-  const s = stripStage.value
-  const visible = s === 0 ? [0] : [s - 1, s]
-  if (!visible.includes(idx))
-    return 'invite-push-row__panel--idle'
-  if (s === 0 || idx === s - 1)
-    return 'invite-push-row__panel--to-next'
-  return 'invite-push-row__panel--from-prev'
+function cardZ(idx: number): number {
+  const s = stage.value
+  if (idx === s)     return 3
+  if (idx === s - 1) return 2
+  return 1
 }
 </script>
 
 <template>
-  <InviteClickGap v-for="i in gapIndices" :key="i" />
+  <InviteClickGap v-for="i in displayImages.length" :key="i" />
 
-  <div class="invite-push-row mt-4">
-    <div ref="viewportRef" class="invite-push-row__viewport">
-      <div
-        class="invite-push-row__track"
-        :class="{ 'invite-push-row__track--no-transition': suppressTrackTransition }"
-        :style="trackStyle"
-        @transitionend="onTrackTransitionEnd"
-      >
-        <div
-          v-for="(src, idx) in images"
-          :key="idx"
-          class="invite-push-row__panel"
-          :class="panelAlignClass(idx)"
-          :style="panelW ? { flex: `0 0 ${panelW}px`, width: `${panelW}px` } : undefined"
-        >
-          <img
-            :src="src"
-            alt=""
-            class="invite-push-row__img"
-          >
-        </div>
-      </div>
+  <!--
+    CSS Grid stacks all cards in the same cell so the row height is driven
+    by the tallest image — no fixed bounding box, no clipping.
+    Off-screen cards overflow the grid and get clipped by the Slidev slide.
+  -->
+  <div class="push-reveal mt-4">
+    <div
+      v-for="(src, idx) in displayImages"
+      :key="idx"
+      class="push-reveal__card"
+      :class="`push-reveal__card--${cardState(idx)}`"
+      :style="{ zIndex: cardZ(idx) }"
+    >
+      <img :src="src" alt="" class="push-reveal__img" />
     </div>
   </div>
 </template>
 
 <style scoped>
-.invite-push-row {
-  --invite-motion-ms: 580ms;
-  --invite-motion-ease: cubic-bezier(0.33, 1, 0.68, 1);
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.invite-push-row__viewport {
-  overflow: hidden;
-  width: 100%;
-  height: min(42vh, 26rem);
-  box-sizing: border-box;
-}
-
-.invite-push-row__track {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: stretch;
-  width: max-content;
-  height: 100%;
-  min-height: 0;
-  transition: transform var(--invite-motion-ms) var(--invite-motion-ease);
-  will-change: transform;
-}
-
-.invite-push-row__track--no-transition {
-  transition: none;
-}
-
-.invite-push-row__panel {
+/* Grid container — height is driven by image content, not a fixed box.
+   The left-edge mask fades out the nudged card's peek in the correct
+   position (relative to the container's left edge, not the card itself). */
+.push-reveal {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
   position: relative;
-  min-width: 0;
-  min-height: 0;
-  height: 100%;
-  box-sizing: border-box;
+  width: 100%;
+  padding-bottom: 32px; /* room for image drop-shadow to breathe */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%);
+          mask-image: linear-gradient(to right, transparent 0%, black 12%);
 }
 
-.invite-push-row__img {
-  position: absolute;
+/*
+  width: fit-content so the card exactly wraps its image — translateX %
+  then maps to the real image width for both portrait and landscape.
+  margin-left: 20% anchors ALL cards to the same left edge, which means
+  the nudged card's right edge always clears the main card's left edge
+  (the gap = 8% of the card's own width).
+*/
+.push-reveal__card {
+  grid-column: 1;
+  grid-row: 1;
+  position: relative;
+  width: fit-content;
+  max-width: 62%;
+  margin-left: 20%;
+  transform-origin: center top;
+  transition:
+    transform 0.62s cubic-bezier(0.33, 1, 0.68, 1),
+    opacity   0.42s ease;
+  will-change: transform, opacity;
+}
+
+/* ── States ─────────────────────────────────────────────
+   translateX % is relative to the card's fit-content width
+   (= the actual rendered image width), so percentages work
+   correctly for both portrait and landscape images.
+*/
+.push-reveal__card--off-right {
+  transform: translateX(140%);
+  opacity: 0;
+}
+
+.push-reveal__card--main {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+.push-reveal__card--nudged {
+  transform: translateX(-108%) scale(0.97);
+  opacity: 0.82;
+}
+
+.push-reveal__card--off-left {
+  transform: translateX(-140%) scale(0.92);
+  opacity: 0;
+}
+
+/* Image: landscape fills card's max-width cap; portrait is constrained
+   by max-height and renders narrower — the fit-content card wraps it. */
+.push-reveal__img {
   display: block;
-  max-width: 100%;
-  max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain;
-  object-position: center;
-  margin: 0;
-}
-
-.invite-push-row__panel--to-next .invite-push-row__img {
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.invite-push-row__panel--from-prev .invite-push-row__img {
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.invite-push-row__panel--idle .invite-push-row__img {
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 395px;
+  border-radius: 0.85rem;
+  box-shadow: 0 6px 24px rgb(0 0 0 / 0.14);
 }
 
 </style>

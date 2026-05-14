@@ -6,6 +6,7 @@ import InviteClickGap from './InviteClickGap.vue'
 const props = withDefaults(
   defineProps<{
     images?: string[]
+    compact?: boolean
   }>(),
   {
     images: () => [
@@ -14,6 +15,7 @@ const props = withDefaults(
       '../public/admanager3.png',
       '../public/admanager4.png',
     ],
+    compact: false,
   },
 )
 
@@ -47,7 +49,7 @@ function layerOpacity(idx: number, V: number) {
 <template>
   <InviteClickGap v-for="i in gapIndices" :key="i" />
 
-  <div class="ad-manager-stack">
+  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact }">
     <div class="ad-manager-stack__viewport">
       <div class="ad-manager-stack__pile">
         <div
@@ -76,13 +78,27 @@ function layerOpacity(idx: number, V: number) {
   --stack-nudge-x: 14px;
   --stack-nudge-y: -14px;
   --stack-enter-x: min(72vw, 52rem);
-  --stack-pull-down: 1.875rem;
+  --stack-pull-down: 0.5rem;
   --ad-stack-motion-ms: 560ms;
   --ad-stack-motion-ease: cubic-bezier(0.33, 1, 0.68, 1);
   width: 100%;
   box-sizing: border-box;
   margin-top: 2.25rem;
   padding-bottom: 1rem;
+}
+
+/* Compact mode: less margin so a heading above doesn't squeeze the images */
+.ad-manager-stack--compact {
+  --stack-pull-down: -1rem; /* pull images up so shadow has room below */
+  margin-top: 0;
+  padding-bottom: 0;
+}
+
+.ad-manager-stack--compact .ad-manager-stack__viewport {
+  height: 385px;
+  min-height: 385px;
+  padding-bottom: 2.5rem;
+  overflow: visible;
 }
 
 .ad-manager-stack__viewport {
@@ -115,7 +131,7 @@ function layerOpacity(idx: number, V: number) {
   transition:
     transform var(--ad-stack-motion-ms) var(--ad-stack-motion-ease),
     opacity calc(var(--ad-stack-motion-ms) * 0.85) var(--ad-stack-motion-ease);
-  filter: drop-shadow(0 10px 24px rgb(0 0 0 / 0.12));
+  filter: drop-shadow(0 6px 16px rgb(0 0 0 / 0.12));
 }
 
 .ad-manager-stack__layer--off {

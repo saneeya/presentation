@@ -49,6 +49,7 @@ layoutClass: h-full
 Welcome note: open Presenter Mode from the bottom bar to see this while presenting.
 -->
 
+
 ---
 transition: fade-out
 layout: default
@@ -95,7 +96,7 @@ transition: slide-left
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col">
-<PinterestMasonry :show-images="false" />
+<PinterestMasonry :show-images="false" span-src="/FI.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="/MCFilters.gif" right-position="left center" left-top-src="/filter88.png" left-bottom-src="/datepicker.png" left-bottom-position="center 18%" />
 </div>
 
 ---
@@ -193,7 +194,7 @@ transition: slide-left
 
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -208,7 +209,7 @@ transition: slide-up
 
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
@@ -241,7 +242,9 @@ transition: slide-left
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
 
-<AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" />
+<h2 class="user-groups-slide-heading m-0 mb-2">Existing patterns</h2>
+
+<AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" :compact="true" />
 
 ---
 layout: default
@@ -290,7 +293,7 @@ transition: slide-left
 
 ---
 layout: default
-transition: slide-up
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="3" />
@@ -320,11 +323,12 @@ transition: slide-up
     <span>Introduce boolean options (AND/OR)</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
-    <span class="relative shrink-0 w-[1.5rem] h-[1.5rem]">
-      <i class="fa-regular fa-square text-slate-300 text-[1.5rem] absolute inset-0 goals-uncheck" style="animation-delay:1.9s"></i>
-      <i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] absolute inset-0 goals-check" style="animation-delay:1.9s"></i>
-    </span>
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
     <span>Enable users to save their filters and share them</span>
+    <span class="ml-auto shrink-0 inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200 px-3 py-1 text-[0.72rem] font-semibold text-amber-700 tracking-wide whitespace-nowrap">
+      <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+      Partially implemented
+    </span>
   </div>
 </div>
 
@@ -344,6 +348,30 @@ transition: slide-up
   animation: goals-check-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 </style>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Takeaways</h2>
+
+<div class="flex flex-row gap-4 mt-6">
+  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-6 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-start gap-3 anim-fade-up anim-d1">
+    <i class="fa-solid fa-arrow-pointer text-[2rem] text-[#e60024] self-center"></i>
+    <span>Prototyping advanced logic harder than intended; did not need pixel-perfect output</span>
+  </div>
+  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-6 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-start gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-hourglass text-[2rem] text-[#e60024] self-center"></i>
+    <span>Should have considered more scope creep into my own workflows &amp; asked for help sooner</span>
+  </div>
+  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-6 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-start gap-3 anim-fade-up anim-d3">
+    <i class="fa-solid fa-hands-clapping text-[2rem] text-[#e60024] self-center"></i>
+    <span>Biggest win was learning how to prototype such intricate designs</span>
+  </div>
+</div>
 
 ---
 layout: default
@@ -482,5 +510,5 @@ transition: fade-out
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" />
+<PinterestMasonry placement="title" left-top-small-src="/IMG_4215.jpg" left-mid-src="/20221117_091012.jpg" left-top-src="/PXL_20241205_015703401.jpg" right-tall-src="/IMG_20200523_120959.jpg" right-bottom-src="/PXL_20240210_213758992.jpg" />
 </div>

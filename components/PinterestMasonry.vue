@@ -7,6 +7,32 @@ const props = withDefaults(
     placement?: 'default' | 'title'
     /** When false, all tiles render as empty placeholder boxes (no images). */
     showImages?: boolean
+    /** Override just the span-full (bottom wide) tile with a specific image URL, even when showImages is false. */
+    spanSrc?: string
+    /** CSS object-position for the span tile image, e.g. "center 40%". Defaults to "center center". */
+    spanPosition?: string
+    /** Override the flex-grow of the span row to make it taller/shorter. Default is 0.58. */
+    spanFlex?: number
+    /** When true, merges the two right-stack tiles into a single tall tile. */
+    mergeRightStack?: boolean
+    /** Override the top-left tile with a specific image URL, even when showImages is false. */
+    leftTopSrc?: string
+    /** Override the bottom-left tile with a specific image URL, even when showImages is false. */
+    leftBottomSrc?: string
+    /** CSS object-position for the bottom-left tile image, e.g. "center 40%". */
+    leftBottomPosition?: string
+    /** Override the small top tile (slot[4]) in title placement with a specific image URL. */
+    leftTopSmallSrc?: string
+    /** Override the middle-left tile (slot[1]) in title placement with a specific image URL. */
+    leftMidSrc?: string
+    /** Override the top-right tile in title placement with a specific image URL. */
+    rightTallSrc?: string
+    /** Override the bottom-right tile in title placement with a specific image URL. */
+    rightBottomSrc?: string
+    /** Override the right tall tile with a specific image/gif URL, even when showImages is false. */
+    rightSrc?: string
+    /** CSS object-position for the right tile image, e.g. "left center". Defaults to "center center". */
+    rightPosition?: string
   }>(),
   { placement: 'default', showImages: true },
 )
@@ -22,7 +48,7 @@ const SLOT_OVERRIDES: readonly { slotIndex: number; pathSubstr: string }[] = [
   { slotIndex: 4, pathSubstr: '20210702_173403' },
 ]
 
-const EXCLUDED_PATH_SUBSTRS: readonly string[] = []
+const EXCLUDED_PATH_SUBSTRS: readonly string[] = ['datepicker', 'filter88', 'IMG_20200523', 'PXL_20241205', 'PXL_20240210', 'IMG_4215', '20221117_091012', 'IMG_4216']
 
 const SLOT_COUNT = 5
 
@@ -110,22 +136,22 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
     <template v-if="placement === 'title'">
       <div class="masonry">
         <div class="masonry-col">
-          <div class="tile tile--stretch" :class="{ 'tile--has-img': !!slots[4] }">
-            <img v-if="slots[4]" class="tile-img" style="object-position: center 15%" :src="slots[4]" alt="" />
+          <div class="tile tile--stretch" :class="{ 'tile--has-img': leftTopSmallSrc || !!slots[4] }">
+            <img v-if="leftTopSmallSrc || slots[4]" class="tile-img" style="object-position: center 15%" :src="leftTopSmallSrc || slots[4]" alt="" />
           </div>
-          <div class="tile tile--stretch" :class="{ 'tile--has-img': !!slots[1] }">
-            <img v-if="slots[1]" class="tile-img" style="object-position: center 35%" :src="slots[1]" alt="" />
+          <div class="tile tile--stretch" :class="{ 'tile--has-img': leftMidSrc || !!slots[1] }">
+            <img v-if="leftMidSrc || slots[1]" class="tile-img" style="object-position: center 35%" :src="leftMidSrc || slots[1]" alt="" />
           </div>
-          <div class="tile tile--stretch" style="flex: 1.8 1 0" :class="{ 'tile--has-img': !!slots[0] }">
-            <img v-if="slots[0]" class="tile-img tile-img--nudge-down" style="object-position: center 70%" :src="slots[0]" alt="" />
+          <div class="tile tile--stretch" style="flex: 1.8 1 0" :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }">
+            <img v-if="leftTopSrc || slots[0]" class="tile-img tile-img--nudge-down" style="object-position: center 70%" :src="leftTopSrc || slots[0]" alt="" />
           </div>
         </div>
         <div class="masonry-col">
-          <div class="tile tile--stretch" style="flex: 1.6 1 0" :class="{ 'tile--has-img': !!slots[2] }">
-            <img v-if="slots[2]" class="tile-img" :src="slots[2]" alt="" />
+          <div class="tile tile--stretch" style="flex: 1.6 1 0" :class="{ 'tile--has-img': rightTallSrc || !!slots[2] }">
+            <img v-if="rightTallSrc || slots[2]" class="tile-img" :src="rightTallSrc || slots[2]" alt="" />
           </div>
-          <div class="tile tile--stretch" :class="{ 'tile--has-img': !!slots[3] }">
-            <img v-if="slots[3]" class="tile-img" :src="slots[3]" alt="" />
+          <div class="tile tile--stretch" :class="{ 'tile--has-img': rightBottomSrc || !!slots[3] }">
+            <img v-if="rightBottomSrc || slots[3]" class="tile-img" :src="rightBottomSrc || slots[3]" alt="" />
           </div>
         </div>
       </div>
@@ -137,32 +163,36 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
             <div
               v-if="p.kind === 'cell'"
               class="tile tile--stretch"
-              :class="{ 'tile--has-img': showImages && !!p.c.src }"
+              :class="{ 'tile--has-img': (p.c.nudge && leftTopSrc) || (!p.c.nudge && leftBottomSrc) || (showImages && !!p.c.src) }"
               :style="leftTileFlex(p.c)"
             >
               <img
-                v-if="showImages && p.c.src"
+                v-if="(p.c.nudge && leftTopSrc) || (!p.c.nudge && leftBottomSrc) || (showImages && p.c.src)"
                 class="tile-img"
-                :class="{ 'tile-img--nudge-down': p.c.nudge }"
-                :src="p.c.src"
+                :class="{ 'tile-img--nudge-down': p.c.nudge && !leftTopSrc }"
+                :src="p.c.nudge && leftTopSrc ? leftTopSrc : (!p.c.nudge && leftBottomSrc ? leftBottomSrc : p.c.src)"
+                :style="(!p.c.nudge && leftBottomPosition) ? { objectPosition: leftBottomPosition } : {}"
                 alt=""
               />
             </div>
           </template>
         </div>
-        <div class="masonry-right-stack">
+        <div class="masonry-right-stack" :style="mergeRightStack ? { gridTemplateRows: 'minmax(0, 1fr)' } : {}">
           <div
             class="tile tile--stretch"
-            :class="{ 'tile--has-img': showImages && !!rightCell.src }"
+            :style="mergeRightStack ? { flex: '1 1 0' } : {}"
+            :class="{ 'tile--has-img': rightSrc || (showImages && !!rightCell.src) }"
           >
             <img
-              v-if="showImages && rightCell.src"
+              v-if="rightSrc || (showImages && rightCell.src)"
               class="tile-img"
-              :src="rightCell.src"
+              :src="rightSrc || rightCell.src"
+              :style="rightPosition ? { objectPosition: rightPosition } : {}"
               alt=""
             />
           </div>
           <div
+            v-if="!mergeRightStack"
             class="tile tile--stretch tile--right-below"
             :class="{ 'tile--has-img': showImages && !!rightBelowCell.src }"
           >
@@ -175,15 +205,16 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
           </div>
         </div>
       </div>
-      <div class="masonry-span">
+      <div class="masonry-span" :style="spanFlex != null ? { flex: `${spanFlex} 1 0` } : {}">
         <div
           class="tile tile--stretch tile--span-full"
-          :class="{ 'tile--has-img': showImages && !!spanCell.src }"
+          :class="{ 'tile--has-img': (spanSrc) || (showImages && !!spanCell.src) }"
         >
           <img
-            v-if="showImages && spanCell.src"
+            v-if="spanSrc || (showImages && spanCell.src)"
             class="tile-img"
-            :src="spanCell.src"
+            :src="spanSrc || spanCell.src"
+            :style="spanPosition ? { objectPosition: spanPosition } : {}"
             alt=""
           />
         </div>

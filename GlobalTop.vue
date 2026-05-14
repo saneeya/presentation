@@ -11,7 +11,7 @@ const tabIndex = computed<number | null>(() => {
   if (p >= 5  && p <= 6)  return 0
   if (p >= 7  && p <= 11) return 1
   if (p >= 12 && p <= 16) return 2
-  if (p >= 17 && p <= 18) return 3
+  if (p >= 17 && p <= 19) return 3
   return null
 })
 
@@ -106,7 +106,7 @@ onMounted(() => nextTick(updatePill))
   font-weight: 600;
   letter-spacing: 0.01em;
   color: #94a3b8;
-  padding: 0.3rem 0.6rem;
+  padding: 0.3rem 0.85rem;
   text-align: center;
   white-space: nowrap;
   transition: color 0.25s ease;

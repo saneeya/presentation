@@ -89,7 +89,7 @@ function layerOpacity(idx: number, V: number) {
 
 /* Compact mode: less margin so a heading above doesn't squeeze the images */
 .ad-manager-stack--compact {
-  --stack-pull-down: -1rem; /* pull images up so shadow has room below */
+  --stack-pull-down: 2rem; /* push images down within the compact viewport */
   margin-top: 0;
   padding-bottom: 0;
 }

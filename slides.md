@@ -67,7 +67,7 @@ InvitePushRow uses InviteClickGap for strip pacing (Space / Right).
 transition: slide-up
 ---
 
-## Ad tech background
+## Background
 
 <AdManagerStack />
 

@@ -1,9 +1,9 @@
 /* Light deck: near-white canvas + soft silver-gray layered depth */
 :root {
-  --deck-bg-base: #f8f9fb;
+  --deck-bg-base: #fafaf8;
   --deck-bg-elevated: #ffffff;
-  --deck-bg-tint: rgba(148, 163, 184, 0.11);
-  --deck-bg-corner: rgba(203, 213, 225, 0.28);
+  --deck-bg-tint: rgba(180, 175, 165, 0.13);
+  --deck-bg-corner: rgba(180, 175, 165, 0.20);
   --deck-accent: #0d9488;
   --deck-accent-dim: #0f766e;
   --deck-ink: #0f172a;
@@ -32,7 +32,7 @@ body::before {
   background-image:
     radial-gradient(ellipse 115% 90% at 18% -8%, var(--deck-bg-tint), transparent 58%),
     radial-gradient(ellipse 78% 62% at 100% 100%, var(--deck-bg-corner), transparent 52%),
-    linear-gradient(188deg, var(--deck-bg-elevated) 0%, #f6f7f9 40%, var(--deck-bg-base) 72%, #f0f2f5 100%);
+    linear-gradient(188deg, var(--deck-bg-elevated) 0%, #fafaf8 40%, #f4f2ee 72%, #edeae4 100%);
 }
 
 html,
@@ -150,14 +150,14 @@ body,
 #slide-content .slidev-layout h2 {
   color: #e60024;
   font-weight: 700;
-  font-size: 2.3rem;
+  font-size: 1.85rem;
 }
 
 /* User groups slide: heading lives in left column with list (aligns with list edge) */
 #slide-content .slidev-layout .user-groups-slide-heading {
   color: #e60024;
   font-weight: 700;
-  font-size: 2.3rem;
+  font-size: 1.85rem;
   letter-spacing: -0.02em;
   line-height: 1.15;
 }
@@ -318,4 +318,48 @@ body,
 /* All raster / SVG images in slide body */
 .slidev-layout img {
   box-shadow: 0 var(--deck-img-shadow-y) var(--deck-img-shadow-blur) var(--deck-img-shadow-color);
+}
+
+/* ─── Global pill-tab tracker (GlobalTop.vue) — hide per-slide instances ─── */
+/* The GlobalTop component renders outside the slide transition container so it
+   stays fixed while slides animate. Per-slide CaseStudyPillTabs are kept in
+   the DOM as invisible layout spacers so content positions are unchanged. */
+.slidev-layout .pill-tabs {
+  visibility: hidden;
+}
+
+/* ─── Entrance animations ─── */
+@keyframes anim-fade-up {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes anim-fade-in-scale {
+  from { opacity: 0; transform: scale(0.96); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes anim-fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.anim-fade-up {
+  animation: anim-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-in-scale {
+  animation: anim-fade-in-scale 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.anim-fade-in {
+  animation: anim-fade-in 0.5s ease both;
+}
+.anim-d1 { animation-delay: 0.08s; }
+.anim-d2 { animation-delay: 0.18s; }
+.anim-d3 { animation-delay: 0.28s; }
+.anim-d4 { animation-delay: 0.38s; }
+.anim-d5 { animation-delay: 0.48s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-fade-in-scale,
+  .anim-fade-in {
+    animation: none;
+  }
 }

@@ -124,7 +124,7 @@ onMounted(() => {
 .hero-wrap--compact .hero-sub .hero-sub-stack {
   flex: 1 1 0;
   min-height: 0;
-  padding-top: 13rem;
+  padding-top: 5rem;
 }
 
 .hero-sub-stack :deep(p) {

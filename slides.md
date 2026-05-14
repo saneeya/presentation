@@ -26,7 +26,7 @@ layoutClass: h-full
 <div class="flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
 <HeroTitle compact>
-  Present at your own pace
+  <span style="color:#3a4652">Filtering</span> Through the Noise
 
   <template #subtitle>
     <p>Saneeya Khan</p>
@@ -83,9 +83,9 @@ transition: slide-left
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl"><span class="block">Making</span><span class="block whitespace-nowrap"><span class="text-[#e60024]">Filters</span> Functional</span></div>
-      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85">Redoing filters for a data-dense tool</div>
-      <div class="mt-auto self-start">
+      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Making</span><span class="block whitespace-nowrap"><span class="text-[#e60024]">Filters</span> Functional</span></div>
+      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Redoing filters for a data-dense tool</div>
+      <div class="mt-auto self-start anim-fade-up anim-d4">
         <span class="hero-pill">CASE STUDY</span>
       </div>
     </div>
@@ -104,11 +104,12 @@ src: ./slides/more.md
 
 ---
 layout: default
+transition: fade
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<div class="mt-4 flex w-full justify-center px-2">
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
   <video
     class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-5xl"
     autoplay
@@ -125,11 +126,12 @@ layout: default
 
 ---
 layout: default
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<div class="mt-4 flex w-full justify-center px-2">
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
   <img
     src="./slides/assets/Filtermap.png"
     alt="Filter map"
@@ -147,19 +149,19 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User feedback</h2>
 
 <div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-4 max-w-3xl">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-brands fa-google text-[#e60024] text-[2rem]"></i>
     <span>Users were used to having custom filters in GAM (which we were trying to replace)</span>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <i class="fa-solid fa-tags text-[#e60024] text-[2rem]"></i>
     <span>They wanted to filter by asset tags &amp; targeting values</span>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
     <i class="fa-regular fa-square-caret-down text-[#e60024] text-[2rem]"></i>
     <span>Filter list is one long dropdown, a lot of scrolling</span>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
     <i class="fa-solid fa-filter text-[#e60024] text-[2rem]"></i>
     <span>They wanted more granular filtering (AND/OR, IS, IS NOT, etc.)</span>
   </div>
@@ -175,17 +177,60 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Technical issues</h2>
 
 <div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-solid fa-filter-circle-xmark text-[#e60024] text-[2rem] self-center"></i>
     <span>Current filter behaviors were implemented inconsistently</span>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <i class="fa-solid fa-layer-group text-[#e60024] text-[2rem] self-center"></i>
     <span>Filters were added on ad hoc on a case by case, field by field basis</span>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
     <i class="fa-solid fa-expand text-[#e60024] text-[2rem] self-center"></i>
     <span>Filters were difficult to scale especially when new fields or data types were introduced</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-up
+---
+
+<CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<div class="flex h-full w-full items-center justify-center">
+  <div
+    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#e60024] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+  >
+    Filters were inconsistent, difficult to use, and did not have boolean (AND/OR) logic.
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-up
+---
+
+<CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Introduce a filter panel or some other new selection area</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Have consistent style for each type of filter (radio, multi-select, etc)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Introduce boolean options (AND/OR)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Enable users to save their filters and share them</span>
   </div>
 </div>
 
@@ -194,58 +239,18 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="1" />
-
-<div class="flex h-full w-full items-center justify-center">
-  <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#e60024] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)]"
-  >
-    Filters were inconsistent, difficult to use, and did not have boolean (AND/OR) logic.
-  </div>
-</div>
-
----
-layout: default
----
-
-<CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
-    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span>Introduce a filter panel or some other new selection area</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
-    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span>Have consistent style for each type of filter (radio, multi-select, etc)</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
-    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span>Introduce boolean options (AND/OR)</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
-    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span>Enable users to save their filters and share them</span>
-  </div>
-</div>
-
----
-layout: default
----
-
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
 
 <AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" />
 
 ---
 layout: default
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
 
-<div class="mt-4 flex w-full justify-center px-2">
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
   <img
     src="./slides/assets/FI.png"
     alt="Advanced Filters"
@@ -255,11 +260,12 @@ layout: default
 
 ---
 layout: default
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
 
-<div class="mt-4 flex w-full justify-center px-2">
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
   <img
     src="./slides/assets/advancefilters.png"
     alt="Advanced Filters"
@@ -269,11 +275,12 @@ layout: default
 
 ---
 layout: default
+transition: slide-left
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="2" />
 
-<div class="mt-4 flex w-full justify-center px-2">
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
   <img
     src="./slides/assets/advancefilters2.png"
     alt="Advanced Filters 2"
@@ -283,6 +290,7 @@ layout: default
 
 ---
 layout: default
+transition: slide-up
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="3" />
@@ -339,6 +347,7 @@ layout: default
 
 ---
 layout: default
+transition: fade
 ---
 
 <CaseStudyPillTabs class="-mt-10 mb-10 mx-auto" :initial-index="3" />

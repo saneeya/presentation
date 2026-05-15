@@ -14,7 +14,7 @@ fonts:
   mono: JetBrains Mono
   provider: google
   italic: true
-  weights: [100, 200, 300, 400, 500, 600, 700, 800, 900]
+  weights: [ 100, 200, 300, 400, 500, 600, 700, 800, 900 ]
 themeConfig:
   primary: '#0d9488'
 defaults:
@@ -46,9 +46,12 @@ layoutClass: h-full
 </div>
 
 <!--
-Welcome note: open Presenter Mode from the bottom bar to see this while presenting.
--->
+hello
 
+let me show you "real life UX" process
+
+a few years ago threw a housewarming/halloween party
+-->
 
 ---
 transition: fade-out
@@ -60,7 +63,11 @@ layout: default
 <InvitePushRow />
 
 <!--
-InvitePushRow uses InviteClickGap for strip pacing (Space / Right).
+Invite -> wayfinding sign -> bathroom sign -> wifi -> QR Code -> google from
+
+- went all out but out of scope: games, recipes
+-no one took candy
+- user feedback was great
 -->
 
 ---
@@ -72,7 +79,9 @@ transition: slide-up
 <AdManagerStack />
 
 <!--
-AdManagerStack: Space / Right advances stacked screenshots (InviteClickGap).
+- Account Manager -> Campaign Creation -> Admin Portal -> MC Traffciking
+- DCM for 4 years, grew from about $10m to $100m
+- Now work on internal tooling
 -->
 
 ---
@@ -99,6 +108,10 @@ transition: slide-left
 <PinterestMasonry :show-images="false" span-src="/FI.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="/MCFilters.gif" right-position="left center" left-top-src="/filter88.png" left-bottom-src="/datepicker.png" left-bottom-position="center 18%" />
 </div>
 
+<!--
+- recent project which is in dev
+-->
+
 ---
 src: ./slides/more.md
 ---
@@ -112,7 +125,7 @@ transition: fade
 
 <div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
   <video
-    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-5xl"
+    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)] md:max-w-5xl"
     autoplay
     loop
     muted
@@ -125,6 +138,10 @@ transition: fade
   </video>
 </div>
 
+<!--
+- filters are one long scrolls
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -136,9 +153,13 @@ transition: slide-left
   <img
     src="./slides/assets/Filtermap.png"
     alt="Filter map"
-    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
+    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)] md:max-w-4xl"
   />
 </div>
+
+<!--
+- mapping it out help me categorize them
+-->
 
 ---
 layout: default
@@ -149,7 +170,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User feedback</h2>
 
-<div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-4 max-w-3xl">
+<div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-4 w-full">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-brands fa-google text-[#e60024] text-[2rem]"></i>
     <span>Users were used to having custom filters in GAM (which we were trying to replace)</span>
@@ -167,6 +188,11 @@ transition: slide-left
     <span>They wanted more granular filtering (AND/OR, IS, IS NOT, etc.)</span>
   </div>
 </div>
+
+<!--
+- they really wanted boolean and more filter options
+- wanted to share filters
+-->
 
 ---
 layout: default
@@ -191,6 +217,10 @@ transition: slide-left
     <span>Filters were difficult to scale especially when new fields or data types were introduced</span>
   </div>
 </div>
+
+<!--
+- new filters took a while to implement
+-->
 
 ---
 layout: default
@@ -246,6 +276,12 @@ transition: slide-left
 
 <AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" :compact="true" />
 
+<!--
+- legacy tool, ad load manager used for ad pods
+- programmatic 
+- asset review
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -257,9 +293,15 @@ transition: slide-left
   <img
     src="./slides/assets/FI.png"
     alt="Advanced Filters"
-    class="mx-auto block h-auto max-h-[min(440px,50vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
+    class="mx-auto block h-auto max-h-[min(440px,50vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)] md:max-w-4xl"
   />
 </div>
+
+<!--
+- wanted side panel design
+
+- too many booleans
+-->
 
 ---
 layout: default
@@ -272,9 +314,13 @@ transition: slide-left
   <img
     src="./slides/assets/advancefilters.png"
     alt="Advanced Filters"
-    class="mx-auto block h-auto max-h-[min(440px,50vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
+    class="mx-auto block h-auto max-h-[min(440px,50vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)] md:max-w-4xl"
   />
 </div>
+
+<!--
+SHOW DEMO
+-->
 
 ---
 layout: default
@@ -353,6 +399,12 @@ transition: slide-left
     <span>Biggest win was learning how to prototype such intricate designs</span>
   </div>
 </div>
+
+<!--
+- this is in development; working with eng if there are any addittinal edge cases
+
+- will do design/own QA when testing environment is ready
+-->
 
 ---
 layout: two-cols

@@ -291,7 +291,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   align-items: center;
   justify-content: center;
   min-height: 0;
-  box-shadow: 0 1px 4px rgb(0 0 0 / 0.06), 0 4px 16px rgb(0 0 0 / 0.1);
+  box-shadow: 0 1px 3px rgb(0 0 0 / 0.04), 0 3px 10px rgb(0 0 0 / 0.06);
   overflow: hidden;
 }
 

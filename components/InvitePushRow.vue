@@ -133,7 +133,7 @@ function cardZ(idx: number): number {
   max-width: 100%;
   max-height: 395px;
   border-radius: 0.85rem;
-  box-shadow: 0 6px 24px rgb(0 0 0 / 0.14);
+  box-shadow: 0 3px 14px rgb(0 0 0 / 0.07);
 }
 
 </style>

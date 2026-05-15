@@ -131,7 +131,7 @@ function layerOpacity(idx: number, V: number) {
   transition:
     transform var(--ad-stack-motion-ms) var(--ad-stack-motion-ease),
     opacity calc(var(--ad-stack-motion-ms) * 0.85) var(--ad-stack-motion-ease);
-  filter: drop-shadow(0 6px 16px rgb(0 0 0 / 0.12));
+  filter: drop-shadow(0 2px 6px rgb(0 0 0 / 0.04));
 }
 
 .ad-manager-stack__layer--off {

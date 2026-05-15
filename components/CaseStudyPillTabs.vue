@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 
 const TABS = ['Context', 'Problem', 'Ideation', 'Outcome'] as const
 
@@ -16,6 +16,10 @@ function clampTabIndex(n: number) {
 }
 
 const active = ref(clampTabIndex(props.initialIndex))
+
+watch(() => props.initialIndex, (val) => {
+  active.value = clampTabIndex(val ?? 0)
+}, { immediate: true })
 </script>
 
 <template>

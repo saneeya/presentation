@@ -10,8 +10,8 @@ const tabIndex = computed<number | null>(() => {
   const p = currentPage.value
   if (p >= 5  && p <= 6)  return 0
   if (p >= 7  && p <= 11) return 1
-  if (p >= 12 && p <= 16) return 2
-  if (p >= 17 && p <= 19) return 3
+  if (p >= 12 && p <= 15) return 2
+  if (p >= 16 && p <= 17) return 3
   return null
 })
 

@@ -9,7 +9,7 @@
   --deck-ink: #0f172a;
   --deck-muted: #3a4652;
   /* Must win over @slidev/client/styles/vars.css (:root sets black later in bundle) */
-  --slidev-slide-container-background: transparent !important;
+  --slidev-slide-container-background: #ffffff !important;
   /* Image drop shadow (#000 @ ~10–15% opacity, blur ~8–12px, Y offset ~2–4px) */
   --deck-img-shadow-y: 3px;
   --deck-img-shadow-blur: 10px;
@@ -50,6 +50,12 @@ body,
   color: var(--deck-ink);
   background-color: transparent;
 }
+
+.layout-wide-right {
+  grid-template-columns: 1fr 1.5fr !important;
+}
+
+
 
 /* Title slide: stack SlideBottom / layout / SlideTop in ONE grid cell so layer
    components do not reserve in-flow height (avoids ~30–40px gap pushing masonry down). */

@@ -7,6 +7,12 @@ const props = withDefaults(
   defineProps<{
     images?: string[]
     compact?: boolean
+    /** Override compact viewport height in px (default 385) */
+    viewportHeight?: number
+    /** Override layer max-width e.g. "55rem" (default "40rem") */
+    layerMaxWidth?: string
+    /** Override --stack-pull-down CSS var e.g. "0rem" to move images up (default "2rem" in compact) */
+    pullDown?: string
   }>(),
   {
     images: () => [
@@ -49,8 +55,11 @@ function layerOpacity(idx: number, V: number) {
 <template>
   <InviteClickGap v-for="i in gapIndices" :key="i" />
 
-  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact }">
-    <div class="ad-manager-stack__viewport">
+  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact }" :style="props.pullDown !== undefined ? { '--stack-pull-down': props.pullDown } : {}">
+    <div
+      class="ad-manager-stack__viewport"
+      :style="props.viewportHeight ? { height: `${props.viewportHeight}px`, minHeight: `${props.viewportHeight}px` } : {}"
+    >
       <div class="ad-manager-stack__pile">
         <div
           v-for="(src, idx) in images"
@@ -64,6 +73,7 @@ function layerOpacity(idx: number, V: number) {
             zIndex: 10 + idx,
             '--layer-i': idx,
             opacity: layerOpacity(idx, visibleCount),
+            ...(props.layerMaxWidth ? { width: `min(80%, ${props.layerMaxWidth})` } : {}),
           }"
         >
           <img :src="src" alt="" class="ad-manager-stack__img">

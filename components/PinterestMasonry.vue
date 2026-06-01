@@ -25,6 +25,16 @@ const props = withDefaults(
     leftTopSmallSrc?: string
     /** Override the middle-left tile (slot[1]) in title placement with a specific image URL. */
     leftMidSrc?: string
+    /** When true, hides the middle-left tile in title placement so the top tile fills the space. */
+    hideLeftMid?: boolean
+    /** Extra tile rendered above all others in the title left column. */
+    leftExtraTopSrc?: string
+    /** flex-grow for the extra top tile. Default: 1. */
+    leftExtraTopGrow?: number
+    /** flex-grow for the top-small tile in title placement (slot[4]). Default: 1. */
+    titleTopGrow?: number
+    /** flex-grow for the bottom tile in title placement (slot[0]). Default: 1.8. */
+    titleBottomGrow?: number
     /** Override the top-right tile in title placement with a specific image URL. */
     rightTallSrc?: string
     /** Override the bottom-right tile in title placement with a specific image URL. */
@@ -33,6 +43,8 @@ const props = withDefaults(
     rightSrc?: string
     /** CSS object-position for the right tile image, e.g. "left center". Defaults to "center center". */
     rightPosition?: string
+    /** When set, adds this CSS border to every image tile, e.g. "1px solid #cbd5e1" */
+    tileBorder?: string
   }>(),
   { placement: 'default', showImages: true },
 )
@@ -136,13 +148,16 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
     <template v-if="placement === 'title'">
       <div class="masonry">
         <div class="masonry-col">
-          <div class="tile tile--stretch" :class="{ 'tile--has-img': leftTopSmallSrc || !!slots[4] }">
+          <div v-if="leftExtraTopSrc" class="tile tile--stretch tile--has-img" :style="{ flex: `${leftExtraTopGrow ?? 1} 1 0` }">
+            <img class="tile-img" :src="leftExtraTopSrc" alt="" />
+          </div>
+          <div class="tile tile--stretch" :style="{ flex: `${titleTopGrow ?? 1} 1 0` }" :class="{ 'tile--has-img': leftTopSmallSrc || !!slots[4] }">
             <img v-if="leftTopSmallSrc || slots[4]" class="tile-img" style="object-position: center 15%" :src="leftTopSmallSrc || slots[4]" alt="" />
           </div>
-          <div class="tile tile--stretch" :class="{ 'tile--has-img': leftMidSrc || !!slots[1] }">
+          <div v-if="!hideLeftMid" class="tile tile--stretch" :class="{ 'tile--has-img': leftMidSrc || !!slots[1] }">
             <img v-if="leftMidSrc || slots[1]" class="tile-img" style="object-position: center 35%" :src="leftMidSrc || slots[1]" alt="" />
           </div>
-          <div class="tile tile--stretch" style="flex: 1.8 1 0" :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }">
+          <div class="tile tile--stretch" :style="{ flex: `${titleBottomGrow ?? 1.8} 1 0` }" :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }">
             <img v-if="leftTopSrc || slots[0]" class="tile-img tile-img--nudge-down" style="object-position: center 70%" :src="leftTopSrc || slots[0]" alt="" />
           </div>
         </div>
@@ -164,7 +179,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
               v-if="p.kind === 'cell'"
               class="tile tile--stretch"
               :class="{ 'tile--has-img': (p.c.nudge && leftTopSrc) || (!p.c.nudge && leftBottomSrc) || (showImages && !!p.c.src) }"
-              :style="leftTileFlex(p.c)"
+              :style="{ ...leftTileFlex(p.c), ...(tileBorder ? { border: tileBorder } : {}) }"
             >
               <img
                 v-if="(p.c.nudge && leftTopSrc) || (!p.c.nudge && leftBottomSrc) || (showImages && p.c.src)"
@@ -180,7 +195,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
         <div class="masonry-right-stack" :style="mergeRightStack ? { gridTemplateRows: 'minmax(0, 1fr)' } : {}">
           <div
             class="tile tile--stretch"
-            :style="mergeRightStack ? { flex: '1 1 0' } : {}"
+            :style="{ ...(mergeRightStack ? { flex: '1 1 0' } : {}), ...(tileBorder ? { border: tileBorder } : {}) }"
             :class="{ 'tile--has-img': rightSrc || (showImages && !!rightCell.src) }"
           >
             <img
@@ -209,6 +224,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
         <div
           class="tile tile--stretch tile--span-full"
           :class="{ 'tile--has-img': (spanSrc) || (showImages && !!spanCell.src) }"
+          :style="tileBorder ? { border: tileBorder } : {}"
         >
           <img
             v-if="spanSrc || (showImages && spanCell.src)"
@@ -291,7 +307,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   align-items: center;
   justify-content: center;
   min-height: 0;
-  box-shadow: 0 1px 3px rgb(0 0 0 / 0.04), 0 3px 10px rgb(0 0 0 / 0.06);
+  box-shadow: none;
   overflow: hidden;
 }
 

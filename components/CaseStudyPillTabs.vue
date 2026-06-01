@@ -1,25 +1,12 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-
-const TABS = ['Context', 'Problem', 'Ideation', 'Outcome'] as const
+const TABS = ['Context', 'Problem', 'Process', 'Outcome'] as const
 
 const props = withDefaults(
-  defineProps<{
-    /** Tab index: 0 Context, 1 Problem, 2 Ideation, 3 Specs */
-    initialIndex?: number
-  }>(),
+  defineProps<{ initialIndex?: number }>(),
   { initialIndex: 0 },
 )
 
-function clampTabIndex(n: number) {
-  return Math.min(Math.max(0, Math.floor(n)), TABS.length - 1)
-}
-
-const active = ref(clampTabIndex(props.initialIndex))
-
-watch(() => props.initialIndex, (val) => {
-  active.value = clampTabIndex(val ?? 0)
-}, { immediate: true })
+const active = Math.min(Math.max(0, props.initialIndex), TABS.length - 1)
 </script>
 
 <template>
@@ -34,7 +21,6 @@ watch(() => props.initialIndex, (val) => {
         :aria-selected="active === i"
         class="pill-tabs__tab"
         :class="{ 'pill-tabs__tab--active': active === i }"
-        @click="active = i"
       >
         {{ label }}
       </button>
@@ -67,7 +53,7 @@ watch(() => props.initialIndex, (val) => {
   min-width: 0;
   border: none;
   background: transparent;
-  cursor: pointer;
+  cursor: default;
   font-family: inherit;
   font-size: 0.875rem;
   font-weight: 600;
@@ -80,22 +66,9 @@ watch(() => props.initialIndex, (val) => {
     background-color 0.15s ease;
 }
 
-.pill-tabs__tab:hover {
-  color: #64748b;
-}
-
-.pill-tabs__tab:focus-visible {
-  outline: 2px solid #e60024;
-  outline-offset: 2px;
-}
-
 .pill-tabs__tab--active {
   background: #e60024;
   color: #fff;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
-}
-
-.pill-tabs__tab--active:hover {
-  color: #fff;
 }
 </style>

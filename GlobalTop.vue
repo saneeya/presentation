@@ -1,15 +1,16 @@
 <script setup lang="ts">
-import { computed, ref, watch, nextTick, onMounted } from 'vue'
+import { computed, ref, watch, nextTick, onMounted, onUnmounted } from 'vue'
 import { useNav } from '@slidev/client'
 
 const { currentPage } = useNav()
 
-const TABS = ['Context', 'Problem', 'Ideation', 'Outcome'] as const
+const TABS = ['Background', 'Problem', 'Ideation', 'Outcome'] as const
 
 const tabIndex = computed<number | null>(() => {
   const p = currentPage.value
   if (p >= 5  && p <= 6)  return 0
-  if (p >= 7  && p <= 11) return 1
+  if (p === 7)            return 0
+  if (p >= 8  && p <= 11) return 1
   if (p >= 12 && p <= 15) return 2
   if (p >= 16 && p <= 17) return 3
   return null
@@ -23,8 +24,6 @@ function updatePill() {
   const tabs = trackRef.value.querySelectorAll<HTMLElement>('.gt-tab')
   const active = tabs[tabIndex.value]
   if (!active) return
-  // Use offset values — these are in CSS pixel space and work correctly
-  // even when Slidev's scale transform is applied to the slide canvas.
   pillStyle.value = {
     width:   `${active.offsetWidth}px`,
     left:    `${active.offsetLeft}px`,
@@ -32,8 +31,16 @@ function updatePill() {
   }
 }
 
+let ro: ResizeObserver | null = null
 watch(tabIndex, () => nextTick(updatePill))
-onMounted(() => nextTick(updatePill))
+onMounted(() => {
+  nextTick(updatePill)
+  if (trackRef.value) {
+    ro = new ResizeObserver(() => updatePill())
+    ro.observe(trackRef.value)
+  }
+})
+onUnmounted(() => ro?.disconnect())
 </script>
 
 <template>
@@ -76,8 +83,7 @@ onMounted(() => nextTick(updatePill))
   background: #fff;
   border-radius: 9999px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.06), 0 2px 8px rgb(0 0 0 / 0.06);
-  min-width: min(100%, 26rem);
-  max-width: min(100%, 34rem);
+  width: 480px;
   box-sizing: border-box;
 }
 

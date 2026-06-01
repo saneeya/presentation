@@ -144,7 +144,9 @@ transition: fade
 
 <CaseStudyPillTabs :key="s6" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" :compact="true" />
+<p class="mt-2 mb-0 text-sm italic text-slate-500">*FKA Hulu Ad Manager</p>
+
+<AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="1rem" />
 
 <!--
 - filters are one long scrolls
@@ -814,7 +816,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s7_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Tasks at hand</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Starting off</h2>
 
 <div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-4 w-full">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
@@ -845,6 +847,209 @@ transition: slide-left
 <AdManagerStack :images="['./slides/assets/upload1.png', './slides/assets/upload2.png', './slides/assets/upload3.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="1rem" />
 
 ---
+layout: default
+transition: slide-left
+---
+
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Initial understanding</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
+    <span>VAST can contain multiple creatives on one tag</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
+    <span>VAST is a URL that needs to be "ingested"</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
+    <span>Platform can only used approved vendors and will replace macros</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s10_copy2" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Specifics</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Entry point to upload VAST</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Show macro replacement or error states when VAST is ingested</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Show creative assets in VAST</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<AdManagerStack :key="s37_copy" :images="['./slides/assets/VAST1a.png', './slides/assets/Vast1b.png', './slides/assets/VASTalternate.png', './slides/assets/Vast1c.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="2rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<AdManagerStack :key="s37_copy2" :images="['./slides/assets/VASTfeedback1.png', './slides/assets/VASTfeedback2.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="2rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s7_copy2" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Starting off</h2>
+
+<div class="grid grid-cols-2 gap-4 w-full">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <i class="fa-brands fa-google text-[#e60024] text-[2rem]"></i>
+    <span>Ops' understanding of VAST was not in line with product's ; leading to conflicting feedback</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-tags text-[#e60024] text-[2rem]"></i>
+    <span>Unexpected staffing changes</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Back to drawing board</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
+    <span>Research VAST from sales & ops users</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
+    <span>Revise how to display assets</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">VAST flow</h2>
+
+<div class="mt-12 flex w-full justify-center">
+  <img
+    src="./slides/assets/VASTmap.png"
+    alt="VAST map"
+    class="vast-map-img block h-auto max-h-[min(480px,55vh)] w-auto max-w-full object-contain md:max-w-4xl"
+  />
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy tool</h2>
+
+<div class="mt-6 flex w-full justify-center">
+  <img
+    src="./slides/assets/VASTTOOL.png"
+    alt="VAST tool"
+    class="block h-auto max-h-[min(420px,50vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)] md:max-w-3xl"
+  />
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy tool</h2>
+
+<AdManagerStack :key="s37_copy3" :images="['./slides/assets/vasttable1.png', './slides/assets/vasttable2.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="2rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy tool</h2>
+
+<AdManagerStack :key="s37_copy4" :images="['./slides/assets/VASTfinal1.png', './slides/assets/VASTfinal2.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="2rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy tool</h2>
+
+<AdManagerStack :key="s37_copy5" :images="['./slides/assets/Vastrevised1.png', './slides/assets/Vastrevised1a.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="2rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy tool</h2>
+
+<div class="mt-2 flex w-full justify-center px-2">
+  <video
+    class="mx-auto block h-auto max-h-[min(400px,46vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-4xl"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="metadata"
+  >
+    <source src="./slides/assets/VASTfinal.mp4" type="video/mp4" />
+  </video>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s7_copy3" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Impact</h2>
+
+<div class="grid grid-cols-3 gap-4 w-full">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <i class="fa-brands fa-google text-[#e60024] text-[2rem]"></i>
+    <span>VAST helped remove an Agency blocker</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-tags text-[#e60024] text-[2rem]"></i>
+    <span>I learned a lot about VAST usage and implementation</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <i class="fa-solid fa-diagram-project text-[#e60024] text-[2rem]"></i>
+    <span>VAST flow I created is still in platform today</span>
+  </div>
+</div>
+
+---
 layout: two-cols
 
 layoutClass: h-full
@@ -855,6 +1060,10 @@ transition: fade-out
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
 <HeroTitle compact>
   Thank you
+
+  <template #subtitle>
+    <p>Q&A</p>
+  </template>
 </HeroTitle>
   </div>
 </div>

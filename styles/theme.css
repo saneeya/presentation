@@ -326,6 +326,10 @@ body,
   box-shadow: 0 var(--deck-img-shadow-y) var(--deck-img-shadow-blur) var(--deck-img-shadow-color);
 }
 
+.slidev-layout img.vast-map-img {
+  box-shadow: none !important;
+}
+
 /* ─── Global pill-tab tracker (GlobalTop.vue) — hide per-slide instances ─── */
 /* The GlobalTop component renders outside the slide transition container so it
    stays fixed while slides animate. Per-slide CaseStudyPillTabs are kept in

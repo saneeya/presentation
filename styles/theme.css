@@ -330,6 +330,18 @@ body,
   box-shadow: none !important;
 }
 
+.slidev-layout .vast-xml-box {
+  max-height: min(520px, 68vh);
+  width: 28rem;
+  max-width: 100%;
+  color: #e60024;
+}
+
+.slidev-layout .vast-xml-box pre,
+.slidev-layout .vast-xml-box code {
+  color: #e60024 !important;
+}
+
 /* ─── Global pill-tab tracker (GlobalTop.vue) — hide per-slide instances ─── */
 /* The GlobalTop component renders outside the slide transition container so it
    stays fixed while slides animate. Per-slide CaseStudyPillTabs are kept in
@@ -398,3 +410,8 @@ body,
 .anim-check-d2 .check-filled { animation-delay: 0.7s; }
 .anim-check-d3 .check-filled { animation-delay: 1.1s; }
 .anim-check-d4 .check-filled { animation-delay: 1.5s; }
+
+/* Starting off: extra space below title before tile grid */
+#slide-content .slide-starting-off .starting-off-grid {
+  margin-top: 2.5rem;
+}

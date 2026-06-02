@@ -13,8 +13,12 @@ const props = withDefaults(
     layerMaxWidth?: string
     /** Override layer width percentage e.g. "95%" (default "80%") */
     layerWidthPct?: string
-    /** Override --stack-pull-down CSS var e.g. "0rem" to move images up (default "2rem" in compact) */
+    /** Vertical offset for layer anchor; negative moves images up (compact default "2rem") */
     pullDown?: string
+    /** Extra translateY on the pile e.g. "-3rem" */
+    pileShift?: string
+    /** object-position for stacked images e.g. "top center" */
+    imgPosition?: string
     /** Make the last image fade in instead of slide in */
     fadeInLast?: boolean
   }>(),
@@ -40,6 +44,11 @@ const visibleCount = computed(() =>
   Math.min(clicks.value + 1, props.images.length),
 )
 
+const rootStyle = computed(() => ({
+  '--stack-pull-down': props.pullDown ?? (props.compact ? '2rem' : '0.5rem'),
+  '--stack-pile-shift': props.pileShift ?? '0',
+}))
+
 function layerOpacity(idx: number, V: number) {
   if (idx >= V)
     return 0
@@ -59,7 +68,7 @@ function layerOpacity(idx: number, V: number) {
 <template>
   <InviteClickGap v-for="i in gapIndices" :key="i" />
 
-  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact }" :style="props.pullDown !== undefined ? { '--stack-pull-down': props.pullDown } : {}">
+  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact }" :style="rootStyle">
     <div
       class="ad-manager-stack__viewport"
       :style="props.viewportHeight ? { height: `${props.viewportHeight}px`, minHeight: `${props.viewportHeight}px` } : {}"
@@ -81,7 +90,12 @@ function layerOpacity(idx: number, V: number) {
             ...(props.layerMaxWidth ? { width: `min(${props.layerWidthPct ?? '80%'}, ${props.layerMaxWidth})` } : {}),
           }"
         >
-          <img :src="src" alt="" class="ad-manager-stack__img">
+          <img
+            :src="src"
+            alt=""
+            class="ad-manager-stack__img"
+            :style="props.imgPosition ? { objectPosition: props.imgPosition } : undefined"
+          >
         </div>
       </div>
     </div>
@@ -93,7 +107,7 @@ function layerOpacity(idx: number, V: number) {
   --stack-nudge-x: 10px;
   --stack-nudge-y: 0px;
   --stack-enter-x: min(72vw, 52rem);
-  --stack-pull-down: 0.5rem;
+  --stack-pile-shift: 0;
   --ad-stack-motion-ms: 560ms;
   --ad-stack-motion-ease: cubic-bezier(0.33, 1, 0.68, 1);
   width: 100%;
@@ -104,7 +118,6 @@ function layerOpacity(idx: number, V: number) {
 
 /* Compact mode: less margin so a heading above doesn't squeeze the images */
 .ad-manager-stack--compact {
-  --stack-pull-down: 2rem; /* push images down within the compact viewport */
   margin-top: 0;
   padding-bottom: 0;
 }
@@ -131,6 +144,7 @@ function layerOpacity(idx: number, V: number) {
   width: 100%;
   height: 100%;
   min-height: 0;
+  transform: translateY(var(--stack-pile-shift));
 }
 
 .ad-manager-stack__layer {

@@ -23,10 +23,16 @@ const props = withDefaults(
     leftBottomPosition?: string
     /** Override the small top tile (slot[4]) in title placement with a specific image URL. */
     leftTopSmallSrc?: string
+    /** CSS object-position for the small top tile. Defaults to "center 15%". */
+    leftTopSmallPosition?: string
+    /** CSS transform scale for the small top tile image, e.g. 1.4. Defaults to 1. */
+    leftTopSmallScale?: number
     /** Override the middle-left tile (slot[1]) in title placement with a specific image URL. */
     leftMidSrc?: string
     /** When true, hides the middle-left tile in title placement so the top tile fills the space. */
     hideLeftMid?: boolean
+    /** When true, hides the bottom-left tile (slot[0] / leftTopSrc) in title placement. */
+    hideLeftBottom?: boolean
     /** Extra tile rendered above all others in the title left column. */
     leftExtraTopSrc?: string
     /** flex-grow for the extra top tile. Default: 1. */
@@ -45,6 +51,8 @@ const props = withDefaults(
     rightPosition?: string
     /** When set, adds this CSS border to every image tile, e.g. "1px solid #cbd5e1" */
     tileBorder?: string
+    /** flex-grow for the left masonry column. Default: 1. */
+    leftColFlex?: number
   }>(),
   { placement: 'default', showImages: true },
 )
@@ -147,17 +155,17 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   <div class="masonry-root" :class="{ 'masonry-root--title': placement === 'title' }">
     <template v-if="placement === 'title'">
       <div class="masonry">
-        <div class="masonry-col">
+        <div class="masonry-col" :style="leftColFlex ? { flex: `${leftColFlex} 1 0` } : {}"  >
           <div v-if="leftExtraTopSrc" class="tile tile--stretch tile--has-img" :style="{ flex: `${leftExtraTopGrow ?? 1} 1 0` }">
             <img class="tile-img" :src="leftExtraTopSrc" alt="" />
           </div>
           <div class="tile tile--stretch" :style="{ flex: `${titleTopGrow ?? 1} 1 0` }" :class="{ 'tile--has-img': leftTopSmallSrc || !!slots[4] }">
-            <img v-if="leftTopSmallSrc || slots[4]" class="tile-img" style="object-position: center 15%" :src="leftTopSmallSrc || slots[4]" alt="" />
+            <img v-if="leftTopSmallSrc || slots[4]" class="tile-img" :style="{ objectPosition: leftTopSmallPosition ?? 'center 15%', transform: leftTopSmallScale ? `scale(${leftTopSmallScale})` : undefined }" :src="leftTopSmallSrc || slots[4]" alt="" />
           </div>
           <div v-if="!hideLeftMid" class="tile tile--stretch" :class="{ 'tile--has-img': leftMidSrc || !!slots[1] }">
             <img v-if="leftMidSrc || slots[1]" class="tile-img" style="object-position: center 35%" :src="leftMidSrc || slots[1]" alt="" />
           </div>
-          <div class="tile tile--stretch" :style="{ flex: `${titleBottomGrow ?? 1.8} 1 0` }" :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }">
+          <div v-if="!hideLeftBottom" class="tile tile--stretch" :style="{ flex: `${titleBottomGrow ?? 1.8} 1 0` }" :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }">
             <img v-if="leftTopSrc || slots[0]" class="tile-img tile-img--nudge-down" style="object-position: center 70%" :src="leftTopSrc || slots[0]" alt="" />
           </div>
         </div>

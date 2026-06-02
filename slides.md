@@ -26,7 +26,7 @@ layoutClass: h-full
 <div class="flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
 <HeroTitle compact>
-  TITLE TBD
+  <span style="color:#3A4652">Designing for <span style="color:#e60024">Advertisers</span></span>
 
   <template #subtitle>
     <p>Saneeya Khan</p>
@@ -52,6 +52,32 @@ let me show you "real life UX" process
 
 a few years ago threw a housewarming/halloween party
 -->
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agenda</h2>
+
+<div class="flex flex-col gap-6 w-full mt-10">
+  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d1">
+    <span class="text-[#e60024] font-semibold text-[1rem] w-6">01</span>
+    <span>Background</span>
+  </div>
+  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2">
+    <span class="text-[#e60024] font-semibold text-[1rem] w-6">02</span>
+    <span>Case Study: Campaign Creation Flow</span>
+  </div>
+  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3">
+    <span class="text-[#e60024] font-semibold text-[1rem] w-6">03</span>
+    <span>Case Study: VAST Implementation</span>
+  </div>
+  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4">
+    <span class="text-[#e60024] font-semibold text-[1rem] w-6">04</span>
+    <span>Q & A</span>
+  </div>
+</div>
 
 ---
 transition: fade-out
@@ -86,7 +112,7 @@ layoutClass: h-full layout-wide-right
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" :hide-left-mid="true" left-extra-top-src="/pictures/20191229_134146.jpg" :left-extra-top-grow="0.8" :title-top-grow="1.4" :title-bottom-grow="1.0" right-tall-src="/pictures/PXL_20251222_030347531.jpg" right-bottom-src="/pictures/PXL_20240608_204901982.jpg" />
+<PinterestMasonry placement="title" :hide-left-mid="true" :hide-left-bottom="true" left-extra-top-src="/pictures/20191229_134146.jpg" :left-extra-top-grow="1.4" :title-top-grow="2.2" :title-bottom-grow="1.0" left-top-small-src="./slides/assets/About2.jpg" left-top-small-position="center 40%" :left-top-small-scale="1.5" right-tall-src="./slides/assets/About1.jpg" right-bottom-src="/pictures/PXL_20240608_204901982.jpg" />
 </div>
 
 <!--
@@ -878,9 +904,10 @@ transition: slide-left
   </div>
   <div class="flex-1 min-w-0 flex justify-center">
     <img
-      src="./slides/assets/lineitem_name.png"
-      alt="Line Item Name"
+      src="./slides/assets/jiraboard.png"
+      alt="Jira Board"
       class="block h-auto max-h-[min(380px,46vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)]"
+      style="margin-top: -1rem;"
     />
   </div>
 </div>
@@ -954,6 +981,25 @@ transition: slide-left
 </div>
 
 ---
+layout: default
+transition: slide-left
+---
+
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Learnings</h2>
+
+<div class="grid grid-cols-2 gap-4 w-full mt-10">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <i class="fa-solid fa-clock text-[#e60024] text-[2rem] self-center"></i>
+    <span>Secure help sooner. Was able to secure budget for contractor but not until the very end.</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-route text-[#e60024] text-[2rem] self-center"></i>
+    <span>Set up timeline for deliverables earlier. Adjust scope as needed.</span>
+  </div>
+</div>
+
+---
 layout: two-cols
 layoutClass: h-full
 transition: slide-left
@@ -962,8 +1008,8 @@ transition: slide-left
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">VAST title TBD</span></div>
-      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Implementing VAST</div>
+      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Designing for <span style="color:#e60024">VAST</span> Support</span></div>
+      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Adding new creative upload feature</div>
       <div class="mt-auto self-start anim-fade-up anim-d4">
         <span class="hero-pill">CASE STUDY</span>
       </div>

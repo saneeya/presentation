@@ -11,8 +11,12 @@ const props = withDefaults(
     viewportHeight?: number
     /** Override layer max-width e.g. "55rem" (default "40rem") */
     layerMaxWidth?: string
+    /** Override layer width percentage e.g. "95%" (default "80%") */
+    layerWidthPct?: string
     /** Override --stack-pull-down CSS var e.g. "0rem" to move images up (default "2rem" in compact) */
     pullDown?: string
+    /** Make the last image fade in instead of slide in */
+    fadeInLast?: boolean
   }>(),
   {
     images: () => [
@@ -27,13 +31,13 @@ const props = withDefaults(
 
 const { clicks } = useNav()
 
-/** Clicks 0 = empty; 1..N = show that many layers (N = images.length). Needs N+1 gaps so total = N. */
+/** Clicks 0 = first image; 1..N-1 = reveal remaining layers. Needs N gaps total. */
 const gapIndices = computed(() =>
-  [...Array(Math.max(0, props.images.length + 1)).keys()],
+  [...Array(Math.max(0, props.images.length)).keys()],
 )
 
 const visibleCount = computed(() =>
-  Math.min(clicks.value, props.images.length),
+  Math.min(clicks.value + 1, props.images.length),
 )
 
 function layerOpacity(idx: number, V: number) {
@@ -68,12 +72,13 @@ function layerOpacity(idx: number, V: number) {
           :class="{
             'ad-manager-stack__layer--on': idx < visibleCount,
             'ad-manager-stack__layer--off': idx >= visibleCount,
+            'ad-manager-stack__layer--fade-only': props.fadeInLast && idx === images.length - 1,
           }"
           :style="{
             zIndex: 10 + idx,
             '--layer-i': idx,
             opacity: layerOpacity(idx, visibleCount),
-            ...(props.layerMaxWidth ? { width: `min(80%, ${props.layerMaxWidth})` } : {}),
+            ...(props.layerMaxWidth ? { width: `min(${props.layerWidthPct ?? '80%'}, ${props.layerMaxWidth})` } : {}),
           }"
         >
           <img :src="src" alt="" class="ad-manager-stack__img">
@@ -85,8 +90,8 @@ function layerOpacity(idx: number, V: number) {
 
 <style scoped>
 .ad-manager-stack {
-  --stack-nudge-x: 14px;
-  --stack-nudge-y: -14px;
+  --stack-nudge-x: 10px;
+  --stack-nudge-y: 0px;
   --stack-enter-x: min(72vw, 52rem);
   --stack-pull-down: 0.5rem;
   --ad-stack-motion-ms: 560ms;
@@ -149,6 +154,15 @@ function layerOpacity(idx: number, V: number) {
   transform: translate(
     calc(-50% + var(--stack-enter-x)),
     calc(-50% + var(--layer-i) * var(--stack-nudge-y))
+  );
+}
+
+/* Fade-only layer sits on top of the previous layer (layer-i - 1) with no slide */
+.ad-manager-stack__layer--fade-only.ad-manager-stack__layer--off,
+.ad-manager-stack__layer--fade-only.ad-manager-stack__layer--on {
+  transform: translate(
+    calc(-50% + (var(--layer-i) - 1) * var(--stack-nudge-x)),
+    calc(-50% + (var(--layer-i) - 1) * var(--stack-nudge-y))
   );
 }
 

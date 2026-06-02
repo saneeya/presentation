@@ -4,15 +4,14 @@ import { useNav } from '@slidev/client'
 
 const { currentPage } = useNav()
 
-const TABS = ['Background', 'Problem', 'Ideation', 'Outcome'] as const
+const TABS = ['Background', 'Problem', 'Ideation', 'The Journey'] as const
 
 const tabIndex = computed<number | null>(() => {
   const p = currentPage.value
-  if (p >= 5  && p <= 6)  return 0
-  if (p === 7)            return 0
+  if (p >= 5  && p <= 7)  return 0
   if (p >= 8  && p <= 11) return 1
-  if (p >= 12 && p <= 15) return 2
-  if (p >= 16 && p <= 17) return 3
+  if (p >= 12 && p <= 19) return 2
+  if (p >= 20 && p <= 33) return 3
   return null
 })
 

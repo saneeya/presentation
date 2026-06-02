@@ -72,12 +72,16 @@ Invite -> wayfinding sign -> bathroom sign -> wifi -> QR Code -> google from
 -->
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: h-full layout-wide-right
 ---
 
+<div class="mt-32">
+
 ## Background
+
+</div>
 
 ::right::
 
@@ -92,12 +96,16 @@ layoutClass: h-full layout-wide-right
 -->
 
 ---
-transition: slide-up
+transition: slide-left
 layout: two-cols
 layoutClass: h-full layout-wide-right
 ---
 
+<div class="mt-32">
+
 ## Experience
+
+</div>
 
 ::right::
 
@@ -114,9 +122,9 @@ transition: slide-left
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Making</span><span class="block whitespace-nowrap"><span class="text-[#e60024]">Filters</span> Functional</span></div>
-      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Campaign flow redesign</div>
-      <div class="mt-auto self-start anim-fade-up anim-d4">
+      <div class="mb-8 mt-10 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-14 md:text-4xl lg:mt-16 lg:text-5xl anim-fade-up"><span class="block">Redesigning for <span class="text-[#e60024]">Agency</span></span><span class="block">Scale</span></div>
+      <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2 mt-4">Updating the Campaign Creation flow</div>
+      <div class="mt-auto self-start anim-fade-up anim-d4" style="position:relative; top:1.5rem;">
         <span class="hero-pill">CASE STUDY</span>
       </div>
     </div>
@@ -146,7 +154,7 @@ transition: fade
 
 <p class="mt-2 mb-0 text-sm italic text-slate-500">*FKA Hulu Ad Manager</p>
 
-<AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="460" layer-max-width="55rem" pull-down="1rem" />
+<AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="500" layer-max-width="72rem" pull-down="-2rem" />
 
 <!--
 - filters are one long scrolls
@@ -252,7 +260,7 @@ transition: slide-left
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
     <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span>Platform rebuild (and brand rename) to launch Oct 2024</span>
+    <span>Platform rebuild to launch Oct 2024</span>
   </div>
 </div>
 
@@ -286,7 +294,7 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Layout</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Previous designs</h2>
 
 <div class="flex gap-8 mt-4 items-start w-full">
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-64 pt-2">
@@ -297,10 +305,6 @@ transition: slide-left
     <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d2">
       <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
       <span>Easier to scale</span>
-    </div>
-    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d3">
-      <i class="fa-solid fa-circle text-[#e60024] text-[0.5rem] shrink-0"></i>
-      <span>Bullet 3</span>
     </div>
   </div>
   <div class="flex-1 min-w-0 flex justify-center">
@@ -325,7 +329,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s13" class="-mt-10 mb-4 mx-auto" :initial-index="1" />
 
-<AdManagerStack :images="['./slides/assets/CA1.png', './slides/assets/CA2.png', './slides/assets/CA3.png']" :compact="true" :viewport-height="560" layer-max-width="70rem" pull-down="-1rem" />
+<AdManagerStack :images="['./slides/assets/CA1.png', './slides/assets/CA2.png', './slides/assets/CA3.png']" :compact="true" :viewport-height="560" layer-max-width="70rem" pull-down="-2rem" />
 
 <!--
 SHOW DEMO
@@ -336,11 +340,11 @@ layout: default
 transition: slide-left
 ---
 
-<div class="mt-12 flex w-full justify-center">
+<div class="mt-4 flex w-full justify-center md:max-w-5xl">
   <img
     src="./slides/assets/layoutidea1.png"
     alt="Layout Idea 1"
-    class="block h-auto max-h-[min(540px,65vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)] md:max-w-5xl"
+    class="block h-auto max-h-[min(460px,55vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)]"
   />
 </div>
 
@@ -352,7 +356,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s15" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
 
-<AdManagerStack :images="['./slides/assets/Concept1.png', './slides/assets/Concept2.png', './slides/assets/Concept3.png', './slides/assets/Concept4.png']" :compact="true" :viewport-height="560" layer-max-width="70rem" pull-down="0.5rem" />
+<AdManagerStack :images="['./slides/assets/Concept1.png', './slides/assets/Concept2.png', './slides/assets/Concept3.png', './slides/assets/Concept4.png']" :compact="true" :viewport-height="560" layer-max-width="70rem" pull-down="-2rem" />
 
 ---
 layout: default
@@ -361,7 +365,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s16" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
 
-<AdManagerStack :images="['./slides/assets/Concept2a.png', './slides/assets/Concept2b.png']" :compact="true" :viewport-height="650" layer-max-width="95rem" pull-down="-4rem" />
+<AdManagerStack :images="['./slides/assets/Concept2a.png', './slides/assets/Concept2b.png']" :compact="true" :viewport-height="650" layer-max-width="130rem" pull-down="-4rem" />
 
 ---
 layout: default
@@ -370,7 +374,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s17" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
 
-<AdManagerStack :images="['./slides/assets/Concept3a.png', './slides/assets/Concept3b.png', './slides/assets/Concept3c.png']" :compact="true" :viewport-height="650" layer-max-width="95rem" pull-down="-1rem" />
+<AdManagerStack :images="['./slides/assets/Concept3a.png', './slides/assets/Concept3b.png', './slides/assets/Concept3c.png']" :compact="true" :viewport-height="550" layer-max-width="75rem" pull-down="-1rem" />
 
 ---
 layout: default
@@ -379,7 +383,16 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s18" class="-mt-10 mb-4 mx-auto" :initial-index="3" />
 
-<AdManagerStack :images="['./slides/assets/Finala.png', './slides/assets/Finalb.png', './slides/assets/Daypart.png']" :compact="true" :viewport-height="650" layer-max-width="95rem" pull-down="-1rem" />
+<AdManagerStack :images="['./slides/assets/Finala.png', './slides/assets/Finalb.png']" :compact="true" :viewport-height="560" layer-max-width="95rem" pull-down="-1rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b" class="-mt-10 mb-4 mx-auto" :initial-index="3" />
+
+<AdManagerStack :images="['./slides/assets/Daypart.png']" :compact="true" :viewport-height="560" layer-max-width="95rem" pull-down="-1rem" />
 
 ---
 layout: default
@@ -444,7 +457,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s21" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
 
-<AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="650" layer-max-width="95rem" pull-down="-4rem" />
+<AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="700" layer-max-width="110rem" layer-width-pct="92%" pull-down="-5rem" />
 
 ---
 layout: default
@@ -482,28 +495,17 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Growing Pains</h2>
 
-<div class="flex items-center gap-2 max-w-4xl mt-16">
-  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
-    <span>Share Test Plan with Sales</span>
-  </div>
-  <i class="fa-solid fa-arrow-right text-slate-400 text-[1.5rem] shrink-0 anim-fade-up anim-d2"></i>
-  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
-    <span>Sales asks for incentives for clients</span>
-  </div>
-  <i class="fa-solid fa-arrow-right text-slate-400 text-[1.5rem] shrink-0 anim-fade-up anim-d3"></i>
-  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
-    <span>Go to Marketing to get incentive</span>
-  </div>
-</div>
-
-<div class="flex items-center gap-2 max-w-4xl mt-4">
-  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4" style="flex-basis: calc(33.333% - 1rem);">
-    <span>Go back to sales with incentive</span>
-  </div>
-  <i class="fa-solid fa-arrow-right text-slate-400 text-[1.5rem] shrink-0 anim-fade-up anim-d5"></i>
-  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d5" style="flex-basis: calc(33.333% - 1rem);">
-    <span>Sales says "No"</span>
-  </div>
+<div class="max-w-4xl mt-16" style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; grid-template-rows: auto auto; gap: 2rem 0.5rem; align-items: stretch;">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:0s"><span>Share Test Plan with Sales</span></div>
+  <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:0.7s"><span>Sales asks for incentives for clients</span></div>
+  <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:1.4s"><span>Go to Marketing to get incentive</span></div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:1.8s"><span>Go back to sales with incentive</span></div>
+  <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:2.2s"></i>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:2.5s"><span>Sales says "No"</span></div>
+  <div></div>
+  <div></div>
 </div>
 
 ---
@@ -680,13 +682,13 @@ transition: slide-left
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#e60024]">
       <i class="fa-solid fa-arrow-up text-[2.5rem]"></i>
-      <span>39%</span>
+      <CountUp :to="39" suffix="%" :duration="1200" />
     </div>
     <span>Increase in agency users the following year</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#e60024]">
-      <span>$76M</span>
+      <CountUp :to="76" prefix="$" suffix="M" :duration="1400" />
     </div>
     <span>ARR the following year (from $26M previous year)</span>
   </div>
@@ -703,20 +705,20 @@ transition: slide-left
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
-    <i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] shrink-0"></i>
+    <span class="check-wrap shrink-0 anim-check-d1"><i class="fa-regular fa-square text-[#e60024] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] check-filled"></i></span>
     <span>Rebuild entire platform to be in-house</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
-    <i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] shrink-0"></i>
+    <span class="check-wrap shrink-0 anim-check-d2"><i class="fa-regular fa-square text-[#e60024] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] check-filled"></i></span>
     <span>Ability to run multiple line items within larger campaigns.</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
-    <i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] shrink-0"></i>
+    <span class="check-wrap shrink-0 anim-check-d3"><i class="fa-regular fa-square text-[#e60024] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] check-filled"></i></span>
     <span>Add extra targeting options (dayparting, pacing, etc)</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
-    <i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] shrink-0"></i>
-    <span>Platform rebuild (and brand rename) to launch Oct 2024</span>
+    <span class="check-wrap shrink-0 anim-check-d4"><i class="fa-regular fa-square text-[#e60024] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#e60024] text-[1.5rem] check-filled"></i></span>
+    <span>Platform rebuild to launch Oct 2024</span>
   </div>
 </div>
 

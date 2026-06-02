@@ -42,7 +42,7 @@ layoutClass: h-full
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" />
+<PinterestMasonry placement="title" left-top-small-src="./slides/assets/cat.jpg" left-top-small-position="center 65%" />
 </div>
 
 <!--
@@ -63,7 +63,7 @@ transition: slide-left
 <div class="flex flex-col gap-6 w-full mt-10">
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d1">
     <span class="text-[#e60024] font-semibold text-[1rem] w-6">01</span>
-    <span>Background</span>
+    <span>About</span>
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2">
     <span class="text-[#e60024] font-semibold text-[1rem] w-6">02</span>
@@ -105,14 +105,14 @@ layoutClass: h-full layout-wide-right
 
 <div class="mt-32">
 
-## Background
+## About
 
 </div>
 
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" :hide-left-mid="true" :hide-left-bottom="true" left-extra-top-src="/pictures/20191229_134146.jpg" :left-extra-top-grow="1.4" :title-top-grow="2.2" :title-bottom-grow="1.0" left-top-small-src="./slides/assets/About2.jpg" left-top-small-position="center 40%" :left-top-small-scale="1.5" right-tall-src="./slides/assets/About1.jpg" right-bottom-src="/pictures/PXL_20240608_204901982.jpg" />
+<PinterestMasonry placement="title" :hide-left-mid="true" :hide-left-bottom="true" left-extra-top-src="./slides/assets/About4.jpg" left-extra-top-position="30% center" :left-extra-top-grow="1.4" :title-top-grow="2.2" :title-bottom-grow="1.0" left-top-small-src="./slides/assets/About2.jpg" left-top-small-position="center 40%" :left-top-small-scale="1.3" right-tall-src="./slides/assets/About1.jpg" right-bottom-src="./slides/assets/About3.jpg" right-bottom-position="20% center" />
 </div>
 
 <!--
@@ -129,14 +129,14 @@ layoutClass: h-full layout-wide-right
 
 <div class="mt-32">
 
-## Experience
+## Background
 
 </div>
 
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" :hide-left-mid="true" />
+<PinterestMasonry placement="title" :hide-left-mid="true" left-top-small-src="./slides/assets/About6.jpg" left-top-src="./slides/assets/About7.png" left-top-bg="transparent" right-tall-src="./slides/assets/About5.jpg" right-bottom-src="./slides/assets/About8.png" />
 </div>
 
 ---
@@ -733,17 +733,17 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s23" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Sourcing users</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">A wrench in the plan</h2>
 
 <div class="max-w-4xl mt-16" style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; grid-template-rows: auto auto; gap: 2rem 0.5rem; align-items: stretch;">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:0s"><span>Shared test plan</span></div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:0s"><span>Shared test plan</span></div>
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:0.7s"><span>Sales wants incentives for clients</span></div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:0.7s"><span>Sales wants incentives for clients</span></div>
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:1.4s"><span>Went to Marketing to get incentive</span></div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:1.8s"><span>Met with Sales again</span></div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:1.4s"><span>Went to Marketing to get incentive</span></div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:1.8s"><span>Met with Sales again</span></div>
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:2.2s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:2.5s"><span class="text-[#e60024] font-bold">No</span></div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:2.5s"><span class="text-[#e60024] font-bold">"No"</span></div>
   <div></div>
   <div></div>
 </div>
@@ -944,7 +944,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s_goals" class="-mt-10 mb-10 mx-auto" :initial-index="3" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Business goals</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
@@ -972,12 +972,18 @@ transition: slide-left
 <div class="grid grid-cols-2 gap-4 w-full mt-10">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-solid fa-clock text-[#e60024] text-[2rem] self-center"></i>
-    <span>Secure help sooner. Was able to secure budget for contractor but not until the very end.</span>
+    <span>Secure help sooner. Was able to secure budget for contractor but not until the very end</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <i class="fa-solid fa-route text-[#e60024] text-[2rem] self-center"></i>
-    <span>Set up timeline for deliverables earlier. Adjust scope as needed.</span>
+    <span>Set up timeline for deliverables earlier. Adjust scope as needed</span>
   </div>
+</div>
+
+<div v-click class="w-full pt-14 text-center">
+  <p class="m-0 text-[1.5rem] font-medium italic text-[#e60024]">
+    If I could design this again...
+  </p>
 </div>
 
 ---
@@ -991,11 +997,11 @@ transition: slide-left
 <div class="grid grid-cols-2 gap-4 w-full mt-10">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-solid fa-clock text-[#e60024] text-[2rem] self-center"></i>
-    <span>Secure help sooner. Was able to secure budget for contractor but not until the very end.</span>
+    <span>I am capable of more than I thought. Did designs for the entire platform, conducted my own UT sessions, and trained and hired a contractor</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <i class="fa-solid fa-route text-[#e60024] text-[2rem] self-center"></i>
-    <span>Set up timeline for deliverables earlier. Adjust scope as needed.</span>
+    <span>Learned a lot about campaign creation, creative formats, and reporting</span>
   </div>
 </div>
 
@@ -1386,16 +1392,22 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s7_copy3" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Impact</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Takeaway</h2>
 
-<div class="mt-10 grid grid-cols-2 gap-4 w-full">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
-    <i class="fa-brands fa-google text-[#e60024] text-[2rem]"></i>
-    <span>VAST implementation removed a significant blocker for Agency use</span>
+<div class="mt-10 flex flex-col gap-4 w-full">
+  <div class="grid grid-cols-2 gap-4 w-full">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+      <span class="text-[#e60024] font-bold text-[1.15rem]">Impact</span>
+      <span>VAST implementation removed a significant blocker for Agency use, and flow is still in use today</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+      <span class="text-[#e60024] font-bold text-[1.15rem]">Challenges</span>
+      <span>So much confusion early on because of incorrect PRD and misunderstanding of VAST</span>
+    </div>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
-    <i class="fa-solid fa-diagram-project text-[#e60024] text-[2rem]"></i>
-    <span>VAST flow I created is still in platform today</span>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3 w-[calc(50%-0.5rem)] max-w-none mx-auto">
+    <span class="text-[#e60024] font-bold text-[1.15rem]">Learnings</span>
+    <span>I learned to get context as early as possible, especially for new concepts. PRD is not source of truth necessarily.</span>
   </div>
 </div>
 
@@ -1412,7 +1424,7 @@ transition: fade-out
   Thank you
 
   <template #subtitle>
-    <p>Q&A</p>
+    <p style="color: #3a4652; font-weight: 500;">Any questions?</p>
   </template>
 </HeroTitle>
   </div>

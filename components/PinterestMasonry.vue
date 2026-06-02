@@ -17,6 +17,8 @@ const props = withDefaults(
     mergeRightStack?: boolean
     /** Override the top-left tile with a specific image URL, even when showImages is false. */
     leftTopSrc?: string
+    /** Background color for the bottom-left title tile (e.g. behind transparent PNGs). */
+    leftTopBg?: string
     /** Override the bottom-left tile with a specific image URL, even when showImages is false. */
     leftBottomSrc?: string
     /** CSS object-position for the bottom-left tile image, e.g. "center 40%". */
@@ -35,6 +37,8 @@ const props = withDefaults(
     hideLeftBottom?: boolean
     /** Extra tile rendered above all others in the title left column. */
     leftExtraTopSrc?: string
+    /** CSS object-position for the extra top tile. Defaults to "center center". */
+    leftExtraTopPosition?: string
     /** flex-grow for the extra top tile. Default: 1. */
     leftExtraTopGrow?: number
     /** flex-grow for the top-small tile in title placement (slot[4]). Default: 1. */
@@ -45,6 +49,8 @@ const props = withDefaults(
     rightTallSrc?: string
     /** Override the bottom-right tile in title placement with a specific image URL. */
     rightBottomSrc?: string
+    /** CSS object-position for the bottom-right tile in title placement. Defaults to "center center". */
+    rightBottomPosition?: string
     /** Override the right tall tile with a specific image/gif URL, even when showImages is false. */
     rightSrc?: string
     /** CSS object-position for the right tile image, e.g. "left center". Defaults to "center center". */
@@ -157,7 +163,12 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
       <div class="masonry">
         <div class="masonry-col" :style="leftColFlex ? { flex: `${leftColFlex} 1 0` } : {}"  >
           <div v-if="leftExtraTopSrc" class="tile tile--stretch tile--has-img" :style="{ flex: `${leftExtraTopGrow ?? 1} 1 0` }">
-            <img class="tile-img" :src="leftExtraTopSrc" alt="" />
+            <img
+              class="tile-img"
+              :src="leftExtraTopSrc"
+              :style="leftExtraTopPosition ? { objectPosition: leftExtraTopPosition } : {}"
+              alt=""
+            />
           </div>
           <div class="tile tile--stretch" :style="{ flex: `${titleTopGrow ?? 1} 1 0` }" :class="{ 'tile--has-img': leftTopSmallSrc || !!slots[4] }">
             <img v-if="leftTopSmallSrc || slots[4]" class="tile-img" :style="{ objectPosition: leftTopSmallPosition ?? 'center 15%', transform: leftTopSmallScale ? `scale(${leftTopSmallScale})` : undefined }" :src="leftTopSmallSrc || slots[4]" alt="" />
@@ -165,7 +176,12 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
           <div v-if="!hideLeftMid" class="tile tile--stretch" :class="{ 'tile--has-img': leftMidSrc || !!slots[1] }">
             <img v-if="leftMidSrc || slots[1]" class="tile-img" style="object-position: center 35%" :src="leftMidSrc || slots[1]" alt="" />
           </div>
-          <div v-if="!hideLeftBottom" class="tile tile--stretch" :style="{ flex: `${titleBottomGrow ?? 1.8} 1 0` }" :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }">
+          <div
+            v-if="!hideLeftBottom"
+            class="tile tile--stretch"
+            :style="{ flex: `${titleBottomGrow ?? 1.8} 1 0`, ...(leftTopBg ? { background: leftTopBg } : {}) }"
+            :class="{ 'tile--has-img': leftTopSrc || !!slots[0] }"
+          >
             <img v-if="leftTopSrc || slots[0]" class="tile-img tile-img--nudge-down" style="object-position: center 70%" :src="leftTopSrc || slots[0]" alt="" />
           </div>
         </div>
@@ -174,7 +190,13 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
             <img v-if="rightTallSrc || slots[2]" class="tile-img" :src="rightTallSrc || slots[2]" alt="" />
           </div>
           <div class="tile tile--stretch" :class="{ 'tile--has-img': rightBottomSrc || !!slots[3] }">
-            <img v-if="rightBottomSrc || slots[3]" class="tile-img" :src="rightBottomSrc || slots[3]" alt="" />
+            <img
+              v-if="rightBottomSrc || slots[3]"
+              class="tile-img"
+              :src="rightBottomSrc || slots[3]"
+              :style="rightBottomPosition ? { objectPosition: rightBottomPosition } : {}"
+              alt=""
+            />
           </div>
         </div>
       </div>

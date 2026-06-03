@@ -46,7 +46,7 @@ layoutClass: h-full
 </div>
 
 <!--
-hello my name is Saneeya and I'm here to go over some of my work
+hello my name is Saneeya and I'm here to go over some of the work I've done in ad tech
 -->
 
 ---
@@ -116,11 +116,11 @@ layoutClass: h-full layout-wide-right
 </div>
 
 <!--
-One major thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific layout 
+Before I dive into the work, I'd like to go over what I call my "creative background" One thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific way 
 
-And speaking of decorations, here is my decor in my virtual home in Final Fantasy 14, an online multiplayer game my pandemic game. One of the most fun things for me to do there was decorate these virtual homes, this screenshot here shows a room I did where I placed every single object in a specific way like the food on top of this table
+and I dont just decorate physicially , here is  my virtual home in Final Fantasy 14, an online multiplayer game which was my pandemic game. One of the most fun things for me was to was decorate these homes, this screenshot here shows a room I did where I placed every single object like the food on top of this table
 
-I also like crafting, I crochet small toys t such as this baby groot. And the things I like creating the most, are of course the ones I can eat.
+And I also like creating real life things. I dont crochet as much as I used to but I have made alot small toys such as this baby groot. And the things I like creating the most, are of course the ones I can eat such as this tart
 -->
 
 ---
@@ -142,15 +142,15 @@ layoutClass: h-full layout-wide-right
 </div>
 
 <!--
-Now, I'm going to go over my professional background. I spent years doing graphic design in a variety of industries.
+Now, I'm going to go over my professional background. Back in the day, I spent years doing graphic design in a variety of industries.
 
-Such as this billboard I did for the local county fair.
+One example was this billboard I did for the local county fair.
 
 Eventually I did a career pivot to UX, my first tech role was at McGraw Hill Education, which is a textbook company but also has a suite of ed tech products. One of those products was ALEKS which I worked on a lot. I  designed teacher and student facing user interfaces and even some other things like this logo I made for the 20th anniversary. 
 
-After McGraw Hill, I spent some time at a mortgage company doing more enterprise platforms , this time for loan officers and real estate agents. While there,  I learned a lot about regulated and complicated work flows. 
+After McGraw Hill, I spent some time at a mortgage company doing more enterprise platforms , this time for loan officers and real estate agents. While there,  I learned a lot about how regulated and complicated work flows behave. 
 
-All of this together really helped me when I joined Disney. I was on the ads teams and initially I knew nothing about ad tech but have since worked on platforms for advertisers, internal users and even some customer-facing products for almost 5 years now
+All of this together really helped when I joined Disney. I was on the ads design team but initially I knew nothing about ad tech,But since then I have worked on several platforms for advertisers, internal users and even some customer-facing products for almost 5 years now
 -->
 
 ---
@@ -647,7 +647,7 @@ transition: slide-left
 
 <div class="mt-2">
   <AdManagerStack
-    :images="['./slides/assets/Finala.png', './slides/assets/Finalb.png']"
+    :images="['./slides/assets/Finala.png']"
     :compact="true"
     :viewport-height="500"
     layer-max-width="88rem"
@@ -745,7 +745,7 @@ transition: slide-left
 </div>
 
 <!--
-Now, i was able to reach the "destination" but there were challenges throughout the 2 year journey
+Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
 -->
 
 ---
@@ -841,7 +841,7 @@ transition: slide-left
 </div>
 
 <!--
-What I learned was that I had to map out everything, every flow, every error state, modal, every state, whatever
+What I ended up doing was mapping out everything, every flow, every error, modal, every state, whatever
 
 This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
 
@@ -877,9 +877,9 @@ transition: slide-left
 <!--
 another part of my non liner journey was User testing. I shared designs often with internal teams but I really wanted to test the campaign flow with customers who already used our platform
 
-Because of time and resources, I wasn't able to user test until after the final designs were being implemented. I knew that that the changes from user testing would be in the launch but I was able to convince product to let me put these changes as fast follow ups after launch
+Because of time and resources, I wasn't able to user test until after the final designs were being implemented. I know you're supposed to user test while the design is in production , like it would be too late to affect the laucn but I was able to convince product to let me put any potential changes as fast follow ups after launch
 
-this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team and I would have to do conduct my own User test sessions
+this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team I knew I would have to do a lot of the work on my own
 
 One thing I thought would be easy was getting users to test with. I had spoken to sales about testing with existing customers and they seemed receptive at first but...
 -->
@@ -969,9 +969,9 @@ transition: slide-left
 </div>
 
 <!--
-I created a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms
+What I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
 
-I conduncted 1 hr usability tests where I asked them to do certain tasks in and see how they went about tje,
+I conduncted 1 hr usability tests where I asked them to do certain tasks in and see how they went about them,
 
 Even though none of them had used hulu ad manager before, I got some pretty useful feedback
 -->
@@ -1010,7 +1010,7 @@ First off, the term "line items" was confusing, even to the users who did a lot 
 
 I think the term "line item" was one of the things I pushed back against the most with product, I wanted to call it ad set or ad groups. even before this user test, based on my meetings with internal teams, a lot of them didn't get the term either
 
-However product insisted on calling it line items because thats what it was called in our internal ad trafficking tool And like with sales, I had to accept I wasn't going to change their minds and had to move on to other important things
+However product insisted on calling it line items because thats what it was called in our internal ad trafficking tool And like with sales, I had to accept I wasn't going to change their minds and had to move on to other important things in this tight deadline
 -->
 
 ---
@@ -1037,7 +1037,7 @@ transition: slide-left
 </div>
 
 <!--
-One big issue was that people could not find the "create new line item button", so that was something I prioritized as a fix post launch
+Another big issue was that people could not find the "create new line item button", it was too small and not noticeable so that was something I prioritized as a fix post launch
 -->
 
 ---
@@ -1069,6 +1069,8 @@ transition: slide-left
 
 <!--
 On the positive note, the single page flow tested well, people new to the platform quickly figured out how to navigate
+
+and that was a huge goal of mine, was to make sure this new singe page layout was usable
 -->
 
 ---
@@ -1104,9 +1106,9 @@ transition: slide-left
 </div>
 
 <!--
-After all the user feedback and my own QA work, I made a huge Epic on JIRA with almost 100 tickets from everything to minor UI issues to major issues like the new line item button
+After all the user feedback as well as my own QA of the testing environment, I made this huge Epic on JIRA with almost 100 tickets from everything to minor UI issues to major issues like the new line item button
 
-I prioritized these tickets based on severity and level of effort and was able to get the enginerring teams to work on them in the weeks following launch
+I prioritized these tickets based on severity and level of effort and was able to get the engineering teams to work on them in the weeks following launch
 -->
 
 ---
@@ -1136,6 +1138,8 @@ transition: slide-left
 
 <!--
 once we released the new campaign flow and new platform, there was pretty quick growth the following year, both revenue and number of agency users signficantly increased
+
+we accomplished the businesses goal of scaling the product and getting more agencies onboard
 -->
 
 ---
@@ -1191,7 +1195,7 @@ transition: slide-left
 </div>
 
 <!--
-I had a lot of takeaways, especially because this was such a large project. There are things I would do differently such as getting support earlier and setting up a realistic timeline for my work up front
+This was a huge project and probably one of the hardest ones I've ever worked on. I learned a lot from this especially things I would do differently such as getting support earlier and setting up a realistic timeline for my work up front
 
 but one thing i would definitely do differently now is use AI especially for quick concepts. 
 
@@ -1263,6 +1267,8 @@ so What is VAST?
 If any of you are unfamiliar, VAST is a string of code created using a 3rd party vendor that has the creative assets, tracking pixels and metadata so a creative will display correctly not matter where the ad is running
 
 Basically if you are an advertiser running ads on different platforms, you can use the same VAST tag for all of them and if you update it on your end (like you change a tracking pixel), it automatically updates everywhere else
+
+I understand what VAST is now but before this project I did not know anything about it
 -->
 
 ---
@@ -1288,11 +1294,13 @@ transition: slide-left
 </div>
 
 <!--
-Ok, so why do we need VAST? Simply put, like the last project, this was something agencies asked for frequently, I myself noticed this when I sat in on one agency call
+so why do we need VAST? Simply put, like the last project, this was something agencies asked for frequently, I myself noticed this when I sat in on one agency call
 
-Unlike the last project I only had a few weeks to work on this because it was going to roll out in what was then our current platform, because I  was told that this would be an easy and quick feature to ad
+we were doing a discovery call with an agency person and they liked the preview we showed them but then they asked of we had VAST and we said no and you could see the disappointment, so I knew why we needed vast
 
-But I found the requirements to be pretty vague
+Unlike the last project I only had a few weeks to work on this because it was going to roll out in what was then our current platform, snd because I  was told that this would be an easy and quick feature to ad
+
+Despite it being sold as a "quick and easy addition"  I found the requirements early on to be pretty vague
 -->
 
 ---
@@ -1339,7 +1347,9 @@ transition: slide-left
 </div>
 
 <!--
-And I knew I had to design a flow where you could upload your VAST tag, show any errors, and  preview the creative assets within the VAST
+And I understood that I had to design a flow where you could upload your VAST tag, show any errors, and  preview the creative assets within the VAST
+
+what I still didn't understand, was the technical flow of a VAST tag
 -->
 
 ---
@@ -1352,7 +1362,7 @@ transition: slide-left
 <AdManagerStack :images="['./slides/assets/upload1.png', './slides/assets/upload2.png', './slides/assets/upload3.png']" :compact="true" :viewport-height="520" layer-max-width="85rem" layer-width-pct="92%" pull-down="-2.3rem" />
 
 <!--
-For sake of time and consistency, I decided to use the pattern we already had in ad upload, which was this panel comes out on the right side
+Because again, I was on a time crucnh, I decided to use this pattern we already had in ad upload, which was this panel that slides out from the right side
 
 This is what ad upload looks like and this is what selecting an ad you've already uploaded looks like
 -->
@@ -1380,13 +1390,13 @@ transition: slide-left
 </div>
 
 <!--
-using that panel this is what I came up with, you enter your VAST here
+using that panel this is what I initially came up with, you enter your VAST here
 
 it shows you all the macros or updates automatically made in your tag so the ad can run on hulu
 
 and then you can see the assets that were in the VAST, like the campaigns designs I tried top nav to cycle through assets but decided it took up too much space 
 
-so I moved them to the left side and added icons showing wether the asset passed (or failed) the technical specs needed for hulu
+so I moved them to the left side and added icons showing wether the asset passed (or failed) the technical specs needed for the ad to go live
 -->
 
 ---
@@ -1412,7 +1422,7 @@ transition: slide-left
 </div>
 
 <!--
-I spent a lot of time going back and forth with our customer facing teams especially our ad ops team, they gave me some good feedback and understood VAST a lot better than I did
+I spent a lot of time going back and forth with our customer facing teams especially our ad ops team, they gave me some good feedback because they understood VAST a lot better than I did
 
 They said they didnt need to see all the macros because most users dont understand what they are, instead they suggested only displaying the important ones like cachebuster or site name
 
@@ -1506,9 +1516,9 @@ transition: slide-left
   <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-5 text-slate-700 text-[1rem] font-medium leading-snug shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:0.7s"><span>VAST passes tech specs</span></div>
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-5 text-slate-700 text-[1rem] font-medium leading-snug shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:1.4s"><span>Preview assets + submit for review</span></div>
-  <div class="rounded-2xl bg-white border border-red-200/50 bg-red-50/40 px-6 py-5 text-[1rem] font-medium leading-snug shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] anim-fade-up" style="animation-delay:1.8s"><span class="text-[#e60024] font-bold">VAST fails tech specs</span></div>
+  <div class="rounded-2xl bg-white border border-red-200/50 bg-red-50/40 px-6 py-5 text-[1rem] font-medium leading-snug shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] anim-fade-up" style="animation-delay:1.8s"><span class="text-[#e60024] font-bold">VAST tag fails upload</span></div>
   <div></div>
-  <div class="rounded-2xl bg-white border border-red-200/50 bg-red-50/40 px-6 py-5 text-[1rem] font-medium leading-snug shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] anim-fade-up" style="animation-delay:2.2s"><span class="text-[#e60024] font-bold">VAST fails tech specs</span></div>
+  <div class="rounded-2xl bg-white border border-red-200/50 bg-red-50/40 px-6 py-5 text-[1rem] font-medium leading-snug shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] anim-fade-up" style="animation-delay:2.2s"><span class="text-[#e60024] font-bold">VAST assets fail tech specs</span></div>
   <div></div>
   <div></div>
 </div>
@@ -1545,9 +1555,9 @@ transition: slide-left
 <!--
 I went back and added the table from the VAST legacy tool because I felt it was useful in pointing out specific errors
 
-and I only added an icon in assets with erros
+and I deicided to only show the icon in assets with errors
 
-I shared these concepts and (slide) once again, got good feedback. users told me they didn't need to see every parameter, just the ones with issues
+I shared these concepts (slide) again with our ops, got good feedback. they told me they didn't need to see every parameter, just the ones with issues
 
 but they did want to see all the statuses at a quick glance.  I knew then they expected those statuses to reflect the final check and not the tech specs, so I changed the logic to match their mental model
 -->
@@ -1669,9 +1679,9 @@ We released VAST in early 2024 in what is now the old platform and then came to 
 
 the VAST flow removed another blocker for agencies and the same design is there to this day
 
-of course the process to get there wasn't very smooth, there was a lot of confusion and misunderstanding and because of that I learned that I shouldn't rely just on the PRD especially if its for something I don't understand or know
+of course the process to get there wasn't very smooth,  Honestly I was pretty frustrated on how long it took especially when I now know that it wasn't that complicated
 
-As a result I learned that if I dont get anything, I should talk to as many people as I can and do as much research as possible so I can get context sooner rather than later
+As a result I learned that if I dont get something, I should talk to as many people as I can and do as much research as I can. and not rely solely on PRD as source of truth 
 
 and that is the VAST implementation
 -->

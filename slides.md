@@ -297,7 +297,7 @@ transition: slide-left
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:0.7s"><span>Chance to redesign entire ad manager (reporting, creative library, etc)</span></div>
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-up" style="animation-delay:1.4s"><span>I could create a new campaign flow to meet agency needs</span></div>
+  <div class="rounded-2xl bg-white px-8 py-6 text-slate-700 text-[1.1rem] font-medium anim-fade-up glow-pulse-red" style="animation-delay:1.4s"><span>I could create a new campaign flow to meet agency needs</span></div>
 </div>
 
 ---
@@ -787,19 +787,19 @@ transition: slide-left
 <div class="grid grid-cols-2 gap-4 max-w-3xl mt-10 mx-auto">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#e60024]" aria-hidden="true"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
-    <span>Created test plan, screener, sourced users & moderated sessions</span>
+    <span>Built test plan and screener criteria, then recruited and moderated all sessions</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#e60024]" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
-    <span>Worked with UX engineering to create interactive prototype</span>
+    <span>Partnered with UX engineering to build a high-fidelity interactive prototype</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#e60024]" aria-hidden="true"><path d="M320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128C256 92.7 284.7 64 320 64zM416 376C416 401 403.3 423 384 435.9L384 528C384 554.5 362.5 576 336 576L304 576C277.5 576 256 554.5 256 528L256 435.9C236.7 423 224 401 224 376L224 336C224 283 267 240 320 240C373 240 416 283 416 336L416 376zM160 96C190.9 96 216 121.1 216 152C216 182.9 190.9 208 160 208C129.1 208 104 182.9 104 152C104 121.1 129.1 96 160 96zM176 336L176 368C176 400.5 188.1 430.1 208 452.7L208 528C208 529.2 208 530.5 208.1 531.7C199.6 539.3 188.4 544 176 544L144 544C117.5 544 96 522.5 96 496L96 439.4C76.9 428.4 64 407.7 64 384L64 352C64 299 107 256 160 256C172.7 256 184.8 258.5 195.9 262.9C183.3 284.3 176 309.3 176 336zM432 528L432 452.7C451.9 430.2 464 400.5 464 368L464 336C464 309.3 456.7 284.4 444.1 262.9C455.2 258.4 467.3 256 480 256C533 256 576 299 576 352L576 384C576 407.7 563.1 428.4 544 439.4L544 496C544 522.5 522.5 544 496 544L464 544C451.7 544 440.4 539.4 431.9 531.7C431.9 530.5 432 529.2 432 528zM480 96C510.9 96 536 121.1 536 152C536 182.9 510.9 208 480 208C449.1 208 424 182.9 424 152C424 121.1 449.1 96 480 96z"/></svg>
-    <span>10 users with various level of expertise using self-serve platforms + 1hr sessions</span>
+    <span>10 participants across beginner to advanced skill levels, each in a 1-hour moderated session</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#e60024]" aria-hidden="true"><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>
-    <span>Tested to see if users could navigate new campaign flow, add line items, could choose targeting options</span>
+    <span>Evaluated whether users could complete end-to-end: create a campaign, add line items, and set targeting</span>
   </div>
 </div>
 
@@ -972,15 +972,15 @@ transition: slide-left
 <div class="grid grid-cols-2 gap-4 w-full mt-10">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-solid fa-clock text-[#e60024] text-[2rem] self-center"></i>
-    <span>Secure help sooner. Was able to secure budget for contractor but not until the very end</span>
+    <span>Bring in contractor support earlier. I was able to find budget, but wasn't able to get help until late in the project</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <i class="fa-solid fa-route text-[#e60024] text-[2rem] self-center"></i>
-    <span>Set up timeline for deliverables earlier. Adjust scope as needed</span>
+    <span>Establish a clear deliverables timeline upfront and revisit scope regularly as the project evolves</span>
   </div>
 </div>
 
-<div v-click class="w-full pt-14 text-center">
+<div v-click class="w-full pt-14 text-center click-fade-up">
   <p class="m-0 text-[1.5rem] font-medium italic text-[#e60024]">
     If I could design this again...
   </p>
@@ -1053,52 +1053,7 @@ transition: slide-left
     </div>
   </div>
   <div class="flex-1 min-w-0 flex justify-center items-start self-stretch -mt-12">
-    <div class="vast-xml-box overflow-auto rounded-2xl bg-white px-5 py-4 font-mono text-[0.5rem] leading-snug text-[#e60024] anim-fade-up anim-d2">
-      <pre class="m-0 whitespace-pre"><code>&lt;VAST version="2.0"&gt;
-  &lt;Ad id="601364"&gt;
-    &lt;InLine&gt;
-      &lt;AdSystem&gt;Adsystem Example&lt;/AdSystem&gt;
-      &lt;AdTitle&gt;VAST 2.0&lt;/AdTitle&gt;
-      &lt;Description&gt;VAST 2.0&lt;/Description&gt;
-      &lt;Error&gt;http://myErrorURL/error&lt;/Error&gt;
-      &lt;Impression&gt;http://myTrackingURL/impression&lt;/Impression&gt;
-      &lt;Creatives&gt;
-        &lt;Creative AdID="12345"&gt;
-          &lt;Linear&gt;
-           &lt;Duration&gt;00:00:30&lt;/Duration&gt;
-            &lt;TrackingEvents&gt;
-              &lt;Tracking event="creativeView"&gt;http://myTrackingURL/creativeView&lt;/Tracking&gt;
-              &lt;Tracking event="start"&gt;http://myTrackingURL/start&lt;/Tracking&gt;
-            &lt;/TrackingEvents&gt;
-            &lt;VideoClicks&gt;
-              &lt;ClickThrough&gt;http://www.examplemedia.com&lt;/ClickThrough&gt;
-              &lt;ClickTracking&gt;http://myTrackingURL/click&lt;/ClickTracking&gt;
-            &lt;/VideoClicks&gt;
-            &lt;MediaFiles&gt;
-             &lt;MediaFile delivery="progressive" type="video/x-flv" bitrate="500" width="400" height="300" scalable="true" maintainAspectRatio="true"&gt;
-        http://demo.examplemedia.com/video/acudeo/Carrot_400x300_500kb.flv
-          &lt;/MediaFile&gt;
-         &lt;/MediaFiles&gt;
-          &lt;/Linear&gt;
-    &lt;/Creative&gt;
-    &lt;Creative AdID="601364-Companion"&gt;
-      &lt;CompanionAds&gt;
-           &lt;Companion width="300" height="250"&gt;
-             &lt;StaticResource creativeType="image/jpeg"&gt;
-             http://demo.examplemedia.com/vast/this_is_the_ad.jpg
-             &lt;/StaticResource&gt;
-             &lt;TrackingEvents&gt;
-               &lt;Tracking event="creativeView"&gt;http://myTrackingURL/tracking&lt;/Tracking&gt;
-             &lt;/TrackingEvents&gt;
-           &lt;CompanionClickThrough&gt;http://www.examplemedia.com&lt;/CompanionClickThrough&gt;
-           &lt;/Companion&gt;
-         &lt;/CompanionAds&gt;
-       &lt;/Creative&gt;
-     &lt;/Creatives&gt;
-   &lt;/InLine&gt;
-   &lt;/Ad&gt;
-&lt;/VAST&gt;</code></pre>
-    </div>
+    <VastTypingDemo />
   </div>
 </div>
 
@@ -1398,16 +1353,16 @@ transition: slide-left
   <div class="grid grid-cols-2 gap-4 w-full">
     <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
       <span class="text-[#e60024] font-bold text-[1.15rem]">Impact</span>
-      <span>VAST implementation removed a significant blocker for Agency use, and flow is still in use today</span>
+      <span>Unblocked agency adoption. The VAST flow shipped and remains in the platform today</span>
     </div>
     <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
       <span class="text-[#e60024] font-bold text-[1.15rem]">Challenges</span>
-      <span>So much confusion early on because of incorrect PRD and misunderstanding of VAST</span>
+      <span>Early confusion stemmed from an inaccurate PRD and a fundamental misunderstanding of how VAST works</span>
     </div>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3 w-[calc(50%-0.5rem)] max-w-none mx-auto">
     <span class="text-[#e60024] font-bold text-[1.15rem]">Learnings</span>
-    <span>I learned to get context as early as possible, especially for new concepts. PRD is not source of truth necessarily.</span>
+    <span>Get context early, especially for unfamiliar concepts. The PRD isn't always the source of truth, so go deeper.</span>
   </div>
 </div>
 

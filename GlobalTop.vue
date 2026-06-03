@@ -9,8 +9,8 @@ const TABS2 = ['Problem', 'Concepts', 'Final', 'Takeaway'] as const
 
 const activeTabs = computed(() => {
   const p = currentPage.value
-  if (p >= 6  && p <= 40) return TABS1
-  if (p >= 42 && p <= 57) return TABS2
+  if (p >= 6  && p <= 39) return TABS1
+  if (p >= 41 && p <= 56) return TABS2
   return null
 })
 
@@ -22,12 +22,12 @@ const tabIndex = computed<number | null>(() => {
   if (p >= 6  && p <= 8)  return 0
   if (p >= 9  && p <= 12) return 1
   if (p >= 13 && p <= 24) return 2
-  if (p >= 25 && p <= 40) return 3
+  if (p >= 25 && p <= 39) return 3
   // Case study 2
-  if (p >= 42 && p <= 44) return 0
-  if (p >= 45 && p <= 53) return 1
-  if (p >= 54 && p <= 56) return 2
-  if (p === 57)            return 3
+  if (p >= 41 && p <= 43) return 0
+  if (p >= 44 && p <= 52) return 1
+  if (p >= 53 && p <= 55) return 2
+  if (p === 56)            return 3
   return null
 })
 

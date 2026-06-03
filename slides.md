@@ -46,11 +46,7 @@ layoutClass: h-full
 </div>
 
 <!--
-hello
-
-let me show you "real life UX" process
-
-a few years ago threw a housewarming/halloween party
+hello my name is Saneeya and I'm here to go over some of my work
 -->
 
 ---
@@ -78,6 +74,10 @@ transition: slide-left
     <span>Q & A</span>
   </div>
 </div>
+
+<!--
+Here is the agenda for today, feel free to interrupt of you have questions you want to ask during this presentation or you can wait until the end where I have some time scheduled for Q and A
+-->
 
 ---
 transition: fade-out
@@ -116,9 +116,11 @@ layoutClass: h-full layout-wide-right
 </div>
 
 <!--
-- Account Manager -> Campaign Creation -> Admin Portal -> MC Traffciking
-- DCM for 4 years, grew from about $10m to $100m
-- Now work on internal tooling
+One major thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific layout 
+
+And speaking of decorations, here is my decor in my virtual home in Final Fantasy 14, an online multiplayer game my pandemic game. One of the most fun things for me to do there was decorate these virtual homes, this screenshot here shows a room I did where I placed every single object in a specific way like the food on top of this table
+
+I also like crafting, I crochet small toys t such as this baby groot. And the things I like creating the most, are of course the ones I can eat.
 -->
 
 ---
@@ -138,6 +140,18 @@ layoutClass: h-full layout-wide-right
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
 <PinterestMasonry placement="title" :hide-left-mid="true" left-top-small-src="./slides/assets/About6.jpg" left-top-src="./slides/assets/About7.png" left-top-bg="transparent" right-tall-src="./slides/assets/About5.jpg" right-bottom-src="./slides/assets/About8.png" />
 </div>
+
+<!--
+Now, I'm going to go over my professional background. I spent years doing graphic design in a variety of industries.
+
+Such as this billboard I did for the local county fair.
+
+Eventually I did a career pivot to UX, my first tech role was at McGraw Hill Education, which is a textbook company but also has a suite of ed tech products. One of those products was ALEKS which I worked on a lot. I  designed teacher and student facing user interfaces and even some other things like this logo I made for the 20th anniversary. 
+
+After McGraw Hill, I spent some time at a mortgage company doing more enterprise platforms , this time for loan officers and real estate agents. While there,  I learned a lot about regulated and complicated work flows. 
+
+All of this together really helped me when I joined Disney. I was on the ads teams and initially I knew nothing about ad tech but have since worked on platforms for advertisers, internal users and even some customer-facing products for almost 5 years now
+-->
 
 ---
 layout: two-cols
@@ -164,7 +178,9 @@ transition: slide-left
 </div>
 
 <!--
-- recent project which is in dev
+And speaking of Ad tech, I'm going to go over my first case study which is the campaign creation flow I did for Disney Campaign Manager
+
+So what is Disney Campaign Manager?
 -->
 
 ---
@@ -183,7 +199,11 @@ transition: fade
 <AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="500" layer-max-width="72rem" pull-down="-2rem" />
 
 <!--
-- filters are one long scrolls
+So as Jimmy explained, Disney Campaign Manager is Disney's self serve ad platform and the product I spent years on.
+
+Before the rebrand, it was known as Hulu Ad Manager, and when I started in 2021 this was campaign creation flow looked like
+
+It was was a page by page flow where you can set up Campaign name, dates, budget,and  targeting options such as demographics and interests
 -->
 
 ---
@@ -198,7 +218,7 @@ transition: slide-left
 <div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#e60024]" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
-    <span>Launched in March 2020 as Hulu Ad Manager</span>
+    <span>Launched in March 2020 as Hulu Ad Manager; maintained by 3rd party</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#e60024]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
@@ -211,8 +231,13 @@ transition: slide-left
 </div>
 
 <!--
-- they really wanted boolean and more filter options
-- wanted to share filters
+Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency. 
+
+The product itself was created to let SMBs advertise on Hulu because there was a much lower minimum spend than the traditional route, $500 dollars vs $50,000
+
+Even thought it was still a young platform, it was profitable, making about $10mil a year 
+
+So it was making money, but the company really wanted to scale ad manager
 -->
 
 ---
@@ -236,7 +261,9 @@ transition: slide-left
 </div>
 
 <!--
-- new filters took a while to implement
+When I started, there was a big push to get more agency users and larger enterprise advertisers because those groups  have larger campaign spends than SMBs and most media buys on streaming are done by agencies
+
+Unfortunately we did not offer all the features that agencies wanted
 -->
 
 ---
@@ -253,6 +280,10 @@ transition: slide-left
     Agencies (and larger advertisers) did not see value in the self-serve ad platform
   </div>
 </div>
+
+<!--
+The core problem then became how could we get these large-spend advertisers to use our platform
+-->
 
 ---
 layout: default
@@ -283,6 +314,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+For this presentation, Im specifically going to focus what agencies wanted in campaign creation since it's the core experience of the platform
+
+These advertisers wanted extra targeting options such as day parting, frequency, pacing but the main thing they wanted was line items.
+
+I think you guys probably know what line items are but they are essentially sub campaigns  each with their own targeting within a larger campaign.
+
+In other ad platforms, they are called ad sets or ad groups
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -299,6 +340,12 @@ transition: slide-left
   <i class="fa-solid fa-arrow-right text-[#e60024] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
   <div class="rounded-2xl bg-white px-8 py-6 text-slate-700 text-[1.1rem] font-medium anim-fade-up glow-pulse-red" style="animation-delay:1.4s"><span>I could create a new campaign flow to meet agency needs</span></div>
 </div>
+
+<!--
+Part of the initiative to scale the platform was this huge 2-year project to move ad manager from the 3rd party to in house because it would save money and give us full ownership of the platform
+
+For me, I was given the rare opportunity to redesign an entire platform and that included redoing campaign creation
+-->
 
 ---
 layout: default
@@ -323,6 +370,12 @@ transition: slide-left
     <span>Have campaign flow (and entire platform) redesigns done by Oct 2024 launch</span>
   </div>
 </div>
+
+<!--
+Before I started, I had 2 core goals, add line items and add more targeting options
+
+And the most import thing: the hard deadline which was oct 1 2024
+-->
 
 ---
 layout: default
@@ -360,6 +413,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Now, I know 2 years sounds like a lot of time to work on a new design, but in reality it was just one of many thing I was working on. I was also working on updating the rest of the platform, as well updating the existing product because it was still making revenue 
+
+One top of that, I was the sole designer for the majority of this project, So, by myself, I had to work with a ton of developers (both internal and overseas), several PMs, the sales teams, the QA team, the marketing and many more people because they were all involved in this initiave
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -374,6 +433,12 @@ transition: slide-left
     How can I show line items in the campaign creation flow?
   </div>
 </div>
+
+<!--
+With all that in consideration, I had to figure out the part that kept stumping me: how to add in line items?
+
+In the page by page flow, There were several pages you had to navigate through to create just one campaign, so how could I implement even more sub-campaigns?
+-->
 
 ---
 layout: default
@@ -402,9 +467,11 @@ transition: slide-left
 </div>
 
 <!--
-- wanted side panel design
+Because of the limited resources, I decided to see what designs or patterns were there that I could upcycle. 
 
-- too many booleans
+There was this single page flow that was done by a previous designer and was also user tested with SMBs. It tested well, most users really liked the layout.
+
+I hypothesized that it would be easier to add more sections (such as new targeting) in a single page flow than adding several more pages in a page-by-page flow
 -->
 
 ---
@@ -433,7 +500,13 @@ transition: slide-left
 </div>
 
 <!--
-SHOW DEMO
+Unfortunately for me the past designer didn't really have anything that I could use for line items. So I looked at other ad platforms to see how they handled this.
+
+Facebook has this folder structure on the left rail and called them "ad sets"
+
+Snapchat also calls them "ad sets" and has them here in the right rail
+
+TikTok has "ad groups" and displayed them in the left rail  in a folder structure similar to facebook
 -->
 
 ---
@@ -451,11 +524,19 @@ transition: slide-left
   />
 </div>
 
+<!--
+After looking at all the examples, I decided the core layout would look something like this
+
+
+On the left would either be the navigation or line item menu, then you have the core campaign creation content in the middle, and here on the right rail would be where the inventory availability meter goes
+
+I still hadn't decided exactly where Line items would go but I figured if I started designing, I could come up with some ideas
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <CaseStudyPillTabs :key="s15" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
 
@@ -482,6 +563,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I did a ton of mocks, and of my initial ideas was to have line items live in the top as tabs because it would be easier to switch back and forth
+
+I experimented with more high fidelity versions but since line item names could be customized, these tabs could get pretty long and you end up with this weird horizontal scroll which did not look good or scale well
+
+I ditched this idea and went on to try other options
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -503,6 +592,14 @@ transition: slide-left
     <AdManagerStack :images="['./slides/assets/Concept2a.png', './slides/assets/Concept2b.png']" :compact="true" :viewport-height="820" layer-max-width="130rem" layer-width-pct="98%" pull-down="-16rem" />
   </div>
 </div>
+
+<!--
+One requirement early on was the ability to do bulk editing, as in be able to edit multiple line items at the same time
+
+because of that concept I came up with these options, like having line items in a dropdown
+
+and this option where line items lived in the left rail. We ended up removing bulk editing for scope but this specific layout stuck with me and I decided to keep experimenting with it
+-->
 
 ---
 layout: default
@@ -527,6 +624,18 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Another idea was having tabs that could toggle back and forth with the campaign navigation and line item menu
+
+it was still sort of awkward, so another idea was having this line item accordion that would open up the navigation when selected
+
+this was fine but navigation doesn't change, its the same regardless of whatever line item is selected. what does change is the line item
+
+so I reversed it and came up with this design where the line item menu was an accordion  
+
+I shared this layout with various internal teams specifically the client facing people such as customer support and sales people and they really liked this approach
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -548,6 +657,10 @@ transition: slide-left
   />
 </div>
 
+<!--
+I took that idea and revised it a little and this was the final flow that launched, the only change was the name change
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -558,6 +671,10 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New targeting section</h2>
 
 <AdManagerStack :images="['./slides/assets/Daypart.png']" :compact="true" :viewport-height="510" layer-max-width="86rem" layer-width-pct="89%" pull-down="-2rem" />
+
+<!--
+And because we had the single page flow now, it was easy for me to a new card with the new targeting like dayparting
+-->
 
 ---
 layout: default
@@ -575,6 +692,12 @@ transition: slide-left
     video-class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-4xl"
   />
 </div>
+
+<!--
+Here is the final flow sped up 
+
+you can see the new branding here
+-->
 
 ---
 layout: default
@@ -621,11 +744,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Now, i was able to reach the "destination" but there were challenges throughout the 2 year journey
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With internal teams</h2>
 
@@ -649,16 +775,21 @@ transition: slide-left
 </div>
 
 <!--
-- this is in development; working with eng if there are any addittinal edge cases
+As I mentioned I was the only designer for the majority of the time, I was able to get a contractor the last couple of months but it was mostly me dealing with a LOT of partners by myself
 
-- will do design/own QA when testing environment is ready
+To keep up with everyone, I would messag the PMs and lead engineers pretty frequently
+
+I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
+
+I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
+
+And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
 -->
 
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With external teams</h2>
 
@@ -676,6 +807,16 @@ transition: slide-left
     <span>Very literal on designs</span>
   </div>
 </div>
+
+<!--
+Working with the external teams was a whole other story, we were using 3rd party developers in Ukraine because this was such a huge project  and we needed additional help
+
+this 3rd party implemented a lot of the front end and it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
+
+I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I had to address
+
+But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
+-->
 
 ---
 layout: default
@@ -699,11 +840,18 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+What I learned was that I had to map out everything, every flow, every error state, modal, every state, whatever
+
+This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
+
+Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User Testing</h2>
 
@@ -725,6 +873,16 @@ transition: slide-left
     <span>Test with existing customers</span>
   </div>
 </div>
+
+<!--
+another part of my non liner journey was User testing. I shared designs often with internal teams but I really wanted to test the campaign flow with customers who already used our platform
+
+Because of time and resources, I wasn't able to user test until after the final designs were being implemented. I knew that that the changes from user testing would be in the launch but I was able to convince product to let me put these changes as fast follow ups after launch
+
+this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team and I would have to do conduct my own User test sessions
+
+One thing I thought would be easy was getting users to test with. I had spoken to sales about testing with existing customers and they seemed receptive at first but...
+-->
 
 ---
 layout: default
@@ -748,11 +906,14 @@ transition: slide-left
   <div></div>
 </div>
 
+<!--
+Nothing is straight forward. I shared my test plan with sales, they asked me to get some type of incentive for their clients, I went to marketing and got the incentive, then I went back to sales and sales said No, they weren't comfortable sharing their clients with me and so ...
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User Testing</h2>
 
@@ -774,6 +935,10 @@ transition: slide-left
     <span>Test with <s class="text-[#e60024]">existing customers</s> &nbsp;users who have done digital advertising</span>
   </div>
 </div>
+
+<!--
+I had to move on and make the best of what I had, and find other users by myself
+-->
 
 ---
 layout: default
@@ -803,6 +968,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I created a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms
+
+I conduncted 1 hr usability tests where I asked them to do certain tasks in and see how they went about tje,
+
+Even though none of them had used hulu ad manager before, I got some pretty useful feedback
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -830,6 +1003,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Here are some of the high level ones
+
+First off, the term "line items" was confusing, even to the users who did a lot of advertising were thrown off by the term but understood the concept
+
+I think the term "line item" was one of the things I pushed back against the most with product, I wanted to call it ad set or ad groups. even before this user test, based on my meetings with internal teams, a lot of them didn't get the term either
+
+However product insisted on calling it line items because thats what it was called in our internal ad trafficking tool And like with sales, I had to accept I wasn't going to change their minds and had to move on to other important things
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -852,6 +1035,10 @@ transition: slide-left
     />
   </div>
 </div>
+
+<!--
+One big issue was that people could not find the "create new line item button", so that was something I prioritized as a fix post launch
+-->
 
 ---
 layout: default
@@ -879,6 +1066,10 @@ transition: slide-left
     />
   </div>
 </div>
+
+<!--
+On the positive note, the single page flow tested well, people new to the platform quickly figured out how to navigate
+-->
 
 ---
 layout: default
@@ -912,6 +1103,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+After all the user feedback and my own QA work, I made a huge Epic on JIRA with almost 100 tickets from everything to minor UI issues to major issues like the new line item button
+
+I prioritized these tickets based on severity and level of effort and was able to get the enginerring teams to work on them in the weeks following launch
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -937,6 +1134,10 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+once we released the new campaign flow and new platform, there was pretty quick growth the following year, both revenue and number of agency users signficantly increased
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -961,11 +1162,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+and i was able to complete all the goals i had set out to do
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What I would do differently</h2>
 
@@ -986,24 +1190,15 @@ transition: slide-left
   </p>
 </div>
 
----
-layout: default
-transition: slide-left
----
+<!--
+I had a lot of takeaways, especially because this was such a large project. There are things I would do differently such as getting support earlier and setting up a realistic timeline for my work up front
 
+but one thing i would definitely do differently now is use AI especially for quick concepts. 
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Learnings</h2>
+Knowing what I know now about ads and wanting to test out AI tooling, I created the campaign flow as i would do it now
 
-<div class="grid grid-cols-2 gap-4 w-full mt-10">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
-    <i class="fa-solid fa-clock text-[#e60024] text-[2rem] self-center"></i>
-    <span>I am capable of more than I thought. Did designs for the entire platform, conducted my own UT sessions, and trained and hired a contractor</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
-    <i class="fa-solid fa-route text-[#e60024] text-[2rem] self-center"></i>
-    <span>Learned a lot about campaign creation, creative formats, and reporting</span>
-  </div>
-</div>
+SHOW PROTO
+-->
 
 ---
 layout: two-cols
@@ -1029,11 +1224,16 @@ transition: slide-left
 <PinterestMasonry :show-images="false" span-src="./slides/assets/VASTgrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/VASTgrid3.png" right-position="left center" left-top-src="./slides/assets/VASTgrid2.png" left-bottom-src="./slides/assets/VASTgrid1.png" left-bottom-position="center 18%" tile-border="0.5px solid #D2D2D2" />
 </div>
 
+<!--
+Before I move on, are there any questions or should I go on to the next case study?
+
+Great, so this is like the previous project, just smaller in scale. And that is adding VAST to the platform
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What is VAST?</h2>
 
@@ -1057,11 +1257,18 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+so What is VAST?
+
+If any of you are unfamiliar, VAST is a string of code created using a 3rd party vendor that has the creative assets, tracking pixels and metadata so a creative will display correctly not matter where the ad is running
+
+Basically if you are an advertiser running ads on different platforms, you can use the same VAST tag for all of them and if you update it on your end (like you change a tracking pixel), it automatically updates everywhere else
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Why VAST</h2>
 
@@ -1080,6 +1287,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Ok, so why do we need VAST? Simply put, like the last project, this was something agencies asked for frequently, I myself noticed this when I sat in on one agency call
+
+Unlike the last project I only had a few weeks to work on this because it was going to roll out in what was then our current platform, because I  was told that this would be an easy and quick feature to ad
+
+But I found the requirements to be pretty vague
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1094,6 +1309,10 @@ transition: slide-left
     Agencies & large advertisers wanted VAST feature in order to use campaign manager
   </div>
 </div>
+
+<!--
+I understood the core problem, we needed VAST to get more big-spend advertisers
+-->
 
 ---
 layout: default
@@ -1119,6 +1338,10 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+And I knew I had to design a flow where you could upload your VAST tag, show any errors, and  preview the creative assets within the VAST
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1127,6 +1350,12 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Current creative upload</h2>
 
 <AdManagerStack :images="['./slides/assets/upload1.png', './slides/assets/upload2.png', './slides/assets/upload3.png']" :compact="true" :viewport-height="520" layer-max-width="85rem" layer-width-pct="92%" pull-down="-2.3rem" />
+
+<!--
+For sake of time and consistency, I decided to use the pattern we already had in ad upload, which was this panel comes out on the right side
+
+This is what ad upload looks like and this is what selecting an ad you've already uploaded looks like
+-->
 
 ---
 layout: default
@@ -1150,6 +1379,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+using that panel this is what I came up with, you enter your VAST here
+
+it shows you all the macros or updates automatically made in your tag so the ad can run on hulu
+
+and then you can see the assets that were in the VAST, like the campaigns designs I tried top nav to cycle through assets but decided it took up too much space 
+
+so I moved them to the left side and added icons showing wether the asset passed (or failed) the technical specs needed for hulu
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1172,6 +1411,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I spent a lot of time going back and forth with our customer facing teams especially our ad ops team, they gave me some good feedback and understood VAST a lot better than I did
+
+They said they didnt need to see all the macros because most users dont understand what they are, instead they suggested only displaying the important ones like cachebuster or site name
+
+And I learned very quickly that the icons did not make sense. They were supposed to indicate wether an asset had passed tech specs or not, tech specs are the first step before a creative goes to the final human review,  the ops people thought that those icons represented the final review not the first step so that was a miss
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1191,11 +1438,16 @@ class: slide-starting-off
   </div>
 </div>
 
+<!--
+Based on feedback from various internal teams I realized I did not understand VAST very well because I was going off the PRD and it seemed like the PRD also didn't understand VAST
+
+Then halfway through this project the lead PM who made that PRD ended up suddenly leaving the company and the other PM who would  have understood VAST was on parental leave
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Back to drawing board</h2>
 
@@ -1214,11 +1466,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I then had to rely on the other teams to help me understand VAST, such as how it was uploaded and how to display the creative assets
+
+One thing i learned from them was that we actually already had a VAST tool
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy VAST tool</h2>
 
@@ -1230,11 +1487,16 @@ transition: slide-left
   />
 </div>
 
+<!--
+This was an old tool in a legacy platform that wasn't updated anymore but could be used to check VAST tags 
+
+and you can see here that it shows every single parameter in the VAST and wether it passed or failed, the tech requirements
+-->
+
 ---
 layout: default
 transition: slide-left
 ---
-
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Revised understanding of VAST</h2>
 
@@ -1250,6 +1512,10 @@ transition: slide-left
   <div></div>
   <div></div>
 </div>
+
+<!--
+After all of this back and forth with various teams I finally understood how a VAST upload works. As well as the failure points such as incorrectly formatted VAST tags or not passing tech specs
+-->
 
 ---
 layout: default
@@ -1276,6 +1542,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I went back and added the table from the VAST legacy tool because I felt it was useful in pointing out specific errors
+
+and I only added an icon in assets with erros
+
+I shared these concepts and (slide) once again, got good feedback. users told me they didn't need to see every parameter, just the ones with issues
+
+but they did want to see all the statuses at a quick glance.  I knew then they expected those statuses to reflect the final check and not the tech specs, so I changed the logic to match their mental model
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1297,6 +1573,16 @@ transition: slide-left
     <AdManagerStack :key="s37_copy4" :images="['./slides/assets/VASTfinal1.png', './slides/assets/VASTfinal2.png']" :compact="true" :viewport-height="620" layer-max-width="100rem" layer-width-pct="95%" pull-down="-3rem" pile-shift="-3rem" />
   </div>
 </div>
+
+<!--
+We have 3 creative review states. an asset with a technical error shows up as rejected automatically, one that passes tech spec but hasn't been human reviewed is pending approval and one that has passed tech spec and human review is approved
+
+now I just needed a way to best display this, I tried status chips at first but it looked weird and took up a lot of space
+
+then I switched to icons instead which worked better
+
+And updated the table to only show the errors as opposed to everything
+-->
 
 ---
 layout: default
@@ -1320,6 +1606,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+From there it was easy to update the rest, I changed the VAST URL upload to only display the major macros being replaced 
+
+and if your VAST doesn't upload you get a specific error message telling you why it didn't pass and you cannot move a head
+
+there are several error codes for this such as incorrect formatting or VAST made with unapproved vendor
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1327,9 +1621,9 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-2 max-w-md">End-to-end flow</h2>
 
-<div class="mt-4 flex w-full justify-center px-2">
+<div class="mt-5 flex w-full justify-center px-2">
   <video
-    class="mx-auto block h-auto max-h-[min(490px,51vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
+    class="mx-auto block h-auto w-[70%] rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)]"
     autoplay
     loop
     muted
@@ -1339,6 +1633,10 @@ transition: slide-left
     <source src="./slides/assets/VASTfinal.mp4" type="video/mp4" />
   </video>
 </div>
+
+<!--
+Here is the full flow
+-->
 
 ---
 layout: default
@@ -1366,6 +1664,18 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+We released VAST in early 2024 in what is now the old platform and then came to platform 2.0 later in the year
+
+the VAST flow removed another blocker for agencies and the same design is there to this day
+
+of course the process to get there wasn't very smooth, there was a lot of confusion and misunderstanding and because of that I learned that I shouldn't rely just on the PRD especially if its for something I don't understand or know
+
+As a result I learned that if I dont get anything, I should talk to as many people as I can and do as much research as possible so I can get context sooner rather than later
+
+and that is the VAST implementation
+-->
+
 ---
 layout: two-cols
 
@@ -1390,4 +1700,3 @@ transition: fade-out
 <div class="flex h-full min-h-0 w-full flex-col pl-4">
 <PinterestMasonry placement="title" left-top-small-src="/IMG_4215.jpg" left-mid-src="/20221117_091012.jpg" left-top-src="/PXL_20241205_015703401.jpg" right-tall-src="/IMG_20200523_120959.jpg" right-bottom-src="/PXL_20240210_213758992.jpg" />
 </div>
-

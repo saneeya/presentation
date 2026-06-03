@@ -29,7 +29,6 @@ layout: default
 transition: slide-left
 ---
 
-
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What is Disney Campaign Manager?</h2>
 
 <div class="mt-10 flex w-full justify-center px-2">
@@ -42,3 +41,7 @@ transition: slide-left
     <source src="./assets/DCMvid.mp4" type="video/mp4" />
   </video>
 </div>
+
+<!--
+I will let Jimmy Kimmel explain
+-->

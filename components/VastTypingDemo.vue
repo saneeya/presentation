@@ -95,7 +95,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div ref="root" class="vast-xml-box overflow-x-auto rounded-2xl bg-white px-5 py-4 font-mono text-[0.62rem] leading-snug text-[#e60024] anim-fade-up anim-d2">
+  <div ref="root" class="vast-xml-box overflow-x-auto rounded-2xl bg-white px-5 py-4 font-mono text-[0.62rem] leading-snug text-[#0D9488] anim-fade-up anim-d2">
     <pre class="m-0 whitespace-pre"><code>{{ before }}<span class="typed-region">{{ middle }}<span v-if="showCursor" class="cursor">|</span></span>{{ after }}</code></pre>
   </div>
 </template>
@@ -104,7 +104,7 @@ onUnmounted(() => {
 .typed-region { color: #1e40af; }
 .cursor {
   display: inline-block;
-  color: #e60024;
+  color: #0D9488;
   animation: blink 0.6s step-end infinite;
   font-weight: bold;
 }

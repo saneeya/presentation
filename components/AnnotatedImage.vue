@@ -21,7 +21,7 @@ defineProps<{
     <svg class="ann-svg" viewBox="0 0 120 110" preserveAspectRatio="none">
       <defs>
         <marker id="dot" markerWidth="4" markerHeight="4" refX="2" refY="2">
-          <circle cx="2" cy="2" r="1.8" fill="#e60024" />
+          <circle cx="2" cy="2" r="1.8" fill="#0D9488" />
         </marker>
       </defs>
 
@@ -34,7 +34,7 @@ defineProps<{
         <line
           :x1="10 + a.tx" :y1="5 + a.ty"
           :x2="10 + a.lx" :y2="5 + a.ly"
-          stroke="#e60024" stroke-width="0.6" stroke-dasharray="2 1.2"
+          stroke="#0D9488" stroke-width="0.6" stroke-dasharray="2 1.2"
           marker-start="url(#dot)"
         />
         <text

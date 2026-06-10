@@ -67,7 +67,7 @@ const active = Math.min(Math.max(0, props.initialIndex), TABS.length - 1)
 }
 
 .pill-tabs__tab--active {
-  background: #e60024;
+  background: #0D9488;
   color: #fff;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
 }

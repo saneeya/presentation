@@ -70,7 +70,7 @@ onMounted(() => {
   font-size: clamp(2.5rem, 5.5vw, 3.65rem);
   font-weight: 700;
   line-height: 1.1;
-  color: #e60024;
+  color: #0D9488;
   opacity: 0;
   transform: translateY(18px) scale(0.98);
   filter: blur(6px);
@@ -133,7 +133,7 @@ onMounted(() => {
 }
 
 .hero-sub-stack :deep(p:first-of-type) {
-  color: #e60024;
+  color: #0D9488;
   font-weight: 700;
 }
 

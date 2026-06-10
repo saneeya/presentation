@@ -283,7 +283,20 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   margin-left: 0;
   margin-right: 0;
   box-sizing: border-box;
-  gap: 0.65rem;
+  gap: 0.9rem;
+}
+
+/* Title placement: diagonally staggered columns — editorial collage, not a flush grid */
+.masonry-root--title .masonry-col:first-child {
+  padding-top: 2.5rem;
+}
+
+.masonry-root--title .masonry-col:last-child {
+  padding-bottom: 2.5rem;
+}
+
+.masonry-root--title .masonry {
+  align-items: stretch;
 }
 
 
@@ -291,7 +304,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
 .masonry-right-stack {
   display: grid;
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 0.65rem;
+  gap: 0.9rem;
   min-height: 0;
   min-width: 0;
   flex: 1 1 0;
@@ -316,7 +329,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   flex: 1 1 0;
   min-height: 0;
   overflow: visible;
-  gap: 0.65rem;
+  gap: 0.9rem;
 }
 
 .masonry-col {
@@ -325,12 +338,12 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.9rem;
 }
 
 .tile {
   position: relative;
-  border-radius: 16px;
+  border-radius: 8px;
   border: 1px dashed rgb(148 163 184 / 0.85);
   background: rgb(248 250 252 / 0.95);
   display: flex;
@@ -372,7 +385,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
 
 /* Title slide only: bottom strip matches one masonry column width, right-aligned */
 .masonry-span--title {
-  width: calc((100% - 0.65rem) / 2);
+  width: calc((100% - 0.9rem) / 2);
   max-width: 100%;
   min-width: 0;
   align-self: flex-end;

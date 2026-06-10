@@ -1,15 +1,15 @@
 /* Light deck: near-white canvas + soft silver-gray layered depth */
 :root {
-  --deck-bg-base: #fafaf8;
+  --deck-bg-base: #fbfbf9;
   --deck-bg-elevated: #ffffff;
-  --deck-bg-tint: rgba(180, 175, 165, 0.13);
-  --deck-bg-corner: rgba(180, 175, 165, 0.20);
-  --deck-accent: #0d9488;
-  --deck-accent-dim: #0f766e;
+  --deck-bg-tint: rgba(13, 148, 136, 0.10);
+  --deck-bg-corner: rgba(13, 148, 136, 0.07);
+  --deck-accent: #0D9488;
+  --deck-accent-dim: #0F766E;
   --deck-ink: #0f172a;
   --deck-muted: #3a4652;
   /* Must win over @slidev/client/styles/vars.css (:root sets black later in bundle) */
-  --slidev-slide-container-background: #ffffff !important;
+  --slidev-slide-container-background: transparent !important;
   /* Image drop shadow (#000 @ ~10–15% opacity, blur ~8–12px, Y offset ~2–4px) */
   --deck-img-shadow-y: 3px;
   --deck-img-shadow-blur: 10px;
@@ -30,9 +30,8 @@ body::before {
   pointer-events: none;
   background-color: var(--deck-bg-base);
   background-image:
-    radial-gradient(ellipse 115% 90% at 18% -8%, var(--deck-bg-tint), transparent 58%),
-    radial-gradient(ellipse 78% 62% at 100% 100%, var(--deck-bg-corner), transparent 52%),
-    linear-gradient(188deg, var(--deck-bg-elevated) 0%, #fafaf8 40%, #f4f2ee 72%, #edeae4 100%);
+    radial-gradient(ellipse 90% 80% at 85% -10%, var(--deck-bg-tint), transparent 55%),
+    radial-gradient(ellipse 70% 60% at 0% 100%, var(--deck-bg-corner), transparent 50%);
 }
 
 html,
@@ -147,6 +146,16 @@ body,
   padding: 0 !important;
 }
 
+/* Display type: Space Grotesk for headlines, Manrope (default sans) for body copy */
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3,
+.slidev-layout h4,
+.slidev-layout .user-groups-slide-heading,
+.slidev-layout [class*="tracking-tight"] {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3 {
@@ -154,14 +163,14 @@ body,
 }
 
 #slide-content .slidev-layout h2 {
-  color: #e60024;
+  color: #0D9488;
   font-weight: 700;
   font-size: 1.85rem;
 }
 
 /* User groups slide: heading lives in left column with list (aligns with list edge) */
 #slide-content .slidev-layout .user-groups-slide-heading {
-  color: #e60024;
+  color: #0D9488;
   font-weight: 700;
   font-size: 1.85rem;
   letter-spacing: -0.02em;
@@ -233,8 +242,8 @@ body,
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #fff;
-  background: #e60024;
-  border: 1px solid color-mix(in srgb, #e60024 88%, #000);
+  background: #0D9488;
+  border: 1px solid color-mix(in srgb, #0D9488 88%, #000);
   border-radius: 9999px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 0.12);
 }
@@ -334,12 +343,12 @@ body,
   max-height: min(520px, 68vh);
   width: 28rem;
   max-width: 100%;
-  color: #e60024;
+  color: #0D9488;
 }
 
 .slidev-layout .vast-xml-box pre,
 .slidev-layout .vast-xml-box code {
-  color: #e60024 !important;
+  color: #0D9488 !important;
 }
 
 /* ─── Global pill-tab tracker (GlobalTop.vue) — hide per-slide instances ─── */
@@ -422,7 +431,7 @@ body,
   50%       { opacity: 1; }
 }
 .glow-pulse-red {
-  border: 1px solid #e60024;
+  border: 1px solid #0D9488;
   position: relative;
 }
 .glow-pulse-red::after {
@@ -430,7 +439,7 @@ body,
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  box-shadow: 0 0 10px 3px rgba(230,0,36,0.5);
+  box-shadow: 0 0 10px 3px rgba(13,148,136,0.45);
   animation: red-glow-pulse 2s ease-in-out infinite;
   pointer-events: none;
 }

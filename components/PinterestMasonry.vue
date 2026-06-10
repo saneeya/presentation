@@ -411,6 +411,9 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   padding: 0;
   border: none;
   background: rgb(241 245 249);
+  box-shadow:
+    0 1px 4px rgb(0 0 0 / 0.06),
+    0 4px 16px rgb(0 0 0 / 0.1);
 }
 
 .tile-img {

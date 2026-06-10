@@ -21,6 +21,8 @@ const props = withDefaults(
     imgPosition?: string
     /** Make the last image fade in instead of slide in */
     fadeInLast?: boolean
+    /** Per-image scale factors, e.g. [0.8, 1, 1, 1] */
+    imageScales?: number[]
   }>(),
   {
     images: () => [
@@ -44,9 +46,21 @@ const visibleCount = computed(() =>
   Math.min(clicks.value + 1, props.images.length),
 )
 
+function normalizeLength(value: string | undefined, fallback: string) {
+  if (!value)
+    return fallback
+  // Unitless numbers invalidate calc(50% + var(...)) and pin layers to top: 0.
+  if (/^-?\d+(\.\d+)?$/.test(value.trim()))
+    return `${value.trim()}px`
+  return value
+}
+
 const rootStyle = computed(() => ({
-  '--stack-pull-down': props.pullDown ?? (props.compact ? '2rem' : '0.5rem'),
-  '--stack-pile-shift': props.pileShift ?? '0',
+  '--stack-pull-down': normalizeLength(
+    props.pullDown,
+    props.compact ? '2rem' : '0.5rem',
+  ),
+  '--stack-pile-shift': normalizeLength(props.pileShift, '0px'),
 }))
 
 function layerOpacity(idx: number, V: number) {
@@ -62,6 +76,16 @@ function layerOpacity(idx: number, V: number) {
     return 0.16
   }
   return 0.07
+}
+
+function imgStyle(idx: number) {
+  const styles: Record<string, string> = {}
+  if (props.imgPosition)
+    styles.objectPosition = props.imgPosition
+  const scale = props.imageScales?.[idx]
+  if (scale != null && scale !== 1)
+    styles.transform = `scale(${scale})`
+  return Object.keys(styles).length ? styles : undefined
 }
 </script>
 
@@ -94,7 +118,7 @@ function layerOpacity(idx: number, V: number) {
             :src="src"
             alt=""
             class="ad-manager-stack__img"
-            :style="props.imgPosition ? { objectPosition: props.imgPosition } : undefined"
+            :style="imgStyle(idx)"
           >
         </div>
       </div>

@@ -1,20 +1,28 @@
 <script setup lang="ts">
-const TABS = ['Context', 'Problem', 'Process', 'Outcome'] as const
+const DEFAULT_TABS = ['Context', 'Problem', 'Process', 'Outcome'] as const
 
 const props = withDefaults(
-  defineProps<{ initialIndex?: number }>(),
+  defineProps<{
+    initialIndex?: number
+    /** Override the third tab label (default "Process") */
+    processLabel?: string
+  }>(),
   { initialIndex: 0 },
 )
 
-const active = Math.min(Math.max(0, props.initialIndex), TABS.length - 1)
+const tabs = props.processLabel
+  ? [DEFAULT_TABS[0], DEFAULT_TABS[1], props.processLabel, DEFAULT_TABS[3]]
+  : [...DEFAULT_TABS]
+
+const active = Math.min(Math.max(0, props.initialIndex), tabs.length - 1)
 </script>
 
 <template>
   <nav class="pill-tabs" aria-label="Case study sections">
     <div class="pill-tabs__track" role="tablist">
       <button
-        v-for="(label, i) in TABS"
-        :key="label"
+        v-for="(label, i) in tabs"
+        :key="`${label}-${i}`"
         type="button"
         role="tab"
         :tabindex="active === i ? 0 : -1"

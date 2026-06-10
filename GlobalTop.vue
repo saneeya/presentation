@@ -6,16 +6,20 @@ const { currentPage } = useNav()
 
 /** Section slide ranges (inclusive) for each case study */
 const SECTIONS: readonly { label: string; start: number; end: number }[] = [
-  // Case study 1
-  { label: 'Background',  start: 6,  end: 8 },
-  { label: 'Problem',     start: 9,  end: 12 },
-  { label: 'Ideation',    start: 13, end: 24 },
-  { label: 'The Journey', start: 25, end: 39 },
-  // Case study 2
-  { label: 'Problem',     start: 41, end: 43 },
-  { label: 'Concepts',    start: 44, end: 52 },
-  { label: 'Final',       start: 53, end: 55 },
-  { label: 'Takeaway',    start: 56, end: 56 },
+  // Mini case study: Making Filters Functional
+  { label: 'Problem',  start: 10, end: 14 },
+  { label: 'Designs',  start: 15, end: 20 },
+  { label: 'Outcome',  start: 21, end: 22 },
+  // Case study: Campaign Creation Flow
+  { label: 'Background',  start: 23, end: 25 },
+  { label: 'Problem',     start: 26, end: 35 },
+  { label: 'Ideation',    start: 36, end: 43 },
+  { label: 'The Journey', start: 44, end: 59 },
+  // Case study: VAST Implementation
+  { label: 'Background',  start: 60, end: 61 },
+  { label: 'Problem',     start: 62, end: 68 },
+  { label: 'Concepts',    start: 69, end: 75 },
+  { label: 'Takeaway',    start: 76, end: 77 },
 ]
 
 const section = computed(() => {

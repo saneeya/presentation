@@ -62,14 +62,18 @@ transition: slide-left
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">02</span>
-    <span>Case Study: Campaign Creation Flow</span>
+    <span>Mini Case Study: Making Filters Functional</span>
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">03</span>
-    <span>Case Study: VAST Implementation</span>
+    <span>Case Study: Campaign Creation Flow</span>
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
+    <span>Case Study: VAST Implementation</span>
+  </div>
+  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d5">
+    <span class="text-[#0D9488] font-semibold text-[1rem] w-6">05</span>
     <span>Q & A</span>
   </div>
 </div>
@@ -104,40 +108,23 @@ layoutClass: h-full layout-wide-right
 
 <div class="mt-32">
 
-## About
-
-</div>
-
-::right::
-
-<div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" :hide-left-mid="true" :hide-left-bottom="true" left-extra-top-src="./slides/assets/About4.jpg" left-extra-top-position="30% center" :left-extra-top-grow="1.4" :title-top-grow="2.2" :title-bottom-grow="1.0" left-top-small-src="./slides/assets/About2.jpg" left-top-small-position="center 40%" :left-top-small-scale="1.3" right-tall-src="./slides/assets/About1.jpg" right-bottom-src="./slides/assets/About3.jpg" right-bottom-position="20% center" />
-</div>
-
-<!--
-Before I dive into the work, I'd like to go over what I call my "creative background" One thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific way 
-
-and I dont just decorate physicially , here is  my virtual home in Final Fantasy 14, an online multiplayer game which was my pandemic game. One of the most fun things for me was to was decorate these homes, this screenshot here shows a room I did where I placed every single object like the food on top of this table
-
-And I also like creating real life things. I dont crochet as much as I used to but I have made alot small toys such as this baby groot. And the things I like creating the most, are of course the ones I can eat such as this tart
--->
-
----
-transition: slide-left
-layout: two-cols
-layoutClass: h-full layout-wide-right
----
-
-<div class="mt-32">
-
 ## Background
 
 </div>
 
 ::right::
 
-<div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" :hide-left-mid="true" left-top-small-src="./slides/assets/About6.jpg" left-top-src="./slides/assets/About7.png" left-top-bg="transparent" right-tall-src="./slides/assets/About5.jpg" right-bottom-src="./slides/assets/About8.png" />
+<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0 -translate-x-20">
+<AdManagerStack
+  :images="['./slides/assets/About6.jpg', './slides/assets/About7.png', './slides/assets/About8.png', './slides/assets/About5.jpg']"
+  :image-scales="[1, 0.78, 1, 1]"
+  :compact="true"
+  :viewport-height="610"
+  layer-max-width="100%"
+  layer-width-pct="100%"
+  pull-down="4.5rem"
+  pile-shift="1rem"
+/>
 </div>
 
 <!--
@@ -151,6 +138,551 @@ After McGraw Hill, I spent some time at a mortgage company doing more enterprise
 
 All of this together really helped when I joined Disney. I was on the ads design team but initially I knew nothing about ad tech,But since then I have worked on several platforms for advertisers, internal users and even some customer-facing products for almost 5 years now
 -->
+
+---
+transition: slide-left
+layout: two-cols
+layoutClass: h-full layout-wide-right
+---
+
+<div class="mt-32">
+
+## About
+
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0 -translate-x-20">
+<AdManagerStack
+  :images="['./slides/assets/About4.jpg', './slides/assets/About1.jpg', './slides/assets/About2.jpg', './slides/assets/About3.jpg']"
+  :compact="true"
+  :viewport-height="610"
+  layer-max-width="100%"
+  layer-width-pct="100%"
+  pull-down="4.5rem"
+  pile-shift="1rem"
+/>
+</div>
+
+<!--
+Before I dive into the work, I'd like to go over what I call my "creative background" One thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific way 
+
+and I dont just decorate physicially , here is  my virtual home in Final Fantasy 14, an online multiplayer game which was my pandemic game. One of the most fun things for me was to was decorate these homes, this screenshot here shows a room I did where I placed every single object like the food on top of this table
+
+And I also like creating real life things. I dont crochet as much as I used to but I have made alot small toys such as this baby groot. And the things I like creating the most, are of course the ones I can eat such as this tart
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_copy_agenda" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Old Process (sort of)</h2>
+
+<div class="flex flex-col gap-3 mt-16 w-full max-w-4xl mx-auto">
+  <div style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 0.75rem 0.5rem; align-items: center;">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d1">Discovery</div>
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d2"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d2">Problem Statement</div>
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d3"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d3">Wireframes</div>
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">High Fidelity</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="flex justify-center">
+      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[1.5rem]"></i>
+    </div>
+  </div>
+  <div style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 0.75rem 0.5rem; align-items: center;">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">Hand off</div>
+    <i class="fa-solid fa-arrow-left text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">Final Designs</div>
+    <i class="fa-solid fa-arrow-left text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">Revisions</div>
+    <i class="fa-solid fa-arrow-left text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">User Testing</div>
+  </div>
+</div>
+
+<!--
+Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_copy_agenda_dup" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Now (sort of)</h2>
+
+<div class="flex flex-col gap-3 mt-16 w-full max-w-4xl mx-auto">
+  <div style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 0.75rem 0.5rem; align-items: center;">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d1">PRD</div>
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d2"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d2">AI Prototype</div>
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d3"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d3">User Feedback</div>
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">AI Prototype (revisions)</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="flex justify-center">
+      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[1.5rem]"></i>
+    </div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">Dev back-and-forth</div>
+    <i class="fa-solid fa-arrow-left text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">Stakeholder back-and-forth</div>
+  </div>
+</div>
+
+<!--
+Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_copy_agenda_dup2" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How I work (now)</h2>
+
+<div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-8 w-8 fill-[#0D9488]" aria-hidden="true"><path d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"/></svg>
+    <span>Managing resources: time/headcount/tokens</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-8 w-8 fill-[#0D9488]" aria-hidden="true"><path d="M320 80C377.4 80 424 126.6 424 184C424 241.4 377.4 288 320 288C262.6 288 216 241.4 216 184C216 126.6 262.6 80 320 80zM96 152C135.8 152 168 184.2 168 224C168 263.8 135.8 296 96 296C56.2 296 24 263.8 24 224C24 184.2 56.2 152 96 152zM0 480C0 409.3 57.3 352 128 352C140.8 352 153.2 353.9 164.9 357.4C132 394.2 112 442.8 112 496L112 512C112 523.4 114.4 534.2 118.7 544L32 544C14.3 544 0 529.7 0 512L0 480zM521.3 544C525.6 534.2 528 523.4 528 512L528 496C528 442.8 508 394.2 475.1 357.4C486.8 353.9 499.2 352 512 352C582.7 352 640 409.3 640 480L640 512C640 529.7 625.7 544 608 544L521.3 544zM472 224C472 184.2 504.2 152 544 152C583.8 152 616 184.2 616 224C616 263.8 583.8 296 544 296C504.2 296 472 263.8 472 224zM160 496C160 407.6 231.6 336 320 336C408.4 336 480 407.6 480 496L480 512C480 529.7 465.7 544 448 544L192 544C174.3 544 160 529.7 160 512L160 496z"/></svg>
+    <span>Working w/ stakeholders: collaboration &amp; negotiations</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-8 w-8 fill-[#0D9488]" aria-hidden="true"><path d="M64 183.4C44.9 172.4 32 151.7 32 128C32 92.7 60.7 64 96 64C119.7 64 140.4 76.9 151.4 96L488.5 96C499.6 76.9 520.2 64 543.9 64C579.2 64 607.9 92.7 607.9 128C607.9 151.7 595 172.4 575.9 183.4L575.9 456.5C595 467.6 607.9 488.2 607.9 511.9C607.9 547.2 579.2 575.9 543.9 575.9C520.2 575.9 499.5 563 488.5 543.9L151.4 543.9C140.3 563 119.7 575.9 96 575.9C60.7 575.9 32 547.2 32 511.9C32 488.2 44.9 467.5 64 456.5L64 183.4zM512 183.4C502.3 177.8 494.2 169.7 488.6 160L151.4 160C145.8 169.7 137.7 177.8 128 183.4L128 456.5C137.7 462.1 145.8 470.2 151.4 479.9L488.5 479.9C494.1 470.2 502.2 462.1 511.9 456.5L511.9 183.4zM176 240C176 222.3 190.3 208 208 208L320 208C337.7 208 352 222.3 352 240L352 304C352 321.7 337.7 336 320 336L208 336C190.3 336 176 321.7 176 304L176 240zM288 384L320 384C364.2 384 400 348.2 400 304L432 304C449.7 304 464 318.3 464 336L464 400C464 417.7 449.7 432 432 432L320 432C302.3 432 288 417.7 288 400L288 384z"/></svg>
+    <span>Setting up the &quot;designer&quot; difference in AI world</span>
+  </div>
+</div>
+
+<!--
+Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+-->
+
+---
+layout: two-cols
+layoutClass: h-full
+transition: slide-left
+---
+
+<div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
+  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
+    <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
+      <div class="mb-8 mt-10 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-14 md:text-4xl lg:mt-16 lg:text-5xl anim-fade-up"><span class="block">Making</span><span class="block whitespace-nowrap"><span class="text-[#0D9488]">Filters</span> Functional</span></div>
+      <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2 mt-4">Redoing filters for a data-dense tool</div>
+      <div class="mt-auto self-start anim-fade-up anim-d4">
+        <span class="hero-pill">MINI CASE STUDY</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col">
+<PinterestMasonry :show-images="false" span-src="./slides/assets/FI.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/MCFilters.gif" right-position="left center" left-top-src="/filter88.png" left-bottom-src="/datepicker.png" left-bottom-position="center 18%" />
+</div>
+
+---
+layout: two-cols
+layoutClass: h-full
+transition: slide-left
+---
+
+<div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
+  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
+    <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
+      <div class="flex flex-col gap-8 mt-4">
+        <div class="flex flex-col gap-2 anim-fade-up anim-d2">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">6 Months</div>
+        </div>
+        <div class="flex flex-col gap-2 anim-fade-up anim-d3">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Type</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Internal Tool</div>
+        </div>
+        <div class="flex flex-col gap-2 anim-fade-up anim-d4">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Status</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">In Development</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col">
+<PinterestMasonry :show-images="false" span-src="./slides/assets/FI.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/MCFilters.gif" right-position="left center" left-top-src="/filter88.png" left-bottom-src="/datepicker.png" left-bottom-position="center 18%" />
+</div>
+
+---
+layout: default
+transition: fade
+---
+
+<CaseStudyPillTabs :key="s_filters_open" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Mission Control filters</h2>
+
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
+  <video
+    class="mx-auto block h-auto max-h-[min(400px,46vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="metadata"
+    @loadedmetadata="(e) => { const v = e.target; if (v instanceof HTMLVideoElement) v.playbackRate = 0.5 }"
+    @play="(e) => { const v = e.target; if (v instanceof HTMLVideoElement) v.playbackRate = 0.5 }"
+  >
+    <source src="./slides/assets/MCfilterexample.mp4" type="video/mp4" />
+  </video>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_vid" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Filter map</h2>
+
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
+  <img
+    src="./slides/assets/Filtermap.png"
+    alt="Filter map"
+    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
+  />
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_map" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User feedback</h2>
+
+<div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-4 max-w-3xl">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <i class="fa-brands fa-google text-[#0D9488] text-[2rem]"></i>
+    <span>Users were used to having custom filters in GAM (which we were trying to replace)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-tags text-[#0D9488] text-[2rem]"></i>
+    <span>They wanted to filter by asset tags &amp; targeting values</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <i class="fa-regular fa-square-caret-down text-[#0D9488] text-[2rem]"></i>
+    <span>Filter list is one long dropdown, a lot of scrolling</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
+    <i class="fa-solid fa-filter text-[#0D9488] text-[2rem]"></i>
+    <span>They wanted more granular filtering (AND/OR, IS, IS NOT, etc.)</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_uf" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Technical issues</h2>
+
+<div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <i class="fa-solid fa-filter-circle-xmark text-[#0D9488] text-[2rem] self-center"></i>
+    <span>Current filter behaviors were implemented inconsistently</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-layer-group text-[#0D9488] text-[2rem] self-center"></i>
+    <span>Filters were added on ad hoc on a case by case, field by field basis</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <i class="fa-solid fa-expand text-[#0D9488] text-[2rem] self-center"></i>
+    <span>Filters were difficult to scale especially when new fields or data types were introduced</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_tech" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<div class="flex h-full w-full items-center justify-center">
+  <div
+    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+  >
+    Filters were inconsistent, difficult to use, and did not have boolean (AND/OR) logic.
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_quote" class="-mt-10 mb-10 mx-auto" :initial-index="2" process-label="Designs" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Introduce a filter panel or some other new selection area</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Have consistent style for each type of filter (radio, multi-select, etc)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Introduce boolean options (AND/OR)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Enable users to save their filters and share them</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_goals1" class="-mt-10 mb-10 mx-auto" :initial-index="2" process-label="Designs" />
+
+<h2 class="user-groups-slide-heading m-0 mb-2">Existing patterns</h2>
+
+<AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" :compact="true" :viewport-height="500" layer-max-width="82rem" layer-width-pct="92%" pull-down="-1.5rem" />
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_patterns_dup" class="-mt-10 mb-10 mx-auto" :initial-index="2" process-label="Designs" />
+
+<div class="flex gap-8 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-64">
+    <h2 class="user-groups-slide-heading m-0">Layout options</h2>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Filters in side panel</span>
+    </div>
+    <CarouselSyncBullet :show-at-click="1">Filters in modal</CarouselSyncBullet>
+  </div>
+  <div class="flex-1 min-w-0 flex justify-center items-start self-start mt-3">
+    <AdManagerStack :images="['./slides/assets/Filters1.png', './slides/assets/Filters2.png']" :compact="true" :viewport-height="480" layer-max-width="72rem" layer-width-pct="95%" pull-down="-1rem" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_patterns" class="-mt-10 mb-10 mx-auto" :initial-index="2" process-label="Designs" />
+
+<div class="flex gap-8 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-64">
+    <h2 class="user-groups-slide-heading m-0">Initial design</h2>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Full &quot;Advanced Filters&quot; page</span>
+    </div>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Too many booleans</span>
+    </div>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Left panel is not necessary</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 flex justify-center items-start self-start mt-3">
+    <img
+      src="./slides/assets/FI.png"
+      alt="Advanced Filters"
+      class="block h-auto max-h-[min(480px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)]"
+    />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_fi" class="-mt-10 mb-10 mx-auto" :initial-index="2" process-label="Designs" />
+
+<div class="flex gap-8 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-64">
+    <h2 class="user-groups-slide-heading m-0">Option 1</h2>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Easier to scan</span>
+    </div>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>First ever AI prototype</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 flex justify-center items-start self-start mt-3">
+    <img
+      src="./slides/assets/advancefilters.png"
+      alt="Advanced Filters"
+      class="block h-auto max-h-[min(480px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)]"
+    />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_adv1" class="-mt-10 mb-10 mx-auto" :initial-index="2" process-label="Designs" />
+
+<div class="flex gap-8 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-64">
+    <h2 class="user-groups-slide-heading m-0">Option 2</h2>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Better use of space</span>
+    </div>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Grouped filters</span>
+    </div>
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Users liked this version more</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 flex justify-center items-start self-start mt-3">
+    <img
+      src="./slides/assets/advancefilters2.png"
+      alt="Advanced Filters 2"
+      class="block h-auto max-h-[min(480px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_6%)]"
+    />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_goals2" class="-mt-10 mb-10 mx-auto" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
+    <span class="relative shrink-0 w-[1.5rem] h-[1.5rem]">
+      <i class="fa-regular fa-square text-slate-300 text-[1.5rem] absolute inset-0 goals-uncheck" style="animation-delay:0.4s"></i>
+      <i class="fa-solid fa-square-check text-[#0D9488] text-[1.5rem] absolute inset-0 goals-check" style="animation-delay:0.4s"></i>
+    </span>
+    <span>Introduce a filter panel or some other new selection area</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
+    <span class="relative shrink-0 w-[1.5rem] h-[1.5rem]">
+      <i class="fa-regular fa-square text-slate-300 text-[1.5rem] absolute inset-0 goals-uncheck" style="animation-delay:0.9s"></i>
+      <i class="fa-solid fa-square-check text-[#0D9488] text-[1.5rem] absolute inset-0 goals-check" style="animation-delay:0.9s"></i>
+    </span>
+    <span>Have consistent style for each type of filter (radio, multi-select, etc)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
+    <span class="relative shrink-0 w-[1.5rem] h-[1.5rem]">
+      <i class="fa-regular fa-square text-slate-300 text-[1.5rem] absolute inset-0 goals-uncheck" style="animation-delay:1.4s"></i>
+      <i class="fa-solid fa-square-check text-[#0D9488] text-[1.5rem] absolute inset-0 goals-check" style="animation-delay:1.4s"></i>
+    </span>
+    <span>Introduce boolean options (AND/OR)</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4">
+    <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
+    <span>Enable users to save their filters and share them</span>
+    <span class="ml-auto shrink-0 inline-flex items-center gap-1.5 rounded-full bg-amber-50 border border-amber-200 px-3 py-1 text-[0.72rem] font-semibold text-amber-700 tracking-wide whitespace-nowrap">
+      <i class="fa-solid fa-triangle-exclamation text-amber-400"></i>
+      Partially implemented
+    </span>
+  </div>
+</div>
+
+<style>
+@keyframes goals-fade-out {
+  to { opacity: 0; }
+}
+@keyframes goals-check-pop {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}
+.goals-uncheck {
+  animation: goals-fade-out 0.25s ease forwards;
+}
+.goals-check {
+  opacity: 0;
+  animation: goals-check-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+</style>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_takeaways" class="-mt-10 mb-10 mx-auto" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Takeaways</h2>
+
+<div class="flex flex-row gap-4 mt-6">
+  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-6 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-start gap-3 anim-fade-up anim-d1">
+    <i class="fa-solid fa-arrow-pointer text-[2rem] text-[#0D9488] self-center"></i>
+    <span>Prototyping advanced logic harder than intended; did not need pixel-perfect output</span>
+  </div>
+  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-6 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-start gap-3 anim-fade-up anim-d2">
+    <i class="fa-solid fa-hourglass text-[2rem] text-[#0D9488] self-center"></i>
+    <span>Should have considered more scope creep into my own workflows &amp; asked for help sooner</span>
+  </div>
+  <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-6 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-start gap-3 anim-fade-up anim-d3">
+    <i class="fa-solid fa-hands-clapping text-[2rem] text-[#0D9488] self-center"></i>
+    <span>Biggest win was learning how to prototype such intricate designs</span>
+  </div>
+</div>
 
 ---
 layout: two-cols
@@ -173,7 +705,48 @@ transition: slide-left
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col">
-<PinterestMasonry :show-images="false" span-src="./slides/assets/Campaigngrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/Campaigngrid1.png" right-position="left center" left-top-src="./slides/assets/Campaigngrid2.png" left-bottom-src="./slides/assets/Campaigngrid3.png" left-bottom-position="center 18%" tile-border="0.5px solid #D2D2D2" />
+<PinterestMasonry :show-images="false" span-src="./slides/assets/Campaigngrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/Campaigngrid1.png" right-position="left center" left-top-src="./slides/assets/Campaigngrid2.png" left-bottom-src="./slides/assets/Campaigngrid3.png" left-bottom-position="center 18%" />
+</div>
+
+---
+layout: two-cols
+layoutClass: h-full
+transition: slide-left
+---
+
+<div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
+  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
+    <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
+      <div class="flex flex-col gap-8 mt-4">
+        <div class="flex flex-col gap-2 anim-fade-up anim-d2">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">2 Years</div>
+        </div>
+        <div class="flex flex-col gap-2 anim-fade-up anim-d3">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Role</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Lead Designer</div>
+        </div>
+        <div class="flex flex-col gap-2 anim-fade-up anim-d4">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Team</div>
+          <div class="flex flex-col gap-1">
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">1 Designer</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">5-7 PMs</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">30-40 Internal &amp; External Deves</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">QA</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Sales</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Customer Support</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Ops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col">
+<PinterestMasonry :show-images="false" span-src="./slides/assets/Campaigngrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/Campaigngrid1.png" right-position="left center" left-top-src="./slides/assets/Campaigngrid2.png" left-bottom-src="./slides/assets/Campaigngrid3.png" left-bottom-position="center 18%" />
 </div>
 
 <!--
@@ -684,11 +1257,11 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Full flow</h2>
 
-<div class="-mt-1 flex w-full justify-center px-2">
+<div class="mt-4 flex w-full justify-center px-2">
   <FastVideo
     src="./slides/assets/New Campaign Flow Walkthrough.mp4"
     :playback-rate="3"
-    video-class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-4xl"
+    video-class="mx-auto block h-auto max-h-[min(400px,46vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
   />
 </div>
 
@@ -746,6 +1319,28 @@ transition: slide-left
 <!--
 Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
 -->
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">I need help</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Getting a contractor would be easier and faster</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Asked around until I got to the people who controlled budget</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Hired contractor in summer 2024</span>
+  </div>
+</div>
 
 ---
 layout: default
@@ -1179,7 +1774,7 @@ transition: slide-left
 <div class="grid grid-cols-2 gap-4 w-full mt-10">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <i class="fa-solid fa-clock text-[#0D9488] text-[2rem] self-center"></i>
-    <span>Bring in contractor support earlier. I was able to find budget, but wasn't able to get help until late in the project</span>
+    <span>Bring in contractor support earlier. Was hard training new hire while also in the midst of a ton of work.</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
     <i class="fa-solid fa-route text-[#0D9488] text-[2rem] self-center"></i>
@@ -1224,7 +1819,7 @@ transition: slide-left
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col">
-<PinterestMasonry :show-images="false" span-src="./slides/assets/VASTgrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/VASTgrid3.png" right-position="left center" left-top-src="./slides/assets/VASTgrid2.png" left-bottom-src="./slides/assets/VASTgrid1.png" left-bottom-position="center 18%" tile-border="0.5px solid #D2D2D2" />
+<PinterestMasonry :show-images="false" span-src="./slides/assets/VASTgrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/VASTgrid3.png" right-position="left center" left-top-src="./slides/assets/VASTgrid2.png" left-bottom-src="./slides/assets/VASTgrid1.png" left-bottom-position="center 18%" />
 </div>
 
 <!--

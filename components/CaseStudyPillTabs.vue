@@ -1,18 +1,24 @@
 <script setup lang="ts">
-const DEFAULT_TABS = ['Context', 'Problem', 'Process', 'Outcome'] as const
+const VARIANT_TABS = {
+  default: ['Context', 'Problem', 'Process', 'Outcome'],
+  campaign: ['Background', 'Problem', 'Ideation', 'The Journey'],
+  filters: ['Context', 'Problem', 'Designs', 'Outcome'],
+} as const
 
 const props = withDefaults(
   defineProps<{
     initialIndex?: number
-    /** Override the third tab label (default "Process") */
+    /** Preset tab labels for a case study */
+    variant?: keyof typeof VARIANT_TABS
+    /** Override the third tab label (default variant or "Process") */
     processLabel?: string
   }>(),
-  { initialIndex: 0 },
+  { initialIndex: 0, variant: 'default' },
 )
 
 const tabs = props.processLabel
-  ? [DEFAULT_TABS[0], DEFAULT_TABS[1], props.processLabel, DEFAULT_TABS[3]]
-  : [...DEFAULT_TABS]
+  ? [VARIANT_TABS[props.variant][0], VARIANT_TABS[props.variant][1], props.processLabel, VARIANT_TABS[props.variant][3]]
+  : [...VARIANT_TABS[props.variant]]
 
 const active = Math.min(Math.max(0, props.initialIndex), tabs.length - 1)
 </script>

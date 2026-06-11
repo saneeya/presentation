@@ -49,6 +49,24 @@ hello my name is Saneeya and I'm here to go over some of the work I've done in a
 -->
 
 ---
+transition: fade-out
+layout: default
+hide: true
+---
+
+## My process
+
+<InvitePushRow />
+
+<!--
+Invite -> wayfinding sign -> bathroom sign -> wifi -> QR Code -> google from
+
+- went all out but out of scope: games, recipes
+-no one took candy
+- user feedback was great
+-->
+
+---
 layout: default
 transition: slide-left
 ---
@@ -70,34 +88,12 @@ transition: slide-left
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
-    <span>Case Study: VAST Implementation</span>
-  </div>
-  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d5">
-    <span class="text-[#0D9488] font-semibold text-[1rem] w-6">05</span>
     <span>Q & A</span>
   </div>
 </div>
 
 <!--
 Here is the agenda for today, feel free to interrupt of you have questions you want to ask during this presentation or you can wait until the end where I have some time scheduled for Q and A
--->
-
----
-transition: fade-out
-layout: default
-hide: true
----
-
-## My process
-
-<InvitePushRow />
-
-<!--
-Invite -> wayfinding sign -> bathroom sign -> wifi -> QR Code -> google from
-
-- went all out but out of scope: games, recipes
--no one took candy
-- user feedback was great
 -->
 
 ---
@@ -690,6 +686,8 @@ layoutClass: h-full
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_campaign_open" class="-mt-10 mb-6 mx-auto" variant="campaign" :initial-index="0" />
+
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
@@ -713,6 +711,8 @@ layout: two-cols
 layoutClass: h-full
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_campaign_meta" class="-mt-10 mb-6 mx-auto" variant="campaign" :initial-index="0" />
 
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
@@ -764,7 +764,7 @@ layout: default
 transition: fade
 ---
 
-<CaseStudyPillTabs :key="s6" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s6" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
 
 <p class="mt-2 mb-0 text-sm italic text-slate-500">*FKA Hulu Ad Manager</p>
 
@@ -783,7 +783,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s7" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s7" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Campaign manager in 2021</h2>
 
@@ -817,7 +817,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s8" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s8" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New target customers</h2>
 
@@ -843,7 +843,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s9" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s9" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <div class="flex h-full w-full items-center justify-center">
   <div
@@ -862,7 +862,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s10" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s10" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agency needs</h2>
 
@@ -901,7 +901,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s23_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s23_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Opportunity for a new design</h2>
 
@@ -924,7 +924,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s10_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s10_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
 
@@ -954,7 +954,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s11" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s11" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Team of one</h2>
 
@@ -996,7 +996,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s9_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s9_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <div class="flex h-full w-full items-center justify-center">
   <div
@@ -1016,6 +1016,8 @@ In the page by page flow, There were several pages you had to navigate through t
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_prev_design" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="2" />
 
 <div class="flex gap-8 mt-6 items-start w-full">
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-64">
@@ -1051,7 +1053,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s13" class="-mt-10 mb-4 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s13" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[9rem]">Competitive analysis</h2>
 
@@ -1086,6 +1088,8 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_core_layout" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="2" />
+
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Core layout</h2>
 
 <div class="-mt-2 flex w-full justify-center md:max-w-5xl">
@@ -1110,7 +1114,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s15" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
+<CaseStudyPillTabs :key="s15" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Top rail</h2>
 
@@ -1148,7 +1152,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s16" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
+<CaseStudyPillTabs :key="s16" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Bulk editing</h2>
 
@@ -1178,7 +1182,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s17" class="-mt-10 mb-4 mx-auto" :initial-index="2" />
+<CaseStudyPillTabs :key="s17" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Left rail</h2>
 
@@ -1213,7 +1217,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s18" class="-mt-10 mb-4 mx-auto" :initial-index="3" />
+<CaseStudyPillTabs :key="s18" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
 <h2 class="user-groups-slide-heading m-0 mt-2 mb-2">Final Line Item menu</h2>
 
@@ -1238,7 +1242,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s18b" class="-mt-10 mb-4 mx-auto" :initial-index="3" />
+<CaseStudyPillTabs :key="s18b" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New targeting section</h2>
 
@@ -1253,7 +1257,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s18b_copy" class="-mt-10 mb-4 mx-auto" :initial-index="3" />
+<CaseStudyPillTabs :key="s18b_copy" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Full flow</h2>
 
@@ -1276,7 +1280,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s11_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s11_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Non-linear journey</h2>
 
@@ -1325,6 +1329,8 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_need_help" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">I need help</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
@@ -1346,6 +1352,8 @@ transition: slide-left
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_internal_teams" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With internal teams</h2>
 
@@ -1385,6 +1393,8 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_external_teams" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With external teams</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
@@ -1417,7 +1427,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
 
@@ -1446,6 +1456,8 @@ Ultimately this did help the external devs and more importantly didn't hold them
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_ut1" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User Testing</h2>
 
@@ -1483,7 +1495,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s23" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s23" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">A wrench in the plan</h2>
 
@@ -1508,6 +1520,8 @@ Nothing is straight forward. I shared my test plan with sales, they asked me to 
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_ut2" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User Testing</h2>
 
@@ -1539,7 +1553,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s25" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+<CaseStudyPillTabs :key="s25" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Methodology</h2>
 
@@ -1574,6 +1588,8 @@ Even though none of them had used hulu ad manager before, I got some pretty usef
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_line_item" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-3">"Line Item"</h2>
 
@@ -1612,6 +1628,8 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_discoverability" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Discoverability</h2>
 
 <div class="flex gap-8 mt-0 items-start w-full">
@@ -1638,6 +1656,8 @@ Another big issue was that people could not find the "create new line item butto
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_layout_ut" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Layout</h2>
 
@@ -1671,6 +1691,8 @@ and that was a huge goal of mine, was to make sure this new singe page layout wa
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_design_uat" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Design UAT</h2>
 
@@ -1710,7 +1732,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s_new" class="-mt-10 mb-10 mx-auto" :initial-index="3" />
+<CaseStudyPillTabs :key="s_new" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Outcome</h2>
 
@@ -1741,7 +1763,7 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s_goals" class="-mt-10 mb-10 mx-auto" :initial-index="3" />
+<CaseStudyPillTabs :key="s_goals" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals</h2>
 
@@ -1768,6 +1790,8 @@ and i was able to complete all the goals i had set out to do
 layout: default
 transition: slide-left
 ---
+
+<CaseStudyPillTabs :key="s_wiwdd" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What I would do differently</h2>
 
@@ -1807,7 +1831,7 @@ transition: slide-left
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Designing for <span style="color:#0D9488">VAST</span> Support</span></div>
+      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Designing for <span style="color:#0D9488">Admin Portal</span></span></div>
       <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Adding new creative upload feature</div>
       <div class="mt-auto self-start anim-fade-up anim-d4">
         <span class="hero-pill">CASE STUDY</span>
@@ -1833,6 +1857,171 @@ for this project, it wasn't so much about the designs but more so the process an
 ---
 layout: default
 transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s7_before_61" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Admin Portal</h2>
+
+<div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+    <span>Admin Portal was used by account managers and Ad Ops</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+    <span>Used for troubleshooting</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
+    <span>Mirrored to match User Portal</span>
+  </div>
+</div>
+
+<!--
+Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency. 
+
+The product itself was created to let SMBs advertise on Hulu because there was a much lower minimum spend than the traditional route, $500 dollars vs $50,000
+
+Even thought it was still a young platform, it was profitable, making about $10mil a year 
+
+So it was making money, but the company really wanted to scale ad manager
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_before_thanks" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Mission Control</h2>
+
+<AdManagerStack :images="['./slides/assets/Daypart.png']" :compact="true" :viewport-height="510" layer-max-width="86rem" layer-width-pct="89%" pull-down="-2rem" />
+
+<!--
+And because we had the single page flow now, it was easy for me to a new card with the new targeting like dayparting
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_ut2_before_account_mgmt" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New changes for advertisers, agency advertisers</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Platform was changing to allow multiple users</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Allowed platform to have ad accounts and brands</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>No dedicated UXR team to help with UT</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Test with <s class="text-[#0D9488]">existing customers</s> &nbsp;users who have done digital advertising</span>
+  </div>
+</div>
+
+<!--
+I had to move on and make the best of what I had, and find other users by myself
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_account_mgmt" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Account Management</h2>
+
+<div class="flex gap-8 mt-2 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-[26rem] max-w-[38%] pt-1">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Manage user access across ad accounts and brands</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Assign roles and permissions for agency teams</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Central hub for advertiser and account administration</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/Daypart.png']" :compact="true" :viewport-height="480" layer-max-width="55rem" layer-width-pct="100%" pull-down="-1.5rem" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_admin_portal_dup" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Admin Portal</h2>
+
+<div class="flex gap-8 mt-2 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-[26rem] max-w-[38%] pt-1">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Manage user access across ad accounts and brands</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Assign roles and permissions for agency teams</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Central hub for advertiser and account administration</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/Daypart.png']" :compact="true" :viewport-height="480" layer-max-width="55rem" layer-width-pct="100%" pull-down="-1.5rem" />
+  </div>
+</div>
+
+---
+layout: two-cols
+
+layoutClass: h-full
+transition: fade-out
+---
+
+<div class="flex h-full min-h-0 flex-col py-10 pr-4">
+  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
+<HeroTitle compact>
+  Thank you
+
+  <template #subtitle>
+    <p style="color: #3a4652; font-weight: 500;">Any questions?</p>
+  </template>
+</HeroTitle>
+  </div>
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col pl-4">
+<PinterestMasonry placement="title" left-top-small-src="/IMG_4215.jpg" left-mid-src="/20221117_091012.jpg" left-top-src="/PXL_20241205_015703401.jpg" right-tall-src="/IMG_20200523_120959.jpg" right-bottom-src="/PXL_20240210_213758992.jpg" />
+</div>
+
+---
+layout: default
+transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What is VAST?</h2>
@@ -1870,6 +2059,7 @@ I understand what VAST is now but before this project I did not know anything ab
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Why VAST</h2>
@@ -1902,6 +2092,7 @@ Despite it being sold as a "quick and easy addition"  I found the requirements e
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s9_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -1921,6 +2112,7 @@ I understood the core problem, we needed VAST to get more big-spend advertisers
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s7_copy" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -1951,6 +2143,7 @@ what I still didn't understand, was the technical flow of a VAST tag
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Current creative upload</h2>
@@ -1966,6 +2159,7 @@ This is what ad upload looks like and this is what selecting an ad you've alread
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">First pass</h2>
@@ -1998,6 +2192,7 @@ so I moved them to the left side and added icons showing wether the asset passed
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Feedback</h2>
@@ -2029,6 +2224,7 @@ And I learned very quickly that the icons did not make sense. They were supposed
 layout: default
 transition: slide-left
 class: slide-starting-off
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-10">Main issues</h2>
@@ -2053,6 +2249,7 @@ Then halfway through this project the lead PM who made that PRD ended up suddenl
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Back to drawing board</h2>
@@ -2081,6 +2278,7 @@ One thing i learned from them was that we actually already had a VAST tool
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Legacy VAST tool</h2>
@@ -2102,6 +2300,7 @@ and you can see here that it shows every single parameter in the VAST and wether
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Revised understanding of VAST</h2>
@@ -2126,6 +2325,7 @@ After all of this back and forth with various teams I finally understood how a V
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[11rem]">Designs with table</h2>
@@ -2161,6 +2361,7 @@ but they did want to see all the statuses at a quick glance.  I knew then they e
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-md">Asset status</h2>
@@ -2193,6 +2394,7 @@ And updated the table to only show the errors as opposed to everything
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-md">URL entry</h2>
@@ -2223,6 +2425,7 @@ there are several error codes for this such as incorrect formatting or VAST made
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-2 max-w-md">End-to-end flow</h2>
@@ -2247,6 +2450,7 @@ Here is the full flow
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s7_copy3" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -2281,28 +2485,3 @@ As a result I learned that if I dont get something, I should talk to as many peo
 
 and that is the VAST implementation
 -->
-
----
-layout: two-cols
-
-layoutClass: h-full
-transition: fade-out
----
-
-<div class="flex h-full min-h-0 flex-col py-10 pr-4">
-  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
-<HeroTitle compact>
-  Thank you
-
-  <template #subtitle>
-    <p style="color: #3a4652; font-weight: 500;">Any questions?</p>
-  </template>
-</HeroTitle>
-  </div>
-</div>
-
-::right::
-
-<div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" left-top-small-src="/IMG_4215.jpg" left-mid-src="/20221117_091012.jpg" left-top-src="/PXL_20241205_015703401.jpg" right-tall-src="/IMG_20200523_120959.jpg" right-bottom-src="/PXL_20240210_213758992.jpg" />
-</div>

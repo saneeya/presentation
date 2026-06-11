@@ -29,6 +29,8 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_dcm" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
+
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What is Disney Campaign Manager?</h2>
 
 <div class="mt-10 flex w-full justify-center px-2">

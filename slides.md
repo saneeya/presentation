@@ -22,7 +22,9 @@ layout: two-cols
 layoutClass: h-full
 ---
 
-<div class="flex h-full min-h-0 flex-col py-10 pr-4">
+<AmbientVeil class="title-veil" />
+
+<div class="title-text flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
 <HeroTitle compact>
   <span style="color:#3A4652">Designing for <span style="color:#0D9488">Advertisers</span></span>
@@ -39,10 +41,6 @@ layoutClass: h-full
 </div>
 
 ::right::
-
-<div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" left-top-small-src="./slides/assets/cat.jpg" left-top-small-position="center 65%" />
-</div>
 
 <!--
 hello my name is Saneeya and I'm here to go over some of the work I've done in ad tech

@@ -17,6 +17,8 @@ const props = withDefaults(
     mergeRightStack?: boolean
     /** Override the top-left tile with a specific image URL, even when showImages is false. */
     leftTopSrc?: string
+    /** CSS object-position for the top-left tile in case-study placement, e.g. "35% center". */
+    leftTopPosition?: string
     /** Background color for the bottom-left title tile (e.g. behind transparent PNGs). */
     leftTopBg?: string
     /** Override the bottom-left tile with a specific image URL, even when showImages is false. */
@@ -216,7 +218,7 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
                 class="tile-img"
                 :class="{ 'tile-img--nudge-down': p.c.nudge && !leftTopSrc }"
                 :src="p.c.nudge && leftTopSrc ? leftTopSrc : (!p.c.nudge && leftBottomSrc ? leftBottomSrc : p.c.src)"
-                :style="(!p.c.nudge && leftBottomPosition) ? { objectPosition: leftBottomPosition } : {}"
+                :style="(p.c.nudge && leftTopPosition) ? { objectPosition: leftTopPosition } : ((!p.c.nudge && leftBottomPosition) ? { objectPosition: leftBottomPosition } : {})"
                 alt=""
               />
             </div>
@@ -284,6 +286,17 @@ const spanCell = computed(() => ({ src: slots.value[3] }))
   margin-right: 0;
   box-sizing: border-box;
   gap: 0.9rem;
+}
+
+/* Case-study opener grids: slightly inset so tiles don’t fill the full column */
+.masonry-root:not(.masonry-root--title) {
+  flex: 0 1 auto;
+  height: 92%;
+  max-height: 92%;
+  width: 92%;
+  max-width: 92%;
+  margin: auto;
+  align-self: center;
 }
 
 /* Title placement: diagonally staggered columns — editorial collage, not a flush grid */

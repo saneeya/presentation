@@ -106,6 +106,40 @@ layoutClass: h-full layout-wide-right
 
 <div class="mt-32">
 
+## About
+
+</div>
+
+::right::
+
+<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0 -translate-x-20">
+<AdManagerStack
+  :images="['./slides/assets/About4.jpg', './slides/assets/About1.jpg', './slides/assets/About2.jpg', './slides/assets/About3.jpg']"
+  :compact="true"
+  :viewport-height="610"
+  layer-max-width="100%"
+  layer-width-pct="100%"
+  pull-down="4.5rem"
+  pile-shift="1rem"
+/>
+</div>
+
+<!--
+Before I dive into the work, I'd like to go over what I call my "creative background" One thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific way 
+
+and I dont just decorate physicially , here is  my virtual home in Final Fantasy 14, an online multiplayer game which was my pandemic game. One of the most fun things for me was to was decorate these homes, this screenshot here shows a room I did where I placed every single object like the food on top of this table
+
+And I also like creating real life things. I dont crochet as much as I used to but I have made alot small toys such as this baby groot. And the things I like creating the most, are of course the ones I can eat such as this tart
+-->
+
+---
+transition: slide-left
+layout: two-cols
+layoutClass: h-full layout-wide-right
+---
+
+<div class="mt-32">
+
 ## Background
 
 </div>
@@ -135,40 +169,6 @@ Eventually I did a career pivot to UX, my first tech role was at McGraw Hill Edu
 After McGraw Hill, I spent some time at a mortgage company doing more enterprise platforms , this time for loan officers and real estate agents. While there,  I learned a lot about how regulated and complicated work flows behave. 
 
 All of this together really helped when I joined Disney. I was on the ads design team but initially I knew nothing about ad tech,But since then I have worked on several platforms for advertisers, internal users and even some customer-facing products for almost 5 years now
--->
-
----
-transition: slide-left
-layout: two-cols
-layoutClass: h-full layout-wide-right
----
-
-<div class="mt-32">
-
-## About
-
-</div>
-
-::right::
-
-<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0 -translate-x-20">
-<AdManagerStack
-  :images="['./slides/assets/About4.jpg', './slides/assets/About1.jpg', './slides/assets/About2.jpg', './slides/assets/About3.jpg']"
-  :compact="true"
-  :viewport-height="610"
-  layer-max-width="100%"
-  layer-width-pct="100%"
-  pull-down="4.5rem"
-  pile-shift="1rem"
-/>
-</div>
-
-<!--
-Before I dive into the work, I'd like to go over what I call my "creative background" One thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific way 
-
-and I dont just decorate physicially , here is  my virtual home in Final Fantasy 14, an online multiplayer game which was my pandemic game. One of the most fun things for me was to was decorate these homes, this screenshot here shows a room I did where I placed every single object like the food on top of this table
-
-And I also like creating real life things. I dont crochet as much as I used to but I have made alot small toys such as this baby groot. And the things I like creating the most, are of course the ones I can eat such as this tart
 -->
 
 ---
@@ -308,15 +308,14 @@ transition: slide-left
 </div>
 
 ---
-layout: two-cols
-layoutClass: h-full
+layout: default
 transition: slide-left
 ---
 
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
-    <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="flex flex-col gap-8 mt-4">
+    <div class="flex h-full min-h-0 w-full max-w-full flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:py-8 md:pr-8 md:pl-0">
+      <div class="grid grid-cols-3 gap-8 mt-4 w-full">
         <div class="flex flex-col gap-2 anim-fade-up anim-d2">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
           <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">6 Months</div>
@@ -332,12 +331,6 @@ transition: slide-left
       </div>
     </div>
   </div>
-</div>
-
-::right::
-
-<div class="flex h-full min-h-0 w-full flex-col">
-<PinterestMasonry :show-images="false" span-src="./slides/assets/FI.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/MCFilters.gif" right-position="left center" left-top-src="/filter88.png" left-bottom-src="/datepicker.png" left-bottom-position="center 18%" />
 </div>
 
 ---
@@ -707,8 +700,7 @@ transition: slide-left
 </div>
 
 ---
-layout: two-cols
-layoutClass: h-full
+layout: default
 transition: slide-left
 ---
 
@@ -716,8 +708,8 @@ transition: slide-left
 
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
-    <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="flex flex-col gap-8 mt-4">
+    <div class="flex h-full min-h-0 w-full max-w-full flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:py-8 md:pr-8 md:pl-0">
+      <div class="grid grid-cols-3 gap-8 mt-4 w-full">
         <div class="flex flex-col gap-2 anim-fade-up anim-d2">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
           <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">2 Years</div>
@@ -741,12 +733,6 @@ transition: slide-left
       </div>
     </div>
   </div>
-</div>
-
-::right::
-
-<div class="flex h-full min-h-0 w-full flex-col">
-<PinterestMasonry :show-images="false" span-src="./slides/assets/Campaigngrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/Campaigngrid1.png" right-position="left center" left-top-src="./slides/assets/Campaigngrid2.png" left-bottom-src="./slides/assets/Campaigngrid3.png" left-bottom-position="center 18%" />
 </div>
 
 <!--
@@ -1843,7 +1829,7 @@ transition: slide-left
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col">
-<PinterestMasonry :show-images="false" span-src="./slides/assets/VASTgrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/VASTgrid3.png" right-position="left center" left-top-src="./slides/assets/VASTgrid2.png" left-bottom-src="./slides/assets/VASTgrid1.png" left-bottom-position="center 18%" />
+<PinterestMasonry :show-images="false" span-src="./slides/assets/GhostMode3.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/NewAdmin.png" right-position="left center" left-top-src="./slides/assets/AdminLayout1.png" left-top-position="55% center" left-bottom-src="./slides/assets/adminportal.gif" left-bottom-position="center 18%" />
 </div>
 
 <!--
@@ -1853,6 +1839,42 @@ Great, so this is like the previous project, just smaller in scale. And that is 
 
 for this project, it wasn't so much about the designs but more so the process and what I learned from it
 -->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_admin_meta" class="-mt-10 mb-6 mx-auto" variant="campaign" :initial-index="0" />
+
+<div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
+  <div class="flex min-h-0 min-w-0 flex-1 flex-col">
+    <div class="flex h-full min-h-0 w-full max-w-full flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:py-8 md:pr-8 md:pl-0">
+      <div class="grid grid-cols-3 gap-8 mt-4 w-full">
+        <div class="flex flex-col gap-2 anim-fade-up anim-d2">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">2 Years</div>
+        </div>
+        <div class="flex flex-col gap-2 anim-fade-up anim-d3">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Role</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Lead Designer</div>
+        </div>
+        <div class="flex flex-col gap-2 anim-fade-up anim-d4">
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Team</div>
+          <div class="flex flex-col gap-1">
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">1 Designer</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">5-7 PMs</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">30-40 Internal &amp; External Deves</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">QA</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Sales</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Customer Support</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Ops</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
 ---
 layout: default

@@ -2274,10 +2274,6 @@ transition: fade-out
 
 ::right::
 
-<div class="flex h-full min-h-0 w-full flex-col pl-4">
-<PinterestMasonry placement="title" left-top-small-src="/IMG_4215.jpg" left-mid-src="/20221117_091012.jpg" left-top-src="/PXL_20241205_015703401.jpg" right-tall-src="/IMG_20200523_120959.jpg" right-bottom-src="/PXL_20240210_213758992.jpg" />
-</div>
-
 ---
 layout: default
 transition: slide-left

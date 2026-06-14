@@ -148,7 +148,7 @@ onMounted(() => {
 }
 
 .hero-wrap--compact .hero-sub .hero-pill-row :deep(.hero-pill) {
-  transform: translateY(2.35rem);
+  transform: translateY(1.5rem);
 }
 
 .hero-sub--in {

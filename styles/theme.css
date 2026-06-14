@@ -66,6 +66,15 @@ body,
   z-index: 1;
 }
 
+#slide-content .slidev-page-1 .hero-wrap--compact .hero-pill-row {
+  margin-bottom: 2.5rem !important;
+  transform: translateY(-1.25rem) !important;
+}
+
+#slide-content .slidev-page-1 .hero-wrap--compact .hero-pill-row .hero-pill {
+  transform: none !important;
+}
+
 
 
 

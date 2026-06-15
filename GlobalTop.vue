@@ -11,11 +11,16 @@ const SECTIONS: readonly { label: string; start: number; end: number }[] = [
   { label: 'Designs',  start: 15, end: 20 },
   { label: 'Outcome',  start: 21, end: 22 },
   // Case study: Campaign Creation Flow
-  { label: 'Background',  start: 23, end: 27 },
+  { label: 'Background',  start: 25, end: 27 },
   { label: 'Problem',     start: 28, end: 34 },
   { label: 'Ideation',    start: 35, end: 40 },
   { label: 'Final',       start: 41, end: 43 },
   { label: 'The Journey', start: 44, end: 59 },
+  // Case study: Behind the Platform (Admin Portal)
+  { label: 'Background', start: 64, end: 66 },
+  { label: 'Discovery',  start: 67, end: 72 },
+  { label: 'Designs',    start: 73, end: 79 },
+  { label: 'Outcome',    start: 80, end: 84 },
 ]
 
 const section = computed(() => {

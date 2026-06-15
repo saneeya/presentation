@@ -704,8 +704,6 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s_campaign_meta" class="-mt-10 mb-6 mx-auto" variant="campaign" :initial-index="0" />
-
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-full flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:py-8 md:pr-8 md:pl-0">
@@ -1817,8 +1815,8 @@ transition: slide-left
 <div class="slide-4-root flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch py-6 pr-6 pl-0 md:max-w-xl md:py-8 md:pr-8 md:pl-0">
-      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Designing for <span style="color:#0D9488">Admin Portal</span></span></div>
-      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Adding new creative upload feature</div>
+      <div class="mb-8 mt-20 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-24 md:text-4xl lg:mt-28 lg:text-5xl anim-fade-up"><span class="block">Behind the <span style="color:#0D9488">Platform</span></span></div>
+      <div class="max-w-xs text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2">Admin portal for internal users</div>
       <div class="mt-auto self-start anim-fade-up anim-d4">
         <span class="hero-pill">CASE STUDY</span>
       </div>
@@ -1919,7 +1917,7 @@ transition: slide-left
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
       <span>Old Account Management</span>
     </div>
-    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <div v-click="1" class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
       <span>New Account Management</span>
     </div>

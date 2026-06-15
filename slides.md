@@ -86,7 +86,7 @@ transition: slide-left
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
-    <span>Admin Portal Case Study</span>
+    <span>Case Study: Behind the Platform</span>
   </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d5">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">05</span>
@@ -1851,23 +1851,15 @@ transition: slide-left
       <div class="grid grid-cols-3 gap-8 mt-4 w-full">
         <div class="flex flex-col gap-2 anim-fade-up anim-d2">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
-          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">2 Years</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">6 Years</div>
         </div>
         <div class="flex flex-col gap-2 anim-fade-up anim-d3">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Role</div>
-          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Lead Designer</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Sole Designer</div>
         </div>
         <div class="flex flex-col gap-2 anim-fade-up anim-d4">
-          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Team</div>
-          <div class="flex flex-col gap-1">
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">1 Designer</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">5-7 PMs</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">30-40 Internal &amp; External Deves</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">QA</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Sales</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Customer Support</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Ops</div>
-          </div>
+          <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Tool Type</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Internal Tool</div>
         </div>
       </div>
     </div>

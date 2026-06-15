@@ -2045,7 +2045,7 @@ transition: slide-left
     </div>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/OldAccountSettings.png', './slides/assets/NewAccountSettings.png']" :compact="true" :viewport-height="480" layer-max-width="55rem" layer-width-pct="100%" pull-down="-3rem" />
+    <AdManagerStack :images="['./slides/assets/OldAccountSettings.png', './slides/assets/NewAccountSettings.png']" :compact="true" :viewport-height="530" layer-max-width="60rem" layer-width-pct="100%" pull-down="-5rem" />
   </div>
 </div>
 
@@ -2097,17 +2097,17 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Admin Portal</h2>
 
 <div class="flex gap-6 mt-2 items-start w-full">
-  <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[18rem] max-w-[28%] pt-1">
-    <div class="rounded-2xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[0.95rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.45rem] shrink-0"></i>
+  <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[14rem] max-w-[20%] pt-1">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-2.5 text-slate-700 text-[0.85rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.4rem] shrink-0"></i>
       <span>Old Admin Portal</span>
     </div>
-    <CarouselSyncBullet :show-at-click="1" class="!rounded-2xl !text-[0.95rem] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)]">
+    <CarouselSyncBullet :show-at-click="1" class="!rounded-2xl !text-[0.85rem] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)]">
       New Admin Portal
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/oldadmin.png', './slides/assets/NewAdmin.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-6.5rem" />
+    <AdManagerStack :images="['./slides/assets/oldadmin.png', './slides/assets/NewAdmin.png']" :compact="true" :viewport-height="590" layer-max-width="78rem" layer-width-pct="100%" pull-down="-9rem" />
   </div>
 </div>
 
@@ -2124,7 +2124,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s18b_admin_portal_dup2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New admin portal navigation</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New admin<br>portal navigation</h2>
 
 <div class="flex gap-6 mt-2 items-start w-full">
   <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[18rem] max-w-[28%] pt-1">
@@ -2142,7 +2142,7 @@ transition: slide-left
     </div>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/adminportal.gif']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-4.6rem" />
+    <AdManagerStack :images="['./slides/assets/adminportal.gif']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-7rem" />
   </div>
 </div>
 
@@ -2378,7 +2378,7 @@ transition: slide-left
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0 ml-8">
-    <AdManagerStack :images="['./slides/assets/oldadmin2.png', './slides/assets/AdminLayout1.png', './slides/assets/AdminLayout2.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-6.5rem" />
+    <AdManagerStack :images="['./slides/assets/oldadmin2.png', './slides/assets/AdminLayout1.png', './slides/assets/AdminLayout2.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-9rem" />
   </div>
 </div>
 
@@ -2399,7 +2399,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s18b_admin_portal_dup_second_last" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Cleaned up designs</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Cleaned up<br>designs</h2>
 
 <div class="flex gap-6 mt-2 items-start w-full">
   <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[18rem] max-w-[28%] pt-1">
@@ -2415,7 +2415,7 @@ transition: slide-left
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/OrgInfo.png', './slides/assets/OrgInfo2.png', './slides/assets/OrgInfo3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-4rem" />
+    <AdManagerStack :images="['./slides/assets/OrgInfo.png', './slides/assets/OrgInfo2.png', './slides/assets/OrgInfo3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-9.5rem" />
   </div>
 </div>
 
@@ -2477,7 +2477,7 @@ transition: slide-left
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/GhostMode1.png', './slides/assets/GhostMode2.png', './slides/assets/GhostMode3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-4rem" />
+    <AdManagerStack :images="['./slides/assets/GhostMode1.png', './slides/assets/GhostMode2.png', './slides/assets/GhostMode3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-8.5rem" />
   </div>
 </div>
 

@@ -2255,6 +2255,8 @@ transition: slide-left
 I asked users what else they'd want to see that it wasn't available right now so they had a whole wish list of features they wanted they wanted to be able to see more campaign metrics in admin portal they wanted an audit log so they could see who made what changes and when 
 
 and they wanted to customize what they needed to see, because like with the filters in the trafficking side, these tables could get pretty dense with a ton of data
+
+Using all these discovery notes I went to the product managers and I was able to convince them that we needed to redo this admin portal and put time in the roadmap to do so, which isn't very common because we have a strict roadmap put in place but the ad sales team but this was such a problem that we really needed to fix it
 -->
 
 ---
@@ -2479,6 +2481,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Ghost mode was fairly straightforward in the admin portal you could click a button on the advertiser's details that would launch you to the advertisers UI
+
+The main thing I had to add was some type of visual indicator that you were an admin viewing ghost mode, initially I added a status badge in the top right here in the header but it was too subtle
+
+In this option experimented with putting this box in the bottom left that would have more information such as the advertiser's name brand and ad account
+
+However I realize I didn't need that much information and this took up too much space, so I ended up going up with is this top green band here that tells you that you're in ghost mode its very visible and it shows you what advertiser you were viewing
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2502,6 +2514,10 @@ transition: slide-left
     <span class="text-left">Ghost Mode enabled faster troubleshooting and let to reduction in escalation tickets</span>
   </div>
 </div>
+
+<!--
+The end result was that the revised navigation was much easier to use by our internal users and as a result they were able to resolve customer support tickets much faster we saw about a 39% drop in escalation tickets overall this project was a success
+-->
 
 ---
 layout: default
@@ -2527,6 +2543,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I had a lot of learnings from this project the main thing I learned was not to just rely on a prior design and assume that the previous designer understood the problem that I should really do my own research and discovery to make sure that anything were release makes sense to our users
+
+I also learned how to make a case for a project that might not be on the roadmap by gathering in information and presenting a compelling use case for why we should fix something
+
+And as far as fixing something goes sometimes you don't need to do that much as designers. when we are redesigning something we always want to redo everything but in this case, what would work the best was actually something that existed in the past in this example of the previous admin portal navigation
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2551,6 +2575,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+another learning in this project was that you can't implement everything
+
+While I was able to fix core issues such as the navigation and layout I had to cut some of the wishlist items out of scope the main one being the audit log. I worked with our product and development teams to see how much to see how much time this would take and it wasn't feasible on LOE in the timeline we had
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2568,6 +2598,12 @@ transition: slide-left
   />
 </div>
 
+<!--
+it's been a few years since since I worked on this  this is what it looked like when I first did the redesign
+
+this is what the org details page looked like when I first did the redesign
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2584,16 +2620,23 @@ transition: slide-left
       <span>Rethink information layout</span>
     </div>
     <CarouselSyncBullet :show-at-click="1" class="!rounded-2xl !text-[0.95rem] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)]">
-      Add drop-shadow for fixed column
-    </CarouselSyncBullet>
-    <CarouselSyncBullet :show-at-click="2" class="!rounded-2xl !text-[0.95rem] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)]">
       Visually stands out
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/NewAdmin1.png', './slides/assets/NewAdmin2.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-5.5rem" />
+    <AdManagerStack :images="['./slides/assets/NewAdmin1.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-5.5rem" />
   </div>
 </div>
+
+<!--
+And this is what it looks like now as you can see it's been branded to Disney campaign manager so it has less of the Hulu fonts and colors
+
+The main difference is that there's a lot more information that's been added here. He's actually quite a bit of detail here and if if more is added they're just gonna have more tiles on top of each other and can get pretty busy
+
+If I was to work on this again now or would probably come up with the new type of layout that could accommodate all this information also allow room for more content to be added I would also rethink this top tab NAV while it was fine before I feel like it looks dense here and it could be organized in another way to make this more scannable
+
+and with that, that is my last case study
+-->
 
 ---
 layout: two-cols
@@ -2615,6 +2658,10 @@ transition: fade-out
 </div>
 
 ::right::
+
+<!--
+thank you for listening and are their any questions?
+-->
 
 ---
 layout: default

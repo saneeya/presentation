@@ -211,7 +211,7 @@ transition: slide-left
 </div>
 
 <!--
-Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+So as far as how I work this is of course the ideal way to do design you know the double diamond approach and I wish I could work like this but...
 -->
 
 ---
@@ -252,7 +252,13 @@ transition: slide-left
 </div>
 
 <!--
-Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+As always the reality of work as always different than you expect for me personally the process never been super linear 
+
+Time usually tends to be a factor for me I'm usually working in teams that move very fast so I don't usually have the opportunity for discovery or talking to users so sometimes I use the best what I have available which usually is the PRD
+
+Instead of doing a bunch of figma mocks, I try to use AI to create quick designs, it's especially easy when you have a design system linked
+
+And from there and I just shared the prototype with everyone developers, PMs, stakeholders etc. And continuously improve the design
 -->
 
 ---
@@ -280,7 +286,13 @@ transition: slide-left
 </div>
 
 <!--
-Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+Using the non-linear approach there are other key factors and how I work
+
+As I mentioned before the big one is time and recently because of AI I'm trying to get better at token management and prompt more efficiently which is still at work in progress
+
+I've been the sole designer on most projects I've worked on because of that I've gotten pretty good at working with a bunch of different teams so I understand that with limited resources there is always some back-and-forth on what you can do what you can achieve and it's technically feasible. I myself like having a weekly what I call you's office hours or anyone can drop in and discussed designs this has proven to be really useful and helpful when collaborating with so many people
+
+And now one thing I tend to keep bringing up is what exactly design can bring. Everyone is using AI to prototype now, I've had many PMs we'll just put a PRD into a prompt and see what pops out and they think the design is done. However these designs don't really follow a design system and take the objective too literally it usually also has weird patterns that just don't make sense so I think there's still a use for designers even in this kind of AI forward world and I do my best to show people I work with that design still brings value
 -->
 
 ---
@@ -306,6 +318,12 @@ transition: slide-left
 <div class="flex h-full min-h-0 w-full flex-col">
 <PinterestMasonry :show-images="false" span-src="./slides/assets/FI.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/MCFilters.gif" right-position="left center" left-top-src="/filter88.png" left-bottom-src="/datepicker.png" left-bottom-position="center 18%" />
 </div>
+
+<!--
+So did it over what I just explained in terms of how I work I have a mini case study to kind of show you the process I described earlier
+
+So this is me designing a new filter layout
+-->
 
 ---
 layout: default
@@ -333,6 +351,10 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+This project is still in development right now I don't know if it took exactly 6 months I started it last year but then it was kind of a shelved for a while and recently picked up again and a I think it might take a little longer because there are some edge cases that keep popping up right now so I have to kind of address those along the way
+-->
+
 ---
 layout: default
 transition: fade
@@ -357,22 +379,11 @@ transition: fade
   </video>
 </div>
 
----
-layout: default
-transition: slide-left
----
+<!--
+now for some context we have an internal add trafficking tool called mission control, mission control is used by account managers account executives, sales planners, customer support operations and so on is used by a ton of people who all different needs in this platform
 
-<CaseStudyPillTabs :key="s_filters_vid" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Filter map</h2>
-
-<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
-  <img
-    src="./slides/assets/Filtermap.png"
-    alt="Filter map"
-    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
-  />
-</div>
+As a result it has quite a lot of filters because there's so much data available here and as you can see from this animation this is what the filters looks like in the current platform it's a long drop down you just scroll and then apply the filters from there
+-->
 
 ---
 layout: default
@@ -402,6 +413,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+That mission control is a legacy tool so it's been around for a while and because of that there's had a lot of feedback especially in terms of the filters
+
+They wanted a better way to navigate filters, they wanted to have custom filters, more filter options and most of all they wanted boolean targeting like and/or targeting because I wanna help I'm narrowed down to find the very specific data that they're looking for and as I mention every type of user is looking for different information in this platform
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -426,6 +443,10 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+There were also some technical issues with the filters for example they they were not consistent because they were added ad hoc on a case by case basis and because of this they weren't very easy to scale especially when we were introducing new data into the platform
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -440,6 +461,10 @@ transition: slide-left
     Filters were inconsistent, difficult to use, and did not have boolean (AND/OR) logic.
   </div>
 </div>
+
+<!--
+so the main problem was that the filters were not very consistent difficult to use, difficult navigate, and do not have boolean logic
+-->
 
 ---
 layout: default
@@ -469,6 +494,35 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+when I had the basic requirements down I kind of made a mental list of all the things I had to make obviously needed the boolean logic and the consistent style for each type of filter.
+
+Also needed a way where users could save their own custom filters and be able to share them with their team that was a big ask and most importantly try to create a better layout for these filterstry to create a better layout for these filters
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_filters_vid" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Filter map</h2>
+
+<div class="mt-4 flex w-full justify-center px-2 anim-fade-in-scale">
+  <img
+    src="./slides/assets/Filtermap.png"
+    alt="Filter map"
+    class="mx-auto block h-auto max-h-[min(460px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-4xl"
+  />
+</div>
+
+<!--
+I started off making what I call a filter map I took all the filter I took screenshots of all the content in the trafficking table and just stitched them in a figma and from there I mapped each filter to the data it represented
+
+This helped me see what types of filters there were how many there were and how to categorize them
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -479,6 +533,16 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mb-2">Existing patterns</h2>
 
 <AdManagerStack :images="['./slides/assets/MCfilter1.png', './slides/assets/MCfilter2.png', './slides/assets/MCfilter3.png']" :compact="true" :viewport-height="500" layer-max-width="82rem" layer-width-pct="92%" pull-down="-1.5rem" />
+
+<!--
+I took a look at other legacy tools we had in mission control and how they displayed filters 
+
+here is one with the filters on the left side
+
+Here is another one in our programmatic platform where the filters are on the right side
+
+And the filter is here are in the creative review tool and they are also on the left side and since this tool is relatively knew it uses our current design system as you may have noticed all these platforms look inconsistent because they're designed at different times however going forward I knew I'd be using this design system here for anything net new
+-->
 
 ---
 layout: default
@@ -500,6 +564,14 @@ transition: slide-left
     <AdManagerStack :images="['./slides/assets/Filters1.png', './slides/assets/Filters2.png']" :compact="true" :viewport-height="480" layer-max-width="72rem" layer-width-pct="95%" pull-down="-1rem" />
   </div>
 </div>
+
+<!--
+I experimented in figma with some layouts using patterns in the design system
+
+Here is one where they are on the left side
+
+and Here is an example of it as a modal
+-->
 
 ---
 layout: default
@@ -533,6 +605,16 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+the previous designs were fine but they were but they did not account for all the content these filters were going to have
+
+I came up with this idea of making a full page where you can just build your filters and use boolean logic 
+
+my first design had this idea where you selected filters on the left side and it would populate them in the middle and you could have your and/or targeting but I just had too many boolean options
+
+And the problem with the left panel is you could only select one filter at a time when users wanted to use multiple types of the same filter
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -560,6 +642,14 @@ transition: slide-left
     />
   </div>
 </div>
+
+<!--
+my next design a simplified the approach I had earlier and remove the left panel to have this select filter drop down at the bottom 
+
+I wanted to test this out with users and at the time we had just gotten licenses to use cursor so this is my first ever AI design that I made back in December and I was just mind blown and how complex I could make the interactions with just prompts
+
+Before I tested with the users I wanted to make another option
+-->
 
 ---
 layout: default
@@ -592,6 +682,14 @@ transition: slide-left
     />
   </div>
 </div>
+
+<!--
+And so this was the second design
+
+Instead of having an advanced filters page I took the full with I thought it might make more sense having like a slide out where you could select your filters again on the left side and use the space to build out your filters
+
+This layout received a better feedback than the other one so we decided to go forward with it and now let me show you the prototype I built you can see these in action
+-->
 
 ---
 layout: default
@@ -651,6 +749,10 @@ transition: slide-left
 }
 </style>
 
+<!--
+I was able to achieve most of the goals I had set out to do however because of technical limitations we can't exactly share custom filters so that is something will probably come later down the year as a p1
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -675,6 +777,18 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+this is still in progress and even though it's not done yet I still had a lot of takeaways I got from it 
+
+first of all the AI prototyping is a game changer, I don't think I would been able to get such specific feedback had I not built such an interactive design in such interactivity wouldn't have been possible in figma
+
+However because the prototype was so technical, the development team took very literal and so they kept asking for updates to match the PRD and so I'd keep going back-and-forth and updating the prototype ultimately I learned that I wasn't really important to have a pixel perfect prototype and just use it more as a general direction
+
+But overall I was pretty proud with how the prototype with AI especially since I don't have a development background
+
+So that is my mini case study now to go on to the actual case studies
+-->
+
 ---
 layout: two-cols
 layoutClass: h-full
@@ -698,6 +812,10 @@ transition: slide-left
 <div class="flex h-full min-h-0 w-full flex-col">
 <PinterestMasonry :show-images="false" span-src="./slides/assets/Campaigngrid4.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/Campaigngrid1.png" right-position="left center" left-top-src="./slides/assets/Campaigngrid2.png" left-bottom-src="./slides/assets/Campaigngrid3.png" left-bottom-position="center 18%" />
 </div>
+
+<!--
+here is the redesign of the campaign creation flow I worked on for Disney Campaign Manager
+-->
 
 ---
 layout: default
@@ -734,9 +852,7 @@ transition: slide-left
 </div>
 
 <!--
-And speaking of Ad tech, I'm going to go over my first case study which is the campaign creation flow I did for Disney Campaign Manager
-
-So what is Disney Campaign Manager?
+It was a huge project and before I get into the specifics, I bet you're all asking what is disney campaign manager?
 -->
 
 ---
@@ -1332,6 +1448,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Now this was a LOT of work for one person, and I really needed help. The rest of the design team was stretched thin, so I had to get someone new
+
+hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so I was able to find who project manager who controlled funding for this initiative and was able to secure budget for a contractor a couple months before launch
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1361,9 +1483,9 @@ transition: slide-left
 </div>
 
 <!--
-As I mentioned I was the only designer for the majority of the time, I was able to get a contractor the last couple of months but it was mostly me dealing with a LOT of partners by myself
+So you know, I was the only designer for the majority of the time, I did get a contractor but it was mostly me dealing with a LOT of partners by myself
 
-To keep up with everyone, I would messag the PMs and lead engineers pretty frequently
+To keep up with everyone, I would message the PMs and lead engineers pretty frequently
 
 I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
 
@@ -1833,9 +1955,9 @@ transition: slide-left
 <!--
 Before I move on, are there any questions or should I go on to the next case study?
 
-Great, so this is like the previous project, just smaller in scale. And that is adding VAST to the platform
+Great, so this is like the previous project, but its more behind the scenes if you well
 
-for this project, it wasn't so much about the designs but more so the process and what I learned from it
+You saw the advertiser facing view of Disney campaign manager and I'm gonna show you the flip side, which we called Admin portal and the work I did on it
 -->
 
 ---
@@ -1851,7 +1973,7 @@ transition: slide-left
       <div class="grid grid-cols-3 gap-8 mt-4 w-full">
         <div class="flex flex-col gap-2 anim-fade-up anim-d2">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
-          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">6 Years</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">6 Months</div>
         </div>
         <div class="flex flex-col gap-2 anim-fade-up anim-d3">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Role</div>
@@ -1865,6 +1987,10 @@ transition: slide-left
     </div>
   </div>
 </div>
+
+<!--
+This was a pretty quick project that was kind of doing in tandem with the whole platform design I talked about
+-->
 
 ---
 layout: default
@@ -1891,7 +2017,11 @@ transition: slide-left
 </div>
 
 <!--
-I had to move on and make the best of what I had, and find other users by myself
+So as I showed with the new campaign flow we were adding a bunch of new features to get agencies on board to our platform 
+
+before the new campaign flow launched we completely redid the account management before you'd only have one user and one payment method 
+
+Now we introduced ad accounts, brands, and the ability to have multiple users with different roles
 -->
 
 ---
@@ -1919,6 +2049,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+This was the old account management setting on the advertiser side you had two tabs basically one that showed your transactions and one that showed your settings such as your payment option and your company's information
+
+When I started at the company this was the redesign that the prior designer had worked on set up this new menu here where you could select your different settings and edit them as needed
+
+I was still new to the platform so I didn't know it as well as I know it now but this design seemed fine with me so I modified it a little and approved it for production
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1944,13 +2082,9 @@ transition: slide-left
 </div>
 
 <!--
-Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency. 
+That was the advertiser facing view and let me describe admin portal so admin portal is the internal side of campaign manager used by account managers county executive planners our operations and customer support
 
-The product itself was created to let SMBs advertise on Hulu because there was a much lower minimum spend than the traditional route, $500 dollars vs $50,000
-
-Even thought it was still a young platform, it was profitable, making about $10mil a year 
-
-So it was making money, but the company really wanted to scale ad manager
+It's commonly used for troubleshooting and it specifically designed to mimic the advertiser facing view so users don't get confused with drastically different UI when addressing support tickets
 -->
 
 ---
@@ -1976,6 +2110,12 @@ transition: slide-left
     <AdManagerStack :images="['./slides/assets/oldadmin.png', './slides/assets/NewAdmin.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-6.5rem" />
   </div>
 </div>
+
+<!--
+this was the prior design for the admin portal similar to the advertiser facing view you have your different tabs the main difference is internal people can view all the organizations and filter down
+
+And the new layout was designed to be the same as the customer facing view and here you can also view all organizations as as well as ad accounts campaigns and users
+-->
 
 ---
 layout: default
@@ -2006,6 +2146,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Much like with the account management I didn't spend a lot of time going over the admin portal designs and so I thought it'd be fine for production
+
+However one thing became very obvious when it did release which was that I had a very odd navigation style
+
+As you can see here you can open an or you can click an ad account and it jumps to another section also you can't really view all the information in one or unless you filter by that org which isn't helpful for our users because they usually just need to see one or at a time
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2030,6 +2178,10 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+We got a lot of feedback from internal people basically they were saying it was hard to navigate it was hard to find information it was just taking longer for them to address support tickets and one of the biggest things was that they liked the old layout much better
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2044,6 +2196,10 @@ transition: slide-left
     Admin users were struggling with the new layout and were taking longer to close support tickets
   </div>
 </div>
+
+<!--
+the core problem was that they could not navigate this new admin portal efficiently and were taking too long with customer support
+-->
 
 ---
 layout: default
@@ -2064,6 +2220,12 @@ transition: slide-left
     <span>Have a way to see advertiser's POV</span>
   </div>
 </div>
+
+<!--
+I talked to her internal people quite a bit and so as I mentioned before their navigation was a huge issue so that's something I had to fix another
+
+another main ask was that they really wanted to see the advertisers point of view. One person mentioned to me that he would have the customer send him a screenshot of what the issue was and then he would try to re-create it on his end on a dummy account so I also to figure out a way internal users could directly see what the advertiser was seeing
+-->
 
 ---
 layout: default
@@ -2089,6 +2251,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I asked users what else they'd want to see that it wasn't available right now so they had a whole wish list of features they wanted they wanted to be able to see more campaign metrics in admin portal they wanted an audit log so they could see who made what changes and when 
+
+and they wanted to customize what they needed to see, because like with the filters in the trafficking side, these tables could get pretty dense with a ton of data
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2109,6 +2277,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+To mimic the advertisers interface, and I don't remember who came up with this, but me and product decided that there needed to be some type of like God mode where an internal person could directly see the UI the advertiser was seeing and be able to change specific things on their behalf
+
+We ended up calling this ghost mode and then I was tasked with where this the launch point for ghost mode would go in admin portal
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2123,6 +2297,14 @@ transition: slide-left
     How can I find out why an ad was rejected?
   </div>
 </div>
+
+<!--
+one of the most common customer support questions we got was why is my ad rejected? 
+
+The way our ops people would address this as they would find the creative asset in admin portal and it would list the specific reasons why the ad was rejected 
+
+it could be technical limit be technical spec rejection or it could be standards and practice violation
+-->
 
 ---
 layout: default
@@ -2147,7 +2329,9 @@ transition: slide-left
 </div>
 
 <!--
-Nothing is straight forward. I shared my test plan with sales, they asked me to get some type of incentive for their clients, I went to marketing and got the incentive, then I went back to sales and sales said No, they weren't comfortable sharing their clients with me and so ...
+In the new flow there was quite a lot of steps for users to be able to find an advertiser's ad 
+
+They go to the view all campaigns tap list all the campaigns across the entire platform they would filter down by advertiser then they would find the relevant campaign, they would click on the campaigns details but it would redirect them to a whole other page which housed the ads
 -->
 
 ---
@@ -2168,7 +2352,9 @@ transition: slide-left
 </div>
 
 <!--
-Nothing is straight forward. I shared my test plan with sales, they asked me to get some type of incentive for their clients, I went to marketing and got the incentive, then I went back to sales and sales said No, they weren't comfortable sharing their clients with me and so ...
+The old flow was more straightforward, you would find the list of all campaigns you would filter by advertiser and an inside there would be a tab that would list the ads for that advertiser
+
+Because of all the feedback I got I knew that I would recycle the previous admin portal layout
 -->
 
 ---
@@ -2193,6 +2379,16 @@ transition: slide-left
     <AdManagerStack :images="['./slides/assets/oldadmin2.png', './slides/assets/AdminLayout1.png', './slides/assets/AdminLayout2.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-6.5rem" />
   </div>
 </div>
+
+<!--
+to recap this is how an organization looked in the old admin portal you had the organization's name it's information and the campaigns ads and payments all associated with this org
+
+I came up with some initial layout concepts 
+
+here was one where the organizations details are on the left and then you have your tabs for a campaigns and ads etc. on the top here
+
+I came up with another option where you had the details right below the org's name and below that you had the different sections and I went forward with this layout because it used up the space better than the previous option
+-->
 
 ---
 layout: default
@@ -2221,6 +2417,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I used this layout to flesh out these designs more and I constantly shared them with our users they told me they didn't need the information right below the name because the didn't reference it that much so I moved it to its own tab here
+
+I created tables for the other sections where I added the features that users wanted such as pacing and impressions delivered
+
+And much like the old layout I included a whole tab for ads where you can click on each ad and it pops up a model where you can preview the ad and see the status and if it's rejected it'll show you why it was rejected
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2241,30 +2445,12 @@ transition: slide-left
   </div>
 </div>
 
----
-layout: default
-transition: slide-left
----
+<!--
+during the several rounds of me sharing designs with their internal people this was the main feedback I got they liked having all the or details on one page where they could navigate through different sections such as campaigns, ad accounts, ads etc.
 
-<CaseStudyPillTabs :key="s18b_cleaned_up_dup_before_thanks" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+And they also like seeing the data such as impressions and pacing status directly in the campaigns table because it was surfaced much faster than before where they had to dig through the information to find it
+-->
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">"All" view</h2>
-
-<div class="flex gap-6 mt-2 items-start w-full">
-  <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[18rem] max-w-[28%] pt-1">
-    <div class="rounded-2xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[0.95rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.45rem] shrink-0"></i>
-      <span>Showing all the values</span>
-    </div>
-  </div>
-  <div class="flex-1 min-w-0">
-    <FastVideo
-      src="./slides/assets/AllCampaigns.mp4"
-      :playback-rate="1.5"
-      video-class="mx-auto block h-auto max-h-[560px] w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)]"
-    />
-  </div>
-</div>
 
 ---
 layout: default

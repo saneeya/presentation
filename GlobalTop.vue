@@ -17,11 +17,11 @@ const SECTIONS: readonly { label: string; start: number; end: number }[] = [
   { label: 'Final',       start: 41, end: 43 },
   { label: 'The Journey', start: 44, end: 59 },
   // Case study: Behind the Platform (Admin Portal)
-  { label: 'Background', start: 62, end: 66 },
-  { label: 'Problem',          start: 67, end: 68 },
-  { label: 'Feature Requests', start: 69, end: 71 },
-  { label: 'Designs',          start: 72, end: 78 },
-  { label: 'Outcome',          start: 79, end: 83 },
+  { label: 'Background', start: 62, end: 65 },
+  { label: 'Problem',          start: 66, end: 69 },
+  { label: 'Feature Requests', start: 70, end: 72 },
+  { label: 'Designs',          start: 73, end: 76 },
+  { label: 'Outcome',          start: 77, end: 81 },
 ]
 
 const section = computed(() => {

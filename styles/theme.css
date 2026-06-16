@@ -361,6 +361,12 @@ body,
   box-shadow: none !important;
 }
 
+.slidev-layout img.ad-manager-stack__img--flat {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
 .slidev-layout .vast-xml-box {
   max-height: min(520px, 68vh);
   width: 28rem;

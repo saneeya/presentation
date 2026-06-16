@@ -23,6 +23,8 @@ const props = withDefaults(
     fadeInLast?: boolean
     /** Per-image scale factors, e.g. [0.8, 1, 1, 1] */
     imageScales?: number[]
+    /** Omit drop shadow and image rounding (e.g. wireframe assets) */
+    flat?: boolean
   }>(),
   {
     images: () => [
@@ -92,7 +94,7 @@ function imgStyle(idx: number) {
 <template>
   <InviteClickGap v-for="i in gapIndices" :key="i" />
 
-  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact }" :style="rootStyle">
+  <div class="ad-manager-stack" :class="{ 'ad-manager-stack--compact': props.compact, 'ad-manager-stack--flat': props.flat }" :style="rootStyle">
     <div
       class="ad-manager-stack__viewport"
       :style="props.viewportHeight ? { height: `${props.viewportHeight}px`, minHeight: `${props.viewportHeight}px` } : {}"
@@ -118,6 +120,7 @@ function imgStyle(idx: number) {
             :src="src"
             alt=""
             class="ad-manager-stack__img"
+            :class="{ 'ad-manager-stack__img--flat': props.flat }"
             :style="imgStyle(idx)"
           >
         </div>
@@ -223,5 +226,22 @@ function imgStyle(idx: number) {
   object-fit: contain;
   object-position: center;
   border-radius: 0.75rem;
+}
+
+.ad-manager-stack--flat .ad-manager-stack__viewport,
+.ad-manager-stack--flat .ad-manager-stack__pile,
+.ad-manager-stack--flat .ad-manager-stack__layer {
+  background: transparent;
+}
+
+.ad-manager-stack--flat .ad-manager-stack__layer {
+  filter: none !important;
+}
+
+.ad-manager-stack--flat .ad-manager-stack__img,
+.ad-manager-stack__img--flat {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 </style>

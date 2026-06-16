@@ -211,7 +211,7 @@ transition: slide-left
 </div>
 
 <!--
-So as far as how I work this is of course the ideal way to do design you know the double diamond approach and I wish I could work like this but...
+I want to go over my process. I know this is the ideal flow that UX has been doing for a while, you know the double diamond approach and I wish I could work like this but...
 -->
 
 ---
@@ -252,13 +252,13 @@ transition: slide-left
 </div>
 
 <!--
-As always the reality of work as always different than you expect for me personally the process never been super linear 
+As always the reality of work is different than you expect. For me personally the process never been super linear 
 
-Time usually tends to be a factor for me I'm usually working in teams that move very fast so I don't usually have the opportunity for discovery or talking to users so sometimes I use the best what I have available which usually is the PRD
+Time is always a factor for me. I'm usually working in teams that move pretty fast so I don't usually have the opportunity for discovery or talking to users so sometimes I use the best what I have available which tends to be the PRD
 
-Instead of doing a bunch of figma mocks, I try to use AI to create quick designs, it's especially easy when you have a design system linked
+These days, instead of doing a bunch of figma mocks, I try to use AI to create quick concepts, it's especially easy when you have a design system linked
 
-And from there and I just shared the prototype with everyone developers, PMs, stakeholders etc. And continuously improve the design
+And from there and I just shared the prototype with everyone developers, PMs, stakeholders etc. And we do back and forth to continuously improve the design
 -->
 
 ---
@@ -286,13 +286,15 @@ transition: slide-left
 </div>
 
 <!--
-Using the non-linear approach there are other key factors and how I work
+With that non-linear approach there are other key factors in how I work
 
-As I mentioned before the big one is time and recently because of AI I'm trying to get better at token management and prompt more efficiently which is still at work in progress
+As I mentioned before time is always a concern and now because of AI I'm trying to get better at token management and prompting which is still at work in progress
 
-I've been the sole designer on most projects I've worked on because of that I've gotten pretty good at working with a bunch of different teams so I understand that with limited resources there is always some back-and-forth on what you can do what you can achieve and it's technically feasible. I myself like having a weekly what I call you's office hours or anyone can drop in and discussed designs this has proven to be really useful and helpful when collaborating with so many people
+I've also been the sole designer on most projects and because of that I've gotten pretty good at working with a bunch of different teams so I understand that with limited resources there is always so much you can do and what you can achieve. 
 
-And now one thing I tend to keep bringing up is what exactly design can bring. Everyone is using AI to prototype now, I've had many PMs we'll just put a PRD into a prompt and see what pops out and they think the design is done. However these designs don't really follow a design system and take the objective too literally it usually also has weird patterns that just don't make sense so I think there's still a use for designers even in this kind of AI forward world and I do my best to show people I work with that design still brings value
+I myself like setting up a weekly design office hour whee anyone can drop in and discuss designs. this has proven to be really useful and helpful when collaborating with so many people
+
+And one thing I tend to keep bringing up is what exactly design can bring. Everyone is using AI to prototype now, I've had many PMs  put a PRD into a prompt and see what pops out and they think the design is done. However these designs don't really follow a design system and don't understand the problem. Even in this AI forward world, I do my best to show people I work with that design still brings value
 -->
 
 ---
@@ -320,9 +322,9 @@ transition: slide-left
 </div>
 
 <!--
-So did it over what I just explained in terms of how I work I have a mini case study to kind of show you the process I described earlier
+So I just explained in terms of how I work I have a mini case study to kind of show you the process as it is now
 
-So this is me designing a new filter layout
+This is me designing a new filter layout
 -->
 
 ---
@@ -414,9 +416,9 @@ transition: slide-left
 </div>
 
 <!--
-That mission control is a legacy tool so it's been around for a while and because of that there's had a lot of feedback especially in terms of the filters
+mission control is a legacy tool so it's been around for a while and because of that there's been especially in terms of the filters 
 
-They wanted a better way to navigate filters, they wanted to have custom filters, more filter options and most of all they wanted boolean targeting like and/or targeting because I wanna help I'm narrowed down to find the very specific data that they're looking for and as I mention every type of user is looking for different information in this platform
+Users want a better way to navigate filters, they want to have custom filters, more filter options and most of all they want target boolean targeting like and/or targeting because I wanna help I'm narrowed down to find the very specific data that they're looking for and as I mention every type of user is looking for different information in this platform
 -->
 
 ---
@@ -497,7 +499,7 @@ transition: slide-left
 <!--
 when I had the basic requirements down I kind of made a mental list of all the things I had to make obviously needed the boolean logic and the consistent style for each type of filter.
 
-Also needed a way where users could save their own custom filters and be able to share them with their team that was a big ask and most importantly try to create a better layout for these filterstry to create a better layout for these filters
+Also needed a way where users could save their own custom filters and be able to share them with their team that was a big ask and most importantly try to create a better layout for these filters
 -->
 
 ---
@@ -518,7 +520,7 @@ transition: slide-left
 </div>
 
 <!--
-I started off making what I call a filter map I took all the filter I took screenshots of all the content in the trafficking table and just stitched them in a figma and from there I mapped each filter to the data it represented
+I started off making what I call a filter map. I took screenshots of all the content in the trafficking table and just stitched them in a figma and from there I mapped each filter to the data it represented
 
 This helped me see what types of filters there were how many there were and how to categorize them
 -->
@@ -608,11 +610,15 @@ transition: slide-left
 <!--
 the previous designs were fine but they were but they did not account for all the content these filters were going to have
 
-I came up with this idea of making a full page where you can just build your filters and use boolean logic 
+I came up with this idea of making a full page called Advanced Filters where you can build your filters with boolean logic 
 
-my first design had this idea where you selected filters on the left side and it would populate them in the middle and you could have your and/or targeting but I just had too many boolean options
+My first design had this idea where you selected filters on the left side and it would populate them in the middle where you could have your and/or targeting. 
 
-And the problem with the left panel is you could only select one filter at a time when users wanted to use multiple types of the same filter
+but I just had too many boolean options all of which were not necessary
+
+Plus with the left panel you could only select one filter at a time and our users wanted to be able to select the same filer again and again
+
+for example they wanted to select publisher Disney+ and date range OR publisher Hulu and date range
 -->
 
 ---
@@ -644,11 +650,13 @@ transition: slide-left
 </div>
 
 <!--
-my next design a simplified the approach I had earlier and remove the left panel to have this select filter drop down at the bottom 
+my next design a simplified the approach.
 
-I wanted to test this out with users and at the time we had just gotten licenses to use cursor so this is my first ever AI design that I made back in December and I was just mind blown and how complex I could make the interactions with just prompts
+I removed the left panel and has this filter drop down at the bottom 
 
-Before I tested with the users I wanted to make another option
+I wanted to test this design out with users and at the time we had just gotten licenses to use cursor so this is my first ever AI prototype. I made this back in December and I was just mind blown and how complex I could make the interactions with just prompts
+
+But before I tested this, I wanted to make another option
 -->
 
 ---
@@ -686,9 +694,9 @@ transition: slide-left
 <!--
 And so this was the second design
 
-Instead of having an advanced filters page I took the full with I thought it might make more sense having like a slide out where you could select your filters again on the left side and use the space to build out your filters
+Instead of having an full page for filters, I thought it might make more sense having a slide out where you could select your filters on the left side, be able to select them multiple times and use the space to build out your filters
 
-This layout received a better feedback than the other one so we decided to go forward with it and now let me show you the prototype I built you can see these in action
+This layout received better feedback than the other one so I decided to go forward with it and now let me show you the prototype I built so you can see this in action
 -->
 
 ---
@@ -750,7 +758,9 @@ transition: slide-left
 </style>
 
 <!--
-I was able to achieve most of the goals I had set out to do however because of technical limitations we can't exactly share custom filters so that is something will probably come later down the year as a p1
+I was able to achieve most of the goals I had set out to do 
+
+however because of some technical limitations we didn't have the ability to share custom filters, so that is something will probably come later down the year as a p1
 -->
 
 ---
@@ -778,15 +788,17 @@ transition: slide-left
 </div>
 
 <!--
-this is still in progress and even though it's not done yet I still had a lot of takeaways I got from it 
+this is still a work in progress and even though it's not done yet I still had a lot of takeaways
 
-first of all the AI prototyping is a game changer, I don't think I would been able to get such specific feedback had I not built such an interactive design in such interactivity wouldn't have been possible in figma
+first of all AI prototyping is a game changer. I don't think I would been able to get such specific feedback had I not built such an interactive design with such interactivity. This wouldn't have been possible in figma
 
-However because the prototype was so technical, the development team took very literal and so they kept asking for updates to match the PRD and so I'd keep going back-and-forth and updating the prototype ultimately I learned that I wasn't really important to have a pixel perfect prototype and just use it more as a general direction
+However because the prototype was so technical, the development team took it very literally and so they kept asking for updates to match the PRD and so I'd keep going back-and-forth and updating the prototype. 
 
-But overall I was pretty proud with how the prototype with AI especially since I don't have a development background
+This took up a lot of time and ultimately I learned that it wasn't important to have a pixel perfect prototype, but use it more as general direction and testing edge cases
 
-So that is my mini case study now to go on to the actual case studies
+Overall I was pretty proud with how the AI prototype turned out especially since I don't have a development background
+
+So that is my mini case studying showing how I work. And now I'm gonna go on to the actual case studies
 -->
 
 ---
@@ -871,11 +883,11 @@ transition: fade
 <AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="500" layer-max-width="72rem" pull-down="-2rem" />
 
 <!--
-So as Jimmy explained, Disney Campaign Manager is Disney's self serve ad platform than. you can access whenever and wherever and is the product I spent most of my time at Disney working on
+So as Jimmy explained, Disney Campaign Manager is Disney's self serve ad platform that you can access whenever and wherever and is the product I spent most of my time at Disney working on
 
 Before the rebrand, it was known as Hulu Ad Manager, and when I started in 2021 this was campaign creation flow looked like
 
-It was was a page by page flow where you can set up Campaign name, dates, budget,and  targeting options such as demographics and interests
+It was was a page by page flow where you can set up Campaign name, dates, budget, and targeting options such as demographics and interests, and hobbies
 -->
 
 ---
@@ -905,11 +917,11 @@ transition: slide-left
 <!--
 Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency. 
 
-The product itself was created to let SMBs advertise on Hulu because there was a much lower minimum spend than the traditional route, $500 dollars vs $50,000
+The product was initially created to let SMBs advertise on Hulu because there was a much lower minimum spend than the traditional route, $500 in campaign manager vs $50,000 through the sales team
 
 Even thought it was still a young platform, it was profitable, making about $10mil a year 
 
-So it was making money, but the company really wanted to scale ad manager
+It was making money, but the company really wanted to scale the platform
 -->
 
 ---
@@ -933,7 +945,7 @@ transition: slide-left
 </div>
 
 <!--
-When I started, there was a big push to get more agency users and larger enterprise advertisers because those groups  have larger campaign spends than SMBs and most media buys on streaming are done by agencies
+When I started, there was a big push to get more agency users and enterprise advertisers on campaign manager, because those groups  have larger campaign spends than SMBs and most media buys on streaming are done through agencies
 
 Unfortunately we did not offer all the features that agencies wanted
 -->
@@ -1014,9 +1026,9 @@ transition: slide-left
 </div>
 
 <!--
-Part of the initiative to scale the platform was this huge 2-year project to move ad manager from the 3rd party to in house because it would save money and give us full ownership of the platform
+Part of the initiative to scale the platform was this huge 2-year project to move ad manager from the 3rd party agency that managed to have it be in house because it would save money and give us full ownership of the platform
 
-For me, I was given the rare opportunity to redesign an entire platform and that included redoing campaign creation
+For me, I was given the rare opportunity to redesign an entire platform which included redoing campaign creation
 -->
 
 ---
@@ -1086,9 +1098,13 @@ transition: slide-left
 </div>
 
 <!--
-Now, I know 2 years sounds like a lot of time to work on a new design, but in reality it was just one of many thing I was working on. I was also working on updating the rest of the platform, as well updating the existing product because it was still making revenue 
+Now, I know 2 years sounds like a lot of time to work on a new design, but in reality it was just one of many thing I was working on. 
 
-One top of that, I was the sole designer for the majority of this project, So, by myself, I had to work with a ton of developers (both internal and overseas), several PMs, the sales teams, the QA team, the marketing and many more people because they were all involved in this initiave
+I was also working on updating the rest of the platform, as well updating the existing product because it was still making revenue 
+
+One top of that, I was the only designer for the majority of this project.
+
+So, by myself, I had to work with a ton of developers (both internal and overseas), several PMs, the sales teams, the QA team, the marketing and many more people because this was a huge initiative and they were all involved in it
 -->
 
 ---
@@ -1143,9 +1159,9 @@ transition: slide-left
 <!--
 Because of the limited resources, I decided to see what designs or patterns were there that I could upcycle. 
 
-There was this single page flow that was done by a previous designer and was also user tested with SMBs. It tested well, most users really liked the layout.
+There was this single page flow that was done by a previous designer and was tested with SMBs. It tested well, most users really liked the layout.
 
-I hypothesized that it would be easier to add more sections (such as new targeting) in a single page flow than adding several more pages in a page-by-page flow
+I hypothesized that it would be easier to add more sections (such as the new targeting options) in a single page flow than adding several more pages in a page-by-page flow
 -->
 
 ---
@@ -1242,7 +1258,11 @@ transition: slide-left
 <!--
 I did a ton of mocks, and of my initial ideas was to have line items live in the top as tabs because it would be easier to switch back and forth
 
-I experimented with more high fidelity versions but since line item names could be customized, these tabs could get pretty long and you end up with this weird horizontal scroll which did not look good or scale well
+I experimented with more high fidelity versions 
+
+but since line item names could be customized, these tabs could get pretty long 
+
+and you end up with this weird horizontal scroll which did not look good or scale well
 
 I ditched this idea and went on to try other options
 -->
@@ -1373,6 +1393,8 @@ transition: slide-left
 Here is the final flow sped up 
 
 you can see the new branding here
+
+and those were the design iterations
 -->
 
 ---
@@ -1421,7 +1443,9 @@ transition: slide-left
 </div>
 
 <!--
-Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+and this was the process Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+
+as I mentioned earlier, I never have linear workflows
 -->
 
 ---
@@ -1451,7 +1475,9 @@ transition: slide-left
 <!--
 Now this was a LOT of work for one person, and I really needed help. The rest of the design team was stretched thin, so I had to get someone new
 
-hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so I was able to find who project manager who controlled funding for this initiative and was able to secure budget for a contractor a couple months before launch
+Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
+
+I was able to connect with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch
 -->
 
 ---
@@ -1483,7 +1509,7 @@ transition: slide-left
 </div>
 
 <!--
-So you know, I was the only designer for the majority of the time, I did get a contractor but it was mostly me dealing with a LOT of partners by myself
+So you know, I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
 
 To keep up with everyone, I would message the PMs and lead engineers pretty frequently
 
@@ -1523,7 +1549,7 @@ Working with the external teams was a whole other story, we were using 3rd party
 
 this 3rd party implemented a lot of the front end and it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
 
-I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I had to address
+I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
 
 But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
 -->
@@ -1551,7 +1577,9 @@ transition: slide-left
 </div>
 
 <!--
-What I ended up doing was mapping out everything, every flow, every error, modal, every state, whatever
+What I ended up doing was mapping out everything, every flow, every error, modal, 
+
+every state, whatever
 
 This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
 
@@ -1589,7 +1617,9 @@ transition: slide-left
 <!--
 another part of my non liner journey was User testing. I shared designs often with internal teams but I really wanted to test the campaign flow with customers who already used our platform
 
-Because of time and resources, I wasn't able to user test until after the final designs were being implemented. I know you're supposed to user test while the design is in production , like it would be too late to affect the laucn but I was able to convince product to let me put any potential changes as fast follow ups after launch
+Because of time and resources, I wasn't able to user test until after the final designs were being implemented. 
+
+I know you're not supposed to user test while the design is in production, because it would be too late to affect the launch, but I was able to convince product to let me put any potential changes from the user test as fast follow ups after launch
 
 this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team I knew I would have to do a lot of the work on my own
 
@@ -1685,9 +1715,9 @@ transition: slide-left
 <!--
 What I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
 
-I conduncted 1 hr usability tests where I asked them to do certain tasks in and see how they went about them,
+I conducted 1 hr usability tests where I asked them to do certain tasks and see how they went about them,
 
-Even though none of them had used hulu ad manager before, I got some pretty useful feedback
+Even though none of them had used our platform before, I got some pretty useful feedback
 -->
 
 ---
@@ -1755,7 +1785,7 @@ transition: slide-left
 </div>
 
 <!--
-Another big issue was that people could not find the "create new line item button", it was too small and not noticeable so that was something I prioritized as a fix post launch
+Another big issue was that people could not find the "create new line item button", it was too small and not noticeable so that was something I prioritized as a post-launch fix
 -->
 
 ---
@@ -1919,11 +1949,11 @@ transition: slide-left
 </div>
 
 <!--
-This was a huge project and probably one of the hardest ones I've ever worked on. I learned a lot from this especially things I would do differently such as getting support earlier and setting up a realistic timeline for my work up front
+This was a huge project and probably one of the hardest ones I've ever worked on. I learned a lot from this especially things I would do differently such as getting support earlier and setting up realistic timelines for my work sooner
 
 but one thing i would definitely do differently now is use AI especially for quick concepts. 
 
-Knowing what I know now about ads and wanting to test out AI tooling, I created the campaign flow as i would do it now
+Knowing what I know now about ads and wanting to test out AI tooling, I created the campaign flow as i would do it now just as a person project
 
 SHOW PROTO
 -->
@@ -1957,7 +1987,7 @@ Before I move on, are there any questions or should I go on to the next case stu
 
 Great, so this is like the previous project, but its more behind the scenes if you well
 
-You saw the advertiser facing view of Disney campaign manager and I'm gonna show you the flip side, which we called Admin portal and the work I did on it
+You saw the advertiser facing view of Disney campaign manager and now I'm gonna show you the flip side, which we call Admin portal
 -->
 
 ---
@@ -1989,7 +2019,7 @@ transition: slide-left
 </div>
 
 <!--
-This was a pretty quick project that was kind of doing in tandem with the whole platform design I talked about
+This was a pretty quick project that was I was doing in tandem with the whole platform redesign I mentioned before
 -->
 
 ---
@@ -2017,11 +2047,11 @@ transition: slide-left
 </div>
 
 <!--
-So as I showed with the new campaign flow we were adding a bunch of new features to get agencies on board to our platform 
+In the last case study, I showed the new campaign flow, where we added a bunch of new features to get agencies 
 
-before the new campaign flow launched we completely redid the account management before you'd only have one user and one payment method 
+Before that launched we completely redid the account management. Initially you only had one user and one payment method 
 
-Now we introduced ad accounts, brands, and the ability to have multiple users with different roles
+Now we introduced ad accounts, brands, and the ability to have multiple payment methods and multiple users with different roles
 -->
 
 ---
@@ -2050,9 +2080,9 @@ transition: slide-left
 </div>
 
 <!--
-This was the old account management setting on the advertiser side you had two tabs basically one that showed your transactions and one that showed your settings such as your payment option and your company's information
+This was the old account management page on the advertiser side you had two tabs basically one that showed your transactions and one that showed your settings such as your payment option and your company's information
 
-When I started at the company this was the redesign that the prior designer had worked on set up this new menu here where you could select your different settings and edit them as needed
+When I started at the company this was the redesign that prior designers had worked on. There is this new menu here where you could navigate your different settings and edit them as needed
 
 I was still new to the platform so I didn't know it as well as I know it now but this design seemed fine with me so I modified it a little and approved it for production
 -->
@@ -2082,9 +2112,9 @@ transition: slide-left
 </div>
 
 <!--
-That was the advertiser facing view and let me describe admin portal so admin portal is the internal side of campaign manager used by account managers county executive planners our operations and customer support
+That was the advertiser facing view but we also had the admin portal. Admin portal is the internal side of campaign manager used by account managers, account executives, planners, operations and customer support
 
-It's commonly used for troubleshooting and it specifically designed to mimic the advertiser facing view so users don't get confused with drastically different UI when addressing support tickets
+It's commonly used for troubleshooting and it specifically designed to mimic the advertiser facing view so internal users don't get confused with drastically different UI when addressing support tickets
 -->
 
 ---
@@ -2112,7 +2142,9 @@ transition: slide-left
 </div>
 
 <!--
-this was the prior design for the admin portal similar to the advertiser facing view you have your different tabs the main difference is internal people can view all the organizations and filter down
+this was the prior design for the admin portal similar to the old account management for advertisers I just showed
+
+You have a table with all advertisers and when you select an advertiser, this is what their detail page looks like. You have here a list of all their campaigns, ads and transactions
 
 And the new layout was designed to be the same as the customer facing view and here you can also view all organizations as as well as ad accounts campaigns and users
 -->
@@ -2124,34 +2156,58 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s18b_admin_portal_dup2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New admin<br>portal navigation</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Admin Navigation</h2>
 
-<div class="flex gap-6 mt-2 items-start w-full">
-  <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[18rem] max-w-[28%] pt-1">
+<div class="flex flex-col gap-2 mt-2 w-full">
+  <div class="flex flex-col gap-2 min-w-0 max-w-3xl">
     <div class="rounded-2xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[0.95rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.45rem] shrink-0"></i>
-      <span>Shows ALL ad accounts, orgs, campaigns, etc</span>
+      <span>Old Admin</span>
     </div>
-    <div class="rounded-2xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[0.95rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d2">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.45rem] shrink-0"></i>
-      <span>Hard to view single org at a time</span>
-    </div>
-    <div class="rounded-2xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[0.95rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d3">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.45rem] shrink-0"></i>
-      <span>Awkward jumps</span>
-    </div>
+    <CarouselSyncBullet :show-at-click="1" class="!rounded-2xl !text-[0.95rem] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)]">
+      New Admin
+    </CarouselSyncBullet>
   </div>
-  <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/adminportal.gif']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-7rem" />
+  <div class="w-full min-w-0">
+    <AdManagerStack :images="['./slides/assets/AdminFlow1.png', './slides/assets/AdminFlow2.png']" :compact="true" :viewport-height="520" layer-max-width="64rem" layer-width-pct="92%" pull-down="-5.5rem" pile-shift="1rem" flat />
   </div>
 </div>
 
 <!--
 Much like with the account management I didn't spend a lot of time going over the admin portal designs and so I thought it'd be fine for production
 
-However one thing became very obvious when it did release which was that I had a very odd navigation style
+However one thing became very obvious after release that the navigation was pretty different
 
-As you can see here you can open an or you can click an ad account and it jumps to another section also you can't really view all the information in one or unless you filter by that org which isn't helpful for our users because they usually just need to see one or at a time
+Here in the old layout, an internal user can go to a list of all orgs and search for a specific advertiser, when they click on their name they go to a new page with that advertisers information and associated campaigns and ads
+
+In the new layout, you do not go to a new page for that advertiser. If you want to see a campaign you go to list of All campaigns and filter by advertiser to find associated campaigns
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_admin_nav_dup" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Navigation Issues</h2>
+
+<div class="flex flex-col gap-2 mt-2 w-full">
+  <div class="flex flex-col gap-2 min-w-0 max-w-3xl">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[0.95rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.45rem] shrink-0"></i>
+      <span>Awkward jumps when switching sections</span>
+    </div>
+  </div>
+  <div class="w-full min-w-0">
+    <AdManagerStack :images="['./slides/assets/AdminFlow3.png']" :compact="true" :viewport-height="520" layer-max-width="64rem" layer-width-pct="92%" pull-down="-6.5rem" pile-shift="0.5rem" flat />
+  </div>
+</div>
+
+<!--
+Or you could go to the list of all orgs and search by advertiser, and when you click on the name you get this side panel with all the details, and if I click a campaign here, it redirects me to the campaign section with the information side panel pulled up
+
+it's awkward and doesn't follow user expectations
 -->
 
 ---
@@ -2166,7 +2222,7 @@ transition: slide-left
 <div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
-    <span>Users were complaining about the new admin portal's navigation</span>
+    <span>Users were complaining about the new navigation, they view most orgs 1 at a time</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M480 400L288 400C279.2 400 272 392.8 272 384L272 128C272 119.2 279.2 112 288 112L421.5 112C425.7 112 429.8 113.7 432.8 116.7L491.3 175.2C494.3 178.2 496 182.3 496 186.5L496 384C496 392.8 488.8 400 480 400zM288 448L480 448C515.3 448 544 419.3 544 384L544 186.5C544 169.5 537.3 153.2 525.3 141.2L466.7 82.7C454.7 70.7 438.5 64 421.5 64L288 64C252.7 64 224 92.7 224 128L224 384C224 419.3 252.7 448 288 448zM160 192C124.7 192 96 220.7 96 256L96 512C96 547.3 124.7 576 160 576L352 576C387.3 576 416 547.3 416 512L416 496L368 496L368 512C368 520.8 360.8 528 352 528L160 528C151.2 528 144 520.8 144 512L144 256C144 247.2 151.2 240 160 240L176 240L176 192L160 192z"/></svg>
@@ -2290,80 +2346,6 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s9_copy_after_discovery_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
-
-<div class="flex h-full w-full items-center justify-center">
-  <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
-  >
-    How can I find out why an ad was rejected?
-  </div>
-</div>
-
-<!--
-one of the most common customer support questions we got was why is my ad rejected? 
-
-The way our ops people would address this as they would find the creative asset in admin portal and it would list the specific reasons why the ad was rejected 
-
-it could be technical limit be technical spec rejection or it could be standards and practice violation
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s23_admin_portal_flow" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Find Ad: New flow</h2>
-
-<div class="max-w-4xl mt-16" style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; grid-template-rows: auto auto; gap: 2rem 0.5rem; align-items: stretch;">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:0s"><span>View "All Campaigns"</span></div>
-  <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:0.7s"><span>Filter by advertisers</span></div>
-  <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:1.4s"><span>Find relevent campaign</span></div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:1.8s"><span>View "Campaign Details"</span></div>
-  <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:2.2s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:2.5s"><span>Redirect to another page with campaing details (and ads)</span></div>
-  <div></div>
-  <div></div>
-</div>
-
-<!--
-In the new flow there was quite a lot of steps for users to be able to find an advertiser's ad 
-
-They go to the view all campaigns tap list all the campaigns across the entire platform they would filter down by advertiser then they would find the relevant campaign, they would click on the campaigns details but it would redirect them to a whole other page which housed the ads
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s23_before_thanks" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Find Ad: Old flow</h2>
-
-<div class="max-w-4xl mt-16" style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 2rem 0.5rem; align-items: stretch;">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:0s"><span>View all campaigns</span></div>
-  <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:0.7s"><span>Filter by advertiser</span></div>
-  <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:1.1s"></i>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center h-[7rem] anim-fade-up" style="animation-delay:1.4s"><span>View associated Ads</span></div>
-</div>
-
-<!--
-The old flow was more straightforward, you would find the list of all campaigns you would filter by advertiser and an inside there would be a tab that would list the ads for that advertiser
-
-Because of all the feedback I got I knew that I would recycle the previous admin portal layout
--->
-
----
-layout: default
-transition: slide-left
----
-
 <CaseStudyPillTabs :key="s18b_admin_portal_dup_end" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Concepts</h2>
@@ -2399,7 +2381,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s18b_admin_portal_dup_second_last" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Cleaned up<br>designs</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Final</h2>
 
 <div class="flex gap-6 mt-2 items-start w-full">
   <div class="flex flex-col gap-2 min-w-0 flex-shrink-0 w-[18rem] max-w-[28%] pt-1">

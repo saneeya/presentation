@@ -95,7 +95,7 @@ transition: slide-left
 </div>
 
 <!--
-Here is the agenda for today, feel free to interrupt of you have questions you want to ask during this presentation or you can wait until the end where I have some time scheduled for Q and A
+Here is the agenda for today, feel free to interrupt if you have questions during this presentation or you can wait until the end where I have some time scheduled for Q and A
 -->
 
 ---
@@ -112,14 +112,15 @@ layoutClass: h-full layout-wide-right
 
 ::right::
 
-<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0 -translate-x-20">
+<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0" style="transform: translateX(-14rem)">
 <AdManagerStack
   :images="['./slides/assets/About4.jpg', './slides/assets/About1.jpg', './slides/assets/About2.jpg', './slides/assets/About3.jpg']"
+  :image-scales="[1, 1, 0.82, 1]"
   :compact="true"
   :viewport-height="610"
   layer-max-width="100%"
   layer-width-pct="100%"
-  pull-down="4.5rem"
+  pull-down="1.5rem"
   pile-shift="1rem"
 />
 </div>
@@ -146,7 +147,7 @@ layoutClass: h-full layout-wide-right
 
 ::right::
 
-<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0 -translate-x-20">
+<div class="flex h-full min-h-0 w-full flex-col justify-center pl-0" style="transform: translateX(-10rem)">
 <AdManagerStack
   :images="['./slides/assets/About6.jpg', './slides/assets/About7.png', './slides/assets/About8.png', './slides/assets/About5.jpg']"
   :image-scales="[1, 0.78, 1, 1]"
@@ -164,7 +165,7 @@ and here is my professional background. Back in the day, I spent years doing gra
 
 One example was this billboard I did for the local county fair.
 
-Eventually I did a career pivot to UX, my first tech role was at McGraw Hill Education, which is a textbook company but also has a suite of ed tech products. One of those products was ALEKS which I did most of my worn on. I  designed teacher and student facing user interfaces and even some other things like this logo I made for the 20th anniversary. 
+Eventually I did a career pivot to UX, my first tech role was at McGraw Hill Education, which is a textbook company but also has a suite of ed tech products. One of those products was ALEKS which I did most of my work on. I  designed teacher and student facing user interfaces and even some other things like this logo I made for the 20th anniversary. 
 
 After McGraw Hill, I spent some time at a mortgage company doing more enterprise platforms , this time for loan officers and real estate agents. While there,  I learned a lot about how regulated and complicated work flows behave. 
 
@@ -211,7 +212,9 @@ transition: slide-left
 </div>
 
 <!--
-I want to go over my process. I know this is the ideal flow that UX has been doing for a while, you know the double diamond approach and I wish I could work like this but...
+I want to go over my process. As most of you know, this is the ideal flow that design has been told to do, the double diamond approach,
+
+ and I wish I could work like this but...
 -->
 
 ---
@@ -294,7 +297,7 @@ I've also been the sole designer on most projects and because of that I've gotte
 
 I myself like setting up a weekly design office hour whee anyone can drop in and discuss designs. this has proven to be really useful and helpful when collaborating with so many people
 
-And one thing I tend to keep bringing up is what exactly design can bring. Everyone is using AI to prototype now, I've had many PMs  put a PRD into a prompt and see what pops out and they think the design is done. However these designs don't really follow a design system and don't understand the problem. Even in this AI forward world, I do my best to show people I work with that design still brings value
+And one thing I tend to keep bringing up is what exactly design can bring. Everyone is using AI to prototype now, I've had many PMs  put a PRD into a prompt and see what pops out and they think the design is done. However these designs don't really follow a design system and don't understand the problem. Even in this AI forward world, I do my best to show people I work with that having a designer still makes a difference
 -->
 
 ---
@@ -324,7 +327,7 @@ transition: slide-left
 <!--
 So I just explained in terms of how I work I have a mini case study to kind of show you the process as it is now
 
-This is me designing a new filter layout
+I'm going to start off showing how I designed a new filter flow
 -->
 
 ---
@@ -354,7 +357,9 @@ transition: slide-left
 </div>
 
 <!--
-This project is still in development right now I don't know if it took exactly 6 months I started it last year but then it was kind of a shelved for a while and recently picked up again and a I think it might take a little longer because there are some edge cases that keep popping up right now so I have to kind of address those along the way
+This project is still in development right now I don't know if it took exactly 6 months I started it last year but then it was kind of a shelved for a while and recently picked up again 
+
+I think there is some ways to go because there are some edge cases that keep popping up
 -->
 
 ---
@@ -382,9 +387,11 @@ transition: fade
 </div>
 
 <!--
-now for some context we have an internal add trafficking tool called mission control, mission control is used by account managers account executives, sales planners, customer support operations and so on is used by a ton of people who all different needs in this platform
+now for some context we have an internal ad trafficking tool called mission control, mission control which is used by account managers account executives, sales planners, customer support operations and basically a ton of people who all different needs in this platform
 
-As a result it has quite a lot of filters because there's so much data available here and as you can see from this animation this is what the filters looks like in the current platform it's a long drop down you just scroll and then apply the filters from there
+As a result there is a lot of data available and users rely on fitlers to sift through what they need 
+
+This is what the filters looks like in the current platform it's a long drop down you have to scroll through and then apply the filters from there
 -->
 
 ---
@@ -416,9 +423,9 @@ transition: slide-left
 </div>
 
 <!--
-mission control is a legacy tool so it's been around for a while and because of that there's been especially in terms of the filters 
+mission control is a legacy tool so it's been around for a while and because of that there's been a lot of complaints or as I like to call it feedback, especially for filters
 
-Users want a better way to navigate filters, they want to have custom filters, more filter options and most of all they want target boolean targeting like and/or targeting because I wanna help I'm narrowed down to find the very specific data that they're looking for and as I mention every type of user is looking for different information in this platform
+I did have some time for discovery here where I learned that users want a better way to navigate filters, they want to have custom filters, more filter options and most of all they want boolean targeting like and/or targeting since every user is looking for something different
 -->
 
 ---
@@ -446,7 +453,11 @@ transition: slide-left
 </div>
 
 <!--
-There were also some technical issues with the filters for example they they were not consistent because they were added ad hoc on a case by case basis and because of this they weren't very easy to scale especially when we were introducing new data into the platform
+There were also some technical issues with the filters
+
+They they were not consistent because they were added ad hoc on a case by case basis 
+
+and because of this they weren't very easy to scale especially when we were introducing new data into the platform
 -->
 
 ---
@@ -497,9 +508,9 @@ transition: slide-left
 </div>
 
 <!--
-when I had the basic requirements down I kind of made a mental list of all the things I had to make obviously needed the boolean logic and the consistent style for each type of filter.
+when I had the basic requirements down I kind of made a mental list of all the things I had to make such as the boolean logic and the consistent style for each type of filter.
 
-Also needed a way where users could save their own custom filters and be able to share them with their team that was a big ask and most importantly try to create a better layout for these filters
+Plus I needed to add way where users could save their filters and an additional ask was that they be able to share them with their team
 -->
 
 ---
@@ -520,9 +531,9 @@ transition: slide-left
 </div>
 
 <!--
-I started off making what I call a filter map. I took screenshots of all the content in the trafficking table and just stitched them in a figma and from there I mapped each filter to the data it represented
+I started off making what I call a filter map. I took screenshots of all the content in the trafficking table and just stitched them together in figma and from there I mapped each filter to the data it represented
 
-This helped me see what types of filters there were how many there were and how to categorize them
+This helped me see what types of filters there were, how many there were, and how to categorize them
 -->
 
 ---
@@ -543,7 +554,11 @@ here is one with the filters on the left side
 
 Here is another one in our programmatic platform where the filters are on the right side
 
-And the filter is here are in the creative review tool and they are also on the left side and since this tool is relatively knew it uses our current design system as you may have noticed all these platforms look inconsistent because they're designed at different times however going forward I knew I'd be using this design system here for anything net new
+And the filter is here are in the creative review tool and they are also on the left side 
+
+and since this tool is relatively new, it uses our current design system
+ 
+as you may have noticed all these platforms look inconsistent because they were designed at different times, but going forward I knew I'd be using this design system here for anything net new
 -->
 
 ---
@@ -568,7 +583,7 @@ transition: slide-left
 </div>
 
 <!--
-I experimented in figma with some layouts using patterns in the design system
+I experimented in figma with some layouts 
 
 Here is one where they are on the left side
 
@@ -697,6 +712,8 @@ And so this was the second design
 Instead of having an full page for filters, I thought it might make more sense having a slide out where you could select your filters on the left side, be able to select them multiple times and use the space to build out your filters
 
 This layout received better feedback than the other one so I decided to go forward with it and now let me show you the prototype I built so you can see this in action
+
+[SHOW PROTOTYPE]
 -->
 
 ---
@@ -790,7 +807,7 @@ transition: slide-left
 <!--
 this is still a work in progress and even though it's not done yet I still had a lot of takeaways
 
-first of all AI prototyping is a game changer. I don't think I would been able to get such specific feedback had I not built such an interactive design with such interactivity. This wouldn't have been possible in figma
+first of all AI prototyping is a game changer. I don't think I would been able to get such specific feedback had I not built such an interactive design with would not have been possible in figma
 
 However because the prototype was so technical, the development team took it very literally and so they kept asking for updates to match the PRD and so I'd keep going back-and-forth and updating the prototype. 
 
@@ -798,7 +815,7 @@ This took up a lot of time and ultimately I learned that it wasn't important to 
 
 Overall I was pretty proud with how the AI prototype turned out especially since I don't have a development background
 
-So that is my mini case studying showing how I work. And now I'm gonna go on to the actual case studies
+So that is my mini case studying showing how I work. And now I'm gonna go on to the one of the main case studies
 -->
 
 ---
@@ -1385,7 +1402,7 @@ transition: slide-left
   <FastVideo
     src="./slides/assets/New Campaign Flow Walkthrough.mp4"
     :playback-rate="3"
-    video-class="mx-auto block h-auto max-h-[min(400px,46vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
+    video-class="mx-auto block h-auto max-h-[min(520px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
   />
 </div>
 
@@ -1572,7 +1589,7 @@ transition: slide-left
     <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-15rem" />
+    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
   </div>
 </div>
 
@@ -1953,9 +1970,9 @@ This was a huge project and probably one of the hardest ones I've ever worked on
 
 but one thing i would definitely do differently now is use AI especially for quick concepts. 
 
-Knowing what I know now about ads and wanting to test out AI tooling, I created the campaign flow as i would do it now just as a person project
+Knowing what I know now about ads and wanting to test out AI tooling, I created the campaign flow as i would do it now just as a personal project
 
-SHOW PROTO
+[SHOW PROTOTYPE]
 -->
 
 ---
@@ -1985,9 +2002,9 @@ transition: slide-left
 <!--
 Before I move on, are there any questions or should I go on to the next case study?
 
-Great, so this is like the previous project, but its more behind the scenes if you well
+This is like the previous project, but its the flip side
 
-You saw the advertiser facing view of Disney campaign manager and now I'm gonna show you the flip side, which we call Admin portal
+You saw the advertiser facing view of Disney campaign manager and now I'm gonna show you the the internal side we call Admin portal
 -->
 
 ---
@@ -2019,7 +2036,7 @@ transition: slide-left
 </div>
 
 <!--
-This was a pretty quick project that was I was doing in tandem with the whole platform redesign I mentioned before
+This was a pretty quick project that was I was doing in tandem with the whole platform redesign
 -->
 
 ---
@@ -2114,7 +2131,7 @@ transition: slide-left
 <!--
 That was the advertiser facing view but we also had the admin portal. Admin portal is the internal side of campaign manager used by account managers, account executives, planners, operations and customer support
 
-It's commonly used for troubleshooting and it specifically designed to mimic the advertiser facing view so internal users don't get confused with drastically different UI when addressing support tickets
+It's commonly used for troubleshooting and it specifically designed to mimic the advertiser facing view so internal users don't get confused with different UI when addressing support tickets
 -->
 
 ---
@@ -2280,7 +2297,7 @@ transition: slide-left
 <!--
 I talked to her internal people quite a bit and so as I mentioned before their navigation was a huge issue so that's something I had to fix another
 
-another main ask was that they really wanted to see the advertisers point of view. One person mentioned to me that he would have the customer send him a screenshot of what the issue was and then he would try to re-create it on his end on a dummy account so I also to figure out a way internal users could directly see what the advertiser was seeing
+another ask was that they wanted to see the advertisers point of view. One person mentioned to me that he would have the customer send him a screenshot of what the issue was and then he would try to re-create it on his end on a dummy account so I also to figure out a way internal users could directly see what the advertiser was seeing
 -->
 
 ---
@@ -2360,7 +2377,7 @@ transition: slide-left
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0 ml-8">
-    <AdManagerStack :images="['./slides/assets/oldadmin2.png', './slides/assets/AdminLayout1.png', './slides/assets/AdminLayout2.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-9rem" />
+    <AdManagerStack :images="['./slides/assets/oldadmin2.png', './slides/assets/AdminLayout1.png', './slides/assets/AdminLayout2.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-6rem" />
   </div>
 </div>
 
@@ -2397,7 +2414,7 @@ transition: slide-left
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/OrgInfo.png', './slides/assets/OrgInfo2.png', './slides/assets/OrgInfo3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-9.5rem" />
+    <AdManagerStack :images="['./slides/assets/OrgInfo.png', './slides/assets/OrgInfo2.png', './slides/assets/OrgInfo3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-6.5rem" />
   </div>
 </div>
 
@@ -2459,7 +2476,7 @@ transition: slide-left
     </CarouselSyncBullet>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/GhostMode1.png', './slides/assets/GhostMode2.png', './slides/assets/GhostMode3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-8.5rem" />
+    <AdManagerStack :images="['./slides/assets/GhostMode1.png', './slides/assets/GhostMode2.png', './slides/assets/GhostMode3.png']" :compact="true" :viewport-height="560" layer-max-width="72rem" layer-width-pct="100%" pull-down="-5.5rem" />
   </div>
 </div>
 
@@ -2549,7 +2566,7 @@ transition: slide-left
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="line-through">Audit log to track changes</span>
+    <span class="line-through" style="color:#0D9488">Audit log to track changes</span>
   </div>
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>

@@ -190,15 +190,11 @@ transition: slide-left
     <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d3">Wireframes</div>
     <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0 anim-fade-up anim-d4"></i>
     <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">High Fidelity</div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="flex justify-center">
-      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[1.5rem]"></i>
-    </div>
+  </div>
+  <div style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 0 0.5rem; align-items: center; padding: 0.25rem 0;">
+    <div class="flex justify-center"><i class="fa-solid fa-arrow-up-long text-[#0D9488] text-[1.5rem]"></i></div>
+    <div></div><div></div><div></div><div></div><div></div>
+    <div class="flex justify-center"><i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[1.5rem]"></i></div>
   </div>
   <div style="display:grid; grid-template-columns: 1fr auto 1fr auto 1fr auto 1fr; gap: 0.75rem 0.5rem; align-items: center;">
     <div class="rounded-2xl bg-white border border-slate-200/40 px-4 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center flex items-center justify-center w-full h-[7rem] anim-fade-up anim-d4">Hand off</div>

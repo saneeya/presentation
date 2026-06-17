@@ -1409,9 +1409,7 @@ transition: slide-left
 <!--
 Here is the final flow sped up 
 
-you can see the new branding here
-
-and those were the design iterations
+you can see the new logo here.
 -->
 
 ---
@@ -1460,9 +1458,11 @@ transition: slide-left
 </div>
 
 <!--
-and this was the process Now, i was able to reach the "destination" but this was a long 2-year journey that took me a while to get to and had many challenges along the way
+coming up with design concepts was probably the easier part of this project
 
-as I mentioned earlier, I never have linear workflows
+what was not as easy this was the 2-year journey to get there, it had many challenges along the way
+
+as you can see here,  I never have linear workflows
 -->
 
 ---
@@ -1490,11 +1490,11 @@ transition: slide-left
 </div>
 
 <!--
-Now this was a LOT of work for one person, and I really needed help. The rest of the design team was stretched thin, so I had to get someone new
+The hardest part was how much work it was for one person.  I really needed help. The rest of the design team was stretched thin, so I had to get someone new
 
 Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
 
-I was able to connect with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch
+I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch for the final stretch
 -->
 
 ---
@@ -1526,7 +1526,7 @@ transition: slide-left
 </div>
 
 <!--
-So you know, I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
+Since  I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
 
 To keep up with everyone, I would message the PMs and lead engineers pretty frequently
 
@@ -2066,7 +2066,7 @@ transition: slide-left
 <!--
 In the last case study, I showed the new campaign flow, where we added a bunch of new features to get agencies 
 
-Before that launched we completely redid the account management. Initially you only had one user and one payment method 
+Before that launched we redid the account management. Initially you only had one user and one payment method 
 
 Now we introduced ad accounts, brands, and the ability to have multiple payment methods and multiple users with different roles
 -->
@@ -2129,9 +2129,11 @@ transition: slide-left
 </div>
 
 <!--
-That was the advertiser facing view but we also had the admin portal. Admin portal is the internal side of campaign manager used by account managers, account executives, planners, operations and customer support
+So what is admin portal? Admin portal is the internal side of campaign manager used by account managers, account executives, planners, operations and customer support
 
 It's commonly used for troubleshooting and it specifically designed to mimic the advertiser facing view so internal users don't get confused with different UI when addressing support tickets
+
+Admin portal needed a facelift also because we were adding a lot of new features as I showed earlier
 -->
 
 ---
@@ -2295,7 +2297,7 @@ transition: slide-left
 </div>
 
 <!--
-I talked to her internal people quite a bit and so as I mentioned before their navigation was a huge issue so that's something I had to fix another
+I talked to internal teams quite a bit and as I mentioned before the navigation was a huge issue and that's something I had to fix asap
 
 another ask was that they wanted to see the advertisers point of view. One person mentioned to me that he would have the customer send him a screenshot of what the issue was and then he would try to re-create it on his end on a dummy account so I also to figure out a way internal users could directly see what the advertiser was seeing
 -->
@@ -2325,7 +2327,9 @@ transition: slide-left
 </div>
 
 <!--
-I asked users what else they'd want to see that it wasn't available right now so they had a whole wish list of features they wanted they wanted to be able to see more campaign metrics in admin portal they wanted an audit log so they could see who made what changes and when 
+I asked users what else they'd want to see that  wasn't available right now gave a whole wish list of features 
+
+they wanted they wanted to be able to see more campaign metrics, wanted an audit log so they could see who made what changes and when 
 
 and they wanted to customize what they needed to see, because like with the filters in the trafficking side, these tables could get pretty dense with a ton of data
 
@@ -2382,6 +2386,8 @@ transition: slide-left
 </div>
 
 <!--
+before I could work on ghost mode, I needed to figure out the layout.
+
 to recap this is how an organization looked in the old admin portal you had the organization's name it's information and the campaigns ads and payments all associated with this org
 
 I came up with some initial layout concepts 
@@ -2447,11 +2453,12 @@ transition: slide-left
 </div>
 
 <!--
-during the several rounds of me sharing designs with their internal people this was the main feedback I got they liked having all the or details on one page where they could navigate through different sections such as campaigns, ad accounts, ads etc.
+during the several rounds of me sharing designs with their internal people this was the main feedback I got 
+
+they liked having all the advertiser details on one page where they could navigate through different sections such as campaigns, ad accounts, ads etc.
 
 And they also like seeing the data such as impressions and pacing status directly in the campaigns table because it was surfaced much faster than before where they had to dig through the information to find it
 -->
-
 
 ---
 layout: default
@@ -2481,9 +2488,11 @@ transition: slide-left
 </div>
 
 <!--
-Ghost mode was fairly straightforward in the admin portal you could click a button on the advertiser's details that would launch you to the advertisers UI
+Designing ghost mode was fairly straightforward, you could click a button on the advertiser's details that would launch you to the advertisers UI
 
-The main thing I had to add was some type of visual indicator that you were an admin viewing ghost mode, initially I added a status badge in the top right here in the header but it was too subtle
+The main thing I had to figure out was having some type of visual indicator showing you were an admin viewing ghost mode, 
+
+initially I added a status badge in the top right here in the header but it was too subtle
 
 In this option experimented with putting this box in the bottom left that would have more information such as the advertiser's name brand and ad account
 
@@ -2515,7 +2524,7 @@ transition: slide-left
 </div>
 
 <!--
-The end result was that the revised navigation was much easier to use by our internal users and as a result they were able to resolve customer support tickets much faster we saw about a 39% drop in escalation tickets overall this project was a success
+The end result was that the revised navigation was much easier to use by our internal users and as a result they were able to resolve customer support tickets much faster we saw about a 28% drop in escalation tickets overall this project was a success
 -->
 
 ---
@@ -2543,11 +2552,15 @@ transition: slide-left
 </div>
 
 <!--
-I had a lot of learnings from this project the main thing I learned was not to just rely on a prior design and assume that the previous designer understood the problem that I should really do my own research and discovery to make sure that anything were release makes sense to our users
+I had a lot of learnings from this project the main thing I learned was not to just rely on a prior design and assume that the previous designer understood the problem that I should really do my own research and discovery to make sure I understand the problem
 
-I also learned how to make a case for a project that might not be on the roadmap by gathering in information and presenting a compelling use case for why we should fix something
+I also learned how to make a case for a project that might not be on the roadmap by gathering in information and presenting a compelling reason for why we should work on something
 
-And as far as fixing something goes sometimes you don't need to do that much as designers. when we are redesigning something we always want to redo everything but in this case, what would work the best was actually something that existed in the past in this example of the previous admin portal navigation
+And as far as fixing something goes sometimes you don't need to do that much sometimes
+
+As designers, when we are redesigning something we always want to redo everything but in this case, 
+
+what worked the best was something that existed in the prior iteration
 -->
 
 ---
@@ -2577,7 +2590,9 @@ transition: slide-left
 <!--
 another learning in this project was that you can't implement everything
 
-While I was able to fix core issues such as the navigation and layout I had to cut some of the wishlist items out of scope the main one being the audit log. I worked with our product and development teams to see how much to see how much time this would take and it wasn't feasible on LOE in the timeline we had
+While I was able to fix core issues such as the navigation and layout I had to cut some of the wishlist items out of scope such as the audit log. 
+
+I worked with our product and development teams to see how much to see how much time it would take and it wasn't feasible on LOE in the timeline we had
 -->
 
 ---
@@ -2598,7 +2613,7 @@ transition: slide-left
 </div>
 
 <!--
-it's been a few years since since I worked on this  this is what it looked like when I first did the redesign
+it's been a few years since since I worked on this 
 
 this is what the org details page looked like when I first did the redesign
 -->
@@ -2630,9 +2645,13 @@ transition: slide-left
 <!--
 And this is what it looks like now as you can see it's been branded to Disney campaign manager so it has less of the Hulu fonts and colors
 
-The main difference is that there's a lot more information that's been added here. He's actually quite a bit of detail here and if if more is added they're just gonna have more tiles on top of each other and can get pretty busy
+The main difference is that there's a lot more information that's been added here. There  is a lot of detail here and if more gets added they're just going to have have more tiles on top of each other and it's going to get cluttered
 
-If I was to work on this again now or would probably come up with the new type of layout that could accommodate all this information also allow room for more content to be added I would also rethink this top tab NAV while it was fine before I feel like it looks dense here and it could be organized in another way to make this more scannable
+The point of this section is to make it easy for internal users to get at-a-glance infromation
+
+If I was to work on this again I would probably come up with a different type of layout that could accommodate all this information and have room for more content to be added
+
+I would also rethink this top tab NAV while it was fine before I feel like it looks dense here and it could be organized in another way to make this more scannable
 
 and with that, that is my last case study
 -->

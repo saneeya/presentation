@@ -253,7 +253,7 @@ transition: slide-left
 <!--
 As always the reality of work is different than you expect. For me personally the process never been super linear 
 
-Time is always a factor for me. I'm usually working in teams that move pretty fast so I don't usually have the opportunity for discovery or talking to users so sometimes I use the best what I have available which tends to be the PRD
+Time is always a factor for me. I'm usually working in teams that move pretty fast so I don't always have the opportunity for discovery or talking to users so sometimes I use the best what I have available which tends to be the PRD
 
 These days, instead of doing a bunch of figma mocks, I try to use AI to create quick concepts, it's especially easy when you have a design system linked
 
@@ -667,7 +667,7 @@ I removed the left panel and has this filter drop down at the bottom
 
 I wanted to test this design out with users and at the time we had just gotten licenses to use cursor so this is my first ever AI prototype. I made this back in December and I was just mind blown and how complex I could make the interactions with just prompts
 
-But before I tested this, I wanted to make another option
+I don't do many formal User Tests, mostly ad hoc ones  as needed. I really wanted to test this out but I wanted to make another option
 -->
 
 ---
@@ -864,7 +864,7 @@ transition: slide-left
           <div class="flex flex-col gap-1">
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">1 Designer</div>
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">5-7 PMs</div>
-            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">30-40 Internal &amp; External Deves</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">30-40 Internal &amp; External Devs</div>
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">QA</div>
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Ad Sales</div>
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Customer Support</div>

@@ -1075,25 +1075,6 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s9" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
-
-<div class="flex h-full w-full items-center justify-center">
-  <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
-  >
-    Agencies (and larger advertisers) did not see value in the self-serve ad platform
-  </div>
-</div>
-
-<!--
-The core problem then became how could we get these large-spend advertisers to use our platform
--->
-
----
-layout: default
-transition: slide-left
----
-
 <CaseStudyPillTabs :key="s10" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What Agencies wanted</h2>
@@ -1131,6 +1112,26 @@ In other ad platforms, they are called ad sets or ad groups
 ---
 layout: default
 transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s9" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<div class="flex h-full w-full items-center justify-center">
+  <div
+    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+  >
+    Agencies (and larger advertisers) did not see value in the self-serve ad platform
+  </div>
+</div>
+
+<!--
+The core problem then became how could we get these large-spend advertisers to use our platform
+-->
+
+---
+layout: default
+transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s23_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
@@ -1188,32 +1189,20 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s11" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Team of one</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My strategy</h2>
 
-<div class="flex flex-col gap-3 mt-16 w-full max-w-4xl mx-auto">
-  <div class="flex gap-4 w-full">
-    <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center anim-fade-up anim-d1">Entire new platform</div>
-    <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center anim-fade-up anim-d2">Existing platform</div>
-    <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center anim-fade-up anim-d3">5-7 PMs, Eng, QA, Sales, etc</div>
-    <div class="flex-1 rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] text-center anim-fade-up anim-d4">Overseas Eng team</div>
+<div class="grid grid-cols-3 gap-4 max-w-4xl mt-16">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+    <span>Prioritize work (Campaign redesign) since I was the only designer</span>
   </div>
-  <div class="flex gap-4 w-full">
-    <div class="flex-1 flex justify-center">
-      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[2rem]"></i>
-    </div>
-    <div class="flex-1 flex justify-center">
-      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[2rem]"></i>
-    </div>
-    <div class="flex-1 flex justify-center">
-      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[2rem]"></i>
-    </div>
-    <div class="flex-1 flex justify-center">
-      <i class="fa-solid fa-arrow-down-long text-[#0D9488] text-[2rem]"></i>
-    </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+    <span>Look at what existed and competitors</span>
   </div>
-  <div class="w-full rounded-2xl bg-white border border-slate-200/40 px-8 py-5 text-[#0D9488] font-bold shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex items-center justify-center gap-3 anim-fade-up anim-d4">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 shrink-0 fill-[#0D9488]" aria-hidden="true"><path d="M320 312C386.3 312 440 258.3 440 192C440 125.7 386.3 72 320 72C253.7 72 200 125.7 200 192C200 258.3 253.7 312 320 312zM290.3 368C191.8 368 112 447.8 112 546.3C112 562.7 125.3 576 141.7 576L498.3 576C514.7 576 528 562.7 528 546.3C528 447.8 448.2 368 349.7 368L290.3 368z"/></svg>
-    <span class="text-[1.75rem]">ME</span>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
+    <span>Get additional resourcing</span>
   </div>
 </div>
 
@@ -1232,7 +1221,135 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s11_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Working across teams</h2>
+
+<div class="grid grid-cols-2 gap-8 max-w-4xl mt-10 w-full">
+  <div class="flex flex-col gap-4 anim-fade-up anim-d1">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-5 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-center gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+      <span>Internal Teams</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Daily slacks/emails to PMs & eng</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Weekly 'UX office hour'</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Set up feedback sessions with sales & ops teams</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Attend on-sites with product/eng</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4 anim-fade-up anim-d3">
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-5 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col items-center gap-3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+      <span>External teams</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Daily 8am calls</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Asynchronous Q&A via spreadsheets</span>
+    </div>
+    <div class="rounded-2xl bg-white border border-slate-200/40 px-6 py-4 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Very literal on designs</span>
+    </div>
+  </div>
+</div>
+
+<!--
+Since  I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
+
+To keep up with everyone, I would message the PMs and lead engineers pretty frequently
+
+I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
+
+I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
+
+And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
+
+Working with the external teams was a whole other story, we were using 3rd party developers in Ukraine because this was such a huge project  and we needed additional help
+
+this 3rd party implemented a lot of the front end and it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
+
+I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
+
+But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
+-->
+
+---
+layout: default
+transition: slide-left
+hide: true
+---
+
+<CaseStudyPillTabs :key="s_internal_teams" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With internal teams</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Daily slacks/emails to PMs & eng</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Weekly 'UX office hour'</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Set up feedback sessions with sales & ops teams</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Attend on-sites with product/eng</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+hide: true
+---
+
+<CaseStudyPillTabs :key="s_external_teams" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With external teams</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Daily 8am calls</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Asynchronous Q&A via spreadsheets</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Very literal on designs</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
 <CaseStudyPillTabs :key="s9_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Design Challenge</h2>
 
 <div class="flex h-full w-full items-center justify-center">
   <div
@@ -1394,7 +1511,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s16" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Bulk editing</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">More concepts</h2>
 
 <div class="flex gap-6 mt-4 items-start w-full">
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
@@ -1520,6 +1637,159 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s_need_help" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Still left to do</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Test designs externally</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Work with overseas engineering team on handoff</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>QA design in testing environment & revise designs as needed</span>
+  </div>
+</div>
+
+<!--
+The hardest part was how much work it was for one person.  I really needed help. The rest of the design team was stretched thin, so I had to get someone new
+
+Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
+
+I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch for the final stretch
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_need_help_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Getting additional resources</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Getting a contractor would be easier and faster</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Asked around until I got to the people who controlled budget</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Hired contractor in summer 2024</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_ut1" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User Testing</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>UT in Summer 2024; changes would not happen until after launch</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>"Gut check" to make sure campaign flow made sense</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>No dedicated UXR team to help with UT</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span>Test with existing customers</span>
+  </div>
+</div>
+
+<!--
+another part of my non liner journey was User testing. I shared designs often with internal teams but I really wanted to test the campaign flow with customers who already used our platform
+
+Because of time and resources, I wasn't able to user test until after the final designs were being implemented. 
+
+I know you're not supposed to user test while the design is in production, because it would be too late to affect the launch, but I was able to convince product to let me put any potential changes from the user test as fast follow ups after launch
+
+this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team I knew I would have to do a lot of the work on my own
+
+One thing I thought would be easy was getting users to test with. I had spoken to sales about testing with existing customers and they seemed receptive at first but...
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_after_methodology" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Challenges that arose</h2>
+
+<div class="grid grid-cols-2 gap-4 max-w-4xl mt-16">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+    <span>No UXR team</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+    <span>Sales team would not give access to their clients</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s25" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Methodology</h2>
+
+<div class="grid grid-cols-2 gap-4 max-w-3xl mt-10 mx-auto">
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
+    <span>Built test plan and screener criteria, then recruited and moderated all sessions</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
+    <span>Partnered with UX engineering to build a high-fidelity interactive prototype</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128C256 92.7 284.7 64 320 64zM416 376C416 401 403.3 423 384 435.9L384 528C384 554.5 362.5 576 336 576L304 576C277.5 576 256 554.5 256 528L256 435.9C236.7 423 224 401 224 376L224 336C224 283 267 240 320 240C373 240 416 283 416 336L416 376zM160 96C190.9 96 216 121.1 216 152C216 182.9 190.9 208 160 208C129.1 208 104 182.9 104 152C104 121.1 129.1 96 160 96zM176 336L176 368C176 400.5 188.1 430.1 208 452.7L208 528C208 529.2 208 530.5 208.1 531.7C199.6 539.3 188.4 544 176 544L144 544C117.5 544 96 522.5 96 496L96 439.4C76.9 428.4 64 407.7 64 384L64 352C64 299 107 256 160 256C172.7 256 184.8 258.5 195.9 262.9C183.3 284.3 176 309.3 176 336zM432 528L432 452.7C451.9 430.2 464 400.5 464 368L464 336C464 309.3 456.7 284.4 444.1 262.9C455.2 258.4 467.3 256 480 256C533 256 576 299 576 352L576 384C576 407.7 563.1 428.4 544 439.4L544 496C544 522.5 522.5 544 496 544L464 544C451.7 544 440.4 539.4 431.9 531.7C431.9 530.5 432 529.2 432 528zM480 96C510.9 96 536 121.1 536 152C536 182.9 510.9 208 480 208C449.1 208 424 182.9 424 152C424 121.1 449.1 96 480 96z"/></svg>
+    <span>10 participants across beginner to advanced skill levels, each in a 1-hour moderated session</span>
+  </div>
+  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>
+    <span>Evaluated whether users could complete end-to-end: create a campaign, add line items, and set targeting</span>
+  </div>
+</div>
+
+<!--
+What I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
+
+I conducted 1 hr usability tests where I asked them to do certain tasks and see how they went about them,
+
+Even though none of them had used our platform before, I got some pretty useful feedback
+-->
+
+---
+layout: default
+transition: slide-left
+hide: true
+---
+
 <CaseStudyPillTabs :key="s11_copy" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Non-linear journey</h2>
@@ -1571,184 +1841,7 @@ as you can see here,  I never have linear workflows
 ---
 layout: default
 transition: slide-left
----
-
-<CaseStudyPillTabs :key="s_need_help" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">I need help</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Getting a contractor would be easier and faster</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Asked around until I got to the people who controlled budget</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Hired contractor in summer 2024</span>
-  </div>
-</div>
-
-<!--
-The hardest part was how much work it was for one person.  I really needed help. The rest of the design team was stretched thin, so I had to get someone new
-
-Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
-
-I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch for the final stretch
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s_internal_teams" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With internal teams</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Daily slacks/emails to PMs & eng</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Weekly 'UX office hour'</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Set up feedback sessions with sales & ops teams</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Attend on-sites with product/eng</span>
-  </div>
-</div>
-
-<!--
-Since  I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
-
-To keep up with everyone, I would message the PMs and lead engineers pretty frequently
-
-I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
-
-I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
-
-And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s_external_teams" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With external teams</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Daily 8am calls</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Asynchronous Q&A via spreadsheets</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Very literal on designs</span>
-  </div>
-</div>
-
-<!--
-Working with the external teams was a whole other story, we were using 3rd party developers in Ukraine because this was such a huge project  and we needed additional help
-
-this 3rd party implemented a lot of the front end and it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
-
-I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
-
-But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
-
-<div class="flex gap-6 mt-4 items-start w-full">
-  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
-    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span>Mapped out every flow</span>
-    </div>
-    <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
-  </div>
-  <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
-  </div>
-</div>
-
-<!--
-What I ended up doing was mapping out everything, every flow, every error, modal, 
-
-every state, whatever
-
-This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
-
-Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s_ut1" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User Testing</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>UT in Summer 2024; changes would not happen until after launch</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>"Gut check" to make sure campaign flow made sense</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>No dedicated UXR team to help with UT</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-row items-center gap-4 anim-fade-up anim-d4">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span>Test with existing customers</span>
-  </div>
-</div>
-
-<!--
-another part of my non liner journey was User testing. I shared designs often with internal teams but I really wanted to test the campaign flow with customers who already used our platform
-
-Because of time and resources, I wasn't able to user test until after the final designs were being implemented. 
-
-I know you're not supposed to user test while the design is in production, because it would be too late to affect the launch, but I was able to convince product to let me put any potential changes from the user test as fast follow ups after launch
-
-this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team I knew I would have to do a lot of the work on my own
-
-One thing I thought would be easy was getting users to test with. I had spoken to sales about testing with existing customers and they seemed receptive at first but...
--->
-
----
-layout: default
-transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s23" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
@@ -1775,6 +1868,7 @@ Nothing is straight forward. I shared my test plan with sales, they asked me to 
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s_ut2" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
@@ -1802,42 +1896,6 @@ transition: slide-left
 
 <!--
 I had to move on and make the best of what I had, and find other users by myself
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s25" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Methodology</h2>
-
-<div class="grid grid-cols-2 gap-4 max-w-3xl mt-10 mx-auto">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
-    <span>Built test plan and screener criteria, then recruited and moderated all sessions</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
-    <span>Partnered with UX engineering to build a high-fidelity interactive prototype</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d3">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M320 64C355.3 64 384 92.7 384 128C384 163.3 355.3 192 320 192C284.7 192 256 163.3 256 128C256 92.7 284.7 64 320 64zM416 376C416 401 403.3 423 384 435.9L384 528C384 554.5 362.5 576 336 576L304 576C277.5 576 256 554.5 256 528L256 435.9C236.7 423 224 401 224 376L224 336C224 283 267 240 320 240C373 240 416 283 416 336L416 376zM160 96C190.9 96 216 121.1 216 152C216 182.9 190.9 208 160 208C129.1 208 104 182.9 104 152C104 121.1 129.1 96 160 96zM176 336L176 368C176 400.5 188.1 430.1 208 452.7L208 528C208 529.2 208 530.5 208.1 531.7C199.6 539.3 188.4 544 176 544L144 544C117.5 544 96 522.5 96 496L96 439.4C76.9 428.4 64 407.7 64 384L64 352C64 299 107 256 160 256C172.7 256 184.8 258.5 195.9 262.9C183.3 284.3 176 309.3 176 336zM432 528L432 452.7C451.9 430.2 464 400.5 464 368L464 336C464 309.3 456.7 284.4 444.1 262.9C455.2 258.4 467.3 256 480 256C533 256 576 299 576 352L576 384C576 407.7 563.1 428.4 544 439.4L544 496C544 522.5 522.5 544 496 544L464 544C451.7 544 440.4 539.4 431.9 531.7C431.9 530.5 432 529.2 432 528zM480 96C510.9 96 536 121.1 536 152C536 182.9 510.9 208 480 208C449.1 208 424 182.9 424 152C424 121.1 449.1 96 480 96z"/></svg>
-    <span>10 participants across beginner to advanced skill levels, each in a 1-hour moderated session</span>
-  </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d4">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M576 160C576 210.2 516.9 285.1 491.4 315C487.6 319.4 482 321.1 476.9 320L384 320C366.3 320 352 334.3 352 352C352 369.7 366.3 384 384 384L480 384C533 384 576 427 576 480C576 533 533 576 480 576L203.6 576C212.3 566.1 222.9 553.4 233.6 539.2C239.9 530.8 246.4 521.6 252.6 512L480 512C497.7 512 512 497.7 512 480C512 462.3 497.7 448 480 448L384 448C331 448 288 405 288 352C288 299 331 256 384 256L423.8 256C402.8 224.5 384 188.3 384 160C384 107 427 64 480 64C533 64 576 107 576 160zM181.1 553.1C177.3 557.4 173.9 561.2 171 564.4L169.2 566.4L169 566.2C163 570.8 154.4 570.2 149 564.4C123.8 537 64 466.5 64 416C64 363 107 320 160 320C213 320 256 363 256 416C256 446 234.9 483 212.5 513.9C201.8 528.6 190.8 541.9 181.7 552.4L181.1 553.1zM192 416C192 398.3 177.7 384 160 384C142.3 384 128 398.3 128 416C128 433.7 142.3 448 160 448C177.7 448 192 433.7 192 416zM480 192C497.7 192 512 177.7 512 160C512 142.3 497.7 128 480 128C462.3 128 448 142.3 448 160C448 177.7 462.3 192 480 192z"/></svg>
-    <span>Evaluated whether users could complete end-to-end: create a campaign, add line items, and set targeting</span>
-  </div>
-</div>
-
-<!--
-What I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
-
-I conducted 1 hr usability tests where I asked them to do certain tasks and see how they went about them,
-
-Even though none of them had used our platform before, I got some pretty useful feedback
 -->
 
 ---
@@ -1948,6 +2006,38 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span>Mapped out every flow</span>
+    </div>
+    <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
+  </div>
+</div>
+
+<!--
+What I ended up doing was mapping out everything, every flow, every error, modal, 
+
+every state, whatever
+
+This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
+
+Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
 <CaseStudyPillTabs :key="s_design_uat" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Design UAT</h2>
@@ -1990,7 +2080,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s_new" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Outcome</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">After the launch</h2>
 
 <div class="grid grid-cols-2 gap-4 max-w-3xl mt-16 mx-auto">
   <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">

@@ -7,21 +7,21 @@ const { currentPage } = useNav()
 /** Section slide ranges (inclusive) for each case study */
 const SECTIONS: readonly { label: string; start: number; end: number }[] = [
   // Mini case study: Making Filters Functional
-  { label: 'Problem',  start: 10, end: 14 },
-  { label: 'Designs',  start: 15, end: 20 },
-  { label: 'Outcome',  start: 21, end: 22 },
+  { label: 'Problem',  start: 11, end: 15 },
+  { label: 'Designs',  start: 16, end: 21 },
+  { label: 'Outcome',  start: 22, end: 23 },
   // Case study: Campaign Creation Flow
-  { label: 'Background',  start: 25, end: 27 },
-  { label: 'Problem',     start: 28, end: 34 },
-  { label: 'Ideation',    start: 35, end: 40 },
-  { label: 'Final',       start: 41, end: 43 },
-  { label: 'The Journey', start: 44, end: 59 },
+  { label: 'Background',  start: 26, end: 29 },
+  { label: 'Problem',     start: 30, end: 38 },
+  { label: 'Ideation',    start: 39, end: 44 },
+  { label: 'Final',       start: 45, end: 47 },
+  { label: 'The Journey', start: 48, end: 63 },
   // Case study: Behind the Platform (Admin Portal)
-  { label: 'Background', start: 62, end: 65 },
-  { label: 'Problem',          start: 66, end: 69 },
-  { label: 'Feature Requests', start: 70, end: 72 },
-  { label: 'Designs',          start: 73, end: 76 },
-  { label: 'Outcome',          start: 77, end: 81 },
+  { label: 'Background', start: 66, end: 69 },
+  { label: 'Problem',          start: 70, end: 73 },
+  { label: 'Feature Requests', start: 74, end: 76 },
+  { label: 'Designs',          start: 77, end: 80 },
+  { label: 'Outcome',          start: 81, end: 85 },
 ]
 
 const section = computed(() => {

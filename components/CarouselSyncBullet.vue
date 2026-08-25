@@ -18,11 +18,11 @@ const visible = computed(() => clicks.value >= props.showAtClick)
 
 <template>
   <div
-    class="carousel-sync-bullet rounded-xl bg-white border border-slate-200/40 px-5 py-3 text-slate-700 text-[1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06)] flex flex-row items-center gap-3"
+    class="carousel-sync-bullet flex flex-row items-center gap-3 py-1.5"
     :class="{ 'carousel-sync-bullet--on': visible }"
   >
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span><slot /></span>
+    <span class="text-slate-900 font-semibold text-[1rem]"><slot /></span>
   </div>
 </template>
 

@@ -168,14 +168,14 @@ body,
   padding: 0 !important;
 }
 
-/* Display type: Space Grotesk for headlines, Manrope (default sans) for body copy */
+/* Display type: Urbanist for headlines, Manrope (default sans) for body copy */
 .slidev-layout h1,
 .slidev-layout h2,
 .slidev-layout h3,
 .slidev-layout h4,
 .slidev-layout .user-groups-slide-heading,
 .slidev-layout [class*="tracking-tight"] {
-  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 .slidev-layout h1,
@@ -197,6 +197,16 @@ body,
   font-size: 1.85rem;
   letter-spacing: -0.02em;
   line-height: 1.15;
+}
+
+/* Body copy: lighten weight + swap near-black for the muted gray ink */
+.slidev-layout .text-slate-900 {
+  color: var(--deck-muted) !important;
+  font-weight: 500 !important;
+}
+
+.slidev-layout .text-slate-900.force-bold {
+  font-weight: 700 !important;
 }
 
 .slidev-layout a {
@@ -367,6 +377,21 @@ body,
   background: transparent !important;
 }
 
+.slidev-layout img.lineitem-map-img {
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.slidev-layout h3.thumb-subheader {
+  font-size: 0.9rem !important;
+}
+
+/* Force equal column widths in two-column grids */
+.slidev-layout .grid.grid-cols-2 > div {
+  min-width: 0;
+}
+
 .slidev-layout .vast-xml-box {
   max-height: min(520px, 68vh);
   width: 28rem;
@@ -400,6 +425,10 @@ body,
   from { opacity: 0; }
   to   { opacity: 1; }
 }
+@keyframes anim-slide-in-x {
+  from { opacity: 0; transform: translateX(-10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
 .anim-fade-up {
   animation: anim-fade-up 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -408,6 +437,9 @@ body,
 }
 .anim-fade-in {
   animation: anim-fade-in 0.5s ease both;
+}
+.anim-slide-in-x {
+  animation: anim-slide-in-x 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 .anim-d1 { animation-delay: 0.08s; }
 .anim-d2 { animation-delay: 0.18s; }
@@ -418,7 +450,8 @@ body,
 @media (prefers-reduced-motion: reduce) {
   .anim-fade-up,
   .anim-fade-in-scale,
-  .anim-fade-in {
+  .anim-fade-in,
+  .anim-slide-in-x {
     animation: none;
   }
 }
@@ -479,4 +512,38 @@ body,
 .click-fade-up.slidev-vclick-hidden {
   opacity: 0 !important;
   transform: translateY(20px);
+}
+
+/* Animate v-click elements with a slide-in from the left on reveal */
+.click-slide-in-x {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.click-slide-in-x.slidev-vclick-hidden {
+  opacity: 0 !important;
+  transform: translateX(-10px);
+}
+
+/* Use with v-click.hide="N" to dim (not hide) a tile from click N onward */
+.click-dim {
+  transition: opacity 0.5s ease;
+}
+.click-dim.slidev-vclick-hidden {
+  opacity: 0.3 !important;
+}
+
+/* Clickable agenda rows that jump to the linked slide */
+.agenda-link {
+  cursor: pointer;
+  color: rgb(51, 65, 85) !important;
+  text-decoration: none;
+  border-bottom: none !important;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  margin: -0.25rem -0.5rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.agenda-link:hover {
+  color: #0D9488 !important;
+  text-decoration: none;
+  transform: translateX(4px);
 }

@@ -11,17 +11,20 @@ const SECTIONS: readonly { label: string; start: number; end: number }[] = [
   { label: 'Designs',  start: 21, end: 26 },
   { label: 'Outcome',  start: 27, end: 28 },
   // Case study: Campaign Creation Flow
-  { label: 'Background',  start: 31, end: 34 },
-  { label: 'Problem',     start: 35, end: 43 },
-  { label: 'Ideation',    start: 44, end: 49 },
-  { label: 'Final',       start: 50, end: 52 },
-  { label: 'The Journey', start: 53, end: 65 },
+  { label: 'Background',  start: 31, end: 33 },
+  { label: 'Problem',     start: 34, end: 38 },
+  { label: 'Strategy',    start: 39, end: 42 },
+  { label: 'Design Concepts', start: 43, end: 48 },
+  { label: 'UI Components', start: 49, end: 57 },
+  { label: 'Collaboration', start: 58, end: 61 },
+  { label: 'User Testing', start: 62, end: 68 },
+  { label: 'Takeaways', start: 69, end: 71 },
   // Case study: Behind the Platform (Admin Portal)
-  { label: 'Background', start: 68, end: 71 },
-  { label: 'Problem',          start: 72, end: 75 },
-  { label: 'Feature Requests', start: 76, end: 78 },
-  { label: 'Designs',          start: 79, end: 82 },
-  { label: 'Outcome',          start: 83, end: 87 },
+  { label: 'Background', start: 73, end: 76 },
+  { label: 'Problem',          start: 77, end: 80 },
+  { label: 'Feature Requests', start: 81, end: 83 },
+  { label: 'Designs',          start: 84, end: 87 },
+  { label: 'Outcome',          start: 88, end: 92 },
 ]
 
 const section = computed(() => {

@@ -53,7 +53,7 @@ onMounted(() => {
 }
 
 .hero-wrap--compact .hero-title {
-  font-size: clamp(2.15rem, 4.6vw, 3.15rem);
+  font-size: clamp(2.7rem, 6vw, 4.4rem);
 }
 
 .hero-wrap--compact .hero-sub {

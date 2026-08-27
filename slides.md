@@ -10,7 +10,7 @@ highlighter: shiki
 transition: slide-left
 aspectRatio: 16/9
 fonts:
-  sans: 'Manrope,Space Grotesk'
+  sans: 'Manrope,Urbanist'
   mono: JetBrains Mono
   provider: google
   weights: [ 300, 400, 500, 600, 700 ]
@@ -21,8 +21,6 @@ defaults:
 layout: two-cols
 layoutClass: h-full
 ---
-
-<AmbientVeil class="title-veil" />
 
 <div class="title-text flex h-full min-h-0 flex-col py-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
@@ -71,23 +69,23 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agenda</h2>
 
-<div class="flex flex-col gap-6 w-full mt-10">
+<div class="flex flex-col gap-6 w-full mt-10 agenda-list">
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d1">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">01</span>
     <span>About</span>
   </div>
-  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2">
+  <Link :to="14" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">02</span>
-    <span>Mini Case Study: Making Filters Functional</span>
-  </div>
-  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3">
+    <span>Making Filters Functional</span>
+  </Link>
+  <Link :to="29" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">03</span>
-    <span>Case Study: Campaign Creation Flow</span>
-  </div>
-  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4">
+    <span>Redesigning for Agency Scale</span>
+  </Link>
+  <Link :to="72" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
-    <span>Case Study: Behind the Platform</span>
-  </div>
+    <span>Behind the Platform</span>
+  </Link>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d5">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">05</span>
     <span>Q & A</span>
@@ -106,7 +104,7 @@ layoutClass: h-full layout-wide-right
 
 <div class="mt-32">
 
-## Designing
+## Personal design work
 
 </div>
 
@@ -132,7 +130,7 @@ layoutClass: h-full layout-wide-right
 
 <div class="mt-32">
 
-## Professional Background
+## Professional<br>Background
 
 </div>
 
@@ -253,7 +251,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How I work</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"/></svg>
@@ -298,7 +296,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How I work</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"/></svg>
@@ -359,7 +357,7 @@ transition: slide-left
   <img
     src="./slides/assets/lineitemmap.png"
     alt="Line item map"
-    class="mx-auto block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain md:max-w-5xl"
+    class="lineitem-map-img mx-auto block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain md:max-w-5xl"
   />
 </div>
 
@@ -493,7 +491,7 @@ transition: slide-left
       <div class="mb-8 mt-10 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-14 md:text-4xl lg:mt-16 lg:text-5xl anim-fade-up"><span class="block">Making</span><span class="block whitespace-nowrap"><span class="text-[#0D9488]">Filters</span> Functional</span></div>
       <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2 mt-4">Redoing filters for a data-dense tool</div>
       <div class="mt-auto self-start anim-fade-up anim-d4">
-        <span class="hero-pill">MINI CASE STUDY</span>
+        <span class="hero-pill">CASE STUDY</span>
       </div>
     </div>
   </div>
@@ -584,7 +582,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User feedback</h2>
 
-<div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-x-4 gap-y-10 max-w-3xl mt-16">
+<div class="grid grid-cols-2 grid-rows-2 auto-rows-fr gap-x-4 gap-y-16 max-w-3xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <i class="fa-brands fa-google text-[#0D9488] text-[1.6rem]"></i>
@@ -630,7 +628,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Technical issues</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <i class="fa-solid fa-filter-circle-xmark text-[#0D9488] text-[1.6rem]"></i>
@@ -671,7 +669,7 @@ transition: slide-left
 
 <div class="flex h-full w-full items-center justify-center">
   <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
   >
     Filters were inconsistent, difficult to use, and did not have boolean (AND/OR) logic.
   </div>
@@ -991,7 +989,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Takeaways</h2>
 
-<div class="flex flex-row gap-4 mt-12">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-12">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <i class="fa-solid fa-arrow-pointer text-[1.6rem] text-[#0D9488] "></i>
@@ -1108,7 +1106,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Background</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
@@ -1218,7 +1216,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agency pivot</h2>
 
-<div class="grid grid-cols-2 gap-6 max-w-4xl mt-12">
+<div class="grid grid-cols-2 gap-16 max-w-2xl mx-auto mt-12">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M64 128C64 92.7 92.7 64 128 64L384 64C419.3 64 448 92.7 448 128L448 249.3C401.1 268.3 368 314.3 368 368C368 395.7 376.8 421.4 391.8 442.4C340.3 463.4 304 514 304 573.1C304 574.1 304 575 304 576L128 576C92.7 576 64 547.3 64 512L64 128zM208 464L208 528L261.4 528C268.6 498.6 282.7 471.9 301.8 449.7C295.7 430.2 277.5 416 256 416C229.5 416 208 437.5 208 464zM339 288.3C338 288.1 337 288 336 288L304 288C295.2 288 288 295.2 288 304L288 336C288 344.8 295.2 352 304 352L320.7 352C322.8 329.2 329.1 307.7 339 288.3zM176 160C167.2 160 160 167.2 160 176L160 208C160 216.8 167.2 224 176 224L208 224C216.8 224 224 216.8 224 208L224 176C224 167.2 216.8 160 208 160L176 160zM288 176L288 208C288 216.8 295.2 224 304 224L336 224C344.8 224 352 216.8 352 208L352 176C352 167.2 344.8 160 336 160L304 160C295.2 160 288 167.2 288 176zM176 288C167.2 288 160 295.2 160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288zM416 368C416 323.8 451.8 288 496 288C540.2 288 576 323.8 576 368C576 412.2 540.2 448 496 448C451.8 448 416 412.2 416 368zM352 576C352 523 395 480 448 480L544 480C597 480 640 523 640 576C640 593.7 625.7 608 608 608L384 608C366.3 608 352 593.7 352 576z"/></svg>
@@ -1240,36 +1238,6 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s8_dup2" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agency pivot</h2>
-
-<div class="flex flex-col items-center gap-10 max-w-4xl mt-16 w-full">
-  <div class="w-full" style="display:grid; grid-template-columns: 1fr auto 1fr; gap: 0.5rem; align-items: stretch;">
-    <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M64 128C64 92.7 92.7 64 128 64L384 64C419.3 64 448 92.7 448 128L448 249.3C401.1 268.3 368 314.3 368 368C368 395.7 376.8 421.4 391.8 442.4C340.3 463.4 304 514 304 573.1C304 574.1 304 575 304 576L128 576C92.7 576 64 547.3 64 512L64 128zM208 464L208 528L261.4 528C268.6 498.6 282.7 471.9 301.8 449.7C295.7 430.2 277.5 416 256 416C229.5 416 208 437.5 208 464zM339 288.3C338 288.1 337 288 336 288L304 288C295.2 288 288 295.2 288 304L288 336C288 344.8 295.2 352 304 352L320.7 352C322.8 329.2 329.1 307.7 339 288.3zM176 160C167.2 160 160 167.2 160 176L160 208C160 216.8 167.2 224 176 224L208 224C216.8 224 224 216.8 224 208L224 176C224 167.2 216.8 160 208 160L176 160zM288 176L288 208C288 216.8 295.2 224 304 224L336 224C344.8 224 352 216.8 352 208L352 176C352 167.2 344.8 160 336 160L304 160C295.2 160 288 167.2 288 176zM176 288C167.2 288 160 295.2 160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288zM416 368C416 323.8 451.8 288 496 288C540.2 288 576 323.8 576 368C576 412.2 540.2 448 496 448C451.8 448 416 412.2 416 368zM352 576C352 523 395 480 448 480L544 480C597 480 640 523 640 576C640 593.7 625.7 608 608 608L384 608C366.3 608 352 593.7 352 576z"/></svg>
-      <span>Initiative to move platform</span>
-    </div>
-    <i class="fa-solid fa-plus text-[#5EEAD4] text-[2.5rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
-    <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d3">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M286.1 368C384.6 368 464.4 447.8 464.4 546.3C464.4 562.7 451.1 576 434.7 576L78.1 576C61.7 576 48.4 562.7 48.4 546.3C48.4 447.8 128.2 368 226.7 368L286.1 368zM562.3 172.1C571.7 162.7 586.9 162.7 596.2 172.1C605.5 181.5 605.6 196.7 596.2 206L562.3 239.9L596.2 273.8C605.6 283.2 605.6 298.4 596.2 307.7C586.8 317 571.6 317.1 562.3 307.7L528.4 273.8L494.5 307.7C485.1 317.1 469.9 317.1 460.6 307.7C451.3 298.3 451.2 283.1 460.6 273.8L494.5 239.9L460.6 206C451.2 196.6 451.2 181.4 460.6 172.1C470 162.8 485.2 162.7 494.5 172.1L528.4 206L562.3 172.1zM256.4 312C190.1 312 136.4 258.3 136.4 192C136.4 125.7 190.1 72 256.4 72C322.7 72 376.4 125.7 376.4 192C376.4 258.3 322.7 312 256.4 312z"/></svg>
-      <span>Plans to scale</span>
-    </div>
-  </div>
-  <div class="flex flex-col items-center gap-3 anim-fade-up anim-d4">
-    <div class="flex flex-row items-center gap-4">
-      <i class="fa-solid fa-equals text-[#5EEAD4] text-[2.5rem] shrink-0"></i>
-      <span class="text-[#0D9488] text-[2.25rem] font-semibold">Entire Platform Rebuild</span>
-    </div>
-    <span class="text-slate-700 text-[1.1rem] font-medium text-center max-w-3xl">New reporting, creative gallery, campaign management, account management, admin experience, etc</span>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
 <CaseStudyPillTabs :key="s10" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What Agencies wanted</h2>
@@ -1282,7 +1250,12 @@ transition: slide-left
     </div>
     <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1.1rem]">Extra targeting options (dayparting, pacing, etc)</span>
+      <span class="text-slate-900 font-semibold text-[1.1rem]">Extra targeting options</span>
+    </div>
+    <div class="flex flex-col gap-2 pl-8 -mt-1 anim-fade-up anim-d4">
+      <span class="text-slate-600 text-[0.95rem]">Dayparting</span>
+      <span class="text-slate-600 text-[0.95rem]">Pacing</span>
+      <span class="text-slate-600 text-[0.95rem]">Frequency</span>
     </div>
   </div>
   <div class="flex-1 min-w-0 flex justify-center">
@@ -1313,7 +1286,7 @@ transition: slide-left
 
 <div class="flex h-full w-full items-center justify-center">
   <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
   >
     Agencies (and larger advertisers) did not see value in the self-serve ad platform
   </div>
@@ -1322,6 +1295,75 @@ transition: slide-left
 <!--
 The core problem then became how could we get these large-spend advertisers to use our platform
 -->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s8_dup2" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agency pivot</h2>
+
+<div class="flex flex-col items-center gap-10 max-w-4xl mt-16 w-full">
+  <div class="w-full" style="display:grid; grid-template-columns: 1fr auto 1fr auto; gap: 1rem; max-width: 600px; margin: 0 auto; align-items: center;">
+    <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d2">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M64 128C64 92.7 92.7 64 128 64L384 64C419.3 64 448 92.7 448 128L448 249.3C401.1 268.3 368 314.3 368 368C368 395.7 376.8 421.4 391.8 442.4C340.3 463.4 304 514 304 573.1C304 574.1 304 575 304 576L128 576C92.7 576 64 547.3 64 512L64 128zM208 464L208 528L261.4 528C268.6 498.6 282.7 471.9 301.8 449.7C295.7 430.2 277.5 416 256 416C229.5 416 208 437.5 208 464zM339 288.3C338 288.1 337 288 336 288L304 288C295.2 288 288 295.2 288 304L288 336C288 344.8 295.2 352 304 352L320.7 352C322.8 329.2 329.1 307.7 339 288.3zM176 160C167.2 160 160 167.2 160 176L160 208C160 216.8 167.2 224 176 224L208 224C216.8 224 224 216.8 224 208L224 176C224 167.2 216.8 160 208 160L176 160zM288 176L288 208C288 216.8 295.2 224 304 224L336 224C344.8 224 352 216.8 352 208L352 176C352 167.2 344.8 160 336 160L304 160C295.2 160 288 167.2 288 176zM176 288C167.2 288 160 295.2 160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288zM416 368C416 323.8 451.8 288 496 288C540.2 288 576 323.8 576 368C576 412.2 540.2 448 496 448C451.8 448 416 412.2 416 368zM352 576C352 523 395 480 448 480L544 480C597 480 640 523 640 576C640 593.7 625.7 608 608 608L384 608C366.3 608 352 593.7 352 576z"/></svg>
+      <span>Initiative to move platform</span>
+    </div>
+    <i class="fa-solid fa-plus text-slate-400 text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
+    <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d3">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M286.1 368C384.6 368 464.4 447.8 464.4 546.3C464.4 562.7 451.1 576 434.7 576L78.1 576C61.7 576 48.4 562.7 48.4 546.3C48.4 447.8 128.2 368 226.7 368L286.1 368zM562.3 172.1C571.7 162.7 586.9 162.7 596.2 172.1C605.5 181.5 605.6 196.7 596.2 206L562.3 239.9L596.2 273.8C605.6 283.2 605.6 298.4 596.2 307.7C586.8 317 571.6 317.1 562.3 307.7L528.4 273.8L494.5 307.7C485.1 317.1 469.9 317.1 460.6 307.7C451.3 298.3 451.2 283.1 460.6 273.8L494.5 239.9L460.6 206C451.2 196.6 451.2 181.4 460.6 172.1C470 162.8 485.2 162.7 494.5 172.1L528.4 206L562.3 172.1zM256.4 312C190.1 312 136.4 258.3 136.4 192C136.4 125.7 190.1 72 256.4 72C322.7 72 376.4 125.7 376.4 192C376.4 258.3 322.7 312 256.4 312z"/></svg>
+      <span>Plans to scale</span>
+    </div>
+    <i class="fa-solid fa-equals text-slate-400 text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
+  </div>
+  <div class="flex flex-col items-center gap-3 anim-fade-up anim-d4">
+    <span class="text-[#0D9488] text-[2.25rem] font-semibold">Entire Platform Rebuild</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s8_dup3" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<div class="grid grid-cols-3 gap-x-16 gap-y-6 max-w-2xl mx-auto mt-0 mb-0 w-full px-4">
+  <div class="flex flex-col items-center gap-1">
+    <img src="./slides/assets/OldCampaignsThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Campaigns</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldAdGalleryThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Ad Gallery</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldDatavizThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Reporting</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldSettingsThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Settings</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldBillingThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Billing</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldOnboardingThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Onboarding</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldNotificationsThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: cover; object-position: top;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Notifications</h3>
+  </div>
+  <div class="flex flex-col items-center gap-1 click-dim" v-click.hide="2">
+    <img src="./slides/assets/OldAdminThumb.png" class="w-full rounded-lg" style="aspect-ratio: 8/5; object-fit: contain; object-position: center;" />
+    <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Internal Ops Portal</h3>
+  </div>
+</div>
 
 ---
 layout: default
@@ -1359,11 +1401,11 @@ transition: slide-left
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
     <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Add line items to campaign creation flow</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Create new layout in campaign creation to allow line items</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
     <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Add extra targeting options (dayparting, pacing, etc)</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">New layout should have dayparting, pacing and frequency</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d4">
     <i class="fa-regular fa-square text-slate-300 text-[1.5rem] shrink-0"></i>
@@ -1386,7 +1428,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My strategy</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
@@ -1418,72 +1460,6 @@ I was also working on updating the rest of the platform, as well updating the ex
 One top of that, I was the only designer for the majority of this project.
 
 So, by myself, I had to work with a ton of developers (both internal and overseas), several PMs, the sales teams, the QA team, the marketing and many more people because this was a huge initiative and they were all involved in it
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s11_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Working across teams</h2>
-
-<div class="grid grid-cols-2 gap-8 max-w-3xl mx-auto mt-10 w-full">
-  <div class="flex flex-col gap-4 anim-fade-up anim-d1">
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Internal Teams</span>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Daily slacks/emails to PMs & eng</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Weekly 'UX office hour'</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Set up feedback sessions with sales & ops teams</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Attend on-sites with product/eng</span>
-    </div>
-  </div>
-  <div class="flex flex-col gap-4 anim-fade-up anim-d3">
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">External teams</span>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Daily 8am calls</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Asynchronous Q&A via spreadsheets</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Very literal on designs</span>
-    </div>
-  </div>
-</div>
-
-<!--
-Since  I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
-
-To keep up with everyone, I would message the PMs and lead engineers pretty frequently
-
-I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
-
-I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
-
-And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
-
-Working with the external teams was a whole other story, we were using 3rd party developers in Ukraine because this was such a huge project  and we needed additional help
-
-this 3rd party implemented a lot of the front end and it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
-
-I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
-
-But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
 -->
 
 ---
@@ -1539,27 +1515,6 @@ hide: true
     <span class="text-slate-900 font-semibold text-[1.1rem]">Very literal on designs</span>
   </div>
 </div>
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s9_copy" class="relative z-10 -mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
-
-<div class="absolute inset-0 flex items-center justify-center">
-  <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
-  >
-    How can I show line items in the campaign creation flow?
-  </div>
-</div>
-
-<!--
-With all that in consideration, I had to figure out the part that kept stumping me: how to add in line items?
-
-In the page by page flow, There were several pages you had to navigate through to create just one campaign, so how could I implement even more sub-campaigns?
--->
 
 ---
 layout: default
@@ -1635,6 +1590,7 @@ TikTok has "ad groups" and displayed them in the left rail  in a folder structur
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s_core_layout" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="2" />
@@ -1677,7 +1633,7 @@ transition: slide-left
   </div>
   <div class="flex-1 min-w-0 mt-2">
     <AdManagerStack
-      :images="['./slides/assets/Concept1.png', './slides/assets/Concept2.png', './slides/assets/Concept3.png', './slides/assets/Concept4.png']"
+      :images="['./slides/assets/Concept2.png', './slides/assets/Concept3.png', './slides/assets/Concept4.png']"
       :compact="true"
       :viewport-height="780"
       layer-max-width="110rem"
@@ -1772,7 +1728,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s18" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
-<h2 class="user-groups-slide-heading m-0 mt-2 mb-2">Final Line Item menu</h2>
+<h2 class="user-groups-slide-heading m-0 mt-2 mb-2">Line Item menu</h2>
 
 <div class="mt-2">
   <AdManagerStack
@@ -1795,15 +1751,145 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s18b" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+<CaseStudyPillTabs :key="s18b_ui_patterns" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New targeting section</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
 
-<AdManagerStack :images="['./slides/assets/Daypart.png']" :compact="true" :viewport-height="510" layer-max-width="86rem" layer-width-pct="89%" pull-down="-2rem" />
+<div class="flex w-full justify-center mt-4">
+  <img src="./slides/assets/LineItemmenuspecs.png" class="vast-map-img block h-auto max-h-[min(560px,66vh)] w-auto max-w-full object-contain" />
+</div>
 
-<!--
-And because we had the single page flow now, it was easy for me to a new card with the new targeting like dayparting
--->
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_ui_patterns_dup" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
+
+<div class="grid grid-cols-3 gap-6 mt-6 items-start w-full">
+  <div class="flex justify-center">
+    <img src="./slides/assets/audiencetar.png" class="vast-map-img block h-auto max-h-[min(480px,60vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center click-fade-up" v-click="1">
+    <img src="./slides/assets/ZIPtar.png" class="vast-map-img block h-auto max-h-[min(480px,60vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center click-fade-up" v-click="2">
+    <img src="./slides/assets/Contenttar.png" class="vast-map-img block h-auto max-h-[min(480px,60vh)] w-auto max-w-full object-contain" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_ui_patterns_dup2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
+
+<div class="grid grid-cols-2 gap-16 mt-6 items-start w-full">
+  <div class="flex justify-center">
+    <img src="./slides/assets/ZIPtar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center click-fade-up" v-click="1">
+    <img src="./slides/assets/NEWziptar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_ui_patterns_dup3" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
+
+<div class="grid grid-cols-2 gap-16 mt-6 items-start w-full">
+  <div class="flex justify-center">
+    <img src="./slides/assets/Contenttar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center click-fade-up" v-click="1">
+    <img src="./slides/assets/Newcontenttar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_ui_patterns_dup4" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
+
+<div class="flex flex-col gap-4 mt-6 w-full">
+  <div class="grid grid-cols-2 gap-40 items-start w-full">
+    <div class="flex justify-start">
+      <img src="./slides/assets/platformtar.png" class="vast-map-img block h-auto max-h-48 w-auto max-w-full object-contain" />
+    </div>
+    <div class="flex justify-start">
+      <img src="./slides/assets/agegroupstar.png" class="vast-map-img block h-auto max-h-60 w-auto max-w-full object-contain" />
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-40 items-start w-full click-fade-up" v-click="1">
+    <div class="flex justify-start">
+      <img src="./slides/assets/newplatformtar.png" class="vast-map-img block h-auto max-h-44 w-auto max-w-full object-contain" />
+    </div>
+    <div class="flex justify-start">
+      <img src="./slides/assets/newagegrouptar.png" class="vast-map-img block h-auto max-h-44 w-auto max-w-full object-contain" />
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_new_patterns" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New patterns</h2>
+
+<div class="flex w-full justify-center mt-4">
+  <img src="./slides/assets/daypartyingtar.png" class="vast-map-img block h-auto max-h-[min(500px,62vh)] w-auto max-w-full object-contain" />
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_new_patterns_dup" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New patterns</h2>
+
+<div class="flex w-full justify-center mt-4">
+  <video
+    class="mx-auto block h-auto max-h-[min(420px,52vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-5xl"
+    autoplay
+    loop
+    muted
+    playsinline
+    preload="metadata"
+    src="./slides/assets/daypart video.mov"
+  ></video>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_new_patterns_dup2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New patterns</h2>
+
+<div class="flex w-full justify-center mt-4">
+  <img src="./slides/assets/deliveryarea.png" class="vast-map-img block h-auto max-h-[min(380px,48vh)] w-auto max-w-full object-contain" />
+</div>
 
 ---
 layout: default
@@ -1817,7 +1903,7 @@ transition: slide-left
 <div class="mt-4 flex w-full justify-center px-2">
   <FastVideo
     src="./slides/assets/New Campaign Flow Walkthrough.mp4"
-    :playback-rate="3"
+    :playback-rate="2"
     video-class="mx-auto block h-auto max-h-[min(520px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
   />
 </div>
@@ -1837,18 +1923,27 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Still left to do</h2>
 
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Test designs externally</span>
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-globe text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Test designs externally</span>
   </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Work with overseas engineering team on handoff</span>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-code text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Work with overseas engineering team on handoff</span>
   </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">QA design in testing environment & revise designs as needed</span>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-clipboard-check text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">QA design in testing environment & revise designs as needed</span>
   </div>
 </div>
 
@@ -1865,6 +1960,104 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s11_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Working across teams</h2>
+
+<div class="grid grid-cols-2 gap-20 max-w-3xl mx-auto mt-10 w-full">
+  <div class="flex flex-col gap-4 anim-fade-up anim-d1">
+    <span class="text-slate-900 font-bold force-bold text-[1.1rem] leading-snug">Internal Teams</span>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Daily slacks/emails to PMs & eng</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Weekly 'UX office hour'</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Set up feedback sessions with sales & ops teams</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Attend on-sites with product/eng</span>
+    </div>
+  </div>
+  <div class="flex flex-col gap-4 anim-fade-up anim-d3">
+    <span class="text-slate-900 font-bold force-bold text-[1.1rem] leading-snug">External teams</span>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Daily 8am calls</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Asynchronous Q&A via spreadsheets</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Very literal on designs</span>
+    </div>
+  </div>
+</div>
+
+<!--
+Since  I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
+
+To keep up with everyone, I would message the PMs and lead engineers pretty frequently
+
+I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
+
+I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
+
+And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
+
+Working with the external teams was a whole other story, we were using 3rd party developers in Ukraine because this was such a huge project  and we needed additional help
+
+this 3rd party implemented a lot of the front end and it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
+
+I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
+
+But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Mapped out every flow</span>
+    </div>
+    <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
+  </div>
+</div>
+
+<!--
+What I ended up doing was mapping out everything, every flow, every error, modal, 
+
+every state, whatever
+
+This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
+
+Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
 <CaseStudyPillTabs :key="s_need_help_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Getting additional resources</h2>
@@ -1872,11 +2065,11 @@ transition: slide-left
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Getting a contractor would be easier and faster</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Getting contractor would be easier than FTE</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Asked around until I got to the people who controlled budget</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Asked project leads to secure budget and then design leads for hiring permission</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
@@ -1896,15 +2089,7 @@ transition: slide-left
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">UT in Summer 2024; changes would not happen until after launch</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
     <span class="text-slate-900 font-semibold text-[1.1rem]">"Gut check" to make sure campaign flow made sense</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">No dedicated UXR team to help with UT</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d4">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
@@ -1933,7 +2118,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Challenges that arose</h2>
 
-<div class="grid grid-cols-2 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mx-auto mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
@@ -1941,12 +2126,19 @@ transition: slide-left
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">No UXR team</span>
   </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Sales team would not give access to their clients</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-rocket text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">UXR results would not affect launch</span>
   </div>
 </div>
 
@@ -1959,7 +2151,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Methodology</h2>
 
-<div class="grid grid-cols-2 gap-4 max-w-3xl mt-10 mx-auto">
+<div class="grid grid-cols-2 gap-x-16 gap-y-10 max-w-3xl mt-6 mx-auto">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
@@ -2220,38 +2412,6 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
-
-<div class="flex gap-6 mt-4 items-start w-full">
-  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Mapped out every flow</span>
-    </div>
-    <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
-  </div>
-  <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
-  </div>
-</div>
-
-<!--
-What I ended up doing was mapping out everything, every flow, every error, modal, 
-
-every state, whatever
-
-This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
-
-Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
--->
-
----
-layout: default
-transition: slide-left
----
-
 <CaseStudyPillTabs :key="s_design_uat" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Design UAT</h2>
@@ -2296,15 +2456,15 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">After the launch</h2>
 
-<div class="grid grid-cols-2 gap-4 max-w-3xl mt-16 mx-auto">
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d1">
+<div class="grid grid-cols-2 gap-24 max-w-3xl mt-16 mx-auto">
+  <div class="text-slate-700 text-[1.1rem] font-medium flex flex-col gap-3 anim-fade-up anim-d1">
     <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#0D9488]">
       <i class="fa-solid fa-arrow-up text-[2.5rem]"></i>
       <CountUp :to="39" suffix="%" :duration="1200" />
     </div>
     <span class="text-center">Increase in agency users the following year</span>
   </div>
-  <div class="rounded-2xl bg-white border border-slate-200/40 px-8 py-6 text-slate-700 text-[1.1rem] font-medium shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] flex flex-col gap-3 anim-fade-up anim-d2">
+  <div class="text-slate-700 text-[1.1rem] font-medium flex flex-col gap-3 anim-fade-up anim-d2">
     <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#0D9488]">
       <CountUp :to="76" prefix="$" suffix="M" :duration="1400" />
     </div>
@@ -2330,11 +2490,11 @@ transition: slide-left
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
     <span class="check-wrap shrink-0 anim-check-d1"><i class="fa-regular fa-square text-[#0D9488] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#0D9488] text-[1.5rem] check-filled"></i></span>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Add line items to campaign creation flow</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Create new layout in campaign creation to allow line items</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
     <span class="check-wrap shrink-0 anim-check-d2"><i class="fa-regular fa-square text-[#0D9488] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#0D9488] text-[1.5rem] check-filled"></i></span>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Add extra targeting options (dayparting, pacing, etc)</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">New layout should have dayparting, pacing and frequency</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
     <span class="check-wrap shrink-0 anim-check-d3"><i class="fa-regular fa-square text-[#0D9488] text-[1.5rem] check-empty"></i><i class="fa-solid fa-square-check text-[#0D9488] text-[1.5rem] check-filled"></i></span>
@@ -2355,13 +2515,13 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What I would do differently</h2>
 
-<div class="grid grid-cols-2 gap-6 w-full mt-10">
+<div class="grid grid-cols-2 gap-28 max-w-4xl mx-auto w-full mt-10">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <i class="fa-solid fa-clock text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Bring in contractor support earlier. Was hard training new hire while also in the midst of a ton of work.</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Bring in contractor support earlier. Was hard training new hire while also in the midst of a ton of work</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
@@ -2372,11 +2532,6 @@ transition: slide-left
   </div>
 </div>
 
-<div v-click class="w-full pt-14 text-center click-fade-up">
-  <p class="m-0 text-[1.5rem] font-medium italic text-[#0D9488]">
-    If I could design this again...
-  </p>
-</div>
 
 <!--
 This was a huge project and probably one of the hardest ones I've ever worked on. I learned a lot from this especially things I would do differently such as getting support earlier and setting up realistic timelines for my work sooner
@@ -2526,7 +2681,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Admin Portal</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M320 80C377.4 80 424 126.6 424 184C424 241.4 377.4 288 320 288C262.6 288 216 241.4 216 184C216 126.6 262.6 80 320 80zM96 152C135.8 152 168 184.2 168 224C168 263.8 135.8 296 96 296C56.2 296 24 263.8 24 224C24 184.2 56.2 152 96 152zM0 480C0 409.3 57.3 352 128 352C140.8 352 153.2 353.9 164.9 357.4C132 394.2 112 442.8 112 496L112 512C112 523.4 114.4 534.2 118.7 544L32 544C14.3 544 0 529.7 0 512L0 480zM521.3 544C525.6 534.2 528 523.4 528 512L528 496C528 442.8 508 394.2 475.1 357.4C486.8 353.9 499.2 352 512 352C582.7 352 640 409.3 640 480L640 512C640 529.7 625.7 544 608 544L521.3 544zM472 224C472 184.2 504.2 152 544 152C583.8 152 616 184.2 616 224C616 263.8 583.8 296 544 296C504.2 296 472 263.8 472 224zM160 496C160 407.6 231.6 336 320 336C408.4 336 480 407.6 480 496L480 512C480 529.7 465.7 544 448 544L192 544C174.3 544 160 529.7 160 512L160 496z"/></svg>
@@ -2660,7 +2815,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Discovery</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
@@ -2697,7 +2852,7 @@ transition: slide-left
 
 <div class="flex h-full w-full items-center justify-center">
   <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
   >
     Admin users were struggling with the new layout and were taking longer to close support tickets
   </div>
@@ -2776,7 +2931,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Ghost mode</h2>
 
-<div class="grid grid-cols-2 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-2 gap-16 max-w-2xl mx-auto mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M168.1 531.1L156.9 540.1C153.7 542.6 149.8 544 145.8 544C136 544 128 536 128 526.2L128 256C128 150 214 64 320 64C426 64 512 150 512 256L512 526.2C512 536 504 544 494.2 544C490.2 544 486.3 542.6 483.1 540.1L471.9 531.1C458.5 520.4 439.1 522.1 427.8 535L397.3 570C394 573.8 389.1 576 384 576C378.9 576 374.1 573.8 370.7 570L344.1 539.5C331.4 524.9 308.7 524.9 295.9 539.5L269.3 570C266 573.8 261.1 576 256 576C250.9 576 246.1 573.8 242.7 570L212.2 535C200.9 522.1 181.5 520.4 168.1 531.1zM288 256C288 238.3 273.7 224 256 224C238.3 224 224 238.3 224 256C224 273.7 238.3 288 256 288C273.7 288 288 273.7 288 256zM384 288C401.7 288 416 273.7 416 256C416 238.3 401.7 224 384 224C366.3 224 352 238.3 352 256C352 273.7 366.3 288 384 288z"/></svg>
@@ -2878,7 +3033,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Feedback</h2>
 
-<div class="grid grid-cols-2 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-2 gap-16 max-w-2xl mx-auto mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M192 112L304 112L304 200C304 239.8 336.2 272 376 272L464 272L464 512C464 520.8 456.8 528 448 528L192 528C183.2 528 176 520.8 176 512L176 128C176 119.2 183.2 112 192 112zM352 131.9L444.1 224L376 224C362.7 224 352 213.3 352 200L352 131.9zM192 64C156.7 64 128 92.7 128 128L128 512C128 547.3 156.7 576 192 576L448 576C483.3 576 512 547.3 512 512L512 250.5C512 233.5 505.3 217.2 493.3 205.2L370.7 82.7C358.7 70.7 342.5 64 325.5 64L192 64zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
@@ -2979,7 +3134,7 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Learnings</h2>
 
-<div class="grid grid-cols-3 gap-6 max-w-4xl mt-16">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M424.5 355.1C449 329.2 464 294.4 464 256C464 176.5 399.5 112 320 112C240.5 112 176 176.5 176 256C176 294.4 191 329.2 215.5 355.1C236.8 377.5 260.4 409.1 268.8 448L371.2 448C379.6 409 403.2 377.5 424.5 355.1zM459.3 388.1C435.7 413 416 443.4 416 477.7L416 496C416 540.2 380.2 576 336 576L304 576C259.8 576 224 540.2 224 496L224 477.7C224 443.4 204.3 413 180.7 388.1C148 353.7 128 307.2 128 256C128 150 214 64 320 64C426 64 512 150 512 256C512 307.2 492 353.7 459.3 388.1zM272 248C272 261.3 261.3 272 248 272C234.7 272 224 261.3 224 248C224 199.4 263.4 160 312 160C325.3 160 336 170.7 336 184C336 197.3 325.3 208 312 208C289.9 208 272 225.9 272 248z"/></svg>
@@ -3214,7 +3369,7 @@ hide: true
 
 <div class="flex h-full w-full items-center justify-center">
   <div
-    class="mx-auto w-full max-w-4xl rounded-2xl bg-white border border-slate-200/40 px-14 py-12 text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] shadow-[0_1px_4px_rgb(0_0_0_/_0.06),_0_4px_16px_rgb(0_0_0_/_0.1)] anim-fade-in-scale"
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
   >
     Agencies & large advertisers wanted VAST feature in order to use campaign manager
   </div>

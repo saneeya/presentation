@@ -7,24 +7,24 @@ const { currentPage } = useNav()
 /** Section slide ranges (inclusive) for each case study */
 const SECTIONS: readonly { label: string; start: number; end: number }[] = [
   // Mini case study: Making Filters Functional
-  { label: 'Problem',  start: 16, end: 20 },
-  { label: 'Designs',  start: 21, end: 26 },
-  { label: 'Outcome',  start: 27, end: 28 },
+  { label: 'Problem',  start: 19, end: 23 },
+  { label: 'Designs',  start: 24, end: 29 },
+  { label: 'Outcome',  start: 30, end: 31 },
   // Case study: Campaign Creation Flow
-  { label: 'Background',  start: 31, end: 33 },
-  { label: 'Problem',     start: 34, end: 38 },
-  { label: 'Strategy',    start: 39, end: 42 },
-  { label: 'Design Concepts', start: 43, end: 48 },
-  { label: 'UI Components', start: 49, end: 57 },
-  { label: 'Collaboration', start: 58, end: 61 },
-  { label: 'User Testing', start: 62, end: 68 },
-  { label: 'Takeaways', start: 69, end: 71 },
+  { label: 'Background',  start: 34, end: 36 },
+  { label: 'Problem',     start: 37, end: 41 },
+  { label: 'Strategy',    start: 42, end: 45 },
+  { label: 'Design Concepts', start: 46, end: 51 },
+  { label: 'UI Components', start: 52, end: 60 },
+  { label: 'Collaboration', start: 61, end: 64 },
+  { label: 'User Testing', start: 65, end: 71 },
+  { label: 'Takeaways', start: 72, end: 74 },
   // Case study: Behind the Platform (Admin Portal)
-  { label: 'Background', start: 73, end: 76 },
-  { label: 'Problem',          start: 77, end: 80 },
-  { label: 'Feature Requests', start: 81, end: 83 },
-  { label: 'Designs',          start: 84, end: 87 },
-  { label: 'Outcome',          start: 88, end: 92 },
+  { label: 'Background', start: 76, end: 79 },
+  { label: 'Problem',          start: 80, end: 83 },
+  { label: 'Feature Requests', start: 84, end: 86 },
+  { label: 'Designs',          start: 87, end: 90 },
+  { label: 'Outcome',          start: 91, end: 95 },
 ]
 
 const section = computed(() => {

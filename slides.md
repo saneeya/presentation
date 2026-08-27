@@ -74,15 +74,15 @@ transition: slide-left
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">01</span>
     <span>About</span>
   </div>
-  <Link :to="14" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2 agenda-link">
+  <Link :to="17" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">02</span>
     <span>Making Filters Functional</span>
   </Link>
-  <Link :to="29" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3 agenda-link">
+  <Link :to="32" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">03</span>
     <span>Redesigning for Agency Scale</span>
   </Link>
-  <Link :to="72" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4 agenda-link">
+  <Link :to="75" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
     <span>Behind the Platform</span>
   </Link>
@@ -93,7 +93,7 @@ transition: slide-left
 </div>
 
 <!--
-Here is the agenda for today, feel free to interrupt if you have questions during this presentation or you can wait until the end where I have some time scheduled for Q and A
+Here is the agenda for today
 -->
 
 ---
@@ -115,11 +115,9 @@ layoutClass: h-full layout-wide-right
 </div>
 
 <!--
-Before I dive into the work, I'd like to go over what I call my "creative background" One thing about me is I like creating things. Things in all sorts of formats. Here is a bedroom wall which I painted myself and while I didn't make the art, I did curate it and arrange it in a specific way 
+Before I dive into the work, I'd like to go over other things I've designed
 
-and I dont just decorate physicially , here is  my virtual home in Final Fantasy 14, an online multiplayer game which was my pandemic game. One of the most fun things for me was to was decorate these homes, this screenshot here shows a room I did where I placed every single object like the food on top of this table
-
-And I also like creating real life things. I dont crochet as much as I used to but I have made alot small toys such as this baby groot. And the things I like creating the most, are of course the ones I can eat such as this tart
+I do more than digital
 -->
 
 ---
@@ -145,11 +143,11 @@ and here is my professional background. Back in the day, I spent years doing gra
 
 One example was this billboard I did for the local county fair.
 
-Eventually I did a career pivot to UX, my first tech role was at McGraw Hill Education, which is a textbook company but also has a suite of ed tech products. One of those products was ALEKS which I did most of my work on. I  designed teacher and student facing user interfaces and even some other things like this logo I made for the 20th anniversary. 
+Eventually I did career pivot to UX. I started at McGraw Hill Education, which is a textbook company but also has a suite of ed tech products. One of those products was ALEKS which I did most of my work on. I  designed teacher and student facing user interfaces, and made logo
 
-After McGraw Hill, I spent some time at a mortgage company doing more enterprise platforms , this time for loan officers and real estate agents. While there,  I learned a lot about how regulated and complicated work flows behave. 
+I was at a mortgage company doing more enterprise platforms, this time for loan officers and real estate agents.  
 
-All of this together really helped when I joined Disney. I was on the ads design team but initially I knew nothing about ad tech,But since then I have worked on several platforms for advertisers, internal users and even some customer-facing products for almost 5 years now
+Now I'm a Disney on the ads design team
 -->
 
 ---
@@ -247,28 +245,59 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s11_copy_agenda_dup2_repeat" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Ad projects I've worked on</h2>
+
+<div class="flex justify-center items-end gap-4 mt-4 px-4">
+  <img src="./slides/assets/AdExp.png" class="rounded-lg shadow-lg h-48 w-auto" />
+  <img src="./slides/assets/Rate Cards - Info Panel.png" class="rounded-lg shadow-lg h-48 w-auto" />
+</div>
+
+<div class="flex justify-center items-end gap-4 mt-3 px-4">
+  <img src="./slides/assets/crdashboard.png" class="rounded-lg shadow-lg h-44 w-auto" />
+  <FastVideo
+    src="./slides/assets/MCfilterexample2.mp4"
+    :playback-rate="1"
+    video-class="rounded-lg shadow-lg h-44 w-auto"
+  />
+</div>
+
+<!--
+I've worked on many projects during 5 years at Disney, ad formats, self-serve pricing tool from scratch
+
+spent majority of time on self-serve ad tool for advertisers working on new self serve tool for internal ad ops people right now
+
+bottom 2 projects are also internal users such as a dashboard for campaign reviews and new filters design, both made using AI
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
 <CaseStudyPillTabs :key="s11_copy_agenda_dup2" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How I work</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My process</h2>
 
 <div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"/></svg>
+      <i class="fa-solid fa-user text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Usually the only designer</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M320 80C377.4 80 424 126.6 424 184C424 241.4 377.4 288 320 288C262.6 288 216 241.4 216 184C216 126.6 262.6 80 320 80zM96 152C135.8 152 168 184.2 168 224C168 263.8 135.8 296 96 296C56.2 296 24 263.8 24 224C24 184.2 56.2 152 96 152zM0 480C0 409.3 57.3 352 128 352C140.8 352 153.2 353.9 164.9 357.4C132 394.2 112 442.8 112 496L112 512C112 523.4 114.4 534.2 118.7 544L32 544C14.3 544 0 529.7 0 512L0 480zM521.3 544C525.6 534.2 528 523.4 528 512L528 496C528 442.8 508 394.2 475.1 357.4C486.8 353.9 499.2 352 512 352C582.7 352 640 409.3 640 480L640 512C640 529.7 625.7 544 608 544L521.3 544zM472 224C472 184.2 504.2 152 544 152C583.8 152 616 184.2 616 224C616 263.8 583.8 296 544 296C504.2 296 472 263.8 472 224zM160 496C160 407.6 231.6 336 320 336C408.4 336 480 407.6 480 496L480 512C480 529.7 465.7 544 448 544L192 544C174.3 544 160 529.7 160 512L160 496z"/></svg>
+      <i class="fa-solid fa-triangle-exclamation text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Technical/time limitations</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M64 183.4C44.9 172.4 32 151.7 32 128C32 92.7 60.7 64 96 64C119.7 64 140.4 76.9 151.4 96L488.5 96C499.6 76.9 520.2 64 543.9 64C579.2 64 607.9 92.7 607.9 128C607.9 151.7 595 172.4 575.9 183.4L575.9 456.5C595 467.6 607.9 488.2 607.9 511.9C607.9 547.2 579.2 575.9 543.9 575.9C520.2 575.9 499.5 563 488.5 543.9L151.4 543.9C140.3 563 119.7 575.9 96 575.9C60.7 575.9 32 547.2 32 511.9C32 488.2 44.9 467.5 64 456.5L64 183.4zM512 183.4C502.3 177.8 494.2 169.7 488.6 160L151.4 160C145.8 169.7 137.7 177.8 128 183.4L128 456.5C137.7 462.1 145.8 470.2 151.4 479.9L488.5 479.9C494.1 470.2 502.2 462.1 511.9 456.5L511.9 183.4zM176 240C176 222.3 190.3 208 208 208L320 208C337.7 208 352 222.3 352 240L352 304C352 321.7 337.7 336 320 336L208 336C190.3 336 176 321.7 176 304L176 240zM288 384L320 384C364.2 384 400 348.2 400 304L432 304C449.7 304 464 318.3 464 336L464 400C464 417.7 449.7 432 432 432L320 432C302.3 432 288 417.7 288 400L288 384z"/></svg>
+      <i class="fa-solid fa-file-half-dashed text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Vague or incomplete requirements</span>
@@ -276,15 +305,11 @@ transition: slide-left
 </div>
 
 <!--
-With that non-linear approach there are other key factors in how I work
+Used to being the only designer, sometimes I have a team but a lot of times I don't
 
-As I mentioned before time is always a concern and now because of AI I'm trying to get better at token management and prompting which is still at work in progress
+Disney is large but even then its felt like a start up on the ads side because of how fast everything is and our team is small so I've learned to understand what I can do with my limits and the teams' limits
 
-I've also been the sole designer on most projects and because of that I've gotten pretty good at working with a bunch of different teams so I understand that with limited resources there is always so much you can do and what you can achieve. 
-
-I myself like setting up a weekly design office hour whee anyone can drop in and discuss designs. this has proven to be really useful and helpful when collaborating with so many people
-
-And one thing I tend to keep bringing up is what exactly design can bring. Everyone is using AI to prototype now, I've had many PMs  put a PRD into a prompt and see what pops out and they think the design is done. However these designs don't really follow a design system and don't understand the problem. Even in this AI forward world, I do my best to show people I work with that having a designer still makes a difference
+A lot of time PRDs are pretty vague, these days PMs usually make their own designs too that I have to rework so I the way I do that is...
 -->
 
 ---
@@ -294,31 +319,41 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup3" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How I work</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My process</h2>
 
 <div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"/></svg>
+      <i class="fa-solid fa-map-location-dot text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Do my own discovery; find out core problem</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M320 80C377.4 80 424 126.6 424 184C424 241.4 377.4 288 320 288C262.6 288 216 241.4 216 184C216 126.6 262.6 80 320 80zM96 152C135.8 152 168 184.2 168 224C168 263.8 135.8 296 96 296C56.2 296 24 263.8 24 224C24 184.2 56.2 152 96 152zM0 480C0 409.3 57.3 352 128 352C140.8 352 153.2 353.9 164.9 357.4C132 394.2 112 442.8 112 496L112 512C112 523.4 114.4 534.2 118.7 544L32 544C14.3 544 0 529.7 0 512L0 480zM521.3 544C525.6 534.2 528 523.4 528 512L528 496C528 442.8 508 394.2 475.1 357.4C486.8 353.9 499.2 352 512 352C582.7 352 640 409.3 640 480L640 512C640 529.7 625.7 544 608 544L521.3 544zM472 224C472 184.2 504.2 152 544 152C583.8 152 616 184.2 616 224C616 263.8 583.8 296 544 296C504.2 296 472 263.8 472 224zM160 496C160 407.6 231.6 336 320 336C408.4 336 480 407.6 480 496L480 512C480 529.7 465.7 544 448 544L192 544C174.3 544 160 529.7 160 512L160 496z"/></svg>
+      <i class="fa-solid fa-comments text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Negotiate scope/deadlines</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M64 183.4C44.9 172.4 32 151.7 32 128C32 92.7 60.7 64 96 64C119.7 64 140.4 76.9 151.4 96L488.5 96C499.6 76.9 520.2 64 543.9 64C579.2 64 607.9 92.7 607.9 128C607.9 151.7 595 172.4 575.9 183.4L575.9 456.5C595 467.6 607.9 488.2 607.9 511.9C607.9 547.2 579.2 575.9 543.9 575.9C520.2 575.9 499.5 563 488.5 543.9L151.4 543.9C140.3 563 119.7 575.9 96 575.9C60.7 575.9 32 547.2 32 511.9C32 488.2 44.9 467.5 64 456.5L64 183.4zM512 183.4C502.3 177.8 494.2 169.7 488.6 160L151.4 160C145.8 169.7 137.7 177.8 128 183.4L128 456.5C137.7 462.1 145.8 470.2 151.4 479.9L488.5 479.9C494.1 470.2 502.2 462.1 511.9 456.5L511.9 183.4zM176 240C176 222.3 190.3 208 208 208L320 208C337.7 208 352 222.3 352 240L352 304C352 321.7 337.7 336 320 336L208 336C190.3 336 176 321.7 176 304L176 240zM288 384L320 384C364.2 384 400 348.2 400 304L432 304C449.7 304 464 318.3 464 336L464 400C464 417.7 449.7 432 432 432L320 432C302.3 432 288 417.7 288 400L288 384z"/></svg>
+      <i class="fa-solid fa-hourglass-start text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Delegate time to the &quot;major&quot; issues</span>
   </div>
 </div>
+
+<!--
+do my own discovery, start off always doing that even if I wasn't included in the initial ask, I'll look at notes or recordings and try to reach out to internal users who are the stakeholders or if its advertiser facing, I try and connect with people in the company who interact with advertisers
+
+as painful as it is to say no for designers, I've learned that it is necessary especially when deadlines are out of your control, at Disney the timeline is usually done by non technical stakeholders
+
+I will push back on scope and/or make clear what I can deliver, aka right now I have a month to make a brand new self serve tool and one person left the team
+
+because of this I know how to redirect my time as needed, sometimes small updates or fixes which are very common need quick process
+-->
 
 ---
 layout: default
@@ -343,6 +378,10 @@ transition: slide-left
     <source src="./slides/assets/MCWalkthrough.mp4" type="video/mp4" />
   </video>
 </div>
+
+<!--
+an example of a small update
+-->
 
 ---
 layout: default
@@ -445,19 +484,23 @@ transition: slide-left
 <div class="grid grid-cols-2 gap-6 max-w-3xl mx-auto mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"/></svg>
+      <i class="fa-solid fa-arrow-down-short-wide text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Could drill down, but not up</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M320 80C377.4 80 424 126.6 424 184C424 241.4 377.4 288 320 288C262.6 288 216 241.4 216 184C216 126.6 262.6 80 320 80zM96 152C135.8 152 168 184.2 168 224C168 263.8 135.8 296 96 296C56.2 296 24 263.8 24 224C24 184.2 56.2 152 96 152zM0 480C0 409.3 57.3 352 128 352C140.8 352 153.2 353.9 164.9 357.4C132 394.2 112 442.8 112 496L112 512C112 523.4 114.4 534.2 118.7 544L32 544C14.3 544 0 529.7 0 512L0 480zM521.3 544C525.6 534.2 528 523.4 528 512L528 496C528 442.8 508 394.2 475.1 357.4C486.8 353.9 499.2 352 512 352C582.7 352 640 409.3 640 480L640 512C640 529.7 625.7 544 608 544L521.3 544zM472 224C472 184.2 504.2 152 544 152C583.8 152 616 184.2 616 224C616 263.8 583.8 296 544 296C504.2 296 472 263.8 472 224zM160 496C160 407.6 231.6 336 320 336C408.4 336 480 407.6 480 496L480 512C480 529.7 465.7 544 448 544L192 544C174.3 544 160 529.7 160 512L160 496z"/></svg>
+      <i class="fa-solid fa-magnifying-glass text-[#0D9488] text-[1.6rem]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Users want to see relevant campaigns/line items/ads regardless of what tab</span>
   </div>
 </div>
+
+<!--
+SHOW PROTOTYPE HERE
+-->
 
 ---
 layout: default
@@ -476,6 +519,62 @@ transition: slide-left
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
     <span class="text-slate-900 font-semibold text-[1.1rem]">But wanted ability to turn off unselected rows as well</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_copy_agenda_dup5_feedback_technical" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Technical feedback</h2>
+
+<div class="flex justify-center items-center gap-6 mt-6">
+  <img src="./slides/assets/techfeedback1.png" class="rounded-lg shadow-lg max-w-[10rem] w-full h-auto" />
+  <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.5rem] shrink-0"></i>
+  <img src="./slides/assets/oldtoggle.png" class="rounded-lg shadow-lg max-w-[10rem] w-full h-auto" />
+</div>
+
+<div class="mx-auto w-full max-w-2xl text-left text-[1.35rem] font-normal italic leading-snug text-[#0D9488] mt-8 anim-fade-in-scale">
+  "And is this the experience we wants for this toggle? Or do we want the toggle that Zero Delivery used to have?"
+</div>
+
+<div class="mx-auto w-full max-w-2xl text-left text-[1.1rem] font-medium text-[#0D9488]/70 mt-2">
+  — Engineer
+</div>
+
+<div v-click class="click-fade-up">
+  <div class="mx-auto w-full max-w-2xl text-left text-[1.35rem] font-normal italic leading-snug text-[#0D9488] mt-14">
+    "So if its filtered out by the filter selections, but it belongs to a selected object by association, then will it show in the highlighted area, right?"
+  </div>
+  <div class="mx-auto w-full max-w-2xl text-left text-[1.1rem] font-medium text-[#0D9488]/70 mt-2">
+    — Product Manager
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_copy_agenda_dup5_feedback_repeat" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
+
+<div class="flex gap-6 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52">
+    <h2 class="user-groups-slide-heading m-0">Ongoing work</h2>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Warning when filtered content isn't visible</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Potentially more edge cases</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 flex justify-center items-start self-start mt-3">
+    <img src="./slides/assets/filterwarning.png" class="rounded-xl shadow-lg w-full max-w-none h-auto" />
   </div>
 </div>
 
@@ -1036,7 +1135,7 @@ transition: slide-left
 <div class="slide-4-root flex h-full min-h-0 flex-col pt-6 pb-10 pr-4">
   <div class="flex min-h-0 min-w-0 flex-1 flex-col">
     <div class="flex h-full min-h-0 w-full max-w-md flex-1 flex-col items-start self-stretch pt-2 pb-6 pr-6 pl-0 md:max-w-xl md:pt-4 md:pb-8 md:pr-8 md:pl-0">
-      <div class="mb-8 mt-6 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-10 md:text-4xl lg:mt-12 lg:text-5xl anim-fade-up"><span class="block">Redesigning for <span class="text-[#0D9488]">Agency</span></span><span class="block">Scale</span></div>
+      <div class="mb-8 mt-6 text-3xl font-semibold tracking-tight text-[#3A4652] md:mt-10 md:text-4xl lg:mt-12 lg:text-5xl anim-fade-up"><span class="block">Redesigning for <span class="text-[#0D9488]">Agency</span> Scale</span></div>
       <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85 anim-fade-up anim-d2 mt-4">Updating the Campaign Creation flow</div>
       <div class="mt-auto self-start anim-fade-up anim-d4" style="position:relative; top:-0.25rem;">
         <span class="hero-pill">CASE STUDY</span>
@@ -1131,13 +1230,11 @@ transition: slide-left
 </div>
 
 <!--
-Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency.
+So as Jimmy explained, Disney Campaign Manager is Disney's self serve ad platform that you can access whenever and wherever and is the product I spent most of my time at Disney working on
+
+Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency as in they did all the updates
 
 The product was initially created to let SMBs advertise on Hulu because there was a much lower minimum spend than the traditional route, $500 in campaign manager vs $50,000 through the sales team
-
-Even thought it was still a young platform, it was profitable, making about $10mil a year
-
-It was making money, but the company really wanted to scale the platform
 -->
 
 ---
@@ -1150,9 +1247,7 @@ transition: fade
 <AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="500" layer-max-width="72rem" pull-down="-2rem" />
 
 <!--
-So as Jimmy explained, Disney Campaign Manager is Disney's self serve ad platform that you can access whenever and wherever and is the product I spent most of my time at Disney working on
-
-Before the rebrand, it was known as Hulu Ad Manager, and when I started in 2021 this was campaign creation flow looked like
+When I started in 2021 this was campaign creation flow looked like
 
 It was was a page by page flow where you can set up Campaign name, dates, budget, and targeting options such as demographics and interests, and hobbies
 -->
@@ -1181,6 +1276,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+Even thought it was still a young platform, it was profitable, making about $10mil a year
+
+It made money, but we spent a lot of money to update and maintain the platform through the 3rd party
+
+we came up with this new initiative to transfer the platform over to our side because it was growing too quickly
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1202,9 +1305,7 @@ transition: slide-left
 </div>
 
 <!--
-When I started, there was a big push to get more agency users and enterprise advertisers on campaign manager, because those groups  have larger campaign spends than SMBs and most media buys on streaming are done through agencies
-
-Unfortunately we did not offer all the features that agencies wanted
+When I started, there was a big push to get more agency users and enterprise advertisers on campaign manager, because those groups  have larger campaign spends than SMBs
 -->
 
 ---
@@ -1226,12 +1327,18 @@ transition: slide-left
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M286.1 368C384.6 368 464.4 447.8 464.4 546.3C464.4 562.7 451.1 576 434.7 576L78.1 576C61.7 576 48.4 562.7 48.4 546.3C48.4 447.8 128.2 368 226.7 368L286.1 368zM562.3 172.1C571.7 162.7 586.9 162.7 596.2 172.1C605.5 181.5 605.6 196.7 596.2 206L562.3 239.9L596.2 273.8C605.6 283.2 605.6 298.4 596.2 307.7C586.8 317 571.6 317.1 562.3 307.7L528.4 273.8L494.5 307.7C485.1 317.1 469.9 317.1 460.6 307.7C451.3 298.3 451.2 283.1 460.6 273.8L494.5 239.9L460.6 206C451.2 196.6 451.2 181.4 460.6 172.1C470 162.8 485.2 162.7 494.5 172.1L528.4 206L562.3 172.1zM256.4 312C190.1 312 136.4 258.3 136.4 192C136.4 125.7 190.1 72 256.4 72C322.7 72 376.4 125.7 376.4 192C376.4 258.3 322.7 312 256.4 312z"/></svg>
+      <i class="fa-solid fa-cart-shopping self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">70% of ad buys on streaming are done via agencies</span>
   </div>
 </div>
+
+<!--
+These users did a lot of ad spend on streaming and so target customer changed from SMBs to agencies and enterprise advertisers
+
+these people did advertise on Disney but through our direct side where operation costs were higher so that was always a reason to push them to the self serve side
+-->
 
 ---
 layout: default
@@ -1268,9 +1375,7 @@ transition: slide-left
 </div>
 
 <!--
-For this presentation, Im specifically going to focus what agencies wanted in campaign creation since it's the core experience of the platform
-
-These advertisers wanted extra targeting options such as day parting, frequency, pacing but the main thing they wanted was line items.
+These Advertisers wanted extra targeting options such as day parting, frequency, pacing but the main thing they wanted was line items.
 
 I think you guys probably know what line items are but they are essentially sub campaigns  each with their own targeting within a larger campaign.
 
@@ -1308,12 +1413,12 @@ transition: slide-left
 <div class="flex flex-col items-center gap-10 max-w-4xl mt-16 w-full">
   <div class="w-full" style="display:grid; grid-template-columns: 1fr auto 1fr auto; gap: 1rem; max-width: 600px; margin: 0 auto; align-items: center;">
     <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d2">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M64 128C64 92.7 92.7 64 128 64L384 64C419.3 64 448 92.7 448 128L448 249.3C401.1 268.3 368 314.3 368 368C368 395.7 376.8 421.4 391.8 442.4C340.3 463.4 304 514 304 573.1C304 574.1 304 575 304 576L128 576C92.7 576 64 547.3 64 512L64 128zM208 464L208 528L261.4 528C268.6 498.6 282.7 471.9 301.8 449.7C295.7 430.2 277.5 416 256 416C229.5 416 208 437.5 208 464zM339 288.3C338 288.1 337 288 336 288L304 288C295.2 288 288 295.2 288 304L288 336C288 344.8 295.2 352 304 352L320.7 352C322.8 329.2 329.1 307.7 339 288.3zM176 160C167.2 160 160 167.2 160 176L160 208C160 216.8 167.2 224 176 224L208 224C216.8 224 224 216.8 224 208L224 176C224 167.2 216.8 160 208 160L176 160zM288 176L288 208C288 216.8 295.2 224 304 224L336 224C344.8 224 352 216.8 352 208L352 176C352 167.2 344.8 160 336 160L304 160C295.2 160 288 167.2 288 176zM176 288C167.2 288 160 295.2 160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288zM416 368C416 323.8 451.8 288 496 288C540.2 288 576 323.8 576 368C576 412.2 540.2 448 496 448C451.8 448 416 412.2 416 368zM352 576C352 523 395 480 448 480L544 480C597 480 640 523 640 576C640 593.7 625.7 608 608 608L384 608C366.3 608 352 593.7 352 576z"/></svg>
+      <i class="fa-solid fa-people-carry-box self-center text-[1.6rem] text-[#0D9488]"></i>
       <span>Initiative to move platform</span>
     </div>
     <i class="fa-solid fa-plus text-slate-400 text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
     <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d3">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M286.1 368C384.6 368 464.4 447.8 464.4 546.3C464.4 562.7 451.1 576 434.7 576L78.1 576C61.7 576 48.4 562.7 48.4 546.3C48.4 447.8 128.2 368 226.7 368L286.1 368zM562.3 172.1C571.7 162.7 586.9 162.7 596.2 172.1C605.5 181.5 605.6 196.7 596.2 206L562.3 239.9L596.2 273.8C605.6 283.2 605.6 298.4 596.2 307.7C586.8 317 571.6 317.1 562.3 307.7L528.4 273.8L494.5 307.7C485.1 317.1 469.9 317.1 460.6 307.7C451.3 298.3 451.2 283.1 460.6 273.8L494.5 239.9L460.6 206C451.2 196.6 451.2 181.4 460.6 172.1C470 162.8 485.2 162.7 494.5 172.1L528.4 206L562.3 172.1zM256.4 312C190.1 312 136.4 258.3 136.4 192C136.4 125.7 190.1 72 256.4 72C322.7 72 376.4 125.7 376.4 192C376.4 258.3 322.7 312 256.4 312z"/></svg>
+      <i class="fa-solid fa-chart-line self-center text-[1.6rem] text-[#0D9488]"></i>
       <span>Plans to scale</span>
     </div>
     <i class="fa-solid fa-equals text-slate-400 text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
@@ -1322,6 +1427,10 @@ transition: slide-left
     <span class="text-[#0D9488] text-[2.25rem] font-semibold">Entire Platform Rebuild</span>
   </div>
 </div>
+
+<!--
+This was going to be a huge project, took 2 years
+-->
 
 ---
 layout: default
@@ -1364,6 +1473,14 @@ transition: slide-left
     <h3 class="thumb-subheader text-slate-600 text-[0.5rem] font-medium text-center"><span class="text-[#0D9488] font-bold mr-1.5 click-slide-in-x" v-click="1">NEW</span> Internal Ops Portal</h3>
   </div>
 </div>
+
+<!--
+I was the only designer who had to update and maintain the existing platform with all its different flows and features 
+
+...as well as all the new iterations of all of these
+
+for the purpose of this presentation I will only focus on campaigns because it was the core user experience in the platform
+-->
 
 ---
 layout: default
@@ -1416,7 +1533,7 @@ transition: slide-left
 <!--
 Before I started, I had 2 core goals, add line items and add more targeting options
 
-And the most import thing: the hard deadline which was oct 1 2024
+in the back of my mind, there was the hard deadline which was oct 1 2024
 -->
 
 ---
@@ -1431,21 +1548,21 @@ transition: slide-left
 <div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+      <i class="fa-solid fa-list-ol self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Prioritize work (Campaign redesign) since I was the only designer</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+      <i class="fa-solid fa-magnifying-glass self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Look at what existed and competitors</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d4">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
+      <i class="fa-solid fa-user-plus self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Get additional resourcing</span>
@@ -1453,13 +1570,9 @@ transition: slide-left
 </div>
 
 <!--
-Now, I know 2 years sounds like a lot of time to work on a new design, but in reality it was just one of many thing I was working on. 
+Before I started off, I prioritized campaign redesign, spent more time on this than any other feature, I looked at other self serve ad platforms to learn what else was out there because I was still relatively new to the space
 
-I was also working on updating the rest of the platform, as well updating the existing product because it was still making revenue 
-
-One top of that, I was the only designer for the majority of this project.
-
-So, by myself, I had to work with a ton of developers (both internal and overseas), several PMs, the sales teams, the QA team, the marketing and many more people because this was a huge initiative and they were all involved in it
+and I was also trying to figure out if I could get at least another helping hand due to all the work
 -->
 
 ---
@@ -1743,7 +1856,7 @@ transition: slide-left
 </div>
 
 <!--
-I took that idea and revised it a little and this was the final flow that launched, the only change was the name change
+This is what the new layout ended up looking like (before the Disney Campaign Manger rebrand)
 -->
 
 ---
@@ -1758,6 +1871,14 @@ transition: slide-left
 <div class="flex w-full justify-center mt-4">
   <img src="./slides/assets/LineItemmenuspecs.png" class="vast-map-img block h-auto max-h-[min(560px,66vh)] w-auto max-w-full object-contain" />
 </div>
+
+<!--
+Big thing to note is I inherited a design system which was a frankenstein of legacy hulu internal tools and hulu consumer apps
+
+Consistency is key for me when it comes to design systems and since I was redoing the whole platform, I wanted to update and add new patterns
+
+This is the specs I did for the new line item menu
+-->
 
 ---
 layout: default
@@ -1780,6 +1901,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+I noticed targeting UI was different in the old campaign flow
+
+this is what audiences looked like, I liked it as multiselect pattern
+
+but location and content targeting looked pretty different even though they were the same other than the include/exclude pattern
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1797,6 +1926,10 @@ transition: slide-left
     <img src="./slides/assets/NEWziptar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
   </div>
 </div>
+
+<!--
+redid patterns to match audiences
+-->
 
 ---
 layout: default
@@ -1844,6 +1977,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+we also had different checkbox selections which were fine in page-by-page flow but took up a lot more space in a single page scroll
+
+So I redid them to also look more consistent
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1856,6 +1995,12 @@ transition: slide-left
 <div class="flex w-full justify-center mt-4">
   <img src="./slides/assets/daypartyingtar.png" class="vast-map-img block h-auto max-h-[min(500px,62vh)] w-auto max-w-full object-contain" />
 </div>
+
+<!--
+Because day parting was a new feature, I looked to see how competitors handled this and I found a drag selection pattern
+
+I found something like this in our internal ad trafficking tool and modified it to fit the then hulu UI
+-->
 
 ---
 layout: default
@@ -1878,6 +2023,10 @@ transition: slide-left
   ></video>
 </div>
 
+<!--
+here is it in action
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -1888,8 +2037,12 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New patterns</h2>
 
 <div class="flex w-full justify-center mt-4">
-  <img src="./slides/assets/deliveryarea.png" class="vast-map-img block h-auto max-h-[min(380px,48vh)] w-auto max-w-full object-contain" />
+  <img src="./slides/assets/deliveryarea.png" class="vast-map-img block h-auto max-h-[min(430px,52vh)] w-auto max-w-full object-contain" />
 </div>
+
+<!--
+here is the whole new "delivery" section or tile in the campaign flow has day parting, pacing and frequency cap
+-->
 
 ---
 layout: default
@@ -1926,14 +2079,14 @@ transition: slide-left
 <div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-globe text-[1.6rem] text-[#0D9488]"></i>
+      <i class="fa-solid fa-chalkboard-user text-[1.6rem] text-[#0D9488]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Test designs externally</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-code text-[1.6rem] text-[#0D9488]"></i>
+      <i class="fa-solid fa-earth-americas text-[1.6rem] text-[#0D9488]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Work with overseas engineering team on handoff</span>
@@ -1948,11 +2101,13 @@ transition: slide-left
 </div>
 
 <!--
-The hardest part was how much work it was for one person.  I really needed help. The rest of the design team was stretched thin, so I had to get someone new
+I had many iterations and specs of the campaign creation flow, but there was a lot to do still
 
-Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
+I had shared designs many times with internal people but I really wanted to test with advertisers
 
-I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch for the final stretch
+This platform overhaul, especially the front-end was done by this large contractor group in Ukraine, and it was difficult because I couldn't do the usual designer/end cowork sessions I did in the past
+
+and there was a lot of design QA I had to do in the QA environments
 -->
 
 ---
@@ -2044,7 +2199,7 @@ transition: slide-left
 </div>
 
 <!--
-What I ended up doing was mapping out everything, every flow, every error, modal, 
+the teams was very literal and I had to spell every design out What I ended up doing was mapping out everything, every flow, every error, modal, 
 
 every state, whatever
 
@@ -2077,6 +2232,14 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+The hardest part was how much work it was for one person.  I really needed help. The rest of the design team was stretched thin, so I had to get someone new
+
+Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
+
+I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch for the final stretch
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -2098,15 +2261,11 @@ transition: slide-left
 </div>
 
 <!--
-another part of my non liner journey was User testing. I shared designs often with internal teams but I really wanted to test the campaign flow with customers who already used our platform
-
 Because of time and resources, I wasn't able to user test until after the final designs were being implemented. 
 
 I know you're not supposed to user test while the design is in production, because it would be too late to affect the launch, but I was able to convince product to let me put any potential changes from the user test as fast follow ups after launch
 
-this was really for my benefit, I wanted to make sure the new design worked and since there was no UXR team I knew I would have to do a lot of the work on my own
-
-One thing I thought would be easy was getting users to test with. I had spoken to sales about testing with existing customers and they seemed receptive at first but...
+this was really for my benefit, I wanted to make sure the new design worked
 -->
 
 ---
@@ -2121,14 +2280,14 @@ transition: slide-left
 <div class="grid grid-cols-3 gap-10 max-w-4xl mx-auto mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+      <i class="fa-solid fa-user-slash self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">No UXR team</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+      <i class="fa-solid fa-briefcase self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Sales team would not give access to their clients</span>
@@ -2138,9 +2297,17 @@ transition: slide-left
       <i class="fa-solid fa-rocket text-[1.6rem] text-[#0D9488]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">UXR results would not affect launch</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">User testing results would not affect launch</span>
   </div>
 </div>
+
+<!--
+some challenges arose pretty early on, we didn't have a UXR team at the time
+
+the sales team was hesitant on giving me their users to test with even though I really wanted to test with existing customers
+
+and again because of resourcing, I just ended up doing User testing later than I wanted to so any changes I made as a result of that would not be implemented before launch
+-->
 
 ---
 layout: default
@@ -2157,7 +2324,7 @@ transition: slide-left
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Built test plan and screener criteria, then recruited and moderated all sessions</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Built test plan and screener criteria, then recruited via Dscout and moderated all sessions</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
@@ -2183,7 +2350,9 @@ transition: slide-left
 </div>
 
 <!--
-What I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
+so what I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
+
+I worked with our UXE team to make an interactive prototype (before AI)
 
 I conducted 1 hr usability tests where I asked them to do certain tasks and see how they went about them,
 

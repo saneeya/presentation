@@ -6,25 +6,16 @@ const { currentPage } = useNav()
 
 /** Section slide ranges (inclusive) for each case study */
 const SECTIONS: readonly { label: string; start: number; end: number }[] = [
-  // Mini case study: Making Filters Functional
-  { label: 'Problem',  start: 19, end: 23 },
-  { label: 'Designs',  start: 24, end: 29 },
-  { label: 'Outcome',  start: 30, end: 31 },
   // Case study: Campaign Creation Flow
-  { label: 'Background',  start: 34, end: 36 },
-  { label: 'Problem',     start: 37, end: 41 },
-  { label: 'Strategy',    start: 42, end: 45 },
-  { label: 'Design Concepts', start: 46, end: 51 },
-  { label: 'UI Components', start: 52, end: 60 },
-  { label: 'Collaboration', start: 61, end: 64 },
-  { label: 'User Testing', start: 65, end: 71 },
-  { label: 'Takeaways', start: 72, end: 74 },
-  // Case study: Behind the Platform (Admin Portal)
-  { label: 'Background', start: 76, end: 79 },
-  { label: 'Problem',          start: 80, end: 83 },
-  { label: 'Feature Requests', start: 84, end: 86 },
-  { label: 'Designs',          start: 87, end: 90 },
-  { label: 'Outcome',          start: 91, end: 95 },
+  { label: 'Background', start: 19, end: 21 },
+  { label: 'Problem',    start: 22, end: 25 },
+  { label: 'Strategy',   start: 26, end: 29 },
+  { label: 'Designs',    start: 30, end: 35 },
+  { label: 'UI Consolidation', start: 36, end: 43 },
+  { label: 'Final',      start: 44, end: 44 },
+  { label: 'Cross-team Collaboration', start: 45, end: 49 },
+  { label: 'User Testing', start: 50, end: 56 },
+  { label: 'Takeaways',  start: 57, end: 59 },
 ]
 
 const section = computed(() => {

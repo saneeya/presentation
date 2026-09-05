@@ -25,6 +25,10 @@ const props = withDefaults(
     imageScales?: number[]
     /** Omit drop shadow and image rounding (e.g. wireframe assets) */
     flat?: boolean
+    /** Override opacity of the layer directly behind the active one (default 0.16) */
+    dimOpacityNear?: number
+    /** Override opacity of layers two or more behind the active one (default 0.07) */
+    dimOpacityFar?: number
   }>(),
   {
     images: () => [
@@ -75,9 +79,9 @@ function layerOpacity(idx: number, V: number) {
     /* Third image (idx 2) sits here when the fourth is on top — dim a bit more */
     if (idx === 2 && V >= 4)
       return 0.08
-    return 0.16
+    return props.dimOpacityNear ?? 0.16
   }
-  return 0.07
+  return props.dimOpacityFar ?? 0.07
 }
 
 function imgStyle(idx: number) {

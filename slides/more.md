@@ -27,6 +27,7 @@ very data dense, serves many users
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s_dcm" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />

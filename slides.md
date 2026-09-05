@@ -76,18 +76,10 @@ transition: slide-left
   </div>
   <Link :to="17" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d2 agenda-link">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">02</span>
-    <span>Making Filters Functional</span>
-  </Link>
-  <Link :to="32" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3 agenda-link">
-    <span class="text-[#0D9488] font-semibold text-[1rem] w-6">03</span>
     <span>Redesigning for Agency Scale</span>
   </Link>
-  <Link :to="75" class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4 agenda-link">
-    <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
-    <span>Behind the Platform</span>
-  </Link>
-  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d5">
-    <span class="text-[#0D9488] font-semibold text-[1rem] w-6">05</span>
+  <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d3">
+    <span class="text-[#0D9488] font-semibold text-[1rem] w-6">03</span>
     <span>Q & A</span>
   </div>
 </div>
@@ -243,6 +235,7 @@ And from there and I just shared the prototype with everyone developers, PMs, st
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup2_repeat" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -274,6 +267,76 @@ bottom 2 projects are also internal users such as a dashboard for campaign revie
 ---
 layout: default
 transition: slide-left
+---
+
+<div class="flex gap-6 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52">
+    <h2 class="user-groups-slide-heading m-0">The Kitchen</h2>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Whole redesign</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 mt-2">
+    <AdManagerStack :images="['./slides/assets/olderkitchen.jpg', './slides/assets/oldkitchenremodel.png', './slides/assets/oldkitchencabinets.jpg']" :compact="true" :viewport-height="460" layer-max-width="60rem" layer-width-pct="90%" pull-down="-3rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" />
+  </div>
+</div>
+
+<!--
+Let me describe my process by describing a kitchen I used to have
+
+Re did counter, added bar counter, repainted cabinets, boughet new sink, had to buy new dishwaster
+
+limited cabinet space with roommate, bought portable bar cart/island
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<div class="flex gap-6 mt-6 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52">
+    <h2 class="user-groups-slide-heading m-0">The Kitchen Part II</h2>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Feature updates</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 mt-2">
+    <AdManagerStack :images="['./slides/assets/newerkitchen.jpg', './slides/assets/newerkitchencabinets.jpg', './slides/assets/newerkitchendrawer.jpg']" :compact="true" :viewport-height="460" layer-max-width="60rem" layer-width-pct="90%" pull-down="-3rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" />
+  </div>
+</div>
+
+<!--
+this kitchen was bigger and more modern, everything was practically new
+
+had more cabinet space and lived alone
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s9_dup_kitchen" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<div class="flex h-full w-full items-center justify-center">
+  <div
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
+  >
+    What type of kitchens do you guys usually work on?
+  </div>
+</div>
+
+<!--
+What is the breakdown of overhauls versus feature updates?
+-->
+
+---
+layout: default
+transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup2" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -315,6 +378,7 @@ A lot of time PRDs are pretty vague, these days PMs usually make their own desig
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup3" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -381,6 +445,10 @@ transition: slide-left
 
 <!--
 an example of a small update
+
+this is mission control trafficking for Disney plus, hulu, and other digital platforms, used by account managers, operations and more
+
+Usually used to find why campaigns are not performing as intended
 -->
 
 ---
@@ -522,6 +590,10 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+wanted a hybrid of option 1 and 2
+-->
+
 ---
 layout: default
 transition: slide-left
@@ -578,7 +650,12 @@ transition: slide-left
   </div>
 </div>
 
+<!--
+recently another eng asked about if we show all sibling groups too
+-->
+
 ---
+hide: true
 layout: two-cols
 layoutClass: h-full
 transition: slide-left
@@ -609,6 +686,7 @@ I'm going to start off showing how I designed a new filter flow
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -641,6 +719,7 @@ I think there is some ways to go because there are some edge cases that keep pop
 -->
 
 ---
+hide: true
 layout: default
 transition: fade
 ---
@@ -673,6 +752,7 @@ This is what the filters looks like in the current platform it's a long drop dow
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -719,6 +799,7 @@ I did have some time for discovery here where I learned that users want a better
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -760,6 +841,7 @@ and because of this they weren't very easy to scale especially when we were intr
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -779,6 +861,7 @@ so the main problem was that the filters were not very consistent difficult to u
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -813,6 +896,7 @@ Plus I needed to add way where users could save their filters and an additional 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -836,6 +920,7 @@ This helped me see what types of filters there were, how many there were, and ho
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -861,6 +946,7 @@ as you may have noticed all these platforms look inconsistent because they were 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -890,6 +976,7 @@ and Here is an example of it as a modal
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -936,6 +1023,7 @@ for example they wanted to select publisher Disney+ and date range OR publisher 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -974,6 +1062,7 @@ I don't do many formal User Tests, mostly ad hoc ones  as needed. I really wante
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -1016,6 +1105,7 @@ This layout received better feedback than the other one so I decided to go forwa
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -1080,6 +1170,7 @@ however because of some technical limitations we didn't have the ability to shar
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -1203,7 +1294,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s7" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Background</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What is Disney Campaign Manager?</h2>
 
 <div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
@@ -1230,7 +1321,7 @@ transition: slide-left
 </div>
 
 <!--
-So as Jimmy explained, Disney Campaign Manager is Disney's self serve ad platform that you can access whenever and wherever and is the product I spent most of my time at Disney working on
+Disney's self serve ad platform that I most of my time at Disney working on
 
 Hulu ad manager was launched in early 2020 and was maintained by a 3rd party agency as in they did all the updates
 
@@ -1259,7 +1350,7 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s23_copy_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Growing pains</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">State of the product</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
@@ -1272,7 +1363,7 @@ transition: slide-left
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">New initiative to transfer/rebuild the platform on Disney</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Business had goals to transfer/rebuild the platform on Disney</span>
   </div>
 </div>
 
@@ -1412,19 +1503,25 @@ transition: slide-left
 
 <div class="flex flex-col items-center gap-10 max-w-4xl mt-16 w-full">
   <div class="w-full" style="display:grid; grid-template-columns: 1fr auto 1fr auto; gap: 1rem; max-width: 600px; margin: 0 auto; align-items: center;">
-    <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d2">
-      <i class="fa-solid fa-people-carry-box self-center text-[1.6rem] text-[#0D9488]"></i>
-      <span>Initiative to move platform</span>
+    <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+      <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+        <i class="fa-solid fa-people-carry-box self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
+      </div>
+      <div class="w-3 h-px bg-[#0D9488]"></div>
+      <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Initiative to move platform</span>
     </div>
-    <i class="fa-solid fa-plus text-slate-400 text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
-    <div class="flex flex-col items-center justify-center gap-3 text-slate-700 text-[1.1rem] font-medium text-center anim-fade-up anim-d3">
-      <i class="fa-solid fa-chart-line self-center text-[1.6rem] text-[#0D9488]"></i>
-      <span>Plans to scale</span>
+    <i class="fa-solid fa-plus text-[#0D9488] text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
+    <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+      <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+        <i class="fa-solid fa-chart-line self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
+      </div>
+      <div class="w-3 h-px bg-[#0D9488]"></div>
+      <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Plans to scale</span>
     </div>
-    <i class="fa-solid fa-equals text-slate-400 text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
+    <i class="fa-solid fa-equals text-[#0D9488] text-[1.75rem] mx-1 anim-fade-up justify-self-center self-center" style="animation-delay:0.4s"></i>
   </div>
   <div class="flex flex-col items-center gap-3 anim-fade-up anim-d4">
-    <span class="text-[#0D9488] text-[2.25rem] font-semibold">Entire Platform Rebuild</span>
+    <span class="text-[#0D9488] text-[2.25rem] font-semibold">Entire Platform Rehaul</span>
   </div>
 </div>
 
@@ -1918,9 +2015,12 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
 
-<div class="grid grid-cols-2 gap-16 mt-6 items-start w-full">
+<div class="grid gap-16 mt-6 items-start w-full" style="grid-template-columns: 1fr auto 1fr;">
   <div class="flex justify-center">
     <img src="./slides/assets/ZIPtar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center self-center -mt-6 click-fade-up" v-click="1">
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.75rem]"></i>
   </div>
   <div class="flex justify-center click-fade-up" v-click="1">
     <img src="./slides/assets/NEWziptar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
@@ -1940,9 +2040,12 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
 
-<div class="grid grid-cols-2 gap-16 mt-6 items-start w-full">
+<div class="grid gap-16 mt-6 items-center w-full" style="grid-template-columns: 1fr auto 1fr;">
   <div class="flex justify-center">
     <img src="./slides/assets/Contenttar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center click-fade-up" v-click="1">
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[1.75rem]"></i>
   </div>
   <div class="flex justify-center click-fade-up" v-click="1">
     <img src="./slides/assets/Newcontenttar.png" class="vast-map-img block h-auto max-h-[min(400px,50vh)] w-auto max-w-full object-contain" />
@@ -1958,13 +2061,21 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
 
-<div class="flex flex-col gap-4 mt-6 w-full">
+<div class="flex flex-col gap-10 mt-6 w-full">
   <div class="grid grid-cols-2 gap-40 items-start w-full">
     <div class="flex justify-start">
       <img src="./slides/assets/platformtar.png" class="vast-map-img block h-auto max-h-48 w-auto max-w-full object-contain" />
     </div>
     <div class="flex justify-start">
       <img src="./slides/assets/agegroupstar.png" class="vast-map-img block h-auto max-h-60 w-auto max-w-full object-contain" />
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-40 w-full py-2 click-fade-up" v-click="1">
+    <div class="flex justify-start pl-8">
+      <i class="fa-solid fa-arrow-down text-[#0D9488] text-[1.75rem]"></i>
+    </div>
+    <div class="flex justify-start pl-8">
+      <i class="fa-solid fa-arrow-down text-[#0D9488] text-[1.75rem]"></i>
     </div>
   </div>
   <div class="grid grid-cols-2 gap-40 items-start w-full click-fade-up" v-click="1">
@@ -2206,6 +2317,25 @@ every state, whatever
 This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
 
 Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s9_dup_handoffs" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<div class="flex h-full w-full items-center justify-center">
+  <div
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
+  >
+    What are some example of cross-team challenges and how you resolve them?
+  </div>
+</div>
+
+<!--
+The core problem then became how could we get these large-spend advertisers to use our platform
 -->
 
 ---
@@ -2713,6 +2843,7 @@ Knowing what I know now about ads and wanting to test out AI tooling, I created 
 -->
 
 ---
+hide: true
 layout: two-cols
 layoutClass: h-full
 transition: slide-left
@@ -2745,6 +2876,7 @@ You saw the advertiser facing view of Disney campaign manager and now I'm gonna 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2777,6 +2909,7 @@ This was a pretty quick project that was I was doing in tandem with the whole pl
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2809,6 +2942,7 @@ Now we introduced ad accounts, brands, and the ability to have multiple payment 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2842,6 +2976,7 @@ I was still new to the platform so I didn't know it as well as I know it now but
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2883,6 +3018,7 @@ Admin portal needed a facelift also because we were adding a lot of new features
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2915,6 +3051,7 @@ And the new layout was designed to be the same as the customer facing view and h
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2949,6 +3086,7 @@ In the new layout, you do not go to a new page for that advertiser. If you want 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -2976,6 +3114,7 @@ it's awkward and doesn't follow user expectations
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3013,6 +3152,7 @@ We got a lot of feedback from internal people basically they were saying it was 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3032,6 +3172,7 @@ the core problem was that they could not navigate this new admin portal efficien
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3058,6 +3199,7 @@ another ask was that they wanted to see the advertisers point of view. One perso
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3092,6 +3234,7 @@ Using all these discovery notes I went to the product managers and I was able to
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3124,6 +3267,7 @@ We ended up calling this ghost mode and then I was tasked with where this the la
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3159,6 +3303,7 @@ I came up with another option where you had the details right below the org's na
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3194,6 +3339,7 @@ And much like the old layout I included a whole tab for ads where you can click 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3228,6 +3374,7 @@ And they also like seeing the data such as impressions and pacing status directl
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3267,6 +3414,7 @@ However I realize I didn't need that much information and this took up too much 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3295,6 +3443,7 @@ The end result was that the revised navigation was much easier to use by our int
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3340,6 +3489,7 @@ what worked the best was something that existed in the prior iteration
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3372,6 +3522,7 @@ I worked with our product and development teams to see how much to see how much 
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---
@@ -3395,6 +3546,7 @@ this is what the org details page looked like when I first did the redesign
 -->
 
 ---
+hide: true
 layout: default
 transition: slide-left
 ---

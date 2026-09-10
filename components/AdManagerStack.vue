@@ -93,6 +93,10 @@ function imgStyle(idx: number) {
     styles.transform = `scale(${scale})`
   return Object.keys(styles).length ? styles : undefined
 }
+
+function isVideo(src: string) {
+  return /\.(mp4|webm|mov)$/i.test(src)
+}
 </script>
 
 <template>
@@ -120,7 +124,21 @@ function imgStyle(idx: number) {
             ...(props.layerMaxWidth ? { width: `min(${props.layerWidthPct ?? '80%'}, ${props.layerMaxWidth})` } : {}),
           }"
         >
+          <video
+            v-if="isVideo(src)"
+            class="ad-manager-stack__img"
+            :class="{ 'ad-manager-stack__img--flat': props.flat }"
+            :style="imgStyle(idx)"
+            autoplay
+            loop
+            muted
+            playsinline
+            preload="metadata"
+          >
+            <source :src="src" type="video/mp4">
+          </video>
           <img
+            v-else
             :src="src"
             alt=""
             class="ad-manager-stack__img"

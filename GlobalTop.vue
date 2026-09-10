@@ -2,20 +2,22 @@
 import { computed } from 'vue'
 import { useNav } from '@slidev/client'
 
-const { currentPage } = useNav()
+const { currentPage, currentSlideRoute } = useNav()
+
+const navHidden = computed(() => currentSlideRoute.value?.meta?.slide?.frontmatter?.hideGlobalNav === true)
 
 /** Section slide ranges (inclusive) for each case study */
 const SECTIONS: readonly { label: string; start: number; end: number }[] = [
   // Case study: Campaign Creation Flow
-  { label: 'Background', start: 19, end: 21 },
-  { label: 'Problem',    start: 22, end: 25 },
-  { label: 'Strategy',   start: 26, end: 29 },
+  { label: 'Background', start: 20, end: 22 },
+  { label: 'Problem',    start: 23, end: 28 },
+  { label: 'Strategy',   start: 29, end: 29 },
   { label: 'Designs',    start: 30, end: 35 },
   { label: 'UI Consolidation', start: 36, end: 43 },
   { label: 'Final',      start: 44, end: 44 },
   { label: 'Cross-team Collaboration', start: 45, end: 49 },
-  { label: 'User Testing', start: 50, end: 56 },
-  { label: 'Takeaways',  start: 57, end: 59 },
+  { label: 'User Testing', start: 50, end: 55 },
+  { label: 'Takeaways',  start: 56, end: 57 },
 ]
 
 const section = computed(() => {
@@ -37,7 +39,7 @@ const progressPct = computed(() =>
 
 <template>
   <Transition name="gt-fade">
-    <div v-if="section" class="gt-wrap" aria-hidden="true">
+    <div v-if="section && !navHidden" class="gt-wrap" aria-hidden="true">
       <div class="gt-index">
         <span class="gt-num">{{ stepNumber }}</span>
         <span class="gt-total">/ {{ stepTotal }}</span>

@@ -7,6 +7,12 @@
       "runtimeArgs": ["run", "dev"],
       "port": 3030,
       "autoPort": true
+    },
+    {
+      "name": "line-item-panel-doc",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["--yes", "serve", "docs", "-l", "4173"],
+      "port": 4173
     }
   ]
 }

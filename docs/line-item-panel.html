@@ -1,0 +1,1497 @@
+<title>Line Item Panel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/js/all.min.js" crossorigin="anonymous"></script>
+<style>
+  :root{
+    --bg:#F5F6FA;
+    --surface:#FFFFFF;
+    --surface-2:#EEF1F7;
+    --ink:#181A22;
+    --ink-2:#535A6B;
+    --ink-3:#828898;
+    --line:#DEE2EC;
+    --line-strong:#C7CEDD;
+    --accent:#3B5BDB;
+    --accent-ink:#FFFFFF;
+    --accent-soft:#E9EDFB;
+    --accent-soft-strong:#D3DBF6;
+    --danger:#C4433D;
+    --danger-soft:#FBEAE8;
+    --code-bg:#141726;
+    --code-ink:#D8DEEF;
+    --code-ink-2:#7C89B8;
+    --shadow:rgba(24,28,40,.10);
+    --radius-sm:6px;
+    --radius-md:10px;
+    --radius-lg:14px;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#12141C;
+      --surface:#181B26;
+      --surface-2:#1F2330;
+      --ink:#E9ECF5;
+      --ink-2:#A7ADC2;
+      --ink-3:#767C93;
+      --line:#2A2F40;
+      --line-strong:#3A4054;
+      --accent:#6E8CFF;
+      --accent-ink:#0B1030;
+      --accent-soft:#1C2542;
+      --accent-soft-strong:#25325A;
+      --danger:#E38078;
+      --danger-soft:#2E1E20;
+      --code-bg:#0B0D16;
+      --code-ink:#D3DAEE;
+      --code-ink-2:#6B77A6;
+      --shadow:rgba(0,0,0,.5);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#12141C;
+    --surface:#181B26;
+    --surface-2:#1F2330;
+    --ink:#E9ECF5;
+    --ink-2:#A7ADC2;
+    --ink-3:#767C93;
+    --line:#2A2F40;
+    --line-strong:#3A4054;
+    --accent:#6E8CFF;
+    --accent-ink:#0B1030;
+    --accent-soft:#1C2542;
+    --accent-soft-strong:#25325A;
+    --danger:#E38078;
+    --danger-soft:#2E1E20;
+    --code-bg:#0B0D16;
+    --code-ink:#D3DAEE;
+    --code-ink-2:#6B77A6;
+    --shadow:rgba(0,0,0,.5);
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+    scroll-behavior:smooth;
+  }
+  ::selection{background:var(--accent-soft-strong);}
+  a{color:inherit;}
+  h1,h2,h3{text-wrap:balance; font-family:"IBM Plex Sans", sans-serif; margin:0;}
+  code, .mono{font-family:"IBM Plex Mono", ui-monospace, monospace;}
+  .eyebrow{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+  }
+
+  /* ---------- top bar ---------- */
+  .topbar{
+    border-bottom:1px solid var(--line);
+    background:var(--surface);
+  }
+  .topbar-inner{
+    max-width:1180px;
+    margin:0 auto;
+    padding:36px 32px 30px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+  .crumb{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--ink-3);
+  }
+  .crumb .sep{color:var(--line-strong);}
+  .title-row{
+    display:flex;
+    align-items:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  h1.page-title{
+    font-size:clamp(28px,4vw,38px);
+    font-weight:700;
+    letter-spacing:-.01em;
+  }
+  .chip{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11.5px;
+    letter-spacing:.03em;
+    padding:4px 10px 4px 8px;
+    border-radius:999px;
+    border:1px solid var(--line-strong);
+    color:var(--ink-2);
+    background:var(--surface-2);
+  }
+  .chip.is-accent{
+    color:var(--accent);
+    border-color:var(--accent-soft-strong);
+    background:var(--accent-soft);
+  }
+  .chip .dot{width:6px;height:6px;border-radius:50%;background:var(--accent);flex-shrink:0;}
+  .lede{
+    max-width:62ch;
+    color:var(--ink-2);
+    font-size:16px;
+    line-height:1.6;
+  }
+  .meta-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    margin-top:6px;
+  }
+  .meta-item{display:flex; flex-direction:column; gap:3px;}
+  .meta-item .k{font-family:"IBM Plex Mono",monospace; font-size:10.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-3);}
+  .meta-item .v{font-size:14px; color:var(--ink);}
+
+  /* ---------- shell / layout ---------- */
+  .shell{
+    max-width:1180px;
+    margin:0 auto;
+    padding:44px 32px 100px;
+    display:grid;
+    grid-template-columns:150px minmax(0,1fr);
+    gap:56px;
+    align-items:start;
+    background:#F5F5F5;
+  }
+  nav.sidenav{
+    position:sticky;
+    top:24px;
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+  }
+  nav.sidenav a{
+    text-decoration:none;
+    font-size:13.5px;
+    color:var(--ink-2);
+    padding:7px 10px;
+    border-radius:7px;
+    border-left:2px solid transparent;
+  }
+  nav.sidenav a:hover{color:var(--ink); background:var(--surface-2);}
+  nav.sidenav a.is-active{color:var(--ink); font-weight:700;}
+  nav.sidenav .navlabel{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    padding:28px 10px 4px;
+  }
+  nav.sidenav .navlabel:first-child{padding-top:0;}
+
+  main{display:flex; flex-direction:column; gap:76px; min-width:0;}
+  section{scroll-margin-top:24px;}
+  .section-head{margin-bottom:26px; display:flex; flex-direction:column; gap:8px;}
+  .section-num{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--accent); font-weight:600;}
+  h2.section-title{font-size:23px; font-weight:600; letter-spacing:-.005em;}
+  .section-desc{color:var(--ink-2); font-size:15px; line-height:1.65; max-width:620px;}
+
+  /* ---------- overview ---------- */
+  .overview-grid{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 320px;
+    gap:36px;
+    align-items:start;
+  }
+  .overview-copy{max-width:460px;}
+  .overview-copy p{font-size:15.5px; line-height:1.7; color:var(--ink-2); margin:0 0 14px;}
+  .overview-copy strong{color:var(--ink); font-weight:600;}
+  .used-in{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:18px 20px;
+  }
+  .used-in ul{margin:10px 0 0; padding-left:18px; font-size:14px; color:var(--ink-2); line-height:1.8;}
+
+  /* ---------- anatomy ---------- */
+  .anatomy-wrap{
+    display:grid;
+    grid-template-columns:340px 1fr;
+    gap:40px;
+    align-items:start;
+  }
+  .mock{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    box-shadow:0 8px 24px var(--shadow);
+    overflow:hidden;
+    position:relative;
+  }
+  .mock-panel{width:320px;}
+  .mock-head{
+    padding:14px 16px 12px;
+    border-bottom:1px solid var(--line);
+  }
+  .mock-head .lbl{font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;}
+  .mock-name{font-size:13.5px; line-height:1.45; color:var(--ink); font-weight:500;}
+  .mock-rows{padding:8px;}
+  .mock-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    padding:9px 10px 9px 12px;
+    border-radius:var(--radius-sm);
+    font-size:13px;
+    color:var(--ink-2);
+    border-left:3px solid transparent;
+    margin-bottom:2px;
+  }
+  .mock-row.is-selected{background:var(--accent-soft); border-left-color:var(--accent); color:var(--ink); font-weight:600;}
+  .mock-add{
+    font-size:13px;
+    color:var(--accent);
+    font-weight:600;
+    padding:9px 12px;
+  }
+  .mock-accordion{border-top:1px solid var(--line);}
+  .acc-head{
+    display:flex; justify-content:space-between; align-items:center;
+    padding:11px 16px;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.07em;
+    color:var(--ink-3);
+    border-bottom:1px solid var(--line);
+    border-left:3px solid transparent;
+    background:transparent;
+    transition:background .12s ease;
+  }
+  .acc-head.is-open{color:var(--ink);}
+  .acc-head:hover{background:var(--accent-soft);}
+  .acc-body{padding:4px 10px 10px;}
+  .acc-row{
+    font-size:13px;
+    padding:8px 10px 8px 12px;
+    border-radius:var(--radius-sm);
+    border-left:3px solid transparent;
+    background:transparent;
+    color:var(--ink-2);
+    transition:background .12s ease;
+  }
+  .acc-row:hover{background:var(--accent-soft);}
+  .acc-row.is-active{background:transparent; border-left-color:var(--accent); color:var(--ink); font-weight:600;}
+  .acc-row.is-active:hover{background:var(--accent-soft);}
+
+  .callout{
+    position:absolute;
+    width:20px; height:20px;
+    border-radius:50%;
+    background:var(--accent);
+    color:var(--accent-ink);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    font-weight:600;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 0 0 3px var(--surface), 0 2px 6px var(--shadow);
+  }
+
+  .legend{display:flex; flex-direction:column; gap:18px;}
+  .legend-item{display:flex; gap:12px;}
+  .legend-num{
+    flex-shrink:0;
+    width:20px; height:20px;
+    border-radius:50%;
+    background:var(--accent);
+    color:var(--accent-ink);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px; font-weight:600;
+    display:flex; align-items:center; justify-content:center;
+    margin-top:2px;
+  }
+  .legend-copy .t{font-size:14.5px; font-weight:600; color:var(--ink); margin-bottom:3px;}
+  .legend-copy .d{font-size:13.5px; color:var(--ink-2); line-height:1.55; max-width:52ch;}
+
+  /* ---------- states grid ---------- */
+  .states-grid{
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    gap:18px;
+  }
+  .state-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:16px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+  }
+  .state-card .tag{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+  }
+  .demo-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+    padding:10px 8px 10px 12px;
+    border-radius:var(--radius-sm);
+    border-left:3px solid transparent;
+    background:var(--surface-2);
+    font-size:13.5px;
+    color:var(--ink-2);
+    position:relative;
+  }
+  .demo-row .kebab{
+    width:20px; height:20px;
+    display:flex; align-items:center; justify-content:center;
+    border-radius:5px;
+    color:var(--ink-3);
+    flex-shrink:0;
+  }
+  .demo-row.default{}
+  .demo-row.hover{background:var(--surface-2); box-shadow:inset 0 0 0 1px var(--line-strong);}
+  .demo-row.selected{background:var(--accent-soft); border-left-color:var(--accent); color:var(--ink); font-weight:600;}
+  .demo-row.selected-hover{background:var(--accent-soft-strong); border-left-color:var(--accent); color:var(--ink); font-weight:600;}
+  .demo-row.menu-hover .kebab{background:var(--surface); box-shadow:0 0 0 1px var(--line-strong); color:var(--ink);}
+  .demo-row.menu-open .kebab{background:var(--ink); color:var(--surface);}
+  .menu-pop{
+    position:absolute;
+    top:calc(100% + 6px);
+    right:8px;
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-sm);
+    box-shadow:0 10px 26px var(--shadow);
+    padding:5px;
+    width:150px;
+    z-index:2;
+  }
+  .menu-pop .mi{
+    font-size:12.5px;
+    padding:7px 9px;
+    border-radius:5px;
+    color:var(--ink-2);
+    cursor:pointer;
+  }
+  .menu-pop .mi:hover{background:var(--surface-2); color:var(--ink);}
+  .menu-pop .mi.danger{color:var(--danger);}
+  .menu-pop .mi.danger:hover{background:var(--danger-soft);}
+  .state-card .behavior{font-size:13px; color:var(--ink-2); line-height:1.55;}
+
+  /* ---------- live interactive panel ---------- */
+  .live-note{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:13px;
+    color:var(--ink-2);
+    margin-bottom:16px;
+  }
+  .live-note .pulse{
+    width:7px; height:7px; border-radius:50%;
+    background:var(--accent);
+    box-shadow:0 0 0 0 var(--accent-soft-strong);
+    animation:live-pulse 2s ease-out infinite;
+    flex-shrink:0;
+  }
+  @keyframes live-pulse{
+    0%{box-shadow:0 0 0 0 var(--accent-soft-strong);}
+    70%{box-shadow:0 0 0 6px transparent;}
+    100%{box-shadow:0 0 0 0 transparent;}
+  }
+  .live-panel{font-family:'Open Sans','IBM Plex Sans',sans-serif; border-radius:0 8px 8px 0;}
+  .live-title-wrap{border-bottom:1px solid var(--line); padding:14px 16px;}
+  .live-title{
+    display:block;
+    width:100%;
+    box-sizing:border-box;
+    padding:8px 6px;
+    font-family:inherit;
+    font-size:21px;
+    font-weight:700;
+    line-height:1.32;
+    color:var(--ink);
+    background:transparent;
+    border:1px solid transparent;
+    border-radius:8px;
+    resize:none;
+    overflow:hidden;
+    outline:none;
+    cursor:text;
+    transition:border-color .12s ease, background .12s ease;
+  }
+  .live-title:hover{border-color:var(--line-strong);}
+  .live-title:focus{border-color:var(--accent); background:var(--surface);}
+  .live-current{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    padding:14px 22px;
+    border-bottom:1px solid var(--line);
+    cursor:pointer;
+    transition:background .12s ease;
+  }
+  .live-current:hover{background:var(--surface-2);}
+  .live-current:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+  .live-current .chev{transition:transform .15s ease;}
+  .live-current.is-collapsed .chev{transform:rotate(-90deg);}
+  .live-current .stack{display:flex; flex-direction:column; gap:2px;}
+  .live-current .k{font-size:12.5px; color:var(--ink-2);}
+  .live-current .v{font-size:15px; font-weight:600; color:var(--ink);}
+  .live-current .chev{color:var(--ink-3); flex-shrink:0;}
+  .live-panel .mock-rows{padding:0; background:var(--surface-2);}
+  .live-row{
+    position:relative;
+    cursor:pointer;
+    user-select:none;
+    border-radius:0;
+    border-left:none;
+    margin-bottom:0;
+    padding:16px 46px 16px 36px;
+    border-bottom:1px solid var(--line);
+    background:#F7F9FA;
+    font-size:14.5px;
+    color:var(--ink);
+  }
+  .live-row.is-selected{
+    background:#DDE9FF;
+    border-left:none;
+    color:var(--ink);
+    font-weight:400;
+  }
+  .live-row:hover:not(.is-selected){background:#D4DEE3;}
+  .live-row.is-selected:hover{background:#B3CAF4;}
+  .live-row:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+  .live-kebab{
+    position:absolute;
+    right:14px;
+    top:50%;
+    transform:translateY(-50%);
+    width:28px; height:28px;
+    border:none;
+    background:transparent;
+    border-radius:8px;
+    color:var(--accent);
+    cursor:pointer;
+    transition:background .12s ease;
+    font-size:15px;
+    letter-spacing:1px;
+    line-height:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:inherit;
+    opacity:0;
+    transition:opacity .12s ease, background .12s ease;
+  }
+  .live-row:hover .live-kebab,
+  .live-row:focus-within .live-kebab,
+  .live-row.menu-open .live-kebab{opacity:1;}
+  .live-kebab:hover,
+  .live-row.menu-open .live-kebab{background:#B3CAF4;}
+  .live-add-wrap{padding:16px 22px 32px;}
+  .live-add{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:9px 20px;
+    border:1.5px solid var(--baymaxblue, #1950B5);
+    border-radius:8px;
+    color:#FFFFFF;
+    font-weight:600;
+    font-size:13.5px;
+    cursor:pointer;
+    background:var(--baymaxblue, #1950B5);
+  }
+  .live-add:hover{background:#153F8F; border-color:#153F8F;}
+  .menu-pop.live-menu{width:172px; padding:0; border-radius:10px; overflow:hidden;}
+  .menu-pop .live-mi{
+    padding:12px 14px;
+    border-bottom:1px solid var(--line);
+    color:var(--accent);
+    font-weight:600;
+    font-size:13px;
+    font-family:'Open Sans','IBM Plex Sans',sans-serif;
+    border-radius:0;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .menu-pop .live-mi:last-child{border-bottom:none;}
+  .menu-pop .live-mi:hover{background:var(--accent-soft);}
+  .menu-pop .live-mi.danger{color:var(--danger);}
+  .menu-pop .live-mi.danger:hover{background:var(--danger-soft);}
+  .live-panel .mi-confirm-copy{padding:14px 18px 6px; font-family:'Open Sans','IBM Plex Sans',sans-serif;}
+
+  .live-nav{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    gap:0;
+    border-top:none;
+  }
+  .live-add-wrap{border-bottom:none;}
+  .live-nav .acc-head{
+    font-family:'Open Sans','IBM Plex Sans',sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    letter-spacing:.04em;
+    border-bottom:none;
+    cursor:pointer;
+  }
+  .live-nav .acc-head:focus-visible{outline:2px solid var(--accent); outline-offset:-2px;}
+  .live-nav .acc-body{padding:4px 0 10px;}
+  .live-nav .acc-row{
+    font-family:'Open Sans','IBM Plex Sans',sans-serif;
+    border-radius:0;
+    padding:8px 10px 8px 22px;
+  }
+  .live-nav .acc-head:hover{background:#DDE9FF;}
+  .live-nav .acc-row:hover{background:#DDE9FF;}
+  .live-nav .acc-row.is-active:hover{background:#DDE9FF;}
+  .menu-pop .mi-confirm-copy{padding:7px 9px 6px; font-size:12px; color:var(--ink-2); line-height:1.4;}
+
+  /* ---------- variants ---------- */
+  .variants-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+    justify-items:start;
+  }
+  .variants-grid .variant-card{width:320px; max-width:100%;}
+  .variant-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:0 8px 24px var(--shadow);
+  }
+  .variant-card .vlabel{
+    padding:12px 16px;
+    border-bottom:1px solid var(--line);
+    font-family:"IBM Plex Mono",monospace;
+    font-size:11px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+    color:var(--ink-2);
+    background:var(--surface-2);
+  }
+
+  /* ---------- tokens ---------- */
+  .token-table{width:100%; border-collapse:collapse; font-size:13.5px;}
+  .token-table th{
+    text-align:left;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.07em;
+    text-transform:uppercase;
+    color:var(--ink-3);
+    padding:0 12px 10px 0;
+    border-bottom:1px solid var(--line-strong);
+    font-weight:500;
+  }
+  .token-table td{
+    padding:12px 12px 12px 0;
+    border-bottom:1px solid var(--line);
+    color:var(--ink-2);
+    vertical-align:middle;
+  }
+  .token-table td:first-child{color:var(--ink); font-weight:500;}
+  .swatch-row{display:flex; align-items:center; gap:10px;}
+  .swatch{width:22px; height:22px; border-radius:6px; border:1px solid var(--line-strong); flex-shrink:0;}
+  .token-val{font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink-2);}
+
+  .scale-row{display:flex; align-items:center; gap:14px; padding:9px 0; border-bottom:1px solid var(--line);}
+  .scale-row:last-child{border-bottom:none;}
+  .scale-bar{height:8px; background:var(--accent); border-radius:3px;}
+  .scale-label{font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--ink-2); width:40px; flex-shrink:0;}
+  .scale-use{font-size:13px; color:var(--ink-3); margin-left:auto;}
+
+  .type-row{display:flex; align-items:baseline; gap:18px; padding:12px 0; border-bottom:1px solid var(--line);}
+  .type-row:last-child{border-bottom:none;}
+  .type-sample{color:var(--ink); flex:1;}
+  .type-meta{font-family:"IBM Plex Mono",monospace; font-size:11.5px; color:var(--ink-3); width:210px; flex-shrink:0; text-align:right;}
+
+  /* ---------- accessibility ---------- */
+  .a11y-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:16px;}
+  .a11y-card{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:18px 20px;
+  }
+  .a11y-card .h{font-size:14px; font-weight:600; margin-bottom:8px; display:flex; align-items:center; gap:8px;}
+  .a11y-card .h .ico{
+    width:22px; height:22px; border-radius:6px;
+    background:var(--accent-soft); color:var(--accent);
+    display:flex; align-items:center; justify-content:center;
+    font-family:"IBM Plex Mono",monospace; font-size:12px; font-weight:700;
+    flex-shrink:0;
+  }
+  .a11y-card ul{margin:0; padding-left:18px; font-size:13.5px; color:var(--ink-2); line-height:1.7;}
+  .a11y-card code{background:var(--surface-2); padding:1px 5px; border-radius:4px; font-size:12.5px;}
+
+  /* ---------- do / dont ---------- */
+  .dd-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px;}
+  .dd-col{display:flex; flex-direction:column; gap:10px;}
+  .dd-heading{display:flex; align-items:center; gap:8px; font-size:13px; font-weight:600; font-family:"IBM Plex Mono",monospace; letter-spacing:.04em; text-transform:uppercase;}
+  .dd-heading.do{color:var(--accent);}
+  .dd-heading.dont{color:var(--danger);}
+  .dd-item{
+    background:var(--surface);
+    border:1px solid var(--line);
+    border-radius:var(--radius-sm);
+    padding:12px 14px;
+    font-size:13.5px;
+    color:var(--ink-2);
+    line-height:1.55;
+  }
+  .dd-item strong{color:var(--ink);}
+
+  /* ---------- code ---------- */
+  .code-block{
+    background:var(--code-bg);
+    color:var(--code-ink);
+    border-radius:var(--radius-md);
+    padding:20px 22px;
+    overflow-x:auto;
+    font-family:"IBM Plex Mono",monospace;
+    font-size:12.8px;
+    line-height:1.65;
+  }
+  .code-block .cm{color:var(--code-ink-2);}
+  .code-block pre{margin:0;}
+
+  footer.page-footer{
+    max-width:1180px;
+    margin:0 auto;
+    padding:0 32px 60px;
+    color:var(--ink-3);
+    font-size:12.5px;
+    display:flex;
+    justify-content:space-between;
+    border-top:1px solid var(--line);
+    padding-top:22px;
+  }
+
+  @media (max-width:900px){
+    .shell{grid-template-columns:1fr;}
+    nav.sidenav{
+      position:static;
+      flex-direction:row;
+      overflow-x:auto;
+      gap:6px;
+      padding-bottom:6px;
+      border-bottom:1px solid var(--line);
+      margin-bottom:8px;
+    }
+    nav.sidenav .navlabel{display:none;}
+    nav.sidenav a{white-space:nowrap; border-left:none; border-bottom:2px solid transparent;}
+    .overview-grid, .anatomy-wrap, .states-grid, .variants-grid, .a11y-grid, .dd-grid{grid-template-columns:1fr;}
+  }
+  @media (max-width:600px){
+    .topbar-inner, .shell, footer.page-footer{padding-left:18px; padding-right:18px;}
+  }
+</style>
+
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="crumb eyebrow">CAMPAIGN MANAGER DESIGN SYSTEM <span class="sep">/</span> NAVIGATION</div>
+    <div class="title-row">
+      <h1 class="page-title">Campaign Side Panel</h1>
+    </div>
+    <div class="meta-row">
+      <div class="meta-item"><span class="k">Category</span><span class="v">Navigation / Side panel</span></div>
+      <div class="meta-item"><span class="k">Used in</span><span class="v">Campaign Creation/Edit flow</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+  <nav class="sidenav">
+    <span class="navlabel">Usage</span>
+    <a href="#overview">Overview</a>
+    <a href="#anatomy">Anatomy</a>
+    <span class="navlabel">Specifications</span>
+    <a href="#states">Navigation States</a>
+    <a href="#variants">Variants</a>
+    <a href="#tokens">Design Tokens</a>
+    <a href="#dos">Do &amp; Do Not</a>
+    <span class="navlabel">Reference</span>
+    <a href="#a11y">Accessibility</a>
+    <a href="#code">Code</a>
+  </nav>
+
+  <main>
+
+    <section id="overview">
+      <div class="section-head">
+        <span class="section-num">01</span>
+        <h2 class="section-title">Overview</h2>
+      </div>
+      <div class="overview-copy" style="max-width:620px;">
+        <p>The <strong>Campaign Side Panel</strong> is used during campaign creation/edit state to navigate between <strong>Line Items</strong>. Each Line Item has the general navigation of <strong>Setup, Targeting, Delivery and Ads.</strong></p>
+      </div>
+      <div style="margin-top:32px;">
+          <div class="live-note"><span class="pulse"></span>Try it — click a row to select it, hover for quick actions.</div>
+          <div class="mock mock-panel live-panel" id="livePanel" style="width:320px;">
+          <div class="live-title-wrap">
+            <textarea class="live-title" id="liveTitleInput" rows="1" aria-label="Campaign name">This is a Campaign Name that can be edited</textarea>
+          </div>
+          <div class="live-current">
+            <div class="stack">
+              <span class="k">Current Line Item</span>
+              <span class="v" id="liveCurrentName">February – Boston Metro</span>
+            </div>
+            <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="mock-rows live-list">
+            <div class="mock-row live-row is-selected" tabindex="0">
+              <span class="live-label">February – Boston Metro</span>
+              <button class="live-kebab" type="button" aria-label="Line item actions" aria-haspopup="menu">•••</button>
+            </div>
+            <div class="mock-row live-row" tabindex="0">
+              <span class="live-label">Line Item Name 2</span>
+              <button class="live-kebab" type="button" aria-label="Line item actions" aria-haspopup="menu">•••</button>
+            </div>
+            <div class="mock-row live-row" tabindex="0">
+              <span class="live-label">Line Item Name 3</span>
+              <button class="live-kebab" type="button" aria-label="Line item actions" aria-haspopup="menu">•••</button>
+            </div>
+            <div class="mock-row live-row" tabindex="0">
+              <span class="live-label">Line Item Name 4</span>
+              <button class="live-kebab" type="button" aria-label="Line item actions" aria-haspopup="menu">•••</button>
+            </div>
+          </div>
+          <div class="live-add-wrap">
+            <div class="live-add" role="button" tabindex="0">+ New Line Item</div>
+          </div>
+          <div class="mock-accordion live-nav">
+            <div class="acc-head is-open"><span>SETUP</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Line Item Name</div>
+              <div class="acc-row">Dates</div>
+              <div class="acc-row">Budget</div>
+            </div>
+            <div class="acc-head"><span>TARGETING</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Location</div>
+              <div class="acc-row">Gender</div>
+              <div class="acc-row">Age Groups</div>
+              <div class="acc-row">Audiences</div>
+              <div class="acc-row">Retargeting Audiences</div>
+              <div class="acc-row">Platforms</div>
+              <div class="acc-row">Content Targeting</div>
+            </div>
+            <div class="acc-head"><span>DELIVERY</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Daypart</div>
+              <div class="acc-row">Pacing</div>
+              <div class="acc-row">Frequency Cap</div>
+            </div>
+            <div class="acc-head"><span>ADS</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Select Ads</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="anatomy">
+      <div class="section-head">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Anatomy</h2>
+        <p class="section-desc">Five parts, from the item switcher at the top to the active field deep in an open section.</p>
+      </div>
+      <div class="anatomy-wrap">
+        <div class="mock mock-panel live-panel" style="width:320px; border-radius:0 14px 14px 0;">
+          <div class="callout" style="top:14px; left:14px;">1</div>
+          <div class="live-title-wrap">
+            <div class="live-title" style="cursor:default;">This is a Campaign Name that can be edited</div>
+          </div>
+          <div class="live-current" style="cursor:default; position:relative;">
+            <div class="callout" style="top:8px; right:8px;">2</div>
+            <div class="stack">
+              <span class="k">Current Line Item</span>
+              <span class="v">February – Boston Metro</span>
+            </div>
+            <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="mock-rows live-list" style="position:relative;">
+            <div class="mock-row live-row is-selected" style="position:relative;">
+              <div class="callout" style="top:8px; right:8px;">3</div>
+              <span class="live-label">February – Boston Metro</span><span class="live-kebab" style="opacity:1;">•••</span>
+            </div>
+            <div class="mock-row live-row"><span class="live-label">Line Item 3</span></div>
+          </div>
+          <div class="live-add-wrap" style="display:flex; align-items:center; gap:10px;">
+            <div class="live-add">+ New Line Item</div>
+            <div class="callout" style="position:static;">4</div>
+          </div>
+          <div class="mock-accordion live-nav" style="position:relative;">
+            <div class="callout" style="top:6px; right:8px;">5</div>
+            <div class="acc-head is-open"><span>SETUP</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Line Item Name</div>
+              <div class="acc-row">Dates</div>
+              <div class="acc-row">Budget</div>
+            </div>
+            <div class="acc-head"><span>TARGETING</span></div>
+            <div class="acc-head"><span>DELIVERY</span></div>
+            <div class="acc-head"><span>ADS</span></div>
+          </div>
+        </div>
+
+        <div class="legend">
+          <div class="legend-item">
+            <span class="legend-num">1</span>
+            <div class="legend-copy">
+              <div class="t">Campaign name</div>
+              <div class="d">User can click into this field to directly edit campaign name.</div>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-num">2</span>
+            <div class="legend-copy">
+              <div class="t">Line Item Accordion</div>
+              <div class="d">Shows the currently selected line item, can be toggled to hide/show other line items.</div>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-num">3</span>
+            <div class="legend-copy">
+              <div class="t">Line Item Menu</div>
+              <div class="d">Hover menu includes options to edit, duplicate or delete line item.</div>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-num">4</span>
+            <div class="legend-copy">
+              <div class="t">Create New Line Item</div>
+              <div class="d">Adds new line item. Naming convention should be "Line Item #" with the next numerical value of the line item.</div>
+            </div>
+          </div>
+          <div class="legend-item">
+            <span class="legend-num">5</span>
+            <div class="legend-copy">
+              <div class="t">Navigation</div>
+              <div class="d">Setup, Targeting, Delivery, Ads — clicking a header opens it and closes whichever section was open.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="states">
+      <div class="section-head">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Navigation States</h2>
+        <p class="section-desc">Specifications for the Line Item & Navigation menus.</p>
+      </div>
+      <div class="section-head" style="margin-top:8px;">
+        <h2 class="section-title" style="font-size:19px;">Line Item Navigation</h2>
+      </div>
+      <div class="states-grid">
+
+        <div class="state-card">
+          <span class="tag">Default</span>
+          <div class="live-row" style="padding-right:16px;"><span class="live-label">February – Boston Metro</span></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Hover</span>
+          <div class="live-row" style="background:#D4DEE3;"><span class="live-label">February – Boston Metro</span><span class="live-kebab" style="opacity:1;">•••</span></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Selected</span>
+          <div class="live-row is-selected" style="padding-right:16px;"><span class="live-label">February – Boston Metro</span></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Selected + hover</span>
+          <div class="live-row is-selected" style="background:#B3CAF4;"><span class="live-label">February – Boston Metro</span><span class="live-kebab" style="opacity:1;">•••</span></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Menu hover</span>
+          <div class="live-row" style="background:#D4DEE3;"><span class="live-label">February – Boston Metro</span><span class="live-kebab" style="opacity:1; background:#B3CAF4;">•••</span></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Menu open</span>
+          <div class="live-row is-selected menu-open" style="margin-bottom:140px;">
+            <span class="live-label">February – Boston Metro</span><span class="live-kebab" style="opacity:1; background:#B3CAF4;">•••</span>
+            <div class="menu-pop live-menu">
+              <div class="mi live-mi">Edit Line Item</div>
+              <div class="mi live-mi">Duplicate Line Item</div>
+              <div class="mi live-mi danger">Delete Line Item</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="section-head" style="margin-top:48px;">
+        <h2 class="section-title" style="font-size:19px;">Navigation Menu</h2>
+      </div>
+      <div class="states-grid">
+
+        <div class="state-card">
+          <span class="tag">Default</span>
+          <div class="live-nav"><div class="acc-row">Dates</div></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Default hover</span>
+          <div class="live-nav"><div class="acc-row" style="background:#DDE9FF;">Dates</div></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Selected</span>
+          <div class="live-nav"><div class="acc-row is-active">Line Item Name</div></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Selected hover</span>
+          <div class="live-nav"><div class="acc-row is-active" style="background:#DDE9FF;">Line Item Name</div></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Header default</span>
+          <div class="live-nav"><div class="acc-head is-open"><span>SETUP</span></div></div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Header hover</span>
+          <div class="live-nav"><div class="acc-head is-open" style="background:#DDE9FF;"><span>SETUP</span></div></div>
+        </div>
+
+      </div>
+
+      <div class="section-head" style="margin-top:48px;">
+        <h2 class="section-title" style="font-size:19px;">Campaign Title</h2>
+      </div>
+      <div class="states-grid">
+
+        <div class="state-card">
+          <span class="tag">Default</span>
+          <div class="live-title-wrap" style="border-bottom:none; padding:0;">
+            <div class="live-title" style="cursor:default; font-size:16px; padding:8px 6px;">This is a Campaign Name that can be edited</div>
+          </div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Hover</span>
+          <div class="live-title-wrap" style="border-bottom:none; padding:0;">
+            <div class="live-title" style="cursor:default; font-size:16px; padding:8px 6px; border-color:var(--line-strong);">This is a Campaign Name that can be edited</div>
+          </div>
+        </div>
+
+        <div class="state-card">
+          <span class="tag">Selected</span>
+          <div class="live-title-wrap" style="border-bottom:none; padding:0;">
+            <div class="live-title" style="cursor:text; font-size:16px; padding:8px 6px; border-color:var(--accent); background:var(--surface);">This is a Campaign Name that can be edited<span style="display:inline-block; width:1px; height:1em; background:var(--accent); vertical-align:text-bottom; margin-left:1px;"></span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="variants">
+      <div class="section-head">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Variants</h2>
+        <p class="section-desc">Examples of long line item &amp; campaign names.</p>
+      </div>
+      <div class="variants-grid">
+
+        <div class="variant-card live-panel" style="border-radius:0 14px 14px 0;">
+          <div class="vlabel">Line Item Name Wrap</div>
+          <div class="live-title-wrap">
+            <div class="live-title" style="cursor:default; font-size:18px;">This is a Campaign Name that can be edited</div>
+          </div>
+          <div class="live-current" style="cursor:default;">
+            <div class="stack">
+              <span class="k">Current Line Item</span>
+              <span class="v">February – Boston Metro</span>
+            </div>
+            <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="mock-rows live-list">
+            <div class="mock-row live-row is-selected"><span class="live-label">February – Boston Metro</span><span class="live-kebab" style="opacity:1;">•••</span></div>
+            <div class="mock-row live-row"><span class="live-label">This is a line item name that can be 140 characters max and wrap as needed</span></div>
+          </div>
+          <div class="live-add-wrap">
+            <div class="live-add">+ New Line Item</div>
+          </div>
+          <div class="mock-accordion live-nav">
+            <div class="acc-head is-open"><span>SETUP</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Line Item Name</div>
+              <div class="acc-row">Dates</div>
+              <div class="acc-row">Budget</div>
+            </div>
+            <div class="acc-head"><span>TARGETING</span></div>
+            <div class="acc-head"><span>DELIVERY</span></div>
+            <div class="acc-head"><span>ADS</span></div>
+          </div>
+        </div>
+
+        <div class="variant-card live-panel" style="border-radius:0 14px 14px 0;">
+          <div class="vlabel">Campaign Name Wrap</div>
+          <div class="live-title-wrap">
+            <div class="live-title" style="cursor:default; font-size:18px;">Campaign name that can wrap over 2 or 3 lines depending on length, or maybe even more — it depends</div>
+          </div>
+          <div class="live-current" style="cursor:default;">
+            <div class="stack">
+              <span class="k">Current Line Item</span>
+              <span class="v">Line Item Name 1</span>
+            </div>
+            <svg class="chev" width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="mock-rows live-list">
+            <div class="mock-row live-row is-selected"><span class="live-label">Line Item Name 1</span><span class="live-kebab" style="opacity:1;">•••</span></div>
+          </div>
+          <div class="live-add-wrap">
+            <div class="live-add">+ New Line Item</div>
+          </div>
+          <div class="mock-accordion live-nav">
+            <div class="acc-head is-open"><span>SETUP</span></div>
+            <div class="acc-body">
+              <div class="acc-row is-active">Line Item Name</div>
+              <div class="acc-row">Dates</div>
+              <div class="acc-row">Budget</div>
+            </div>
+            <div class="acc-head"><span>TARGETING</span></div>
+            <div class="acc-head"><span>DELIVERY</span></div>
+            <div class="acc-head"><span>ADS</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="tokens">
+      <div class="section-head">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Design Tokens</h2>
+        <p class="section-desc">Type, color and corner-radius values as implemented on the live panel today. Values built from a shared token (var(--accent), var(--danger), var(--line)) are noted; hex values are literal overrides not yet promoted to a token.</p>
+      </div>
+
+      <div class="section-head" style="margin-top:8px;">
+        <h2 class="section-title" style="font-size:19px;">Color</h2>
+      </div>
+      <table class="token-table">
+        <thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td>Row — default</td><td><div class="swatch-row"><span class="swatch" style="background:#F7F9FA;"></span><span class="token-val">#F7F9FA</span></div></td><td>Unselected line item row background</td></tr>
+          <tr><td>Row — hover</td><td><div class="swatch-row"><span class="swatch" style="background:#D4DEE3;"></span><span class="token-val">#D4DEE3</span></div></td><td>Hover on an unselected row</td></tr>
+          <tr><td>Row — selected / nav hover</td><td><div class="swatch-row"><span class="swatch" style="background:#DDE9FF;"></span><span class="token-val">#DDE9FF</span></div></td><td>Selected row background; also accordion row &amp; header hover fill</td></tr>
+          <tr><td>Row — selected + hover / kebab hover</td><td><div class="swatch-row"><span class="swatch" style="background:#B3CAF4;"></span><span class="token-val">#B3CAF4</span></div></td><td>Hover on a selected row; kebab trigger hover background</td></tr>
+          <tr><td>Accent</td><td><div class="swatch-row"><span class="swatch" style="background:var(--accent);"></span><span class="token-val">var(--accent)</span></div></td><td>Kebab icon, quick-actions menu text, active accordion left bar</td></tr>
+          <tr><td>Add button</td><td><div class="swatch-row"><span class="swatch" style="background:#1950B5;"></span><span class="token-val">#1950B5</span></div></td><td>"+ New Line Item" fill &amp; border</td></tr>
+          <tr><td>Add button — hover</td><td><div class="swatch-row"><span class="swatch" style="background:#153F8F;"></span><span class="token-val">#153F8F</span></div></td><td>Hover fill &amp; border for the New Line Item button</td></tr>
+          <tr><td>Danger</td><td><div class="swatch-row"><span class="swatch" style="background:var(--danger);"></span><span class="token-val">var(--danger)</span></div></td><td>Delete Line Item text; "Do Not" heading</td></tr>
+          <tr><td>Success</td><td><div class="swatch-row"><span class="swatch" style="background:#1D9A5B;"></span><span class="token-val">#1D9A5B</span></div></td><td>"Do" heading</td></tr>
+          <tr><td>Ink</td><td><div class="swatch-row"><span class="swatch" style="background:var(--ink);"></span><span class="token-val">var(--ink)</span></div></td><td>Campaign name &amp; row label text</td></tr>
+          <tr><td>Ink — secondary</td><td><div class="swatch-row"><span class="swatch" style="background:var(--ink-2);"></span><span class="token-val">var(--ink-2)</span></div></td><td>"Current Line Item" label</td></tr>
+          <tr><td>Line</td><td><div class="swatch-row"><span class="swatch" style="background:var(--line);"></span><span class="token-val">var(--line)</span></div></td><td>Dividers between title, current-item and row list</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-head" style="margin-top:48px;">
+        <h2 class="section-title" style="font-size:19px;">Typography</h2>
+      </div>
+      <div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:21px; font-weight:700;">Campaign name</div><div class="type-meta">Open Sans · 21px · 700 · 1.32</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:15px; font-weight:600;">Current line item value</div><div class="type-meta">Open Sans · 15px · 600</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:12.5px; color:var(--ink-2);">Current line item label</div><div class="type-meta">Open Sans · 12.5px · 400</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:14.5px;">Row label</div><div class="type-meta">Open Sans · 14.5px · 400</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:13.5px; font-weight:600;">New Line Item button</div><div class="type-meta">Open Sans · 13.5px · 600</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:13px; font-weight:600;">Quick-actions menu item</div><div class="type-meta">Open Sans · 13px · 600</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:12.5px; font-weight:600; letter-spacing:.04em; text-transform:uppercase;">Accordion header</div><div class="type-meta">Open Sans · 12.5px · 600 · .04em · uppercase</div></div>
+        <div class="type-row"><div class="type-sample" style="font-family:'Open Sans',sans-serif; font-size:13px;">Accordion row</div><div class="type-meta">Open Sans · 13px · 400</div></div>
+      </div>
+
+      <div class="section-head" style="margin-top:48px;">
+        <h2 class="section-title" style="font-size:19px;">Corner Radius</h2>
+      </div>
+      <table class="token-table">
+        <thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td>Panel</td><td><span class="token-val">0 8px 8px 0</span></td><td>Panel corners — square left edge, rounded right edge</td></tr>
+          <tr><td>Field / button</td><td><span class="token-val">8px</span></td><td>Campaign name field, kebab trigger, New Line Item button</td></tr>
+          <tr><td>Menu</td><td><span class="token-val">10px</span></td><td>Quick-actions menu popover</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="dos">
+      <div class="section-head">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Do &amp; Do Not</h2>
+      </div>
+      <div class="dd-grid">
+        <div class="dd-col do">
+          <div class="dd-heading do" style="color:#1D9A5B;"><i class="fa-regular fa-circle-check" style="color:#1D9A5B;"></i> Do</div>
+          <div class="dd-item">Let the current-item name <strong>wrap</strong> to a second or third line — it's a real, editable textarea, so give it the height it asks for.</div>
+          <div class="dd-item">Reserve the left <strong>accent bar</strong> for nav-style selection (accordion rows, section headers). List rows signal selection with background fill alone.</div>
+          <div class="dd-item">Confirm before <strong>Delete Line Item</strong> executes, and keep it red. Edit and Duplicate share the accent blue; Delete never does.</div>
+          <div class="dd-item">Let one accordion section close when another opens — it keeps the panel short instead of stacking every field on screen at once.</div>
+        </div>
+        <div class="dd-col dont">
+          <div class="dd-heading dont" style="color:#C4433D;"><i class="fa-regular fa-circle-xmark" style="color:#C4433D;"></i> Do Not</div>
+          <div class="dd-item">Don't truncate the name with an ellipsis — that hides the date range or market that made someone open the panel.</div>
+          <div class="dd-item">Don't use the accent color for anything destructive. Delete takes the danger token, full stop.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="a11y">
+      <div class="section-head">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Accessibility</h2>
+        <p class="section-desc">Four independent interactive parts — the list, the quick-actions menu, the accordion, and the editable name field. None of them borrow another's keys.</p>
+      </div>
+      <div class="a11y-grid">
+        <div class="a11y-card">
+          <div class="h"><span class="ico">R</span>Roles</div>
+          <ul>
+            <li>Item list: <code>role="listbox"</code>; each row is <code>role="option"</code> with <code>aria-selected</code></li>
+            <li>Kebab trigger: <code>&lt;button&gt;</code> with <code>aria-haspopup="menu"</code>, <code>aria-expanded</code></li>
+            <li>Pop-over: <code>role="menu"</code>, items are <code>role="menuitem"</code></li>
+            <li>Section header: <code>role="button"</code>, <code>aria-expanded</code> — one section open at a time</li>
+            <li>Campaign name: a real <code>&lt;textarea&gt;</code> with <code>aria-label="Campaign name"</code>, not a styled div</li>
+          </ul>
+        </div>
+        <div class="a11y-card">
+          <div class="h"><span class="ico">K</span>Keyboard</div>
+          <ul>
+            <li><code>↑ / ↓</code> moves focus between rows</li>
+            <li><code>Enter</code> / <code>Space</code> selects the focused row, or toggles a section header / the Current Line Item row</li>
+            <li><code>Enter</code> on the trigger opens the menu, focus moves to Edit</li>
+            <li>In the name field, <code>Enter</code> commits and blurs instead of inserting a line break; <code>Esc</code> reverts focus</li>
+            <li><code>Esc</code> closes an open quick-actions menu, focus returns to its trigger</li>
+          </ul>
+        </div>
+        <div class="a11y-card">
+          <div class="h"><span class="ico">F</span>Focus</div>
+          <ul>
+            <li>Every row, section header, and the kebab trigger show a 2px accent ring, offset 2px</li>
+            <li>Opening the menu never leaves the row's own focus ring visible underneath</li>
+            <li>Deleting a row returns focus to the row that took its place, or the panel head if the list is now empty</li>
+          </ul>
+        </div>
+        <div class="a11y-card">
+          <div class="h"><span class="ico">S</span>Screen reader</div>
+          <ul>
+            <li>Row announces as "Option, February dash Boston Metro, selected"</li>
+            <li>Trigger announces as "Line item actions, button, menu collapsed / expanded"</li>
+            <li>Section header announces as "Targeting, button, expanded"</li>
+            <li>Delete requires a confirmation dialog — it is never announced as complete on its own menu item</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="code">
+      <div class="section-head">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Code</h2>
+        <p class="section-desc">Row markup and the state classes that drive it.</p>
+      </div>
+      <div class="code-block">
+<pre><span class="cm">&lt;!-- one row in the list — no border-left, color-fill only --&gt;</span>
+&lt;li class="li-row li-row--selected"
+    role="option"
+    aria-selected="true"
+    tabindex="0"&gt;
+  &lt;span class="li-row__label"&gt;February – Boston Metro&lt;/span&gt;
+
+  <span class="cm">&lt;!-- opacity:0 until the row is hovered/focused --&gt;</span>
+  &lt;button class="li-row__menu-trigger"
+          aria-haspopup="menu"
+          aria-expanded="false"
+          aria-label="Line item actions"&gt;•••&lt;/button&gt;
+
+  <span class="cm">&lt;!-- rendered on open, role="menu" --&gt;</span>
+  &lt;ul class="li-row__menu" role="menu" hidden&gt;
+    &lt;li role="menuitem"&gt;Edit Line Item&lt;/li&gt;
+    &lt;li role="menuitem"&gt;Duplicate Line Item&lt;/li&gt;
+    &lt;li role="menuitem" class="is-danger"&gt;Delete Line Item&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/li&gt;
+
+<span class="cm">/* rows: background-only states, no border, no weight change */</span>
+.li-row                        { background: #F7F9FA; }
+.li-row:hover:not(.li-row--selected) { background: #D4DEE3; }
+.li-row--selected              { background: #DDE9FF; }
+.li-row--selected:hover,
+.li-row--selected.is-open      { background: #B3CAF4; }
+
+<span class="cm">/* kebab: hidden until interaction, own hover chip */</span>
+.li-row__menu-trigger           { opacity: 0; color: var(--accent); }
+.li-row:hover .li-row__menu-trigger,
+.li-row:focus-within .li-row__menu-trigger { opacity: 1; }
+.li-row__menu-trigger:hover     { background: #B3CAF4; }
+
+<span class="cm">/* accordion sub-row: this is where the accent bar still lives */</span>
+.acc-row.is-active              { border-left: 3px solid var(--accent); font-weight: 600; }
+.acc-row:hover,
+.acc-row.is-active:hover        { background: #DDE9FF; }
+
+<span class="cm">/* primary action: filled, not an outline pill */</span>
+.li-add {
+  background: var(--baymaxblue, #1950B5);
+  border: 1.5px solid var(--baymaxblue, #1950B5);
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+.li-add:hover { background: #153F8F; border-color: #153F8F; }
+</pre>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<footer class="page-footer">
+  <span>Line Item Panel · Campaign Manager Design System</span>
+  <span>Documented after the pattern-consolidation pass</span>
+</footer>
+
+<script>
+(function(){
+  var panel = document.getElementById('livePanel');
+  if(!panel) return;
+  var list = panel.querySelector('.live-list');
+
+  function rows(){ return Array.prototype.slice.call(list.querySelectorAll('.live-row')); }
+
+  function closeAllMenus(except){
+    rows().forEach(function(r){
+      if(r === except) return;
+      r.classList.remove('menu-open');
+      var m = r.querySelector('.menu-pop');
+      if(m) m.remove();
+    });
+  }
+
+  function selectRow(row){
+    rows().forEach(function(r){ r.classList.remove('is-selected'); });
+    row.classList.add('is-selected');
+    var label = row.querySelector('.live-label').textContent.trim();
+    var head = panel.querySelector('#liveCurrentName');
+    if(head) head.textContent = label;
+  }
+
+  function menuHTML(){
+    return '<div class="mi live-mi" data-action="edit">Edit Line Item</div>'
+         + '<div class="mi live-mi" data-action="dup">Duplicate Line Item</div>'
+         + '<div class="mi live-mi danger" data-action="del">Delete Line Item</div>';
+  }
+  function confirmHTML(){
+    return '<div class="mi-confirm-copy">Delete this line item?</div>'
+         + '<div class="mi live-mi danger" data-action="confirm-del">Yes, delete</div>'
+         + '<div class="mi live-mi" data-action="cancel">Cancel</div>';
+  }
+
+  function toggleMenu(row){
+    var isOpen = row.classList.contains('menu-open');
+    closeAllMenus(row);
+    if(isOpen){
+      row.classList.remove('menu-open');
+      var m = row.querySelector('.menu-pop');
+      if(m) m.remove();
+      return;
+    }
+    row.classList.add('menu-open');
+    var menu = document.createElement('div');
+    menu.className = 'menu-pop live-menu';
+    menu.setAttribute('role','menu');
+    menu.innerHTML = menuHTML();
+    row.appendChild(menu);
+  }
+
+  function duplicateRow(row){
+    var clone = row.cloneNode(true);
+    var existingMenu = clone.querySelector('.menu-pop');
+    if(existingMenu) existingMenu.remove();
+    clone.classList.remove('is-selected','menu-open');
+    var label = clone.querySelector('.live-label');
+    label.textContent = label.textContent.trim() + ' (copy)';
+    row.parentNode.insertBefore(clone, row.nextSibling);
+  }
+
+  function deleteRow(row){
+    if(rows().length <= 1) return;
+    var all = rows();
+    var idx = all.indexOf(row);
+    var wasSelected = row.classList.contains('is-selected');
+    row.remove();
+    if(wasSelected){
+      var remaining = rows();
+      var next = remaining[Math.min(idx, remaining.length - 1)];
+      if(next) selectRow(next);
+    }
+  }
+
+  panel.addEventListener('click', function(e){
+    var kebab = e.target.closest('.live-kebab');
+    var menuItem = e.target.closest('.mi');
+    var addBtn = e.target.closest('.live-add');
+    var row = e.target.closest('.live-row');
+
+    if(kebab){
+      e.stopPropagation();
+      toggleMenu(kebab.closest('.live-row'));
+      return;
+    }
+    if(menuItem){
+      e.stopPropagation();
+      var action = menuItem.getAttribute('data-action');
+      var r = menuItem.closest('.live-row');
+      if(action === 'edit'){ selectRow(r); closeAllMenus(); }
+      else if(action === 'dup'){ duplicateRow(r); closeAllMenus(); }
+      else if(action === 'del'){
+        var m = r.querySelector('.menu-pop');
+        if(m) m.innerHTML = confirmHTML();
+      }
+      else if(action === 'confirm-del'){ deleteRow(r); }
+      else if(action === 'cancel'){ closeAllMenus(); }
+      return;
+    }
+    if(addBtn){
+      var base = rows()[0];
+      var clone = base.cloneNode(true);
+      var existingMenu = clone.querySelector('.menu-pop');
+      if(existingMenu) existingMenu.remove();
+      clone.classList.remove('is-selected','menu-open');
+      clone.querySelector('.live-label').textContent = 'Line Item Name ' + (rows().length + 1);
+      list.appendChild(clone);
+      return;
+    }
+    if(row){
+      selectRow(row);
+      return;
+    }
+  });
+
+  panel.addEventListener('keydown', function(e){
+    if(e.key !== 'Enter' && e.key !== ' ') return;
+    var row = e.target.closest('.live-row');
+    var addBtn = e.target.closest('.live-add');
+    if(row && e.target === row){ e.preventDefault(); selectRow(row); }
+    if(addBtn){ e.preventDefault(); addBtn.click(); }
+  });
+
+  document.addEventListener('click', function(e){
+    if(!panel.contains(e.target)) closeAllMenus();
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeAllMenus();
+  });
+
+  var navHeads = Array.prototype.slice.call(panel.querySelectorAll('.live-nav .acc-head'));
+  function setBodyOpen(head, open){
+    var body = head.nextElementSibling;
+    if(body && body.classList.contains('acc-body')){
+      body.style.display = open ? '' : 'none';
+    }
+  }
+  navHeads.forEach(function(head){
+    head.setAttribute('tabindex','0');
+    head.setAttribute('role','button');
+    head.setAttribute('aria-expanded', head.classList.contains('is-open') ? 'true' : 'false');
+    head.addEventListener('click', function(){
+      var wasOpen = head.classList.contains('is-open');
+      navHeads.forEach(function(h){
+        h.classList.remove('is-open');
+        h.setAttribute('aria-expanded','false');
+        setBodyOpen(h, false);
+      });
+      if(!wasOpen){
+        head.classList.add('is-open');
+        head.setAttribute('aria-expanded','true');
+        setBodyOpen(head, true);
+      }
+    });
+    head.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); head.click(); }
+    });
+    setBodyOpen(head, head.classList.contains('is-open'));
+  });
+
+  var currentRow = panel.querySelector('.live-current');
+  if(currentRow){
+    currentRow.setAttribute('tabindex','0');
+    currentRow.setAttribute('role','button');
+    currentRow.setAttribute('aria-expanded','true');
+    currentRow.addEventListener('click', function(){
+      var collapsed = currentRow.classList.toggle('is-collapsed');
+      list.style.display = collapsed ? 'none' : '';
+      currentRow.setAttribute('aria-expanded', collapsed ? 'false' : 'true');
+    });
+    currentRow.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); currentRow.click(); }
+    });
+  }
+
+  var titleInput = panel.querySelector('#liveTitleInput');
+  if(titleInput){
+    var autoResize = function(){
+      titleInput.style.height = 'auto';
+      titleInput.style.height = titleInput.scrollHeight + 'px';
+    };
+    autoResize();
+    titleInput.addEventListener('input', autoResize);
+    titleInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); titleInput.blur(); }
+      if(e.key === 'Escape'){ titleInput.blur(); }
+    });
+    titleInput.addEventListener('focus', function(){ titleInput.select(); });
+    window.addEventListener('resize', autoResize);
+  }
+})();
+
+(function(){
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('nav.sidenav a[href^="#"]'));
+  var sections = navLinks.map(function(a){
+    return document.getElementById(a.getAttribute('href').slice(1));
+  }).filter(Boolean);
+  if(!sections.length) return;
+
+  function setActive(id){
+    navLinks.forEach(function(a){
+      a.classList.toggle('is-active', a.getAttribute('href') === '#' + id);
+    });
+  }
+
+  var observer = new IntersectionObserver(function(entries){
+    var visible = entries.filter(function(e){ return e.isIntersecting; });
+    if(visible.length){
+      visible.sort(function(a,b){ return a.boundingClientRect.top - b.boundingClientRect.top; });
+      setActive(visible[0].target.id);
+    }
+  }, { rootMargin: '-15% 0px -70% 0px', threshold: 0 });
+
+  sections.forEach(function(s){ observer.observe(s); });
+  setActive(sections[0].id);
+})();
+</script>

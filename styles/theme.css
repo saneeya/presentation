@@ -51,7 +51,7 @@ body,
 }
 
 .layout-wide-right {
-  grid-template-columns: 1fr 1.5fr !important;
+  grid-template-columns: 0.7fr 1.8fr !important;
 }
 
 #slide-content .slidev-page-1 .title-veil {

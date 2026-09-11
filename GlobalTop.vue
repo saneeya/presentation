@@ -8,16 +8,19 @@ const navHidden = computed(() => currentSlideRoute.value?.meta?.slide?.frontmatt
 
 /** Section slide ranges (inclusive) for each case study */
 const SECTIONS: readonly { label: string; start: number; end: number }[] = [
+  { label: 'About', start: 3, end: 5 },
+  { label: 'Process', start: 6, end: 6 },
   // Case study: Campaign Creation Flow
-  { label: 'Background', start: 20, end: 22 },
-  { label: 'Problem',    start: 23, end: 28 },
-  { label: 'Strategy',   start: 29, end: 29 },
-  { label: 'Designs',    start: 30, end: 35 },
-  { label: 'UI Consolidation', start: 36, end: 43 },
-  { label: 'Final',      start: 44, end: 44 },
-  { label: 'Cross-team Collaboration', start: 45, end: 49 },
-  { label: 'User Testing', start: 50, end: 55 },
-  { label: 'Takeaways',  start: 56, end: 57 },
+  { label: 'Background', start: 9, end: 10 },
+  { label: 'Problem',    start: 11, end: 13 },
+  { label: 'Strategy',   start: 14, end: 16 },
+  { label: 'Research',   start: 17, end: 18 },
+  { label: 'Designs',    start: 19, end: 22 },
+  { label: 'Cross-collaboration', start: 23, end: 25 },
+  { label: 'UI Consolidation', start: 26, end: 32 },
+  { label: 'User Testing', start: 33, end: 39 },
+  { label: 'Final',      start: 40, end: 41 },
+  { label: 'Takeaways',  start: 42, end: 43 },
 ]
 
 const section = computed(() => {
@@ -68,8 +71,8 @@ const progressPct = computed(() =>
   display: flex;
   align-items: baseline;
   justify-content: flex-end;
-  gap: 0.3rem;
-  font-size: 0.72rem;
+  gap: 0.25rem;
+  font-size: 0.6rem;
   letter-spacing: 0.02em;
   white-space: nowrap;
 }
@@ -91,9 +94,9 @@ const progressPct = computed(() =>
 }
 
 .gt-bar {
-  margin-top: 0.32rem;
+  margin-top: 0.28rem;
   margin-left: auto;
-  width: 7.5rem;
+  width: 5rem;
   height: 2px;
   border-radius: 2px;
   background: rgb(58 70 82 / 0.12);

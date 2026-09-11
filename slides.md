@@ -64,6 +64,17 @@ transition: slide-left
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">03</span>
     <span>Redesigning for Agency Scale</span>
   </Link>
+  <div class="grid grid-cols-3 gap-x-4 gap-y-1 max-w-lg pl-10 -mt-2 anim-fade-up anim-d3">
+    <span class="text-slate-500 text-[0.9rem]">Background</span>
+    <span class="text-slate-500 text-[0.9rem]">Research</span>
+    <span class="text-slate-500 text-[0.9rem]">UI Consolidation</span>
+    <span class="text-slate-500 text-[0.9rem]">Problem</span>
+    <span class="text-slate-500 text-[0.9rem]">Designs</span>
+    <span class="text-slate-500 text-[0.9rem]">User Testing</span>
+    <span class="text-slate-500 text-[0.9rem]">Strategy</span>
+    <span class="text-slate-500 text-[0.9rem]">Cross-collaboration</span>
+    <span class="text-slate-500 text-[0.9rem]">Final</span>
+  </div>
   <div class="flex items-center gap-4 text-slate-700 text-[1.1rem] font-medium anim-fade-up anim-d4">
     <span class="text-[#0D9488] font-semibold text-[1rem] w-6">04</span>
     <span>Q & A</span>
@@ -88,7 +99,7 @@ layoutClass: h-full layout-wide-right
 
 ::right::
 
-<div class="flex h-full min-h-0 w-full flex-col pl-4">
+<div class="flex h-full min-h-0 w-full flex-col pl-4" style="padding-right: 3.5rem; transform: scale(0.88); transform-origin: top left;">
 <PinterestMasonry placement="title" :hide-left-mid="true" :hide-left-bottom="true" left-extra-top-src="./slides/assets/About4.jpg" left-extra-top-position="30% center" :left-extra-top-grow="1.4" :title-top-grow="2.2" :title-bottom-grow="1.0" left-top-small-src="./slides/assets/About2.jpg" left-top-small-position="center 40%" :left-top-small-scale="1.3" right-tall-src="./slides/assets/About1.jpg" right-bottom-src="./slides/assets/About3.jpg" right-bottom-position="20% center" />
 </div>
 
@@ -128,9 +139,29 @@ transition: slide-left
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup2_repeat_pre" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Work in Ad Tech</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Working in Ads</h2>
 
-<AdManagerStack :images="['./slides/assets/AdExp.png', './slides/assets/Rate Cards - Info Panel.png', './slides/assets/crdashboard.png', './slides/assets/MCfilterexample2.mp4']" :compact="true" :viewport-height="500" layer-max-width="72rem" pull-down="-2rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" />
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Established design role for brand new team</span>
+    </div>
+    <CarouselSyncBullet :show-at-click="1">New self-serve tool that removed engineering dependency</CarouselSyncBullet>
+    <CarouselSyncBullet :show-at-click="2">Will reduce time to find relevant information</CarouselSyncBullet>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/AdExp.png', './slides/assets/Rate Cards - Info Panel.png', './slides/assets/MCfilterexample2.mp4']" :compact="true" :viewport-height="560" layer-max-width="82rem" layer-width-pct="90%" pull-down="-4rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" :image-scales="[1, 1, 1.15]" />
+  </div>
+</div>
+
+<!--
+I've worked on many projects during 5 years at Disney, one example is this ad formats template, this was an early design and the team was newly formed, so I helped establish early design foundations such as patterns, research and documentation, this helped when we were able to hire a full time designer to take over this work [CLICK]
+
+I made this internal tool in a few months. Our pricing team had to make a JIRA ticket everytime they wanted a CPM change for ad manager, it could several weeks. This self-serve tool let them manage rate cards such as how much the base CPM would be, how much extra targeting would cost and what specific advertisers it would apply to giving better pricing option to advertisers we wanted to entice or retain. CPM changes went from weeks to literal minutes [CLICK]
+
+One of the newest things I've worked on that is in development right now, is redoing filters for our internal ad trafficking tool. We have many users who use this tool and they are all looking for different information and the current filters were in just one long dropdown. So I redid the whole layout and added AND/OR boolean targeting they wanted. Was my first AI design [SHOW PROTO]
+-->
 
 ---
 layout: default
@@ -144,27 +175,33 @@ transition: slide-left
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
       <span class="text-slate-900 font-semibold text-[1rem]">Whole redesign</span>
     </div>
+    <div class="flex flex-col gap-2 pl-8 -mt-1 anim-fade-up anim-d2">
+      <span class="text-slate-600 text-[0.95rem]">Cabinets</span>
+      <span class="text-slate-600 text-[0.95rem]">Counters</span>
+      <span class="text-slate-600 text-[0.95rem]">Sink</span>
+      <span class="text-slate-600 text-[0.95rem]">Dishwasher</span>
+      <span class="text-slate-600 text-[0.95rem]">Cut-out</span>
+    </div>
   </div>
   <div class="flex-1 min-w-0 mt-2">
-    <AdManagerStack :images="['./slides/assets/olderkitchen.jpg', './slides/assets/oldkitchenremodel.png', './slides/assets/oldkitchencabinets.jpg']" :compact="true" :viewport-height="460" layer-max-width="60rem" layer-width-pct="90%" pull-down="-3rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" />
+    <AdManagerStack :images="['./slides/assets/oldkitchen.jpg', './slides/assets/Newkitchen.jpeg', './slides/assets/Newkitchen2.jpeg']" :compact="true" :viewport-height="500" layer-max-width="68rem" layer-width-pct="95%" pull-down="-3rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" />
   </div>
 </div>
 
 <!--
-Let me describe my design process by talking a kitchen I used to have. note, these are not actual photos of my space
+Let me describe my design process by talking a kitchen I used to have. 
 
-My old place had this small kitchen, a little smaller than this, and it was very dated, cabinets were painted salmon, tile countertops, old sink and broken dishwasher. It had this cutout in one wall which didn't serve a purpose other than to I guess make the space look bigger
+My old place had this small kitchen, a little smaller than this, and it was very dated, cabinets were painted salmon, hard, to open, tile countertops, old sink and broken dishwasher. It had this cutout in one wall which didn't serve a purpose other than to I guess make the space look bigger
 
 It was fine, but needed a lot of work, I repainted the cabinets, added pull handles, new counter, added a bar counter to the cutout to give it some function, bought new sink and dishwasher [CLICK]
 
-The new look was great, but it was still a small space and I had a roommate [CLICK]
-
-So we had to work out which cabinet space belonged to who and what stuff was shared. I bought a portable island or bar cart just so I could easily grab items I used a lot such as frying pans or the air fryer. The old kitchen was fine but then
+The new look was great, but it was still a small space so I bought this bar cart for additional counter space and rearranged my dishes/cutting boards, pans etc depending on how often I used them. Also I am not tall [CLICK]
 -->
 
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <div class="flex gap-6 mt-6 items-start w-full">
@@ -193,6 +230,7 @@ I'm still working on what I call "content layout" as in getting rid of things an
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup4" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -225,6 +263,7 @@ Its usually used to setup campaigns from the direct side and troubleshooting if 
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup4_ad_dup" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -250,6 +289,7 @@ so, within a campaign, there can be multiple line items and there can be multipl
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup4_dup" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -280,6 +320,7 @@ and the tabs act as a filters, for example here, I can select some campaigns and
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup4_dup_dup" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -308,6 +349,7 @@ Same thing with line items, I can select line items in the tab and it will show 
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup4_dup_dup_dup" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -336,6 +378,7 @@ and if I select ads, it will just show the ads
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup5" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -372,6 +415,7 @@ SHOW PROTOTYPE HERE
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup5_feedback" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -398,6 +442,7 @@ they wanted combo of option 1 and 2, they basically wanted the ability to see se
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup5_feedback_technical" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -441,6 +486,7 @@ I didn't want to change the basic function of filters so I told my team and user
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup5_feedback_repeat" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -474,6 +520,7 @@ So that was an example of my "small kitchen" update, let me get to my main case 
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s11_copy_agenda_dup5_feedback_repeat_dup" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
@@ -525,7 +572,7 @@ transition: slide-left
 </div>
 
 <!--
-This is redesign of the campaign creation flow I worked on for Disney Campaign Manager
+Let me describe some "big kitchen remodel" I did which was the redesign of the campaign creation flow I worked on for Disney Campaign Manager
 -->
 
 ---
@@ -629,6 +676,7 @@ It was was a page by page flow where you can set up Campaign name, dates, budget
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s23_copy_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
@@ -661,6 +709,7 @@ Business wanted to transfer the platform over to our side because it was growing
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s8" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
@@ -693,15 +742,22 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Agency pivot</h2>
 
-<div class="grid grid-cols-2 gap-16 max-w-2xl mx-auto mt-12">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mx-auto mt-12">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-chart-line self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">$10M ARR but business wanted to scale faster</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M64 128C64 92.7 92.7 64 128 64L384 64C419.3 64 448 92.7 448 128L448 249.3C401.1 268.3 368 314.3 368 368C368 395.7 376.8 421.4 391.8 442.4C340.3 463.4 304 514 304 573.1C304 574.1 304 575 304 576L128 576C92.7 576 64 547.3 64 512L64 128zM208 464L208 528L261.4 528C268.6 498.6 282.7 471.9 301.8 449.7C295.7 430.2 277.5 416 256 416C229.5 416 208 437.5 208 464zM339 288.3C338 288.1 337 288 336 288L304 288C295.2 288 288 295.2 288 304L288 336C288 344.8 295.2 352 304 352L320.7 352C322.8 329.2 329.1 307.7 339 288.3zM176 160C167.2 160 160 167.2 160 176L160 208C160 216.8 167.2 224 176 224L208 224C216.8 224 224 216.8 224 208L224 176C224 167.2 216.8 160 208 160L176 160zM288 176L288 208C288 216.8 295.2 224 304 224L336 224C344.8 224 352 216.8 352 208L352 176C352 167.2 344.8 160 336 160L304 160C295.2 160 288 167.2 288 176zM176 288C167.2 288 160 295.2 160 304L160 336C160 344.8 167.2 352 176 352L208 352C216.8 352 224 344.8 224 336L224 304C224 295.2 216.8 288 208 288L176 288zM416 368C416 323.8 451.8 288 496 288C540.2 288 576 323.8 576 368C576 412.2 540.2 448 496 448C451.8 448 416 412.2 416 368zM352 576C352 523 395 480 448 480L544 480C597 480 640 523 640 576C640 593.7 625.7 608 608 608L384 608C366.3 608 352 593.7 352 576z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Target users changed from SMBs to agencies &amp; larger advertisers</span>
   </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d4">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <i class="fa-solid fa-cart-shopping self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
@@ -711,7 +767,9 @@ transition: slide-left
 </div>
 
 <!--
-Because of that we pivoted away from SMBs as the core user group to agencies and enterprise advertisers because they had those larger ad spends and did the bulk of advertising on steaming 
+Platform was profitable, but business wanted faster growth. Which currently wasn't easy because we had to pay the 3rd party agency for every update. 
+
+And to get larger spends, we also needed to pivot away from SMBs as the core user group to agencies and enterprise advertisers because they had those larger ad spends and did the bulk of advertising on steaming 
 
 these people did advertise on Disney but through our direct side where operational costs were higher so that was another a reason to push them to the self serve side
 -->
@@ -809,7 +867,7 @@ transition: slide-left
 </div>
 
 <!--
-Because of everything going on, such as transferring the platform over (using another external agency in Ukraine)
+Because these was this plan for rapid growth, we had this initiative to move the platform to be in house as in transferring the platform over (using another external agency in Ukraine)
 
 And the had huge plans to scale, this was a rare opportunity for me to essentially redo the entire platform.
 -->
@@ -898,7 +956,7 @@ transition: slide-left
 </div>
 
 <!--
-Before I started off, I prioritized campaign redesign and I looked at other self serve ad platforms to learn what else was out there because agency users were used to working with these products so I wanted to stick with patterns they were familiar with
+There was a hard deadline of Oct 1, 2024. Since it just me, I prioritized campaign redesign because it would be the biggest overhaul. For the same of time, I looked at other self serve ad platforms to learn what else was out there because agency users were used to working with these products so I wanted to stick with patterns they were familiar with
 
 My other big goal was to get at least another designer to help me
 -->
@@ -1120,7 +1178,7 @@ transition: slide-left
 
 <div class="mt-2">
   <AdManagerStack
-    :images="['./slides/assets/Finala.png']"
+    :images="['./slides/assets/Line Item Open.png']"
     :compact="true"
     :viewport-height="500"
     layer-max-width="88rem"
@@ -1139,6 +1197,109 @@ layout: default
 transition: slide-left
 ---
 
+<CaseStudyPillTabs :key="s11_dup_internal" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With internal teams</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Daily slacks/emails to PMs & eng</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Weekly 'UX office hour'</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Set up feedback sessions with sales & ops teams</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d4">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Attend on-sites with product/eng</span>
+  </div>
+</div>
+
+<!--
+While the designs were being finalized, I was  doing a lot of check in and hand offs with product and eng. Especially since I was the only designer.
+
+To keep up with everyone, I would message the PMs and lead engineers pretty frequently
+
+I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
+
+I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
+
+And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s11_dup_external" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With external teams</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Daily 8am calls</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Asynchronous Q&A via spreadsheets</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Very literal on designs</span>
+  </div>
+</div>
+
+<!--
+Working with the external teams was a whole other story, it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
+
+I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
+
+But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Mapped out every flow</span>
+    </div>
+    <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
+  </div>
+</div>
+
+<!--
+the teams was very literal so I had to spell every flow including every error, modal, state, etc [CLICK]
+
+
+This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
+
+Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
 <CaseStudyPillTabs :key="s18b_ui_patterns" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Pattern consolidation</h2>
@@ -1148,7 +1309,7 @@ transition: slide-left
 </div>
 
 <!--
-After I had the layout down, I had to finalize the specs. One thing to note is that I inherited a design system which was a frankenstein of legacy hulu internal tools and hulu consumer apps
+While I was going handoffs, I had to finalize the specs. One thing to note is that I inherited a design system which was a frankenstein of legacy hulu internal tools and hulu consumer apps
 
 Consistency is big for me when it comes to UI and since I was redoing the whole platform, I wanted to make sure everything looked consistent, even any new elements I would add
 
@@ -1279,6 +1440,7 @@ So I redid them to also look more consistent
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <CaseStudyPillTabs :key="s18b_new_patterns" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
@@ -1317,7 +1479,7 @@ transition: slide-left
 </div>
 
 <!--
-here is it in action
+I still needed to add dayparting, because of time I recyled this dayparting tool we had in mission control, that ad traffciking tool I showed you earlier. Here is it in action
 -->
 
 ---
@@ -1330,225 +1492,11 @@ transition: slide-left
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New patterns</h2>
 
 <div class="flex w-full justify-center mt-4">
-  <img src="./slides/assets/deliveryarea.png" class="vast-map-img block h-auto max-h-[min(430px,52vh)] w-auto max-w-full object-contain" />
+  <img src="./slides/assets/Dayparttile.png" class="vast-map-img block h-auto max-h-[min(430px,52vh)] w-auto max-w-full object-contain" />
 </div>
 
 <!--
 and here is the whole new "delivery" section in the campaign flow with day parting, pacing and frequency cap
-
-Now let me me show you what this all looked like in Figma 
-
-[SHOW FIGMA HERE]
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s18b_copy" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Final</h2>
-
-<div class="mt-4 flex w-full justify-center px-2">
-  <FastVideo
-    src="./slides/assets/New Campaign Flow Walkthrough.mp4"
-    :playback-rate="2"
-    video-class="mx-auto block h-auto max-h-[min(520px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
-  />
-</div>
-
-<!--
-Here is the final flow sped up 
-
-you can see the line item menu and the ability to navigate back and forth between them
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s_need_help" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Still left to do</h2>
-
-<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-chalkboard-user text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Test designs externally</span>
-  </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-earth-americas text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Work on engineering handoff</span>
-  </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-clipboard-check text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Do Design QA</span>
-  </div>
-</div>
-
-<!--
-Even though all the iterations and specs of the campaign creation flow were more or less done, I still had a lot to do before launch
-
-I had shared designs several times with internal people but I really wanted to test with advertisers
-
-This platform overhaul, especially the front-end was done by this this team in Ukraine, and it was difficult because I couldn't do the usual designer/eng co-work sessions I've done in other jobs
-
-And there was a lot of my own QA I had to do in the testing environments
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s11_dup_internal" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With internal teams</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Daily slacks/emails to PMs & eng</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Weekly 'UX office hour'</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Set up feedback sessions with sales & ops teams</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d4">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Attend on-sites with product/eng</span>
-  </div>
-</div>
-
-<!--
-Since I was the only designer for the majority of the time, and I was dealing with a LOT of partners by myself
-
-To keep up with everyone, I would message the PMs and lead engineers pretty frequently
-
-I held weekly UX office hours where anyone could sign up in the agenda and go over anything design related
-
-I myself shared designs and did discovery in ad hoc sessions with our sales and operations people
-
-And I would even try to go out to the Hulu office, this was before RTO and it wasn't even my assigned office. But I tried to go a few times a month because the PMs were there and it usually was the easiest way for me to get updates and ask questions
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s11_dup_external" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">With external teams</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Daily 8am calls</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Asynchronous Q&A via spreadsheets</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Very literal on designs</span>
-  </div>
-</div>
-
-<!--
-Working with the external teams was a whole other story, it was difficult to communicate with them, because there was a 10 hour time difference as well as a culture and language barrier
-
-I would go to the 8am calls because it the was the only time everyone was online at once, we used this spreadsheet to ask questions and answers. Right before those 8am calls, I would scan the spreadsheet to see if there was anything design related that I could answer
-
-But the biggest challenge, especially for me, was how literal those teams took designs. I was used to sharing designs with devs that had general direction, and they could fill in the blanks themselves but for these teams, they wanted every single flow spelled out
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s13_copy2" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5 max-w-[18rem]">Handoffs</h2>
-
-<div class="flex gap-6 mt-4 items-start w-full">
-  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Mapped out every flow</span>
-    </div>
-    <CarouselSyncBullet :show-at-click="1">And every state</CarouselSyncBullet>
-  </div>
-  <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/literal1.png', './slides/assets/literal2.png']" :compact="true" :viewport-height="780" layer-max-width="120rem" layer-width-pct="98%" pull-down="-12rem" />
-  </div>
-</div>
-
-<!--
-the teams was very literal so I shared the Figma files I showed you guys earlier and I had to spell every flow including every error, modal, state, etc [CLICK]
-
-
-This led to some massive figma files and I really wish I had the AI tooling we have now because it could have sped up a lot of this 
-
-Ultimately this did help the external devs and more importantly didn't hold them up when we had this tight deadline we had to hit
--->
-
----
-layout: default
-transition: slide-left
----
-
-<CaseStudyPillTabs :key="s_need_help_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Getting a contractor</h2>
-
-<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-user-tie text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">It would be easier to hire a contractor than a FTE</span>
-  </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-sack-dollar text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Secured budget for a contractor and hire someone in summer 2024</span>
-  </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-chalkboard-user text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">I was able to learn mentorship and constructive feedback skills</span>
-  </div>
-</div>
-
-<!--
-The hardest part was how much work it was for one person.  I really needed help. The rest of the design team was stretched thin, so I had to get someone new
-
-Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
-
-I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor and then was able to hire a contractor a couple months before launch for the final stretch
 -->
 
 ---
@@ -1591,7 +1539,7 @@ transition: slide-left
       <i class="fa-solid fa-user-slash self-center text-[1.6rem] text-[#0D9488] flex-shrink-0"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">No UXR team</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">No additional resources/UXR team</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
@@ -1610,11 +1558,52 @@ transition: slide-left
 </div>
 
 <!--
-some challenges arose pretty early on, we didn't have a UXR team at the time
+I was getting to the crunch time, a couple of months away from launch. There was still a lot to do, I still had to run QA of the testing environment and I really wanted to do user testing, I had tested a lot of the campaign redesigns with internal people but not with customers. And the hardest challenge of all was that it was still just me, no additional resource, not even a dedicated UXR team.
 
-the sales team was hesitant on giving me their users to test with even though I really wanted to test with existing customers and I really tried to give me access to their clients, I was able to secure incentives from the marketing team, I offered to let them sit in on the sessions, but in the end they didn't want to participate and I was running out of time
+I ran into hudrles, the sales team was hesitant on giving me their users to test with even though I really wanted to test with existing customers and I really tried to give me access to their clients, I was able to secure incentives from the marketing team, I offered to let them sit in on the sessions, but in the end they didn't want to participate and I was running out of time
 
-And the biggest issue was that user testing happened later than I wanted to so any recommendations that came about from testing wouldn't affect launch. However, I was able to work out a deal with product that I could add the fixes as a fast follow after launch
+And the because user testing was happening later than I wanted to, any recommendations that came about from testing wouldn't affect launch. However, I was able to work out a deal with product that I could add the fixes as a fast follow after launch
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s_need_help_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Getting a contractor</h2>
+
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-sack-dollar text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Secured budget for a contractor and hire someone in summer 2024</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-list-check text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Was able to delegate user testing & QA work</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-chalkboard-user text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">I was able to learn mentorship and constructive feedback skills</span>
+  </div>
+</div>
+
+<!--
+I started off trying to address the most prominent issue, resourcing. I really needed help, we were months from launching. The rest of the design team was stretched thin, so I had to get someone new
+
+Hiring a full-time person at Disney is quite difficult and takes a long time which I was not gonna wait around for so 
+
+I played slack tag where I would ask one person who I can talk to about budget and they would refer me to someone else. Ultimately I ended up finding the with the project manager who controlled funding for this initiative and was able to secure budget for a contractor who I was able to train and delegate as well as mentor
 -->
 
 ---
@@ -1658,11 +1647,11 @@ transition: slide-left
 </div>
 
 <!--
-so what I ended up doing was creating  a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
+Now with an additional person, I planned the user sessions. I made a screener and recruited users on Dscout (its a usertesting.com type of product we had a license to). From there I found 10 people who said they had used self serve ad platforms before
 
-I worked with our UXE team to make an interactive prototype (before AI)
+We worked with our UXE team to make an interactive prototype (before AI)
 
-I conducted 1 hr usability tests where I asked them to do certain tasks and see how they went about them,
+We conducted 1 hr usability tests where I asked them to do certain tasks and see how they went about them,
 
 Even though none of them had used our platform before, I got some pretty useful feedback
 -->
@@ -1812,6 +1801,88 @@ I prioritized these tickets based on severity and level of effort and was able t
 
 ---
 layout: default
+transition: fade
+---
+
+<CaseStudyPillTabs :key="s6_copy_before_final" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="0" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Before</h2>
+
+<AdManagerStack :images="['./slides/assets/OLDham1.png', './slides/assets/OLDham2.png', './slides/assets/OLDham3.png', './slides/assets/OLDham4.png']" :compact="true" :viewport-height="500" layer-max-width="72rem" pull-down="-2rem" />
+
+<!--
+We were ready to release, here is the page by page design we had in the old platform
+-->
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s18b_copy" class="-mt-10 mb-4 mx-auto" variant="campaign" :initial-index="2" process-label="Final" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-3">After</h2>
+
+<div class="mt-4 flex w-full justify-center px-2">
+  <FastVideo
+    src="./slides/assets/New Campaign Flow Walkthrough.mp4"
+    :playback-rate="2"
+    video-class="mx-auto block h-auto max-h-[min(520px,58vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_2px_16px_rgb(0_0_0_/_8%)] md:max-w-3xl"
+  />
+</div>
+
+<!--
+Here is the final flow at launch, this is sped up 
+
+you can see the line item menu and the ability to navigate back and forth between them
+-->
+
+---
+layout: default
+transition: slide-left
+hide: true
+---
+
+<CaseStudyPillTabs :key="s_need_help" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="3" />
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Still left to do</h2>
+
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-chalkboard-user text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Test designs externally</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-earth-americas text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Work on engineering handoff</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-clipboard-check text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Do Design QA</span>
+  </div>
+</div>
+
+<!--
+Even though all the iterations and specs of the campaign creation flow were more or less done, I still had a lot to do before launch
+
+I had shared designs several times with internal people but I really wanted to test with advertisers
+
+This platform overhaul, especially the front-end was done by this this team in Ukraine, and it was difficult because I couldn't do the usual designer/eng co-work sessions I've done in other jobs
+
+And there was a lot of my own QA I had to do in the testing environments
+-->
+
+---
+layout: default
 transition: slide-left
 ---
 
@@ -1836,7 +1907,7 @@ transition: slide-left
 </div>
 
 <!--
-once we released the new campaign flow and the new platform, there was pretty quick growth the following year, both revenue and number of agency users significantly increased
+once we released the new campaign flow as well as the rest of the new platform, there was pretty quick growth the following year, both revenue and number of agency users significantly increased
 
 we accomplished the businesses goal of scaling the product and getting more agencies onboard
 -->
@@ -1875,7 +1946,7 @@ and setting up realistic timelines for my work sooner, I think I relied too much
 
 but one thing i would definitely do differently now is use AI especially for quick concepts. 
 
-I think it would have been easier to create mocks and share out with stakeholders
+I think it would have been easier to create mocks and share out with stakeholders, here is an example I made [SHOW PROTO]
 -->
 
 ---

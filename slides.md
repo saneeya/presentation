@@ -832,17 +832,22 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Ad experience</h2>
+<h2 class="user-groups-slide-heading m-0 mt-4 mb-3">Ad experience</h2>
 
-<div class="grid gap-8 mt-6 items-center w-full" style="grid-template-columns: 1fr auto 1fr;">
-  <div class="flex justify-end anim-fade-up anim-d1">
-    <img src="./slides/assets/Adtemplateoverview.png" class="vast-map-img block h-auto max-h-[min(520px,62vh)] w-auto max-w-full object-contain" />
+<div class="flex flex-col gap-8 mt-4 w-full">
+  <div class="grid gap-4 items-center w-full" style="grid-template-columns: 1fr auto 1fr;">
+    <div class="flex justify-end anim-fade-up anim-d1">
+      <img src="./slides/assets/Adtemplateoverview.png" class="vast-map-img block h-auto max-h-[min(160px,20vh)] w-auto max-w-full object-contain" />
+    </div>
+    <div class="flex justify-center self-center px-2 anim-fade-up anim-d2">
+      <i class="fa-solid fa-arrow-right text-[#0D9488] text-[2rem]"></i>
+    </div>
+    <div class="flex justify-start ml-2 anim-fade-up anim-d3">
+      <img src="./slides/assets/Adtemplateoverview3.png" class="vast-map-img block h-auto max-h-[min(160px,20vh)] w-auto max-w-full object-contain" />
+    </div>
   </div>
-  <div class="flex justify-center self-center px-2 anim-fade-up anim-d2 click-dim-strong" v-click.hide="2">
-    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[3rem]"></i>
-  </div>
-  <div class="flex justify-start ml-4 anim-fade-up anim-d3 click-dim-strong" v-click.hide="2">
-    <img src="./slides/assets/Adtemplateoverview2.png" class="vast-map-img block h-auto max-h-[min(320px,40vh)] w-auto max-w-full object-contain" />
+  <div class="flex justify-center anim-fade-up anim-d4 click-dim-strong" v-click.hide="2">
+    <img src="./slides/assets/Adtemplateoverview2.png" class="vast-map-img block h-auto max-h-[min(235px,27vh)] w-auto max-w-full object-contain" />
   </div>
 </div>
 
@@ -938,7 +943,7 @@ transition: slide-left
     </div>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/gatewayshopdesign1.png', './slides/assets/gatewayshopdesign2.png', './slides/assets/gatewayshopdesign3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+    <AdManagerStack :images="['./slides/assets/gatewayshopdesign1.png', './slides/assets/gatewayshopdesign2.png', './slides/assets/gatewayshopdesign3.png', './slides/assets/gatewayshopdesign4.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
   </div>
 </div>
 
@@ -966,17 +971,17 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Bumpers</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Information prompts</h2>
 
 <div class="flex gap-6 mt-4 items-start w-full">
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
     <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Combination of CTAs + positionings</span>
+      <span class="text-slate-900 font-semibold text-[1rem]">Concern if user would know how to browse</span>
     </div>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/gatewayshopbumper1.png', './slides/assets/gatewayshopbumper2.png', './slides/assets/gatewayshopbumper3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+    <AdManagerStack :images="['./slides/assets/gatewayshopremote1.png', './slides/assets/gatewayshopremote2.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
   </div>
 </div>
 
@@ -985,11 +990,22 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">New shoppable ad format</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Where we were at</h2>
 
-<div class="flex-1 min-w-0 flex justify-center mt-8">
-  <div class="w-full h-80 bg-slate-100 rounded-xl flex items-center justify-center">
-    <div class="text-slate-400 font-medium">Interactive ad with product browsing and purchase tracking</div>
+<div class="grid grid-cols-2 gap-10 max-w-3xl mt-16 mx-auto">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-tv text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Worked part-time on this team</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-bag-shopping text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Helped hire/train new designer dedicated to team</span>
   </div>
 </div>
 
@@ -1000,18 +1016,14 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Results & impact</h2>
 
-<div class="grid grid-cols-2 gap-24 max-w-3xl mt-16 mx-auto">
-  <div class="text-slate-700 text-[1.1rem] font-medium flex flex-col gap-3 anim-fade-up anim-d1">
-    <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#0D9488]">
-      <span>Conversion</span>
-    </div>
-    <span class="text-center">Track purchases and measure revenue impact</span>
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]"><span class="text-[#0D9488]">Conversion</span> — Track purchases and measure revenue impact</span>
   </div>
-  <div class="text-slate-700 text-[1.1rem] font-medium flex flex-col gap-3 anim-fade-up anim-d2">
-    <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#0D9488]">
-      <span>Adoption</span>
-    </div>
-    <span class="text-center">New ad format available for advertisers</span>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]"><span class="text-[#0D9488]">Adoption</span> — New ad format available for advertisers</span>
   </div>
 </div>
 

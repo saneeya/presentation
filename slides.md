@@ -611,20 +611,25 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">The opportunity</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Advertising on Hulu</h2>
 
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Create a new ad type that lets viewers shop directly from ads</span>
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">30-45s video ads</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Pause Ads</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Interactive Ads</span>
+    </div>
   </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Track purchases and measure real revenue impact</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">QR code ads only provided click-through data, not conversion insights</span>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/CurrentHuluad1.png', './slides/assets/CurrentHuluad2.png', './slides/assets/CurrentHuluad3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
   </div>
 </div>
 
@@ -635,142 +640,73 @@ transition: slide-left
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Key constraints</h2>
 
-<div class="grid grid-cols-2 gap-10 max-w-4xl mt-12">
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">~2/3 of viewers watch on TV</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Interactive ads had CTAs such as QR codes/push/emails</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M296 88C296 74.7 306.7 64 320 64C333.3 64 344 74.7 344 88L344 128L400 128C417.7 128 432 142.3 432 160C432 177.7 417.7 192 400 192L285.1 192C260.2 192 240 212.2 240 237.1C240 259.6 256.5 278.6 278.7 281.8L370.3 294.9C424.1 302.6 464 348.6 464 402.9C464 463.2 415.1 512 354.9 512L344 512L344 552C344 565.3 333.3 576 320 576C306.7 576 296 565.3 296 552L296 512L224 512C206.3 512 192 497.7 192 480C192 462.3 206.3 448 224 448L354.9 448C379.8 448 400 427.8 400 402.9C400 380.4 383.5 361.4 361.3 358.2L269.7 345.1C215.9 337.5 176 291.4 176 237.1C176 176.9 224.9 128 285.1 128L296 128L296 88z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Limited to remote controls or voice commands</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">We were not getting attributions for clicks/purchases</span>
   </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Research & learning</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Mapped out every interaction within the Hulu TV app video player</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Reviewed interactive TV ads on Hulu and competitor platforms</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Few competitors offered true "shoppable" experience on TV</span>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Design approach</h2>
-
-<div class="flex gap-6 mt-4 items-start w-full">
-  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Keep experience lightweight and non-intrusive</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Templatize elements for advertiser customization</span>
-    </div>
-  </div>
-  <div class="flex-1 min-w-0 flex justify-center">
-    <div class="w-full h-80 bg-slate-100 rounded-xl flex items-center justify-center">
-      <div class="text-slate-400 font-medium">Ad template mockup placeholder</div>
-    </div>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">TV-first design considerations</h2>
-
-<div class="flex gap-6 mt-4 items-start w-full">
-  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Viewer distance from screen</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Safe zones for elements</span>
-    </div>
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d3">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Limitations of remote controls</span>
-    </div>
-  </div>
-  <div class="flex-1 min-w-0 flex justify-center">
-    <div class="w-full h-80 bg-slate-100 rounded-xl flex items-center justify-center">
-      <div class="text-slate-400 font-medium">TV safe zones diagram placeholder</div>
-    </div>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Cross-functional collaboration</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Worked with Hulu video player UX team for TV best practices</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Built interactive elements like buttons and product carousels</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Created templatized ad format for scalability</span>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Why tracking matters</h2>
-
-<div class="grid grid-cols-2 gap-x-16 gap-y-16 max-w-3xl mt-6 mx-auto">
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M128 128C128 92.7 156.7 64 192 64L341.5 64C358.5 64 374.8 70.7 386.8 82.7L493.3 189.3C505.3 201.3 512 217.6 512 234.6L512 512C512 547.3 483.3 576 448 576L192 576C156.7 576 128 547.3 128 512L128 128zM336 122.5L336 216C336 229.3 346.7 240 360 240L453.5 240L336 122.5zM248 320C234.7 320 224 330.7 224 344C224 357.3 234.7 368 248 368L392 368C405.3 368 416 357.3 416 344C416 330.7 405.3 320 392 320L248 320zM248 416C234.7 416 224 426.7 224 440C224 453.3 234.7 464 248 464L392 464C405.3 464 416 453.3 416 440C416 426.7 405.3 416 392 416L248 416z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Advertisers see actual product purchases</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Could not quantify the ad's impact on driving sales</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<CaseStudyPillTabs :key="s9_dup" class="-mt-10 mb-10 mx-auto" variant="campaign" :initial-index="1" />
+
+<div class="flex h-full w-full items-center justify-center">
+  <div
+    class="mx-auto w-full max-w-2xl text-left text-[2rem] font-normal italic leading-snug text-[#0D9488] anim-fade-in-scale"
+  >
+    We did not have a truly frictionless shoppable TV ad experience where we could quantify the ad's impact
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">The opportunity</h2>
+
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-cart-shopping text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Create a new ad format that lets viewers shop directly from their screen</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="h-7 w-7 fill-[#0D9488]" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
+      <i class="fa-solid fa-lightbulb text-[1.6rem] text-[#0D9488]"></i>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Data helps market the format better</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Create a custom landing page where viewers can browse &amp; purchase</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-chart-line text-[1.6rem] text-[#0D9488]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Track purchases/clicks in order to measure real revenue impact</span>
   </div>
 </div>
 
@@ -779,7 +715,7 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Key value drivers</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Business value</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
@@ -798,14 +734,249 @@ transition: slide-left
 
 ---
 layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Goals & Strategy</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Set up a working relationship with a brand new team of 4-5 PMs and no engineers</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1 pl-10 -mt-2 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.35rem] shrink-0"></i>
+    <span class="text-slate-600 text-[0.95rem]">More experimental than my other teams</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Research and learn about ad formats</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Design template for living room (ad format) and second screen (mobile)</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Other ad formats</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Existing ad formats on Hulu and competitors</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/adformatcompetitor1.png', './slides/assets/adformatcompetitor2.png', './slides/assets/adformatcompetitor3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">TV controls</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">About 2/3 of viewers</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Mapped out every remote control flow</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/huluplayer1.png', './slides/assets/huluplayer2.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">TV-first design</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Worked with the player experience team</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Safe zones for elements</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Limitations of remote controls</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0 flex justify-center items-start self-start mt-3">
+    <img src="./slides/assets/TVsafezone.webp" class="vast-map-img w-full max-w-none h-auto" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Ad experience</h2>
+
+<div class="grid gap-8 mt-6 items-center w-full" style="grid-template-columns: 1fr auto 1fr;">
+  <div class="flex justify-end anim-fade-up anim-d1">
+    <img src="./slides/assets/Adtemplateoverview.png" class="vast-map-img block h-auto max-h-[min(520px,62vh)] w-auto max-w-full object-contain" />
+  </div>
+  <div class="flex justify-center self-center px-2 anim-fade-up anim-d2 click-dim-strong" v-click.hide="2">
+    <i class="fa-solid fa-arrow-right text-[#0D9488] text-[3rem]"></i>
+  </div>
+  <div class="flex justify-start ml-4 anim-fade-up anim-d3 click-dim-strong" v-click.hide="2">
+    <img src="./slides/assets/Adtemplateoverview2.png" class="vast-map-img block h-auto max-h-[min(320px,40vh)] w-auto max-w-full object-contain" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Intended features</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Keep the experience lightweight and non-intrusive</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Include interactive CTAs such as buttons/QR code/product carousel</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Ensure that ad can be &quot;templatized&quot; ie advertiser can easily customize each element</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<div class="relative mx-auto mt-6 w-full max-w-[82rem]" style="width: 95%;">
+  <div class="grid w-full">
+    <img
+      src="./slides/assets/CurrentHuluad3.png"
+      alt=""
+      class="col-start-1 row-start-1 block h-auto w-full max-h-[min(520px,65vh)] object-contain rounded-xl pointer-events-none"
+    />
+    <img
+      src="./slides/assets/gatewaygoannotations.png"
+      alt=""
+      class="click-fade-in-slow col-start-1 row-start-1 z-10 block h-auto w-full max-h-[min(520px,65vh)] object-contain rounded-xl pointer-events-none"
+      v-click="1"
+    />
+  </div>
+</div>
+
+---
+layout: default
 transition: fade
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Previous ad options</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Designs</h2>
 
-<div class="flex-1 min-w-0 flex justify-center mt-8">
-  <div class="w-full h-80 bg-slate-100 rounded-xl flex items-center justify-center">
-    <div class="text-slate-400 font-medium">Ad formats: Video ads, interactive selection, pause ads</div>
+<div class="flex flex-col gap-2 mt-4 w-full max-w-4xl mx-auto">
+  <div class="grid grid-cols-2 gap-12 items-start w-full">
+    <div class="flex justify-center">
+      <img src="./slides/assets/gatewaywire1.png" class="rounded-xl shadow-lg block h-auto max-h-[min(180px,21vh)] w-auto max-w-full object-contain" />
+    </div>
+    <div class="flex justify-center">
+      <img src="./slides/assets/gatewaywire2.png" class="rounded-xl shadow-lg block h-auto max-h-[min(180px,21vh)] w-auto max-w-full object-contain" />
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-12 w-full click-fade-in" v-click="1">
+    <div class="flex justify-center py-0.5">
+      <i class="fa-solid fa-arrow-down text-[#0D9488] text-[1.5rem]"></i>
+    </div>
+    <div class="flex justify-center py-0.5">
+      <i class="fa-solid fa-arrow-down text-[#0D9488] text-[1.5rem]"></i>
+    </div>
+  </div>
+  <div class="grid grid-cols-2 gap-12 items-start w-full click-fade-in" v-click="1">
+    <div class="flex justify-center">
+      <img src="./slides/assets/gatewaywire3.png" class="rounded-xl shadow-lg block h-auto max-h-[min(180px,21vh)] w-auto max-w-full object-contain" />
+    </div>
+    <div class="flex justify-center">
+      <img src="./slides/assets/gatewaywire4.png" class="rounded-xl shadow-lg block h-auto max-h-[min(180px,21vh)] w-auto max-w-full object-contain" />
+    </div>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Designs</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Combination of CTAs + positionings</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/gatewayshopdesign1.png', './slides/assets/gatewayshopdesign2.png', './slides/assets/gatewayshopdesign3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Bumpers</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Combination of CTAs + positionings</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/gatewayshopbumper1.png', './slides/assets/gatewayshopbumper2.png', './slides/assets/gatewayshopbumper3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Bumpers</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Combination of CTAs + positionings</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/gatewayshopbumper1.png', './slides/assets/gatewayshopbumper2.png', './slides/assets/gatewayshopbumper3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
   </div>
 </div>
 

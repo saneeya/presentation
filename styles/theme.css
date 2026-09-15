@@ -514,6 +514,20 @@ body,
   transform: translateY(20px);
 }
 
+.click-fade-in {
+  transition: opacity 0.5s ease;
+}
+.click-fade-in.slidev-vclick-hidden {
+  opacity: 0 !important;
+}
+
+.click-fade-in-slow {
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.click-fade-in-slow.slidev-vclick-hidden {
+  opacity: 0 !important;
+}
+
 /* Animate v-click elements with a slide-in from the left on reveal */
 .click-slide-in-x {
   transition: opacity 0.5s ease, transform 0.5s ease;
@@ -529,6 +543,12 @@ body,
 }
 .click-dim.slidev-vclick-hidden {
   opacity: 0.3 !important;
+}
+.click-dim-strong {
+  transition: opacity 0.5s ease;
+}
+.click-dim-strong.slidev-vclick-hidden {
+  opacity: 0.15 !important;
 }
 
 /* Clickable agenda rows that jump to the linked slide */

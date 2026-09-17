@@ -550,6 +550,13 @@ body,
 .click-dim-strong.slidev-vclick-hidden {
   opacity: 0.15 !important;
 }
+.click-dim-shift-up {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.click-dim-shift-up.slidev-vclick-hidden {
+  opacity: 0.15 !important;
+  transform: translateY(-0.75rem);
+}
 
 /* Clickable agenda rows that jump to the linked slide */
 .agenda-link {

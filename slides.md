@@ -137,37 +137,6 @@ layout: default
 transition: slide-left
 ---
 
-<CaseStudyPillTabs :key="s11_copy_agenda_dup2_repeat_pre" class="-mt-10 mb-10 mx-auto" :initial-index="1" />
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-3">Working in Ads</h2>
-
-<div class="flex gap-6 mt-4 items-start w-full">
-  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
-    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
-      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Established design role for brand new team</span>
-    </div>
-    <CarouselSyncBullet :show-at-click="1">New self-serve tool that removed engineering dependency</CarouselSyncBullet>
-    <CarouselSyncBullet :show-at-click="2">Will reduce time to find relevant information</CarouselSyncBullet>
-  </div>
-  <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/AdExp.png', './slides/assets/Rate Cards - Info Panel.png', './slides/assets/MCfilterexample2.mp4']" :compact="true" :viewport-height="560" layer-max-width="82rem" layer-width-pct="90%" pull-down="-4rem" :dim-opacity-near="0.06" :dim-opacity-far="0.02" :image-scales="[1, 1, 1.15]" />
-  </div>
-</div>
-
-<!--
-I've worked on many projects during 5 years at Disney, one example is this ad formats template, this was an early design and the team was newly formed, so I helped establish early design foundations such as patterns, research and documentation, this helped when we were able to hire a full time designer to take over this work [CLICK]
-
-I made this internal tool in a few months. Our pricing team had to make a JIRA ticket everytime they wanted a CPM change for ad manager, it could several weeks. This self-serve tool let them manage rate cards such as how much the base CPM would be, how much extra targeting would cost and what specific advertisers it would apply to giving better pricing option to advertisers we wanted to entice or retain. CPM changes went from weeks to literal minutes [CLICK]
-
-One of the newest things I've worked on that is in development right now, is redoing filters for our internal ad trafficking tool. We have many users who use this tool and they are all looking for different information and the current filters were in just one long dropdown. So I redid the whole layout and added AND/OR boolean targeting they wanted. Was my first AI design [SHOW PROTO]
--->
-
----
-layout: default
-transition: slide-left
----
-
 <div class="flex gap-6 mt-6 items-start w-full">
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52">
     <h2 class="user-groups-slide-heading m-0">My Process - The Kitchen</h2>
@@ -568,9 +537,7 @@ transition: slide-left
 ::right::
 
 <div class="flex h-full min-h-0 w-full flex-col">
-  <div class="flex h-full w-full items-center justify-center bg-slate-100 rounded-xl">
-    <div class="text-slate-400 font-medium">Image placeholder</div>
-  </div>
+<PinterestMasonry :show-images="false" span-src="./slides/assets/gatewayshopbumper1.png" span-position="center 28%" :span-flex="0.8" :merge-right-stack="true" right-src="./slides/assets/BetaDesign4.png" right-position="center" left-top-src="./slides/assets/huluplayer2.png" left-top-position="left center" left-bottom-src="./slides/assets/CurrentHuluad3.png" left-bottom-position="center 18%" />
 </div>
 
 <!--
@@ -588,17 +555,19 @@ transition: slide-left
       <div class="grid grid-cols-3 gap-8 mt-4 w-full">
         <div class="flex flex-col gap-2 anim-fade-up anim-d2">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Timeline</div>
-          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">4 Months</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">16 Months</div>
         </div>
         <div class="flex flex-col gap-2 anim-fade-up anim-d3">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Role</div>
-          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Product Designer</div>
+          <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Lead Designer</div>
         </div>
         <div class="flex flex-col gap-2 anim-fade-up anim-d4">
           <div class="text-sm font-semibold uppercase tracking-wide text-[#0D9488]">Team</div>
           <div class="flex flex-col gap-1">
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">1 Other Designer</div>
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">UX Researchers</div>
             <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">Product Managers</div>
+            <div class="max-w-lg text-[28px] font-medium leading-snug text-[#3A4652]/85">External Developers</div>
           </div>
         </div>
       </div>
@@ -638,12 +607,12 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Key constraints</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How to better measure impact?</h2>
 
 <div class="grid grid-cols-3 gap-10 max-w-4xl mt-16">
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M160 224L224 224L224 160L160 160L160 224zM96 144C96 117.5 117.5 96 144 96L240 96C266.5 96 288 117.5 288 144L288 240C288 266.5 266.5 288 240 288L144 288C117.5 288 96 266.5 96 240L96 144zM160 480L224 480L224 416L160 416L160 480zM96 400C96 373.5 117.5 352 144 352L240 352C266.5 352 288 373.5 288 400L288 496C288 522.5 266.5 544 240 544L144 544C117.5 544 96 522.5 96 496L96 400zM416 160L416 224L480 224L480 160L416 160zM400 96L496 96C522.5 96 544 117.5 544 144L544 240C544 266.5 522.5 288 496 288L400 288C373.5 288 352 266.5 352 240L352 144C352 117.5 373.5 96 400 96zM384 416C366.3 416 352 401.7 352 384C352 366.3 366.3 352 384 352C401.7 352 416 366.3 416 384C416 401.7 401.7 416 384 416zM384 480C401.7 480 416 494.3 416 512C416 529.7 401.7 544 384 544C366.3 544 352 529.7 352 512C352 494.3 366.3 480 384 480zM480 512C480 494.3 494.3 480 512 480C529.7 480 544 494.3 544 512C544 529.7 529.7 544 512 544C494.3 544 480 529.7 480 512zM512 416C494.3 416 480 401.7 480 384C480 366.3 494.3 352 512 352C529.7 352 544 366.3 544 384C544 401.7 529.7 416 512 416zM480 448C480 465.7 465.7 480 448 480C430.3 480 416 465.7 416 448C416 430.3 430.3 416 448 416C465.7 416 480 430.3 480 448z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Interactive ads had CTAs such as QR codes/push/emails</span>
@@ -657,7 +626,7 @@ transition: slide-left
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M96 160L96 400L544 400L544 160L96 160zM32 160C32 124.7 60.7 96 96 96L544 96C579.3 96 608 124.7 608 160L608 400C608 435.3 579.3 464 544 464L96 464C60.7 464 32 435.3 32 400L32 160zM192 512L448 512C465.7 512 480 526.3 480 544C480 561.7 465.7 576 448 576L192 576C174.3 576 160 561.7 160 544C160 526.3 174.3 512 192 512z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="self-center w-8 h-8 fill-[#0D9488] flex-shrink-0" aria-hidden="true"><path d="M128 128C128 110.3 113.7 96 96 96C78.3 96 64 110.3 64 128L64 464C64 508.2 99.8 544 144 544L544 544C561.7 544 576 529.7 576 512C576 494.3 561.7 480 544 480L144 480C135.2 480 128 472.8 128 464L128 128zM534.6 214.6C547.1 202.1 547.1 181.8 534.6 169.3C522.1 156.8 501.8 156.8 489.3 169.3L384 274.7L326.6 217.4C314.1 204.9 293.8 204.9 281.3 217.4L185.3 313.4C172.8 325.9 172.8 346.2 185.3 358.7C197.8 371.2 218.1 371.2 230.6 358.7L304 285.3L361.4 342.7C373.9 355.2 394.2 355.2 406.7 342.7L534.7 214.7z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Could not quantify the ad's impact on driving sales</span>
@@ -696,14 +665,14 @@ transition: slide-left
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-lightbulb text-[1.6rem] text-[#0D9488]"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M144 128C144 92.7 172.7 64 208 64L432 64C467.3 64 496 92.7 496 128L496 512C496 547.3 467.3 576 432 576L208 576C172.7 576 144 547.3 144 512L144 128zM256 504C256 517.3 266.7 528 280 528L360 528C373.3 528 384 517.3 384 504C384 490.7 373.3 480 360 480L280 480C266.7 480 256 490.7 256 504zM432 128L208 128L208 432L432 432L432 128z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Create a custom landing page where viewers can browse &amp; purchase</span>
   </div>
   <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
     <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-chart-line text-[1.6rem] text-[#0D9488]"></i>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M173.3 66.5C181.4 62.4 191.2 63.3 198.4 68.8L518.4 308.7C526.7 314.9 530 325.7 526.8 335.5C523.6 345.3 514.4 351.9 504 351.9L351.7 351.9L440.6 529.6C448.5 545.4 442.1 564.6 426.3 572.5C410.5 580.4 391.3 574 383.4 558.2L294.5 380.5L203.2 502.3C197 510.6 186.2 513.9 176.4 510.7C166.6 507.5 160 498.3 160 488L160 88C160 78.9 165.1 70.6 173.3 66.5z"/></svg>
     </div>
     <div class="w-3 h-px bg-[#0D9488]"></div>
     <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Track purchases/clicks in order to measure real revenue impact</span>
@@ -713,6 +682,7 @@ transition: slide-left
 ---
 layout: default
 transition: slide-left
+hide: true
 ---
 
 <h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Business value</h2>
@@ -737,7 +707,7 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Goals & Strategy</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">My goals & strategies</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
@@ -773,7 +743,7 @@ transition: slide-left
     </div>
   </div>
   <div class="flex-1 min-w-0">
-    <AdManagerStack :images="['./slides/assets/adformatcompetitor1.png', './slides/assets/adformatcompetitor2.png', './slides/assets/adformatcompetitor3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
+    <AdManagerStack :images="['./slides/assets/adformatcompetitor1.png', './slides/assets/adformatcompetitor2.png', './slides/assets/adformatcompetitor3.png', './slides/assets/CurrentHuluad3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" />
   </div>
 </div>
 
@@ -788,7 +758,7 @@ transition: slide-left
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
     <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">About 2/3 of viewers</span>
+      <span class="text-slate-900 font-semibold text-[1rem]">2/3 of viewers watch on a TV device</span>
     </div>
     <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d2">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
@@ -832,7 +802,7 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-4 mb-3">Ad experience</h2>
+<h2 class="user-groups-slide-heading m-0 mt-4 mb-3">Ad format experience</h2>
 
 <div class="flex flex-col gap-8 mt-4 w-full">
   <div class="grid gap-4 items-center w-full" style="grid-template-columns: 1fr auto 1fr;">
@@ -856,7 +826,7 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Intended features</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Key features</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
@@ -958,7 +928,7 @@ transition: slide-left
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
     <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Combination of CTAs + positionings</span>
+      <span class="text-slate-900 font-semibold text-[1rem]">Appear for 15s at the end of the video ad</span>
     </div>
   </div>
   <div class="flex-1 min-w-0">
@@ -971,13 +941,13 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Information prompts</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Can they interact?</h2>
 
 <div class="flex gap-6 mt-4 items-start w-full">
   <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
     <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
       <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-      <span class="text-slate-900 font-semibold text-[1rem]">Concern if user would know how to browse</span>
+      <span class="text-slate-900 font-semibold text-[1rem]">Concern if user would know how to interact</span>
     </div>
   </div>
   <div class="flex-1 min-w-0">
@@ -990,22 +960,22 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Where we were at</h2>
+<h2 class="user-groups-slide-heading m-0 mt-4 mb-3">Second screen experience</h2>
 
-<div class="grid grid-cols-2 gap-10 max-w-3xl mt-16 mx-auto">
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-tv text-[1.6rem] text-[#0D9488]"></i>
+<div class="flex flex-col gap-8 mt-4 w-full">
+  <div class="grid gap-4 items-center w-full" style="grid-template-columns: 1fr auto 1fr;">
+    <div class="flex justify-end anim-fade-up anim-d1 click-dim-strong" v-click.hide="2">
+      <img src="./slides/assets/Adtemplateoverview.png" class="vast-map-img block h-auto max-h-[min(160px,20vh)] w-auto max-w-full object-contain" />
     </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Worked part-time on this team</span>
+    <div class="flex justify-center self-center px-2 anim-fade-up anim-d2 click-dim-strong" v-click.hide="2">
+      <i class="fa-solid fa-arrow-right text-[#0D9488] text-[2rem]"></i>
+    </div>
+    <div class="flex justify-start ml-2 anim-fade-up anim-d3 click-dim-shift-up" v-click.hide="2">
+      <img src="./slides/assets/Adtemplateoverview3.png" class="vast-map-img block h-auto max-h-[min(160px,20vh)] w-auto max-w-full object-contain" />
+    </div>
   </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-bag-shopping text-[1.6rem] text-[#0D9488]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Helped hire/train new designer dedicated to team</span>
+  <div class="flex justify-center anim-fade-up anim-d4">
+    <img src="./slides/assets/Adtemplateoverview2.png" class="vast-map-img block h-auto max-h-[min(235px,27vh)] w-auto max-w-full object-contain" />
   </div>
 </div>
 
@@ -1014,62 +984,343 @@ layout: default
 transition: slide-left
 ---
 
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Results & impact</h2>
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Other ecommerce sites</h2>
+
+<div class="flex justify-center items-start gap-10 mt-4 w-full">
+  <img src="./slides/assets/secondscreendiscovery1.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain anim-fade-up anim-d1" />
+  <img src="./slides/assets/secondscreendiscovery2.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain anim-fade-up anim-d2" />
+  <img src="./slides/assets/secondscreendiscovery3.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain anim-fade-up anim-d3" />
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Second screen shopping page</h2>
+
+<div class="relative mt-4 w-full min-h-[min(450px,53vh)]">
+  <div class="flex justify-center items-start gap-10 w-full click-fade-in" v-click.hide="2">
+    <img src="./slides/assets/secondscreen1.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain anim-fade-up anim-d1" />
+    <img src="./slides/assets/secondscreen2.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain anim-fade-up anim-d2" />
+    <img src="./slides/assets/secondscreen3.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain anim-fade-up anim-d3" />
+  </div>
+  <div class="absolute inset-0 flex justify-center items-start gap-10 w-full click-fade-in" v-click="2">
+    <img src="./slides/assets/secondscreenretail1.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain" />
+    <img src="./slides/assets/secondscreenretail2.png" class="rounded-xl shadow-lg block h-auto max-h-[min(450px,53vh)] w-auto object-contain" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Upcoming beta</h2>
+
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16 mx-auto">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z"/></svg>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Beta launch set for Holiday 2023 season</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Was able to ideate more with a new designer</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 128C83.1 128 71.4 135.8 66.4 147.8C61.4 159.8 64.2 173.5 73.4 182.6L256 365.3L256 480C256 488.5 259.4 496.6 265.4 502.6L329.4 566.6C338.6 575.8 352.3 578.5 364.3 573.5C376.3 568.5 384 556.9 384 544L384 365.3L566.6 182.7C575.8 173.5 578.5 159.8 573.5 147.8C568.5 135.8 556.9 128 544 128L96 128z"/></svg>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">We needed to narrow down designs</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">User testing goals</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-start gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0 mt-2"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">What Impact does a Shoppable TV ad experience have on driving brand metrics (brand awareness, product consideration, and purchase intent)</span>
+  </div>
+  <div class="flex flex-row items-start gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0 mt-2"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Gauge potential feelings of delight and/or intrusiveness while experiencing the product, and how does a shoppable ad experience compare to a standard video commercial?</span>
+  </div>
+  <div class="flex flex-row items-start gap-4 py-1.5 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0 mt-2"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">What are viewer's impression of each component of the Shoppable TV ad experience</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Methodology</h2>
 
 <div class="flex flex-col gap-4 max-w-3xl mt-6">
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]"><span class="text-[#0D9488]">Conversion</span> — Track purchases and measure revenue impact</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">8 users of various backgrounds who are subscribed to Hulu/Disney+</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]"><span class="text-[#0D9488]">Adoption</span> — New ad format available for advertisers</span>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Design outcomes</h2>
-
-<div class="grid grid-cols-2 gap-28 max-w-4xl mx-auto w-full mt-10">
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-check text-[#0D9488] text-[1.6rem]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Templatized solution enables advertiser customization</span>
-  </div>
-  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
-    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
-      <i class="fa-solid fa-lightbulb text-[#0D9488] text-[1.6rem]"></i>
-    </div>
-    <div class="w-3 h-px bg-[#0D9488]"></div>
-    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Early UX team collaboration accelerated learning</span>
-  </div>
-</div>
-
----
-layout: default
-transition: slide-left
----
-
-<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Key learnings</h2>
-
-<div class="flex flex-col gap-4 max-w-3xl mt-6">
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">TV-first design requires different considerations than mobile/desktop</span>
-  </div>
-  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
-    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Templatization enables faster iteration and advertiser adoption</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">1-hour moderated usability sessions</span>
   </div>
   <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
     <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
-    <span class="text-slate-900 font-semibold text-[1.1rem]">Cross-team collaboration accelerates learning and execution</span>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">2 different layouts + bumper</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d4">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">QR code would redirect to shopDisney (custom landing page not in test)</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">What we tested</h2>
+
+<div class="flex flex-col items-center gap-4 mt-4 w-full">
+  <div class="flex justify-center items-center gap-6 w-full">
+    <img src="./slides/assets/usertest1.png" class="vast-map-img block h-auto max-h-[min(200px,26vh)] w-auto object-contain anim-fade-up anim-d1" />
+    <img src="./slides/assets/usertest2.png" class="vast-map-img block h-auto max-h-[min(200px,26vh)] w-auto object-contain anim-fade-up anim-d2" />
+  </div>
+  <div class="flex justify-center w-full anim-fade-up anim-d3">
+    <img src="./slides/assets/usertest3.png" class="vast-map-img block h-auto max-h-[min(200px,26vh)] w-auto object-contain" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">How we tested</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Did not have access to a living room/TV test lab</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/livingroommimic.mov', './slides/assets/Livingroommock.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" :dim-opacity-near="0.04" :dim-opacity-far="0.02" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Findings</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Tended to focus on left side</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 click-fade-up" v-click="1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Copy was usually overlooked</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 click-fade-up" v-click="2">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Confusion on how to interact with ad</span>
+    </div>
+    <div class="flex flex-row items-center gap-3 py-1.5 click-fade-up" v-click="3">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">Too many elements competing for attention</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/usertestingresult1.png', './slides/assets/usertestingresult2.png', './slides/assets/usertestingresult3.png', './slides/assets/usertestingresult4.png']" :compact="true" :flat="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" :dim-opacity-near="0.04" :dim-opacity-far="0.02" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Takeaways from user testing</h2>
+
+<div class="flex flex-col gap-4 max-w-3xl mt-6">
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d1">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Reduce cognitive load by minimizing on-screen information</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Prioritize the QR code as the primary call to action—it was the most well-received</span>
+  </div>
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d3">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Improve clarity around how to navigate the ad using the TV remote</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Revised layouts</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex flex-col gap-3 min-w-0 flex-shrink-0 w-52 pt-2">
+    <div class="flex flex-row items-center gap-3 py-1.5 anim-fade-up anim-d1">
+      <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+      <span class="text-slate-900 font-semibold text-[1rem]">More design explorations</span>
+    </div>
+  </div>
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/BetaIdeas1.png', './slides/assets/BetaIdeas2.png', './slides/assets/BetaIdeas3.png']" :compact="true" :viewport-height="420" layer-max-width="72rem" layer-width-pct="95%" pull-down="-2rem" :dim-opacity-near="0.04" :dim-opacity-far="0.02" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Final for beta</h2>
+
+<div class="flex gap-6 mt-4 items-start w-full">
+  <div class="flex-1 min-w-0">
+    <AdManagerStack :images="['./slides/assets/BetaDesign1.png', './slides/assets/BetaDesign2.png', './slides/assets/BetaDesign3.png', './slides/assets/BetaDesign4.png']" :compact="true" :viewport-height="470" layer-max-width="80rem" layer-width-pct="100%" pull-down="-0.5rem" :image-scales="[1.12, 1.12, 1.12, 1.12]" :dim-opacity-near="0.04" :dim-opacity-far="0.008" :dim-opacity-third="0.008" />
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Beta overview</h2>
+
+<div class="grid grid-cols-3 gap-10 max-w-4xl mt-16 mx-auto">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M385.5 132.8C393.1 119.9 406.9 112 421.8 112L424 112C446.1 112 464 129.9 464 152C464 174.1 446.1 192 424 192L350.7 192L385.5 132.8zM254.5 132.8L289.3 192L216 192C193.9 192 176 174.1 176 152C176 129.9 193.9 112 216 112L218.2 112C233.1 112 247 119.9 254.5 132.8zM344.1 108.5L320 149.5L295.9 108.5C279.7 80.9 250.1 64 218.2 64L216 64C167.4 64 128 103.4 128 152C128 166.4 131.5 180 137.6 192L96 192C78.3 192 64 206.3 64 224L64 256C64 273.7 78.3 288 96 288L544 288C561.7 288 576 273.7 576 256L576 224C576 206.3 561.7 192 544 192L502.4 192C508.5 180 512 166.4 512 152C512 103.4 472.6 64 424 64L421.8 64C389.9 64 360.3 80.9 344.1 108.4zM544 336L344 336L344 544L480 544C515.3 544 544 515.3 544 480L544 336zM296 336L96 336L96 480C96 515.3 124.7 544 160 544L296 544L296 336z"/></svg>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">4 different advertisers who offer non-perishable/alcoholic retail products</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 192C96 130.1 146.1 80 208 80C269.9 80 320 130.1 320 192C320 253.9 269.9 304 208 304C146.1 304 96 253.9 96 192zM32 528C32 430.8 110.8 352 208 352C305.2 352 384 430.8 384 528L384 534C384 557.2 365.2 576 342 576L74 576C50.8 576 32 557.2 32 534L32 528zM464 128C517 128 560 171 560 224C560 277 517 320 464 320C411 320 368 277 368 224C368 171 411 128 464 128zM464 368C543.5 368 608 432.5 608 512L608 534.4C608 557.4 589.4 576 566.4 576L421.6 576C428.2 563.5 432 549.2 432 534L432 528C432 476.5 414.6 429.1 385.5 391.3C408.1 376.6 435.1 368 464 368z"/></svg>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Campaigns ran 6-8 weeks</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" class="w-8 h-8 fill-[#0D9488]" aria-hidden="true"><path d="M96 128C83.1 128 71.4 135.8 66.4 147.8C61.4 159.8 64.2 173.5 73.4 182.6L256 365.3L256 480C256 488.5 259.4 496.6 265.4 502.6L329.4 566.6C338.6 575.8 352.3 578.5 364.3 573.5C376.3 568.5 384 556.9 384 544L384 365.3L566.6 182.7C575.8 173.5 578.5 159.8 573.5 147.8C568.5 135.8 556.9 128 544 128L96 128z"/></svg>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Measure impressions and second-screen metrics</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Beta findings</h2>
+
+<div class="grid grid-cols-2 gap-16 max-w-3xl mt-16 mx-auto">
+  <div class="text-slate-700 text-[1.1rem] font-medium flex flex-col gap-3 anim-fade-up anim-d2">
+    <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#0D9488]">
+      <CountUp :to="233" suffix="K" :duration="1200" />
+    </div>
+    <span class="text-center">Interactive impressions</span>
+  </div>
+  <div class="text-slate-700 text-[1.1rem] font-medium flex flex-col gap-3 anim-fade-up anim-d3">
+    <div class="flex items-center gap-2 self-center text-[3.5rem] font-bold text-[#0D9488]">
+      <CountUp :to="94" suffix="%" :duration="1400" />
+    </div>
+    <span class="text-center">Site visits from QR codes</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Beta findings</h2>
+
+<div class="flex flex-col items-center gap-4 mt-4 w-full">
+  <img src="./slides/assets/betafunnel.png" class="vast-map-img block h-auto max-h-[min(400px,48vh)] w-auto object-contain anim-fade-up anim-d1" />
+  <div class="flex flex-row items-center gap-4 py-1.5 anim-fade-up anim-d2">
+    <i class="fa-solid fa-circle text-[#0D9488] text-[0.5rem] shrink-0"></i>
+    <span class="text-slate-900 font-semibold text-[1.1rem]">Able to track lower-funnel metrics</span>
+  </div>
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Wide release coming this year</h2>
+
+<div class="flex flex-col items-center gap-4 mt-4 w-full">
+  <img
+    src="./slides/assets/GatewayShopCleanedup.png"
+    class="mx-auto block h-auto max-h-[min(400px,50vh)] w-auto max-w-full rounded-xl object-contain shadow-[0_4px_24px_rgb(0_0_0_/_12%)] md:max-w-5xl anim-fade-up anim-d1"
+  />
+</div>
+
+---
+layout: default
+transition: slide-left
+---
+
+<h2 class="user-groups-slide-heading m-0 mt-6 mb-5">Takeaways</h2>
+
+<div class="grid grid-cols-3 gap-16 max-w-4xl mx-auto w-full mt-16">
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d1">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-tv text-[#0D9488] text-[1.6rem]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Set up design foundations and stakeholder collaboration for brand new team</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d2">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-layer-group text-[#0D9488] text-[1.6rem]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Quickly learned best practices for a format I had never designed for</span>
+  </div>
+  <div class="flex flex-col items-center text-center gap-3 anim-fade-up anim-d3">
+    <div class="w-16 h-16 rounded-full bg-[#0D9488]/10 flex items-center justify-center">
+      <i class="fa-solid fa-users text-[#0D9488] text-[1.6rem]"></i>
+    </div>
+    <div class="w-3 h-px bg-[#0D9488]"></div>
+    <span class="text-slate-900 font-semibold text-[1.1rem] leading-snug">Took me back to my graphic design days</span>
   </div>
 </div>
 

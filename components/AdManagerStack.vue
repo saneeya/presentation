@@ -29,6 +29,8 @@ const props = withDefaults(
     dimOpacityNear?: number
     /** Override opacity of layers two or more behind the active one (default 0.07) */
     dimOpacityFar?: number
+    /** Override opacity of the third image while the fourth is on top (default 0.08) */
+    dimOpacityThird?: number
   }>(),
   {
     images: () => [
@@ -78,7 +80,7 @@ function layerOpacity(idx: number, V: number) {
   if (depthFromTop === 1) {
     /* Third image (idx 2) sits here when the fourth is on top — dim a bit more */
     if (idx === 2 && V >= 4)
-      return 0.08
+      return props.dimOpacityThird ?? 0.08
     return props.dimOpacityNear ?? 0.16
   }
   return props.dimOpacityFar ?? 0.07
